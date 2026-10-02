@@ -9,20 +9,20 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{background:#060C17;color:#C8DCF0;font-family:system-ui,-apple-system,sans-serif;height:100vh;overflow:hidden}
+body{background:#0F172A;color:#E2E8F0;font-family:system-ui,-apple-system,sans-serif;height:100vh;overflow:hidden}
 #root{height:100vh}
 input,button,textarea{font-family:inherit}
-input::placeholder,textarea::placeholder{color:#2D4560}
+input::placeholder,textarea::placeholder{color:#475569}
 ::-webkit-scrollbar{width:5px;height:5px}
 ::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:#1A2E4A;border-radius:3px}
+::-webkit-scrollbar-thumb{background:#334155;border-radius:3px}
 </style>
 </head>
 <body>
 <div id="root"></div>
 <script type="text/babel" data-presets="react">
 const{useState,useEffect,useRef,useMemo}=React;
-const C={bg:'#060C17',surface:'#0B1523',card:'#0E1C30',border:'#162536',accent:'#3B82F6',accentLo:'rgba(59,130,246,0.10)',text:'#C8DCF0',muted:'#5F7A9B',dim:'#2D4560',green:'#10B981',red:'#EF4444',amber:'#F59E0B',purple:'#8B5CF6',cyan:'#06B6D4'};
+const C={bg:'#0F172A',surface:'#1E293B',card:'#243347',border:'#334155',accent:'#4F86E8',accentLo:'rgba(79,134,232,0.12)',text:'#E2E8F0',muted:'#94A3B8',dim:'#475569',green:'#34D399',red:'#F87171',amber:'#FBBF24',purple:'#A78BFA',cyan:'#22D3EE'};
 
 const Tag=({children,color=C.accent})=>(<span style={{display:'inline-block',padding:'1px 7px',borderRadius:3,fontSize:11,fontWeight:600,background:`${color}1A`,color,border:`1px solid ${color}33`,marginRight:5}}>{children}</span>);
 const Card=({children,accent,style:sx={}})=>(<div style={{background:C.card,border:`1px solid ${C.border}`,borderLeft:`3px solid ${accent||C.accent}`,borderRadius:6,padding:'13px 16px',marginBottom:10,...sx}}>{children}</div>);
@@ -31,6 +31,7 @@ const Sub=({children,color})=>(<div style={{fontSize:11,fontWeight:700,color:col
 const P=({children})=>(<p style={{fontSize:13,lineHeight:1.7,color:C.text,margin:'0 0 9px',maxWidth:680}}>{children}</p>);
 const TabBar=({tabs,active,set})=>(<div style={{display:'flex',gap:2,marginBottom:20,borderBottom:`1px solid ${C.border}`}}>{tabs.map(t=>(<button key={t.id} onClick={()=>set(t.id)} style={{padding:'7px 14px',background:'none',border:'none',cursor:'pointer',fontSize:13,fontWeight:active===t.id?600:400,color:active===t.id?C.accent:C.muted,borderBottom:active===t.id?`2px solid ${C.accent}`:'2px solid transparent',marginBottom:-1}}>{t.label}</button>))}</div>);
 const Grid=({children,cols=2})=>(<div style={{display:'grid',gridTemplateColumns:`repeat(${cols},1fr)`,gap:9,marginBottom:12}}>{children}</div>);
+function renderMarkdown(txt){if(!txt)return null;return txt.split(/(\*\*[^*]+\*\*)/g).map((p,i)=>p.startsWith('**')&&p.endsWith('**')?<strong key={i} style={{fontWeight:700,color:'inherit'}}>{p.slice(2,-2)}</strong>:p);}
 
 function getKey(){return localStorage.getItem('ant_key')||'';}
 
@@ -61,7 +62,9 @@ function TodaySection(){
     const prompt=`Today is ${today}. Search for the latest US financial market data and news. Return ONLY a JSON object, no markdown: {"date":"${today}","market_levels":[{"name":"S&P 500","value":"...","change":"...","up":true},{"name":"10Y UST","value":"...%","change":"... bps","up":true},{"name":"2Y UST","value":"...%","change":"... bps","up":true},{"name":"DXY","value":"...","change":"...","up":false},{"name":"VIX","value":"...","change":"...","up":false}],"stories":[{"headline":"...","source":"...","summary":"2-3 sentences","why_matters":"...","tag":"Rates|Equities|FX|Macro|Credit"},{"headline":"...","source":"...","summary":"...","why_matters":"...","tag":"..."},{"headline":"...","source":"...","summary":"...","why_matters":"...","tag":"..."}],"calendar":[{"day":"...","event":"...","importance":"high|medium","note":"..."},{"day":"...","event":"...","importance":"medium","note":"..."}],"concept":{"title":"...","one_liner":"...","explanation":"2-3 sentences","market_link":"How this connects to today"},"narrative":"1-2 sentence macro narrative update"}`;
     try{
       const text=await callClaude([{role:'user',content:prompt}],'You are a US financial markets assistant. Search for current market data and news. Return ONLY valid JSON without any markdown.',true);
-      const b=JSON.parse(text.replace(/```json|```/g,'').trim());
+      const cleaned=text.replace(/```json|```/g,'').trim();
+      const start=cleaned.indexOf('{');const end=cleaned.lastIndexOf('}');
+      const b=JSON.parse(cleaned.slice(start,end+1));
       setBrief(b);
       try{localStorage.setItem(`brief_${dateKey}`,JSON.stringify(b));}catch(e){}
     }catch(err){setError(err.message);}
@@ -94,11 +97,14 @@ function TodaySection(){
 }
 
 function LearnSection(){
-  const[msgs,setMsgs]=useState([{role:'assistant',content:"Hey Gina! I'm your S&T tutor. Ask me anything — concepts, trade ideas, how a specific desk works, interview prep, or what's happening in markets right now."}]);
+  const LEARN_KEY='st_learn_msgs';
+  const defaultMsg={role:'assistant',content:"Hey Gina! I'm your S&T tutor. Ask me anything — concepts, trade ideas, how a specific desk works, interview prep, or what's happening in markets right now."};
+  const[msgs,setMsgs]=useState(()=>{try{const s=localStorage.getItem(LEARN_KEY);if(s){const p=JSON.parse(s);if(Array.isArray(p)&&p.length)return p;}return[defaultMsg];}catch(e){return[defaultMsg];}});
   const[input,setInput]=useState('');
   const[loading,setLoading]=useState(false);
   const bottomRef=useRef(null);
   useEffect(()=>{bottomRef.current?.scrollIntoView({behavior:'smooth'});},[msgs]);
+  useEffect(()=>{try{localStorage.setItem(LEARN_KEY,JSON.stringify(msgs));}catch(e){};},[msgs]);
   const quick=["Walk me through duration and why 2022 was catastrophic for bonds","Quiz me on yield curve shapes — give me a scenario","Explain the difference between rates sales and rates trading","What should I know about the current macro environment for an interview?","Give me a practice trade idea to work through step by step","Why is Warsh more hawkish than Powell?","How does a rates sales desk make money?","Walk me through earnings season on an equities desk"];
   async function send(text){
     const msg=text||input.trim();if(!msg)return;
@@ -111,11 +117,11 @@ function LearnSection(){
     setLoading(false);
   }
   return <div style={{display:'flex',flexDirection:'column',height:'calc(100vh - 120px)'}}>
-    <SH>Learn</SH>
-    <p style={{fontSize:13,color:C.muted,marginBottom:16}}>Your live S&T tutor — ask anything</p>
+    <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:4}}><SH>Learn</SH><button onClick={()=>{if(window.confirm('Clear chat history?')){setMsgs([defaultMsg]);localStorage.removeItem(LEARN_KEY);}}} style={{background:'none',border:'none',cursor:'pointer',fontSize:12,color:C.dim,padding:'4px 8px',borderRadius:4}}>Clear history</button></div>
+    <p style={{fontSize:13,color:C.muted,marginBottom:16}}>Your live S&T tutor — history saved between tabs</p>
     <div style={{display:'flex',flexWrap:'wrap',gap:6,marginBottom:16}}>{quick.map(p=><button key={p} onClick={()=>send(p)} style={{padding:'5px 10px',background:C.card,border:`1px solid ${C.border}`,borderRadius:4,fontSize:12,color:C.muted,cursor:'pointer',textAlign:'left'}}>{p}</button>)}</div>
     <div style={{flex:1,overflow:'auto',background:C.surface,borderRadius:8,border:`1px solid ${C.border}`,padding:16,marginBottom:12}}>
-      {msgs.map((m,i)=>(<div key={i} style={{display:'flex',gap:10,marginBottom:14,flexDirection:m.role==='user'?'row-reverse':'row'}}><div style={{width:28,height:28,borderRadius:'50%',flexShrink:0,background:m.role==='user'?C.accent:C.purple,display:'flex',alignItems:'center',justifyContent:'center',fontSize:11,fontWeight:700,color:'#fff'}}>{m.role==='user'?'G':'T'}</div><div style={{maxWidth:'78%',background:m.role==='user'?C.accentLo:C.card,border:`1px solid ${m.role==='user'?C.accent+'33':C.border}`,borderRadius:8,padding:'10px 14px',fontSize:13,color:C.text,lineHeight:1.7,whiteSpace:'pre-wrap'}}>{m.content}</div></div>))}
+      {msgs.map((m,i)=>(<div key={i} style={{display:'flex',gap:10,marginBottom:14,flexDirection:m.role==='user'?'row-reverse':'row'}}><div style={{width:28,height:28,borderRadius:'50%',flexShrink:0,background:m.role==='user'?C.accent:C.purple,display:'flex',alignItems:'center',justifyContent:'center',fontSize:11,fontWeight:700,color:'#fff'}}>{m.role==='user'?'G':'T'}</div><div style={{maxWidth:'78%',background:m.role==='user'?C.accentLo:C.card,border:`1px solid ${m.role==='user'?C.accent+'33':C.border}`,borderRadius:8,padding:'10px 14px',fontSize:13,color:C.text,lineHeight:1.7,whiteSpace:'pre-wrap'}}>{renderMarkdown(m.content)}</div></div>))}
       {loading&&<div style={{display:'flex',gap:10,marginBottom:14}}><div style={{width:28,height:28,borderRadius:'50%',background:C.purple,display:'flex',alignItems:'center',justifyContent:'center',fontSize:11,fontWeight:700,color:'#fff'}}>T</div><div style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:8,padding:'10px 14px',fontSize:13,color:C.muted}}>thinking…</div></div>}
       <div ref={bottomRef}/>
     </div>
