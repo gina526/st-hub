@@ -35,10 +35,10 @@ function renderMarkdown(txt){if(!txt)return null;return txt.split(/(\*\*[^*]+\*\
 
 function getKey(){return localStorage.getItem('ant_key')||'';}
 
-async function callClaude(messages,system,useSearch=false){
+async function callClaude(messages,system,useSearch=false,model='claude-sonnet-4-6',maxTokens=1000){
   const apiKey=getKey();
   if(!apiKey)throw new Error('No API key set — add it in the sidebar below.');
-  const body={model:'claude-sonnet-4-6',max_tokens:1000,system,messages:messages.map(m=>({role:m.role,content:m.content}))};
+  const body={model,max_tokens:maxTokens,system,messages:messages.map(m=>({role:m.role,content:m.content}))};
   if(useSearch)body.tools=[{type:'web_search_20250305',name:'web_search'}];
   const res=await fetch('https://api.anthropic.com/v1/messages',{
     method:'POST',
@@ -61,7 +61,7 @@ function TodaySection(){
     setLoading(true);setError(null);
     const prompt=`Today is ${today}. Search for the latest US financial market data and news. Return ONLY a JSON object, no markdown: {"date":"${today}","market_levels":[{"name":"S&P 500","value":"...","change":"...","up":true},{"name":"10Y UST","value":"...%","change":"... bps","up":true},{"name":"2Y UST","value":"...%","change":"... bps","up":true},{"name":"DXY","value":"...","change":"...","up":false},{"name":"VIX","value":"...","change":"...","up":false}],"stories":[{"headline":"...","source":"...","summary":"2-3 sentences","why_matters":"...","tag":"Rates|Equities|FX|Macro|Credit"},{"headline":"...","source":"...","summary":"...","why_matters":"...","tag":"..."},{"headline":"...","source":"...","summary":"...","why_matters":"...","tag":"..."}],"calendar":[{"day":"...","event":"...","importance":"high|medium","note":"..."},{"day":"...","event":"...","importance":"medium","note":"..."}],"concept":{"title":"...","one_liner":"...","explanation":"2-3 sentences","market_link":"How this connects to today"},"narrative":"1-2 sentence macro narrative update"}`;
     try{
-      const text=await callClaude([{role:'user',content:prompt}],'You are a US financial markets assistant. Search for current market data and news. Return ONLY valid JSON without any markdown.',true);
+      const text=await callClaude([{role:'user',content:prompt}],'You are a US financial markets assistant. Search for current market data and news. Return ONLY valid JSON without any markdown fences or explanation text before or after.',true,'claude-haiku-4-5-20251001',2500);
       const cleaned=text.replace(/```json|```/g,'').trim();
       const start=cleaned.indexOf('{');const end=cleaned.lastIndexOf('}');
       const b=JSON.parse(cleaned.slice(start,end+1));
