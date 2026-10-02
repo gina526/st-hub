@@ -54,9 +54,14 @@ function TodaySection(){
   const[brief,setBrief]=useState(null);
   const[loading,setLoading]=useState(false);
   const[error,setError]=useState(null);
+  const[autoLoaded,setAutoLoaded]=useState(null);
   const today=new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
   const dateKey=new Date().toISOString().split('T')[0];
-  useEffect(()=>{try{const c=localStorage.getItem(`brief_${dateKey}`);if(c)setBrief(JSON.parse(c));}catch(e){};},[]);
+  useEffect(()=>{
+    try{const c=localStorage.getItem(`brief_${dateKey}`);if(c){setBrief(JSON.parse(c));return;}}catch(e){}
+    async function tryAutoLoad(){try{const r=await fetch('/public/brief.json');if(!r.ok)return;const data=await r.json();if(data.date===dateKey){setBrief(data);setAutoLoaded(new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}));try{localStorage.setItem(`brief_${dateKey}`,JSON.stringify(data));}catch(e){}}}catch(e){}}
+    tryAutoLoad();
+  },[]);
   async function generate(){
     setLoading(true);setError(null);
     const prompt=`Today is ${today}. Search for the latest US financial market data and news. Return ONLY a JSON object, no markdown: {"date":"${today}","market_levels":[{"name":"S&P 500","value":"...","change":"...","up":true},{"name":"10Y UST","value":"...%","change":"... bps","up":true},{"name":"2Y UST","value":"...%","change":"... bps","up":true},{"name":"DXY","value":"...","change":"...","up":false},{"name":"VIX","value":"...","change":"...","up":false}],"stories":[{"headline":"...","source":"...","summary":"2-3 sentences","why_matters":"...","tag":"Rates|Equities|FX|Macro|Credit"},{"headline":"...","source":"...","summary":"...","why_matters":"...","tag":"..."},{"headline":"...","source":"...","summary":"...","why_matters":"...","tag":"..."}],"calendar":[{"day":"...","event":"...","importance":"high|medium","note":"..."},{"day":"...","event":"...","importance":"medium","note":"..."}],"concept":{"title":"...","one_liner":"...","explanation":"2-3 sentences","market_link":"How this connects to today"},"narrative":"1-2 sentence macro narrative update"}`;
@@ -73,7 +78,7 @@ function TodaySection(){
   const tagColor=t=>({Rates:C.amber,Equities:C.green,FX:C.purple,Macro:C.cyan,Credit:C.red}[t]||C.muted);
   return <div>
     <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:20}}>
-      <div><SH>Today's Brief</SH><div style={{fontSize:13,color:C.muted,marginTop:2}}>{today}</div></div>
+      <div><SH>Today's Brief</SH><div style={{fontSize:13,color:C.muted,marginTop:2}}>{today}{autoLoaded&&<span style={{marginLeft:10,fontSize:11,color:C.green,fontWeight:600}}>✓ Auto-loaded · {autoLoaded}</span>}</div></div>
       <button onClick={generate} disabled={loading} style={{padding:'9px 18px',background:C.accent,border:'none',borderRadius:6,color:'#fff',fontSize:13,fontWeight:600,cursor:loading?'not-allowed':'pointer',opacity:loading?0.6:1}}>{loading?'Fetching…':brief?'↻ Refresh':'⚡ Generate Today\'s Brief'}</button>
     </div>
     {error&&<Card accent={C.red}><div style={{fontSize:13,color:C.red}}>{error}</div></Card>}
