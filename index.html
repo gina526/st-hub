@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gina's S&T Desk — US S&T 2028</title>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:#060C17;color:#C8DCF0;font-family:system-ui,-apple-system,sans-serif;height:100vh;overflow:hidden}
+#root{height:100vh}
+input,button,textarea{font-family:inherit}
+input::placeholder,textarea::placeholder{color:#2D4560}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#1A2E4A;border-radius:3px}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" data-presets="react">
+const{useState,useEffect,useRef,useMemo}=React;
+const C={bg:'#060C17',surface:'#0B1523',card:'#0E1C30',border:'#162536',accent:'#3B82F6',accentLo:'rgba(59,130,246,0.10)',text:'#C8DCF0',muted:'#5F7A9B',dim:'#2D4560',green:'#10B981',red:'#EF4444',amber:'#F59E0B',purple:'#8B5CF6',cyan:'#06B6D4'};
+
+const Tag=({children,color=C.accent})=>(<span style={{display:'inline-block',padding:'1px 7px',borderRadius:3,fontSize:11,fontWeight:600,background:`${color}1A`,color,border:`1px solid ${color}33`,marginRight:5}}>{children}</span>);
+const Card=({children,accent,style:sx={}})=>(<div style={{background:C.card,border:`1px solid ${C.border}`,borderLeft:`3px solid ${accent||C.accent}`,borderRadius:6,padding:'13px 16px',marginBottom:10,...sx}}>{children}</div>);
+const SH=({children})=>(<h2 style={{fontSize:22,fontWeight:700,color:C.text,margin:'0 0 4px',letterSpacing:'-0.02em'}}>{children}</h2>);
+const Sub=({children,color})=>(<div style={{fontSize:11,fontWeight:700,color:color||C.accent,textTransform:'uppercase',letterSpacing:'0.1em',margin:'22px 0 8px'}}>{children}</div>);
+const P=({children})=>(<p style={{fontSize:13,lineHeight:1.7,color:C.text,margin:'0 0 9px',maxWidth:680}}>{children}</p>);
+const TabBar=({tabs,active,set})=>(<div style={{display:'flex',gap:2,marginBottom:20,borderBottom:`1px solid ${C.border}`}}>{tabs.map(t=>(<button key={t.id} onClick={()=>set(t.id)} style={{padding:'7px 14px',background:'none',border:'none',cursor:'pointer',fontSize:13,fontWeight:active===t.id?600:400,color:active===t.id?C.accent:C.muted,borderBottom:active===t.id?`2px solid ${C.accent}`:'2px solid transparent',marginBottom:-1}}>{t.label}</button>))}</div>);
+const Grid=({children,cols=2})=>(<div style={{display:'grid',gridTemplateColumns:`repeat(${cols},1fr)`,gap:9,marginBottom:12}}>{children}</div>);
+
+function getKey(){return localStorage.getItem('ant_key')||'';}
+
+async function callClaude(messages,system,useSearch=false){
+  const apiKey=getKey();
+  if(!apiKey)throw new Error('No API key set — add it in the sidebar below.');
+  const body={model:'claude-sonnet-4-6',max_tokens:1000,system,messages:messages.map(m=>({role:m.role,content:m.content}))};
+  if(useSearch)body.tools=[{type:'web_search_20250305',name:'web_search'}];
+  const res=await fetch('https://api.anthropic.com/v1/messages',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+    body:JSON.stringify(body)
+  });
+  const data=await res.json();
+  if(data.error)throw new Error(data.error.message);
+  return data.content.filter(b=>b.type==='text').map(b=>b.text).join('');
+}
+
+function TodaySection(){
+  const[brief,setBrief]=useState(null);
+  const[loading,setLoading]=useState(false);
+  const[error,setError]=useState(null);
+  const today=new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+  const dateKey=new Date().toISOString().split('T')[0];
+  useEffect(()=>{try{const c=localStorage.getItem(`brief_${dateKey}`);if(c)setBrief(JSON.parse(c));}catch(e){};},[]);
+  async function generate(){
+    setLoading(true);setError(null);
+    const prompt=`Today is ${today}. Search for the latest US financial market data and news. Return ONLY a JSON object, no markdown: {"date":"${today}","market_levels":[{"name":"S&P 500","value":"...","change":"...","up":true},{"name":"10Y UST","value":"...%","change":"... bps","up":true},{"name":"2Y UST","value":"...%","change":"... bps","up":true},{"name":"DXY","value":"...","change":"...","up":false},{"name":"VIX","value":"...","change":"...","up":false}],"stories":[{"headline":"...","source":"...","summary":"2-3 sentences","why_matters":"...","tag":"Rates|Equities|FX|Macro|Credit"},{"headline":"...","source":"...","summary":"...","why_matters":"...","tag":"..."},{"headline":"...","source":"...","summary":"...","why_matters":"...","tag":"..."}],"calendar":[{"day":"...","event":"...","importance":"high|medium","note":"..."},{"day":"...","event":"...","importance":"medium","note":"..."}],"concept":{"title":"...","one_liner":"...","explanation":"2-3 sentences","market_link":"How this connects to today"},"narrative":"1-2 sentence macro narrative update"}`;
+    try{
+      const text=await callClaude([{role:'user',content:prompt}],'You are a US financial markets assistant. Search for current market data and news. Return ONLY valid JSON without any markdown.',true);
+      const b=JSON.parse(text.replace(/```json|```/g,'').trim());
+      setBrief(b);
+      try{localStorage.setItem(`brief_${dateKey}`,JSON.stringify(b));}catch(e){}
+    }catch(err){setError(err.message);}
+    setLoading(false);
+  }
+  const tagColor=t=>({Rates:C.amber,Equities:C.green,FX:C.purple,Macro:C.cyan,Credit:C.red}[t]||C.muted);
+  return <div>
+    <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:20}}>
+      <div><SH>Today's Brief</SH><div style={{fontSize:13,color:C.muted,marginTop:2}}>{today}</div></div>
+      <button onClick={generate} disabled={loading} style={{padding:'9px 18px',background:C.accent,border:'none',borderRadius:6,color:'#fff',fontSize:13,fontWeight:600,cursor:loading?'not-allowed':'pointer',opacity:loading?0.6:1}}>{loading?'Fetching…':brief?'↻ Refresh':'⚡ Generate Today\'s Brief'}</button>
+    </div>
+    {error&&<Card accent={C.red}><div style={{fontSize:13,color:C.red}}>{error}</div></Card>}
+    {!brief&&!loading&&<Card accent={C.dim} style={{textAlign:'center',padding:'40px 20px'}}><div style={{fontSize:32,marginBottom:12}}>⚡</div><div style={{fontSize:14,color:C.muted,marginBottom:6}}>Hit Generate to pull live market data + today's top stories</div><div style={{fontSize:12,color:C.dim}}>Searches the web — saves so you don't re-fetch the same day</div></Card>}
+    {loading&&<Card accent={C.accent} style={{textAlign:'center',padding:'40px 20px'}}><div style={{fontSize:13,color:C.muted}}>Searching market data and news…</div></Card>}
+    {brief&&<>
+      <Sub>Market Levels</Sub>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(5,1fr)',gap:8,marginBottom:20}}>
+        {brief.market_levels?.map(m=>(<div key={m.name} style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:6,padding:'12px 12px'}}><div style={{fontSize:11,color:C.muted,marginBottom:4}}>{m.name}</div><div style={{fontSize:16,fontWeight:700,color:C.text,marginBottom:2}}>{m.value}</div><div style={{fontSize:12,color:m.up?C.green:C.red,fontFamily:'monospace'}}>{m.change}</div></div>))}
+      </div>
+      <Sub>Top Stories</Sub>
+      {brief.stories?.map((s,i)=>(<Card key={i} accent={tagColor(s.tag)}><div style={{display:'flex',gap:8,alignItems:'baseline',marginBottom:6}}><span style={{fontSize:13,fontWeight:600,color:C.text,flex:1}}>{s.headline}</span><Tag color={tagColor(s.tag)}>{s.tag}</Tag><span style={{fontSize:11,color:C.dim}}>{s.source}</span></div><div style={{fontSize:13,color:C.muted,lineHeight:1.6,marginBottom:6}}>{s.summary}</div><div style={{fontSize:12}}><span style={{color:C.dim}}>Why it matters: </span><span style={{color:tagColor(s.tag)}}>{s.why_matters}</span></div></Card>))}
+      <Sub>This Week</Sub>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))',gap:8,marginBottom:20}}>
+        {brief.calendar?.map((e,i)=>(<div key={i} style={{background:C.card,border:`1px solid ${e.importance==='high'?C.amber:C.border}`,borderRadius:6,padding:'10px 12px'}}><div style={{display:'flex',gap:8,alignItems:'center',marginBottom:4}}><span style={{fontFamily:'monospace',fontSize:11,color:e.importance==='high'?C.amber:C.muted}}>{e.day}</span>{e.importance==='high'&&<Tag color={C.amber}>Key</Tag>}</div><div style={{fontSize:13,fontWeight:500,color:C.text,marginBottom:3}}>{e.event}</div><div style={{fontSize:12,color:C.muted}}>{e.note}</div></div>))}
+      </div>
+      {brief.concept&&<><Sub>Concept of the Day</Sub><Card accent={C.purple}><div style={{fontSize:16,fontWeight:700,color:C.text,marginBottom:4}}>{brief.concept.title}</div><div style={{fontSize:13,color:C.cyan,marginBottom:8,fontStyle:'italic'}}>{brief.concept.one_liner}</div><P>{brief.concept.explanation}</P><div style={{fontSize:12,color:C.purple}}><span style={{color:C.dim}}>Today's connection: </span>{brief.concept.market_link}</div></Card></>}
+      {brief.narrative&&<><Sub>Macro Narrative</Sub><Card accent={C.amber}><p style={{fontSize:13,lineHeight:1.75,color:C.text,margin:0,fontStyle:'italic'}}>"{brief.narrative}"</p></Card></>}
+    </>}
+  </div>;
+}
+
+function LearnSection(){
+  const[msgs,setMsgs]=useState([{role:'assistant',content:"Hey Gina! I'm your S&T tutor. Ask me anything — concepts, trade ideas, how a specific desk works, interview prep, or what's happening in markets right now."}]);
+  const[input,setInput]=useState('');
+  const[loading,setLoading]=useState(false);
+  const bottomRef=useRef(null);
+  useEffect(()=>{bottomRef.current?.scrollIntoView({behavior:'smooth'});},[msgs]);
+  const quick=["Walk me through duration and why 2022 was catastrophic for bonds","Quiz me on yield curve shapes — give me a scenario","Explain the difference between rates sales and rates trading","What should I know about the current macro environment for an interview?","Give me a practice trade idea to work through step by step","Why is Warsh more hawkish than Powell?","How does a rates sales desk make money?","Walk me through earnings season on an equities desk"];
+  async function send(text){
+    const msg=text||input.trim();if(!msg)return;
+    const newMsgs=[...msgs,{role:'user',content:msg}];
+    setMsgs(newMsgs);setInput('');setLoading(true);
+    try{
+      const reply=await callClaude(newMsgs,'You are an S&T tutor for Gina, a UChicago sophomore targeting US S&T sales roles (NY, Summer 2028). She is in PAIR investment club, exploring which product area (rates, equities, FX, credit). Current macro: Fed Chair Warsh hiked to 3.75-4.00% Sept 2026, second tightening cycle, oil above $100 from Strait of Hormuz, core PCE 3.3%. Be direct, concrete, real examples. Socratic method when useful. Under 200 words unless a complex concept needs more.');
+      setMsgs([...newMsgs,{role:'assistant',content:reply}]);
+    }catch(e){setMsgs([...newMsgs,{role:'assistant',content:`Error: ${e.message}`}]);}
+    setLoading(false);
+  }
+  return <div style={{display:'flex',flexDirection:'column',height:'calc(100vh - 120px)'}}>
+    <SH>Learn</SH>
+    <p style={{fontSize:13,color:C.muted,marginBottom:16}}>Your live S&T tutor — ask anything</p>
+    <div style={{display:'flex',flexWrap:'wrap',gap:6,marginBottom:16}}>{quick.map(p=><button key={p} onClick={()=>send(p)} style={{padding:'5px 10px',background:C.card,border:`1px solid ${C.border}`,borderRadius:4,fontSize:12,color:C.muted,cursor:'pointer',textAlign:'left'}}>{p}</button>)}</div>
+    <div style={{flex:1,overflow:'auto',background:C.surface,borderRadius:8,border:`1px solid ${C.border}`,padding:16,marginBottom:12}}>
+      {msgs.map((m,i)=>(<div key={i} style={{display:'flex',gap:10,marginBottom:14,flexDirection:m.role==='user'?'row-reverse':'row'}}><div style={{width:28,height:28,borderRadius:'50%',flexShrink:0,background:m.role==='user'?C.accent:C.purple,display:'flex',alignItems:'center',justifyContent:'center',fontSize:11,fontWeight:700,color:'#fff'}}>{m.role==='user'?'G':'T'}</div><div style={{maxWidth:'78%',background:m.role==='user'?C.accentLo:C.card,border:`1px solid ${m.role==='user'?C.accent+'33':C.border}`,borderRadius:8,padding:'10px 14px',fontSize:13,color:C.text,lineHeight:1.7,whiteSpace:'pre-wrap'}}>{m.content}</div></div>))}
+      {loading&&<div style={{display:'flex',gap:10,marginBottom:14}}><div style={{width:28,height:28,borderRadius:'50%',background:C.purple,display:'flex',alignItems:'center',justifyContent:'center',fontSize:11,fontWeight:700,color:'#fff'}}>T</div><div style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:8,padding:'10px 14px',fontSize:13,color:C.muted}}>thinking…</div></div>}
+      <div ref={bottomRef}/>
+    </div>
+    <div style={{display:'flex',gap:8}}>
+      <input value={input} onChange={e=>setInput(e.target.value)} onKeyDown={e=>e.key==='Enter'&&!e.shiftKey&&send()} placeholder="Ask anything…" style={{flex:1,background:C.card,border:`1px solid ${C.border}`,borderRadius:6,padding:'10px 14px',color:C.text,fontSize:13,outline:'none'}}/>
+      <button onClick={()=>send()} disabled={loading||!input.trim()} style={{padding:'10px 18px',background:C.accent,border:'none',borderRadius:6,color:'#fff',fontSize:13,fontWeight:600,cursor:loading?'not-allowed':'pointer',opacity:loading?0.5:1}}>Send</button>
+    </div>
+  </div>;
+}
+
+function ProductsSection(){
+  const[sel,setSel]=useState(null);
+  const[quizMsgs,setQuizMsgs]=useState([{role:'assistant',content:"Let's figure out which S&T desk might fit you best. I'll ask a few questions — answer naturally and I'll give you a real recommendation.\n\nFirst: when you imagine yourself at work in 5 years, what matters more — being the person who knows a specific market deeply and can trade it, or being the person who talks to the biggest clients and translates complex ideas into decisions?"}]);
+  const[quizInput,setQuizInput]=useState('');
+  const[quizLoading,setQuizLoading]=useState(false);
+  const[quizOpen,setQuizOpen]=useState(false);
+  const quizBottom=useRef(null);
+  useEffect(()=>{quizBottom.current?.scrollIntoView({behavior:'smooth'});},[quizMsgs]);
+  async function sendQuiz(){
+    const msg=quizInput.trim();if(!msg)return;
+    const newMsgs=[...quizMsgs,{role:'user',content:msg}];
+    setQuizMsgs(newMsgs);setQuizInput('');setQuizLoading(true);
+    try{
+      const reply=await callClaude(newMsgs,'You are helping Gina, a UChicago sophomore, figure out which S&T product desk suits her best. Options: Rates/Fixed Income, Equities, FX & Commodities, Credit. Ask 3-4 probing questions one at a time, then give a direct recommendation. She targets sales roles specifically. Be opinionated — give a real top pick + runner-up with specific reasoning. After 4 exchanges, give a definitive recommendation.');
+      setQuizMsgs([...newMsgs,{role:'assistant',content:reply}]);
+    }catch(e){setQuizMsgs([...newMsgs,{role:'assistant',content:`Error: ${e.message}`}]);}
+    setQuizLoading(false);
+  }
+  const products=[
+    {id:'rates',color:C.accent,icon:'∿',name:'Rates / Fixed Income',tagline:'The backbone of institutional markets — most relevant desk right now',what:'Rates desks trade US Treasuries, agency bonds, interest rate swaps, swaptions, and Treasury futures. By notional volume, the largest desk at any major bank. You\'re trading the most important instrument in the world.',dayInLife:'Morning: check overnight Treasury moves, any Fed speakers, where the 2s10s opened. Sales: calling accounts about how to position around the upcoming FOMC or CPI print. Trading: managing duration risk in the Treasury book, hedging DV01 exposure.',clients:'Asset managers (BlackRock, PIMCO), pension funds, insurance companies, central banks, macro hedge funds.',skills:['Strong macro intuition (Fed, inflation, growth cycle)','Comfort with duration / DV01 math','Yield curve mechanics — reading shape and moves','Fast with numbers under pressure'],interesting:'You are permanently connected to the most important variable in finance. Every market event — CPI, FOMC, geopolitical shock — shows up in rates first. The 2022–2026 rate cycle has made this the most dynamic desk at most banks.',hard:'Steep learning curve, very math-heavy, increasingly electronic at the plain-vanilla end.',green:['You love macro more than company-specific stories','Mental math feels natural','You want to be fluent in the instrument that anchors every other asset'],red:['You want more narrative/story-driven selling','You prefer equity-style conviction trades over macro positioning'],interview:'Yield curve mechanics, duration math, Fed policy, DV01 sizing, current rate environment'},
+    {id:'equities',color:C.green,icon:'◆',name:'Equities S&T',tagline:'The most visible product — stocks, sectors, earnings, IPOs, flows',what:'Market-making and flow trading in stocks, ETFs, and equity derivatives (options, equity futures). Handles the most visible trades — mega-caps, earnings plays, sector rotations, IPO allocations, block trades.',dayInLife:'Pre-market: check futures, overnight ADRs, analyst upgrades/downgrades, any earnings. Sales: calling hedge fund accounts about earnings setup, sector rotation, how to play AI capex theme. Trading: managing delta/gamma on options book, handling block trades.',clients:'Long/short hedge funds (primary), long-only asset managers, quant funds, multi-strategy pods.',skills:['Earnings analysis — EPS setup, guidance, beats/misses','Sector knowledge — what drives each sector\'s P/E','Reading positioning and fund flows','Comfortable discussing specific companies and names'],interesting:'Most intuitive product if you follow stocks. Directly connected to company fundamentals + macro. AI theme, earnings volatility, mega-cap concentration have made equities fascinating.',hard:'Equity sales under structural pressure — more algorithmic execution, fewer relationship-driven block trades.',green:['You follow stocks, read earnings reports, have opinions on specific companies','PAIR investment club analysis feels natural','You like connecting macro to sector rotation stories'],red:['Pure macro > company-specific analysis for you','You don\'t want to spend time on individual stock stories'],interview:'Valuation metrics (P/E, EV/EBITDA), earnings dynamics, sector rotation, current AI/tech theme, trade idea on a specific name'},
+    {id:'fx',color:C.amber,icon:'⟐',name:'FX & Commodities',tagline:'Pure global macro — every geopolitical event shows up here first',what:'Trading G10 currencies (EUR, JPY, GBP), EM currencies, commodity currencies, spot/forwards/options on FX. Commodities: oil, gold, base metals. Often combined at mid-size banks.',dayInLife:'FX never sleeps — Asia opens at 7pm ET, London at 3am. Sales: calling corporates hedging FX exposure, macro hedge funds about positioning around DXY. Trading: managing G10 book around data releases.',clients:'Corporates (hedging currency exposure), real money asset managers, macro hedge funds.',skills:['Deep macro intuition and geopolitical awareness','Understanding of interest rate differentials and carry','Fast reflexes — FX spot is the fastest market','Comfort with global complexity (multiple central banks simultaneously)'],interesting:'The most global product. Every central bank decision, geopolitical event (Strait of Hormuz, Taiwan) — shows up in FX immediately. You track the Fed AND ECB AND BOJ AND PBOC simultaneously.',hard:'Spot FX dominated by HFT — human edge in complex products, EM, and client relationships.',green:['Geopolitics and global macro genuinely excites you','The oil/Strait of Hormuz story feels more interesting than any single earnings report','You want to trade the most global instrument'],red:['You prefer deep dives on one market vs. tracking 20+ simultaneously'],interview:'Carry trade mechanics, DXY drivers, central bank policy transmission to FX, current oil narrative'},
+    {id:'credit',color:C.purple,icon:'◈',name:'Credit',tagline:'Macro + micro combined — fastest-growing institutional desk',what:'Investment grade and high yield corporate bonds, credit derivatives (CDS, CDX indices), structured credit (CLOs, ABS, MBS). Sales means calling accounts about new issue pipeline, spread dynamics, credit cycle positioning.',dayInLife:'Morning: check CDX.NA.IG and CDX.NA.HY spreads, any overnight corporate news. Sales: calling insurance company accounts about IG new issuance, credit hedge funds about HY spread trades. Trading: managing IG/HY bond inventory, hedging with CDX.',clients:'Insurance companies (massive IG buyers), pension funds, credit hedge funds, CLO managers.',skills:['Credit analysis — individual issuer fundamentals','Macro credit cycle intuition (default rates, spread dynamics)','Structured products basics (CLOs, ABS)','IG vs. HY distinction'],interesting:'Unique blend of macro (credit cycle, rate environment) and micro (individual company creditworthiness). Private credit explosion means credit knowledge valued far beyond the trading desk.',hard:'Less liquid than rates or equities, more OTC/bilateral.',green:['You like both macro AND company analysis','Private credit boom and growing asset class appeals to you','Interested in structured products world'],red:['You want the fastest-paced most liquid desk'],interview:'Credit spread mechanics, IG vs. HY, duration vs. credit beta, default/recovery dynamics'},
+  ];
+  return <div>
+    <SH>Product Explorer</SH>
+    <p style={{fontSize:13,color:C.muted,marginBottom:20}}>Learn each desk — then use the quiz to figure out which fits you</p>
+    <Card accent={C.amber}><P><strong style={{color:C.text}}>How to use this:</strong> Read through all four areas. Notice which makes you think "that sounds like me" vs. "I could do that." Then use the quiz at the bottom for a direct recommendation. Once you know your product, go to <strong style={{color:C.accent}}>Your Edge</strong>.</P></Card>
+    {products.map(p=>(<div key={p.id} style={{marginBottom:10}}>
+      <div onClick={()=>setSel(sel===p.id?null:p.id)} style={{display:'flex',gap:14,alignItems:'center',background:C.card,border:`1px solid ${sel===p.id?p.color:C.border}`,borderLeft:`3px solid ${p.color}`,borderRadius:sel===p.id?'6px 6px 0 0':6,padding:'14px 16px',cursor:'pointer'}}>
+        <span style={{fontSize:18,color:p.color}}>{p.icon}</span>
+        <div style={{flex:1}}><div style={{fontSize:14,fontWeight:700,color:C.text,marginBottom:2}}>{p.name}</div><div style={{fontSize:12,color:C.muted}}>{p.tagline}</div></div>
+        <span style={{fontSize:11,color:C.dim}}>{sel===p.id?'▲':'▼'}</span>
+      </div>
+      {sel===p.id&&<div style={{background:`${p.color}06`,border:`1px solid ${p.color}33`,borderTop:'none',borderRadius:'0 0 6px 6px',padding:'20px 20px'}}>
+        <Grid>
+          <div>
+            <div style={{fontSize:11,fontWeight:700,color:p.color,letterSpacing:'0.08em',marginBottom:8}}>WHAT THE DESK DOES</div>
+            <p style={{fontSize:13,color:C.text,lineHeight:1.7,margin:'0 0 16px'}}>{p.what}</p>
+            <div style={{fontSize:11,fontWeight:700,color:p.color,letterSpacing:'0.08em',marginBottom:8}}>A DAY IN THE LIFE (SALES)</div>
+            <p style={{fontSize:13,color:C.text,lineHeight:1.7,margin:'0 0 16px'}}>{p.dayInLife}</p>
+            <div style={{fontSize:11,fontWeight:700,color:p.color,letterSpacing:'0.08em',marginBottom:8}}>TYPICAL CLIENTS</div>
+            <p style={{fontSize:13,color:C.muted,lineHeight:1.7,margin:0}}>{p.clients}</p>
+          </div>
+          <div>
+            <div style={{fontSize:11,fontWeight:700,color:p.color,letterSpacing:'0.08em',marginBottom:8}}>KEY SKILLS</div>
+            {p.skills.map(s=><div key={s} style={{fontSize:13,color:C.text,marginBottom:5,paddingLeft:10,borderLeft:`2px solid ${p.color}33`}}>{s}</div>)}
+            <div style={{fontSize:11,fontWeight:700,color:p.color,letterSpacing:'0.08em',margin:'16px 0 8px'}}>WHY IT'S INTERESTING</div>
+            <p style={{fontSize:13,color:C.text,lineHeight:1.7,margin:'0 0 16px'}}>{p.interesting}</p>
+            <div style={{fontSize:11,fontWeight:700,color:p.color,letterSpacing:'0.08em',marginBottom:8}}>WATCH OUT FOR</div>
+            <p style={{fontSize:13,color:C.muted,lineHeight:1.7,margin:0}}>{p.hard}</p>
+          </div>
+        </Grid>
+        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:10,marginTop:4}}>
+          <div style={{background:`${C.green}0A`,border:`1px solid ${C.green}22`,borderRadius:6,padding:'12px 14px'}}><div style={{fontSize:11,fontWeight:700,color:C.green,marginBottom:8}}>🟢 MIGHT BE YOU IF…</div>{p.green.map(g=><div key={g} style={{fontSize:12,color:C.text,marginBottom:5,lineHeight:1.5}}>· {g}</div>)}</div>
+          <div style={{background:`${C.red}0A`,border:`1px solid ${C.red}22`,borderRadius:6,padding:'12px 14px'}}><div style={{fontSize:11,fontWeight:700,color:C.red,marginBottom:8}}>🔴 MAYBE NOT IF…</div>{p.red.map(r=><div key={r} style={{fontSize:12,color:C.text,marginBottom:5,lineHeight:1.5}}>· {r}</div>)}</div>
+        </div>
+        <div style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:6,padding:'10px 14px',marginTop:10}}><span style={{fontSize:11,fontWeight:700,color:C.muted,letterSpacing:'0.08em'}}>INTERVIEW TESTS: </span><span style={{fontSize:12,color:C.text}}>{p.interview}</span></div>
+      </div>}
+    </div>))}
+    <div style={{marginTop:24}}>
+      <div onClick={()=>setQuizOpen(!quizOpen)} style={{display:'flex',alignItems:'center',justifyContent:'space-between',background:C.card,border:`1px solid ${quizOpen?C.cyan:C.border}`,borderLeft:`3px solid ${C.cyan}`,borderRadius:quizOpen?'6px 6px 0 0':6,padding:'14px 16px',cursor:'pointer'}}>
+        <div><div style={{fontSize:14,fontWeight:700,color:C.text,marginBottom:2}}>Help me choose my product area</div><div style={{fontSize:12,color:C.muted}}>Answer a few questions → get a direct recommendation</div></div>
+        <span style={{fontSize:11,color:C.dim}}>{quizOpen?'▲':'▼'}</span>
+      </div>
+      {quizOpen&&<div style={{background:C.surface,border:`1px solid ${C.cyan}33`,borderTop:'none',borderRadius:'0 0 6px 6px',padding:16}}>
+        <div style={{maxHeight:340,overflow:'auto',marginBottom:12}}>
+          {quizMsgs.map((m,i)=>(<div key={i} style={{display:'flex',gap:10,marginBottom:12,flexDirection:m.role==='user'?'row-reverse':'row'}}><div style={{width:26,height:26,borderRadius:'50%',flexShrink:0,background:m.role==='user'?C.accent:C.cyan,display:'flex',alignItems:'center',justifyContent:'center',fontSize:10,fontWeight:700,color:'#fff'}}>{m.role==='user'?'G':'?'}</div><div style={{maxWidth:'80%',background:m.role==='user'?C.accentLo:C.card,border:`1px solid ${m.role==='user'?C.accent+'33':C.border}`,borderRadius:8,padding:'9px 13px',fontSize:13,color:C.text,lineHeight:1.7,whiteSpace:'pre-wrap'}}>{m.content}</div></div>))}
+          {quizLoading&&<div style={{display:'flex',gap:10,marginBottom:12}}><div style={{width:26,height:26,borderRadius:'50%',background:C.cyan,display:'flex',alignItems:'center',justifyContent:'center',fontSize:10,fontWeight:700,color:'#fff'}}>?</div><div style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:8,padding:'9px 13px',fontSize:13,color:C.muted}}>thinking…</div></div>}
+          <div ref={quizBottom}/>
+        </div>
+        <div style={{display:'flex',gap:8}}>
+          <input value={quizInput} onChange={e=>setQuizInput(e.target.value)} onKeyDown={e=>e.key==='Enter'&&sendQuiz()} placeholder="Type your answer…" style={{flex:1,background:C.card,border:`1px solid ${C.border}`,borderRadius:6,padding:'9px 13px',color:C.text,fontSize:13,outline:'none'}}/>
+          <button onClick={sendQuiz} disabled={quizLoading||!quizInput.trim()} style={{padding:'9px 16px',background:C.cyan,border:'none',borderRadius:6,color:'#fff',fontSize:13,fontWeight:600,cursor:quizLoading?'not-allowed':'pointer',opacity:quizLoading?0.5:1}}>Send</button>
+        </div>
+      </div>}
+    </div>
+  </div>;
+}
+
+function SourcesSection(){
+  const go=url=>window.open(url,'_blank');
+  const Lnk=({name,url,desc,freq,tag,col})=>(<div onClick={()=>url&&go(url)} style={{background:C.card,border:`1px solid ${C.border}`,borderLeft:`3px solid ${col||C.accent}`,borderRadius:6,padding:'11px 14px',marginBottom:8,cursor:url?'pointer':'default'}}><div style={{display:'flex',justifyContent:'space-between',alignItems:'baseline',marginBottom:4}}><span style={{fontSize:13,fontWeight:600,color:url?C.accent:C.text}}>{name}{url?' ↗':''}</span><div>{freq&&<Tag color={col||C.accent}>{freq}</Tag>}{tag&&<Tag color={C.muted}>{tag}</Tag>}</div></div><div style={{fontSize:12,color:C.muted,lineHeight:1.5}}>{desc}</div></div>);
+  return <div>
+    <SH>Sources</SH>
+    <p style={{fontSize:13,color:C.muted,marginBottom:20}}>Everything to read and listen to — click to open</p>
+    <Sub>Daily Must-Read</Sub>
+    <Lnk name="FT Alphaville" url="https://www.ft.com/alphaville" freq="Daily" tag="Free" col={C.accent} desc="Best financial journalism for market professionals. Opinionated, fast, no filler."/>
+    <Lnk name="Bloomberg Markets" url="https://www.bloomberg.com/markets" freq="Daily" tag="Limited free" col={C.green} desc="The bible. Headlines, rates tables, equity movers. Even the free tier is valuable."/>
+    <Lnk name="WSJ Markets" url="https://www.wsj.com/news/markets" freq="Daily" tag="Paywalled" col={C.amber} desc="US establishment markets voice. Excellent Fed coverage, corporate earnings, M&A."/>
+    <Lnk name="Reuters Markets" url="https://www.reuters.com/markets/" freq="Daily" tag="Free" col={C.cyan} desc="Fast, reliable. Great for breaking news on central banks, geopolitics, commodity moves."/>
+    <Sub>Free Market Data</Sub>
+    <Lnk name="FRED (St. Louis Fed)" url="https://fred.stlouisfed.org" freq="Any time" tag="Free" col={C.green} desc="Best free macro data. Yield curve, CPI, GDP, employment. Bookmark now."/>
+    <Lnk name="Treasury Yield Curve" url="https://home.treasury.gov/resource-center/data-chart-center/interest-rates" freq="Daily" tag="Free" col={C.accent} desc="Official daily Treasury yield data. See the full curve, watch 2s10s, 3m10s."/>
+    <Lnk name="CME FedWatch" url="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" freq="Daily" tag="Free" col={C.amber} desc="Real-time Fed hike/cut probabilities from futures markets. Check every day."/>
+    <Lnk name="Yahoo Finance" url="https://finance.yahoo.com" freq="Daily" tag="Free" col={C.purple} desc="Free quotes for SPX, VIX, DXY, WTI, 10Y yield. Quick daily numbers check."/>
+    <Sub>Podcasts</Sub>
+    <Lnk name="Bloomberg Surveillance" url="https://www.bloomberg.com/podcasts/surveillance" freq="Daily weekdays" tag="Podcast" col={C.green} desc="Gold standard. Macro professionals discussing real-time markets. Listen every weekday."/>
+    <Lnk name="Bloomberg Odd Lots" url="https://www.bloomberg.com/podcasts/odd-lots" freq="2–3x weekly" tag="Podcast" col={C.accent} desc="Deep market mechanics. Repo, CLOs, structured credit, yield curve math."/>
+    <Lnk name="JPMorgan Making Sense" url="https://www.jpmorgan.com/insights/markets/market-commentary/making-sense" freq="Weekly" tag="Podcast" col={C.amber} desc="JPM economists and strategists. Good for seeing how a bank frames a trade idea."/>
+    <Lnk name="Forward Guidance" url="https://blockworks.co/podcast/forward-guidance" freq="Weekly" tag="Podcast" col={C.cyan} desc="Deep macro and rates focus. Excellent for rates, credit, and macro deep dives."/>
+    <Sub>For Your Product Area</Sub>
+    <Lnk name="Calculated Risk" url="https://www.calculatedriskblog.com" freq="Weekly" tag="Rates/Macro" col={C.accent} desc="Best free US housing and economic data analysis. Essential for rates/macro depth."/>
+    <Lnk name="SpotGamma" url="https://spotgamma.com" freq="Daily" tag="Equities" col={C.green} desc="Options flow and gamma analysis. Understand how derivatives desks think about positioning."/>
+    <Lnk name="Credit Investor Substack" url="https://creditinvestor.substack.com" freq="Weekly" tag="Credit" col={C.purple} desc="Credit market commentary. HY/IG dynamics, spread analysis, CLO mechanics."/>
+  </div>;
+}
+
+function ModelSection(){return <div>
+  <SH>The Mental Model</SH>
+  <p style={{fontSize:13,color:C.muted,marginBottom:20}}>How professionals actually think about markets</p>
+  <Card><P><strong style={{color:C.text}}>Markets are discounting machines.</strong> Every price reflects aggregate beliefs about future cash flows discounted at a risk-adjusted rate. The question is never "is this a good company?" It's <em style={{color:C.amber}}>"is this correctly priced given what the market already knows?"</em></P></Card>
+  <Sub>The Hierarchy</Sub>
+  <Card>{[['01',C.accent,'Central Bank Policy','The risk-free rate anchors every asset. When the Fed moves, everything re-prices.'],['02',C.cyan,'Macro Regime','Where are we in the cycle? This determines which asset classes win.'],['03',C.green,'Asset Class Outlook','Given the regime: equities vs. bonds vs. FX vs. alternatives.'],['04',C.muted,'Sector / Security','Which sectors or names best capture the theme?']].map(([n,col,title,desc])=>(<div key={n} style={{display:'flex',gap:12,marginBottom:12}}><span style={{fontFamily:'monospace',fontSize:11,color:col,minWidth:18,paddingTop:2}}>{n}</span><div><div style={{fontSize:13,fontWeight:600,color:C.text,marginBottom:2}}>{title}</div><div style={{fontSize:13,color:C.muted,lineHeight:1.6}}>{desc}</div></div></div>))}</Card>
+  <Sub>Three Questions for Any View</Sub>
+  <Grid cols={3}>{[['What\'s priced in?',C.cyan,'The current price implies a specific future. What consensus is embedded?'],['What\'s my variant view?',C.amber,'Where do I disagree and why?'],['What\'s the catalyst?',C.purple,'What event forces the market to reprice toward your view?']].map(([q,col,a])=>(<Card key={q} accent={col}><div style={{fontSize:13,fontWeight:600,color:col,marginBottom:6}}>{q}</div><div style={{fontSize:13,color:C.muted,lineHeight:1.5}}>{a}</div></Card>))}</Grid>
+  <Sub>Risk-On vs. Risk-Off</Sub>
+  <Grid>{[[C.green,'RISK-ON',['Equities rally','HY spreads tighten','EM currencies strengthen','USD weakens','Gold flat','VIX falls']],[C.red,'RISK-OFF',['Equities sell off','HY spreads widen','EM currencies weaken','USD rallies','Gold rallies','VIX spikes']]].map(([col,label,items])=>(<Card key={label} accent={col}><div style={{fontSize:11,fontWeight:700,color:col,letterSpacing:'0.1em',marginBottom:8}}>{label}</div>{items.map(x=><div key={x} style={{fontSize:12,color:C.text,borderLeft:`2px solid ${col}33`,paddingLeft:8,marginBottom:4}}>{x}</div>)}</Card>))}</Grid>
+</div>;}
+
+function MacroSection(){
+  const[tab,setTab]=useState('cycle');
+  return <div>
+    <SH>Macro Framework</SH>
+    <p style={{fontSize:13,color:C.muted,marginBottom:20}}>The engine that drives every asset class</p>
+    <TabBar tabs={[{id:'cycle',label:'Economic Cycle'},{id:'data',label:'Key Data'},{id:'fed',label:'The Fed'},{id:'curve',label:'Yield Curve'}]} active={tab} set={setTab}/>
+    {tab==='cycle'&&<><Grid>{[['Expansion',C.green,['GDP above trend','Unemployment falling','Earnings growing','Spreads tightening'],'Cyclicals, HY credit, equities'],['Peak',C.amber,['Inflation elevated','CB hiking','Curve flattening','Labor very tight'],'Defensives, commodities, short duration'],['Contraction',C.red,['GDP slowing/negative','Earnings falling','Unemployment rising','Spreads widening'],'Treasuries, USD, gold, defensives'],['Recovery',C.cyan,['Leading indicators turning','CB pivoting dovish','Credit easing','Stimulus taking effect'],'Equities lead, especially growth']].map(([phase,col,signals,assets])=>(<Card key={phase} accent={col}><div style={{fontSize:13,fontWeight:700,color:col,marginBottom:7}}>{phase}</div>{signals.map(s=><div key={s} style={{fontSize:12,color:C.muted,marginBottom:3}}>· {s}</div>)}<div style={{fontSize:12,color:C.text,marginTop:8,paddingTop:8,borderTop:`1px solid ${C.border}`}}><span style={{color:C.muted}}>Assets: </span>{assets}</div></Card>))}</Grid>
+    <Sub>Indicator Types</Sub>
+    <Grid cols={3}>{[['Leading',C.cyan,'Predict future',['2s10s yield curve','ISM New Orders PMI','Building permits','Consumer confidence']],['Coincident',C.accent,'Move with economy',['GDP','Industrial production','Non-farm payrolls','Personal income']],['Lagging',C.muted,'Confirm after',['CPI / PCE','Unemployment rate','Corporate margins','Bank lending rates']]].map(([type,col,desc,examples])=>(<Card key={type} accent={col}><div style={{fontSize:13,fontWeight:600,color:col,marginBottom:3}}>{type}</div><div style={{fontSize:12,color:C.muted,marginBottom:7}}>{desc}</div>{examples.map(e=><div key={e} style={{fontSize:12,color:C.text,marginBottom:3}}>· {e}</div>)}</Card>))}</Grid></>}
+    {tab==='data'&&<>{[{cat:'Labor',col:C.green,items:[{name:'NFP',freq:'First Friday monthly',why:'Most market-moving US release. Strong = Fed hawkish. Weak = cuts back on table.',mkt:'Rates, USD, equities'},{name:'JOLTS',freq:'Monthly',why:'Labor demand. High quits = wage pressure = inflation risk.',mkt:'Short-end rates'},{name:'Initial Claims',freq:'Weekly Thursday',why:'High-frequency labor check.',mkt:'Front-end rates'}]},{cat:'Inflation',col:C.red,items:[{name:'CPI',freq:'Monthly mid-month',why:'Headline vs. core. Currently ~3.7% headline, 3.4% core.',mkt:'2Y yields and USD'},{name:'PCE (Core)',freq:'Monthly end-of-month',why:"Fed's preferred measure. 3.3%+ is why Warsh is hiking.",mkt:'Fed-critical'},{name:'PPI',freq:'Monthly',why:'Upstream inflation — leads CPI.',mkt:'CPI expectations'}]},{cat:'Growth',col:C.accent,items:[{name:'GDP',freq:'Quarterly',why:'2026 tracking 1.5–2%.',mkt:'Equities, rates, USD'},{name:'ISM PMI',freq:'First business day monthly',why:'Above 50 = expansion. New Orders is the forward-looking piece.',mkt:'Rates, equities, commodities'},{name:'Retail Sales',freq:'Monthly',why:'Consumer spending = 70% of US GDP.',mkt:'Consumer equities, rates'}]}].map(({cat,col,items})=><div key={cat}><Sub><span style={{color:col}}>{cat}</span></Sub>{items.map(r=><Card key={r.name} accent={col}><div style={{display:'flex',justifyContent:'space-between',alignItems:'baseline',marginBottom:5}}><span style={{fontSize:13,fontWeight:600,color:C.text}}>{r.name}</span><span style={{fontSize:11,color:C.muted,fontFamily:'monospace'}}>{r.freq}</span></div><div style={{fontSize:13,color:C.muted,marginBottom:4,lineHeight:1.5}}>{r.why}</div><div style={{fontSize:12}}><span style={{color:C.dim}}>Market: </span><span style={{color:col}}>{r.mkt}</span></div></Card>)}</div>)}</>}
+    {tab==='fed'&&<><Card accent={C.amber}><P><strong style={{color:C.text}}>Kevin Warsh became Fed Chair May 2026.</strong> More hawkish than Powell, anti-forward-guidance. Hiked 25bps to 3.75–4.00% Sept 16, 2026. Markets pricing further hikes. Core PCE at 3.3%+.</P></Card>
+    <Sub>Tools</Sub>{[{tool:'Federal Funds Rate',type:'Primary',desc:"Controls overnight rate. Currently 3.75–4.00%. Markets pricing 4.25–4.50% by year end.",effect:'Controls short end'},
+    {tool:'QE / QT',type:'Balance sheet',desc:"QE: Fed buys Treasuries/MBS. QT: lets bonds mature without reinvesting. QT still running.",effect:'QT drains reserves'},
+    {tool:'Forward Guidance',type:'Communication',desc:"Warsh explicitly refuses to pre-commit to a rate path. More rate volatility than Powell era.",effect:'More vol, harder to front-run'}].map(t=>(<Card key={t.tool}><div style={{display:'flex',gap:8,alignItems:'baseline',marginBottom:6}}><span style={{fontSize:13,fontWeight:600,color:C.text}}>{t.tool}</span><Tag color={C.accent}>{t.type}</Tag></div><P>{t.desc}</P><div style={{fontSize:12,color:C.accent}}>Effect: {t.effect}</div></Card>))}
+    <Sub>Key Vocabulary</Sub>
+    <Grid>{[['Hawkish','Policy bias toward hiking rates'],['Dovish','Policy bias toward cutting rates'],['Dot Plot','FOMC members\' future rate projections. Released quarterly.'],['Terminal Rate','Peak rate in a hiking cycle. ~4.5–4.7% by late 2027.'],['Pivot','When Fed shifts direction. Markets front-run pivots months ahead.'],['r* (Neutral Rate)','Neither stimulative nor restrictive. Fed estimate ~2.5–3%.'],['Higher for Longer','Rates stay elevated even after inflation falls.'],['SEP','Summary of Economic Projections — GDP, unemployment, PCE forecasts.']].map(([term,def])=>(<Card key={term}><div style={{fontSize:13,fontWeight:600,color:C.cyan,marginBottom:4}}>{term}</div><div style={{fontSize:12,color:C.muted,lineHeight:1.5}}>{def}</div></Card>))}</Grid></>}
+    {tab==='curve'&&<><Card accent={C.accent}><P><strong style={{color:C.text}}>The yield curve is the most important chart in finance.</strong> Plots Treasury yields across maturities. Shape tells you everything about growth, inflation, and policy expectations.</P></Card>
+    <Sub>Shapes</Sub>
+    <Grid>{[['Normal',C.green,'Long > short. Healthy. Growth expected.',],['Inverted',C.red,'Short > long. Recession predictor. US 2022–2023.'],['Bear Steepener',C.amber,'Long rises faster. Inflation fears. 2026 theme.'],['Flat',C.muted,'Short ≈ long. Late cycle transition.']].map(([s,c,d])=>(<Card key={s} accent={c}><div style={{fontSize:13,fontWeight:600,color:c,marginBottom:5}}>{s}</div><div style={{fontSize:13,color:C.muted,lineHeight:1.5}}>{d}</div></Card>))}</Grid>
+    <Sub>Movement Vocab</Sub>
+    <Grid>{[['Bull flattener','Short falls faster — Fed expected to cut'],['Bear flattener','Short rises faster — Fed hiking into slowdown'],['Bull steepener','Long falls faster — growth expectations declining'],['Bear steepener','Long rises faster — inflation/fiscal fears. 2026.'],['Parallel shift','All maturities move same amount'],['Twist','Short and long move in opposite directions']].map(([term,def])=>(<Card key={term}><span style={{fontSize:13,fontWeight:600,color:C.cyan}}>{term}: </span><span style={{fontSize:13,color:C.muted}}>{def}</span></Card>))}</Grid></>}
+  </div>;
+}
+
+function AssetsSection(){
+  const[tab,setTab]=useState('equities');
+  return <div>
+    <SH>Asset Classes</SH>
+    <p style={{fontSize:13,color:C.muted,marginBottom:20}}>The instruments you'll price and sell</p>
+    <TabBar tabs={[{id:'equities',label:'Equities'},{id:'fixed',label:'Fixed Income'},{id:'fx',label:'FX & Commodities'},{id:'alts',label:'Alternatives'}]} active={tab} set={setTab}/>
+    {tab==='equities'&&<><Sub>Valuation</Sub>{[{m:'P/E',f:'Price / EPS',w:'How much per dollar of earnings. S&P avg ~16x. Ask: which direction are estimates moving?'},{m:'Forward P/E',f:'Price / Next 12m EPS estimate',w:'Market trades on expectations. Watch earnings revision direction.'},{m:'EV/EBITDA',f:'Enterprise Value / EBITDA',w:'Capital structure-neutral. Standard in banking.'},{m:'PEG',f:'P/E ÷ EPS Growth Rate',w:'Adjusts for growth. PEG < 1 can signal undervaluation.'}].map(v=>(<Card key={v.m}><div style={{display:'flex',gap:10,alignItems:'baseline',marginBottom:5}}><span style={{fontSize:13,fontWeight:600,color:C.text}}>{v.m}</span><code style={{fontSize:11,color:C.accent,background:C.accentLo,padding:'1px 6px',borderRadius:3}}>{v.f}</code></div><div style={{fontSize:13,color:C.muted,lineHeight:1.5}}>{v.w}</div></Card>))}
+    <Sub>Earnings Framework</Sub>
+    <Card accent={C.amber}><P>Market trades the <em style={{color:C.amber}}>surprise vs. consensus</em>. Beat + raised guidance = strongest signal.</P>
+    <Grid>{[['EPS Beat','Earnings > consensus.'],['Revenue Beat','Sales > consensus. Quality signal.'],['Beat & Raise','Beat + raised guidance. Most bullish.'],['Guidance Cut','Most negative catalyst.'],['Op Margin','EBIT/Revenue. Expansion = pricing power.'],['FCF','Cash after capex. Funds buybacks/dividends.']].map(([t,d])=>(<div key={t} style={{borderLeft:`2px solid ${C.amber}33`,paddingLeft:10}}><div style={{fontSize:12,fontWeight:600,color:C.amber}}>{t}</div><div style={{fontSize:12,color:C.muted}}>{d}</div></div>))}</Grid></Card>
+    <Sub>GICS Sectors</Sub>
+    <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:7}}>{[['Technology','Growth',C.accent,'Long-duration — most rate-sensitive. AI supercycle.'],['Financials','Cyclical',C.green,'Benefits from steeper curve (NIM).'],['Healthcare','Defensive',C.cyan,'Non-cyclical. Patent cliffs + pricing risk.'],['Consumer Disc.','Cyclical',C.amber,'High beta to consumer. Amazon, Tesla.'],['Consumer Staples','Defensive',C.green,'Outperforms in downturns.'],['Energy','Commodity',C.amber,'Trades with oil. Benefiting from $100+ WTI.'],['Industrials','Cyclical',C.muted,'Capex cycle, defense, AI data centers.'],['Comm. Services','Mixed',C.purple,'Meta, Alphabet, Netflix.'],['Real Estate','Rate-sensitive',C.red,'Hurt by rising rates.'],['Utilities','Defensive',C.muted,'Bond proxy — falls when rates rise.'],['Materials','Cyclical',C.amber,'Mining, chemicals. Trades on China + commodities.']].map(([s,cycle,col,note])=>(<div key={s} style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:5,padding:'8px 10px'}}><div style={{fontSize:12,fontWeight:600,color:C.text,marginBottom:3}}>{s}</div><Tag color={col}>{cycle}</Tag><div style={{fontSize:11,color:C.muted,marginTop:4,lineHeight:1.4}}>{note}</div></div>))}</div></>}
+    {tab==='fixed'&&<><Card><P><strong style={{color:C.text}}>~$130T globally — the world's largest asset class.</strong></P></Card>
+    <Sub>Basics</Sub>
+    <Grid>{[['Price-Yield (Inverse)','Yields rise → prices fall. Most critical mechanic.'],['Duration','Price sensitivity per 1% yield change. 7yr duration = ~7% price drop per 1% yield rise.'],['YTM','Total return if held to maturity. What traders quote.'],['DV01','Dollar change per 1 basis point yield change. How traders size positions.']].map(([t,d])=>(<Card key={t}><div style={{fontSize:13,fontWeight:600,color:C.cyan,marginBottom:4}}>{t}</div><div style={{fontSize:13,color:C.muted,lineHeight:1.5}}>{d}</div></Card>))}</Grid>
+    <Card accent={C.red}><P><strong style={{color:C.text}}>Why 2022 was catastrophic:</strong> 400bps of hikes. Long-duration bonds (~17yr duration) × 4% = ~68% price impact. Worst year for bonds in 100+ years. Duration is risk.</P></Card>
+    <Sub>Credit</Sub>
+    <Grid>{[[C.green,'Investment Grade (IG)','BBB-/Baa3+. Spreads typically 50–150bps over Treasuries.'],[C.amber,'High Yield (HY)','BB+ or below. 300–500bps normal. Trades more like equity.']].map(([col,title,desc])=>(<Card key={title} accent={col}><div style={{fontSize:13,fontWeight:700,color:col,marginBottom:6}}>{title}</div><div style={{fontSize:12,color:C.muted,lineHeight:1.5}}>{desc}</div></Card>))}</Grid></>}
+    {tab==='fx'&&<><Sub>FX Basics</Sub>{[{t:'Spot Rate',d:'Current rate, settlement T+2.'},{t:'Forward Rate',d:'Agreed rate for future date. Reflects interest rate differentials.'},{t:'Carry Trade',d:'Borrow in low-rate currency (JPY), invest in high-rate (BRL). Unwinds violently in risk-off.'},{t:'DXY',d:'EUR 57.6%, JPY 13.6%, GBP 11.9%, CAD 9.1%, SEK 4.2%, CHF 3.6%.'}].map(i=>(<Card key={i.t}><div style={{fontSize:13,fontWeight:600,color:C.cyan,marginBottom:4}}>{i.t}</div><div style={{fontSize:13,color:C.muted,lineHeight:1.5}}>{i.d}</div></Card>))}
+    <Sub>Commodities</Sub>{[{n:'WTI / Brent',tag:'Energy',col:C.amber,d:'Currently $100+ from Strait of Hormuz. Major driver of 2026 inflation.'},{n:'Gold',tag:'Safe Haven',col:C.amber,d:'Inversely correlated with real rates. USD hedge and geopolitical barometer.'},{n:'Copper',tag:'Growth',col:C.cyan,d:'"Dr. Copper." Predicts economic activity. Watch China demand signals.'}].map(c=>(<Card key={c.n} accent={c.col}><div style={{display:'flex',gap:8,marginBottom:6}}><span style={{fontSize:13,fontWeight:600,color:C.text}}>{c.n}</span><Tag color={c.col}>{c.tag}</Tag></div><div style={{fontSize:13,color:C.muted,lineHeight:1.5}}>{c.d}</div></Card>))}</>}
+    {tab==='alts'&&<><Card><P>Your institutional clients run alternatives. Need fluency for credible PM conversations.</P></Card>
+    <Sub>Private Equity</Sub>{[{t:'LBO',d:'PE acquires using ~60–70% debt. Higher rates = harder LBO math = fewer deals.'},{t:'IRR / MOIC',d:'IRR = annualized return. MOIC = total multiple. 3x = tripled the money.'},{t:'J-Curve',d:'PE funds show negative early returns (fees), then positive as exits occur.'}].map(i=>(<Card key={i.t} accent={C.purple}><div style={{fontSize:13,fontWeight:600,color:C.purple,marginBottom:4}}>{i.t}</div><div style={{fontSize:13,color:C.muted,lineHeight:1.5}}>{i.d}</div></Card>))}
+    <Sub>Private Credit</Sub>
+    <Card accent={C.accent}><P>$2T+ AUM, fastest-growing institutional asset class. Floating rate loans benefit from higher rates.</P>{[['Direct Lending','Loans to mid-market, floating rate (SOFR+).'],['CLO','Pools of leveraged loans, tranched by risk. Largest buyer of leveraged loans.'],['Mezzanine','Sub debt + equity upside. Higher yield, higher risk.']].map(([t,d])=>(<div key={t} style={{marginBottom:10,paddingLeft:12,borderLeft:`2px solid ${C.accent}33`}}><div style={{fontSize:12,fontWeight:600,color:C.text,marginBottom:2}}>{t}</div><div style={{fontSize:12,color:C.muted,lineHeight:1.4}}>{d}</div></div>))}</Card></>}
+  </div>;
+}
+
+function GlossarySection(){
+  const[q,setQ]=useState('');
+  const terms=[
+    {cat:'Rates',term:'Basis Point (bps)',def:"1/100th of 1%. 25bps = 0.25%."},
+    {cat:'Rates',term:'SOFR',def:'Replaced LIBOR. US benchmark floating rate.'},
+    {cat:'Rates',term:'Real Rate',def:'Nominal rate minus inflation. Drives gold and currencies.'},
+    {cat:'Rates',term:'Breakeven Inflation',def:'10Y nominal minus 10Y TIPS yield = market\'s 10yr inflation expectation.'},
+    {cat:'Rates',term:'TIPS',def:'Treasury Inflation-Protected Securities. Principal adjusts with CPI.'},
+    {cat:'Rates',term:'Repo',def:'Short-term borrowing using securities as collateral. Critical for bank funding.'},
+    {cat:'Equities',term:'Beta',def:'Sensitivity to market moves. Beta > 1 = more volatile. Defensives < 1.'},
+    {cat:'Equities',term:'Alpha',def:'Excess return over benchmark after risk adjustment.'},
+    {cat:'Equities',term:'Sharpe Ratio',def:'(Return - Risk-free rate) / Volatility. Higher = better risk-adjusted return.'},
+    {cat:'Equities',term:'Short Selling',def:'Borrow and sell, betting price falls, buy back to close.'},
+    {cat:'Equities',term:'VWAP',def:'Volume Weighted Average Price. Benchmark for execution quality.'},
+    {cat:'Credit',term:'IG Cliff (BBB-)',def:'Investment grade / high yield threshold. Fallen angels force selling.'},
+    {cat:'Credit',term:'Fallen Angel',def:'Was IG, downgraded to HY. Creates forced selling — often a buying opportunity.'},
+    {cat:'Credit',term:'Covenant',def:'Legal restrictions in a loan/bond. Cov-lite = more risk to lenders.'},
+    {cat:'Credit',term:'Recovery Rate',def:'How much creditors recover in default. Senior ~60–70%, HY unsecured ~30–40%.'},
+    {cat:'Credit',term:'CDS',def:'Credit Default Swap. Insurance against default. Spreads = real-time credit health.'},
+    {cat:'Macro',term:'PMI',def:'Purchasing Managers\' Index. 50 = expansion/contraction line.'},
+    {cat:'Macro',term:'Stagflation',def:'High inflation + stagnant growth. 2026 has "stagflation-lite" characteristics.'},
+    {cat:'Macro',term:'Soft Landing',def:'CB raises rates to kill inflation without recession. 2024 US outcome.'},
+    {cat:'Macro',term:'Fiscal Policy',def:'Government spending and taxation. Congress/Treasury. Separate from the Fed.'},
+    {cat:'Macro',term:'QE / QT',def:'Quantitative Easing (balance sheet expansion) / Tightening (contraction).'},
+    {cat:'FX',term:'DXY',def:'Dollar Index: EUR 57.6%, JPY 13.6%, GBP 11.9%, CAD 9.1%, SEK 4.2%, CHF 3.6%.'},
+    {cat:'FX',term:'Carry Trade',def:'Borrow in low-rate currency, invest in high-rate. Unwinds violently in risk-off.'},
+    {cat:'FX',term:'Intervention',def:"Central bank buys/sells its own currency to influence the exchange rate."},
+    {cat:'Derivatives',term:'Call / Put',def:'Call = right to buy at strike. Put = right to sell. Buyer pays premium.'},
+    {cat:'Derivatives',term:'Delta',def:'Option price change per $1 move in underlying. 0–1 calls, 0 to -1 puts.'},
+    {cat:'Derivatives',term:'Implied Vol (IV)',def:"Market's forecast of future vol from option prices. VIX is S&P 500's 30-day IV."},
+    {cat:'Derivatives',term:'VIX',def:'Fear index. Below 15 = calm. Above 30 = fear. Spiked >80 in COVID.'},
+    {cat:'Derivatives',term:'Swap',def:'Exchange of cash flows. Interest rate swap: fixed for floating.'},
+    {cat:'Market Structure',term:'Market Maker',def:'Quotes both bid and ask, providing liquidity. What S&T desks do.'},
+    {cat:'Market Structure',term:'Block Trade',def:'Large institutional trade (>$5M+) executed to minimize market impact.'},
+    {cat:'Market Structure',term:'Dark Pool',def:'Private exchange for large anonymous orders.'},
+  ];
+  const filtered=useMemo(()=>{if(!q)return terms;const lq=q.toLowerCase();return terms.filter(t=>t.term.toLowerCase().includes(lq)||t.def.toLowerCase().includes(lq)||t.cat.toLowerCase().includes(lq));},[q]);
+  const cats=[...new Set(filtered.map(t=>t.cat))];
+  return <div>
+    <SH>Technical Glossary</SH>
+    <p style={{fontSize:13,color:C.muted,marginBottom:16}}>{terms.length} terms — search anything</p>
+    <input value={q} onChange={e=>setQ(e.target.value)} placeholder="Search: 'duration', 'credit', 'carry'…" style={{width:'100%',maxWidth:440,background:C.card,border:`1px solid ${C.border}`,borderRadius:6,padding:'9px 14px',color:C.text,fontSize:13,outline:'none',marginBottom:20,boxSizing:'border-box'}}/>
+    {cats.map(cat=><div key={cat}><Sub>{cat}</Sub><Grid>{filtered.filter(t=>t.cat===cat).map(t=>(<Card key={t.term}><div style={{fontSize:13,fontWeight:600,color:C.cyan,marginBottom:4}}>{t.term}</div><div style={{fontSize:12,color:C.muted,lineHeight:1.5}}>{t.def}</div></Card>))}</Grid></div>)}
+    {!filtered.length&&<div style={{color:C.muted,fontSize:13,padding:20}}>No terms found.</div>}
+  </div>;
+}
+
+function NarrativeSection(){
+  const[sel,setSel]=useState(null);
+  const events=[
+    {year:'2020',col:C.red,title:'COVID Shock & The Everything Rally',detail:'March 2020: S&P fell 34% in 33 days. Fed cut to 0%, launched $120B/month QE. Congress deployed $6T+ stimulus. Markets recovered by August — fastest recovery ever. Lesson: Never fight the Fed + fiscal bazooka.'},
+    {year:'2021',col:C.amber,title:'Reopening + Inflation Surprise',detail:'Demand surged into supply chains wound down during COVID. CPI hit 5% by May 2021. Fed called it "transitory" — the biggest policy error in decades. SPAC boom, meme stocks, crypto ATHs.'},
+    {year:'2022',col:C.red,title:'The Great Tightening',detail:'Russia invaded Ukraine → energy + food shock. CPI peaked at 9.1% in June. Fed hiked 425bps in one year including four 75bps hikes. Bonds had worst year in 100+ years. Tech stocks down 40–70%. Lesson: Duration is risk.'},
+    {year:'2023',col:C.amber,title:'Soft Landing Debate & AI Boom',detail:'March: SVB failed. Fed continued to 5.25–5.50% by July. "Higher for longer" dominant. ChatGPT (Nov 2022), NVIDIA became the most important stock on earth. S&P recovered as AI enthusiasm offset rate fears.'},
+    {year:'2024',col:C.green,title:'The Pivot — Soft Landing Achieved',detail:'Fed started cutting in September 2024, bringing rates from 5.25–5.50% down to ~3.25–3.50% by early 2025. Equities hit ATHs. Credit spreads tightened. Yield curve un-inverted. AI capex boom: $500B+ committed.'},
+    {year:'2025',col:C.amber,title:'Tariff Shock & Stagflation-Lite',detail:'Broad tariffs → supply chain disruptions → inflation re-accelerated toward 3%+. Labor market slowed. Powell\'s term expired May 2026. Kevin Warsh nominated — more hawkish, anti-forward-guidance.'},
+    {year:'2026',col:C.red,title:'Second Tightening Cycle — Current',detail:'Markets expected CUTS. Instead: Warsh\'s Fed hiked. Strait of Hormuz closure → oil above $100 → core PCE 3.3%+. Warsh hiked 25bps Sept 16, 2026 to 3.75–4.00%. Markets pricing Oct + Dec hikes. Bear-steepening curve. Elevated rate vol because Warsh won\'t give forward guidance.'},
+  ];
+  return <div>
+    <SH>Market History</SH>
+    <p style={{fontSize:13,color:C.muted,marginBottom:16}}>The cohesive story to tell in interviews — click each era</p>
+    <Card accent={C.amber}><P><strong style={{color:C.text}}>In interviews:</strong> start with today and work backward. The 2026 second tightening story is interesting and not fluently known by every candidate.</P></Card>
+    {events.map(e=>(<div key={e.year} onClick={()=>setSel(sel===e.year?null:e.year)} style={{cursor:'pointer',marginBottom:8}}><div style={{display:'flex',gap:14,alignItems:'center',background:C.card,border:`1px solid ${sel===e.year?e.col:C.border}`,borderLeft:`3px solid ${e.col}`,borderRadius:6,padding:'12px 16px'}}><span style={{fontFamily:'monospace',fontSize:13,fontWeight:700,color:e.col,minWidth:36}}>{e.year}</span><span style={{fontSize:13,fontWeight:600,color:C.text,flex:1}}>{e.title}</span><span style={{fontSize:11,color:C.dim}}>{sel===e.year?'▲':'▼'}</span></div>{sel===e.year&&<div style={{background:`${e.col}08`,border:`1px solid ${e.col}33`,borderTop:'none',borderRadius:'0 0 6px 6px',padding:'14px 16px'}}><p style={{fontSize:13,lineHeight:1.8,color:C.text,margin:0}}>{e.detail}</p></div>}</div>))}
+    <Sub>The One-Paragraph Interview Answer</Sub>
+    <Card accent={C.accent}><p style={{fontSize:13,lineHeight:1.85,color:C.text,margin:0,fontStyle:'italic'}}>"We went from COVID-era zero rates and massive QE in 2020–2021 into the fastest tightening cycle in 40 years in 2022, as inflation hit a 9% peak. The Fed achieved a rare soft landing, cutting rates to ~3.5% by early 2025. But tariffs in 2025 and a Strait of Hormuz oil supply shock in 2026 re-accelerated inflation above 3%, and the new Fed Chair Warsh — more hawkish and anti-forward-guidance — has started hiking again. So we're in a second tightening cycle: bear-steepening curve, elevated rate volatility, and the market trying to figure out where the terminal rate lands this time."</p></Card>
+  </div>;
+}
+
+function InterviewSection(){
+  const[open,setOpen]=useState(null);
+  const qas=[
+    {q:'Walk me through what happened to the bond market in 2022.',cat:'Rates',a:'The Fed hiked 425bps in one year — fastest since Volcker. Bond prices move inversely to yields. Long-duration bonds (~17yr duration) × 4% yield rise = ~68% price impact from duration alone. Worst year for bonds in 100+ years. The lesson: duration is risk.'},
+    {q:'If the Fed hikes 100bps, what happens to bonds and equities?',cat:'Cross-Asset',a:'Bonds: price falls. A 10Y Treasury (~9yr duration) loses ~9%. Long bonds hurt far more. Equities: rising discount rates hurt growth stocks most (long-duration). Defensives (utilities, REITs) also hurt — bond proxies. Banks can benefit from steeper curve (NIM). Net: equities usually sell off, growth more than value.'},
+    {q:'What is the yield curve telling us right now?',cat:'Current Macro',a:'Currently bear-steepening — long end rising faster as inflation concerns mount. Warsh hiked in September 2026, markets pricing Oct and Dec. Oil $100+ from Middle East feeding into PCE (3.3%). No longer inverted like 2022–2023, but steepening reflects inflation premium priced back into long bonds.'},
+    {q:'Pitch me a trade you\'d put on today.',cat:'Trade Idea',a:'Framework: thesis, instrument, catalyst, risk. Example: "I\'d buy 2-year Treasuries and short 10-year — a flattener trade. Thesis: Warsh is anchoring the short end by hiking, but the long end has priced in too much inflation premium. Catalyst: if next CPI comes in below expectations, long end rallies while short stays anchored. Risk: oil continues rising, trade doesn\'t work."'},
+    {q:'Why do bond prices fall when yields rise?',cat:'Rates Basics',a:'A bond promises $50/year on $1,000 par — that\'s 5%. If new bonds offer 6%, your 5% bond is less attractive. The price must fall until the fixed $50 coupon represents a 6% return on the new lower price. Inverse relationship — mechanical and fundamental.'},
+    {q:'Walk me through how equities are valued.',cat:'Equities',a:'Core metrics: P/E (how much per dollar of earnings), forward P/E (trades on expectations), EV/EBITDA (capital structure-neutral). S&P historically ~16x P/E. Rising rates increase the discount rate on future earnings, compressing multiples especially for growth stocks. Whether high P/E is justified depends on EPS growth trajectory and earnings revision direction.'},
+    {q:'What\'s the difference between monetary and fiscal policy?',cat:'Macro',a:'Monetary = the Fed. Tools: interest rates, QE/QT. Goal: 2% inflation + max employment. Fiscal = Congress/Treasury. Tools: spending, taxation. Key tension: government running large deficits (fiscal expansion) while Fed tightens (monetary) = 2026 situation — fiscal stimulus fighting monetary policy, keeping inflation elevated. Warsh has flagged this explicitly.'},
+    {q:'What makes a good sales professional on a trading desk?',cat:'Role Fit',a:'Three things: (1) Market fluency — credible conversation with a PM. (2) Client understanding — anticipate needs before they ask. (3) Communication — translate complex dynamics into a clear, actionable narrative quickly. The best salespeople frame information as what it means for the specific client\'s portfolio.'},
+    {q:'How do you explain credit spreads to someone non-technical?',cat:'Communication',a:'"Imagine lending money to two people — one has steady income and great credit, one has been struggling. You\'d charge the struggling person a higher interest rate. That extra rate is the credit spread. When investors get nervous about the economy, they demand a bigger premium to lend to riskier borrowers — spreads widen. Tight = confidence. Wide = fear."'},
+    {q:'What is a carry trade and what\'s the risk?',cat:'FX',a:'Borrow in a low-rate currency (JPY at ~0%), invest in a high-rate one (BRL, TRY). Profit = interest rate differential. Risk: if high-rate currency depreciates against your borrowed currency, you lose more than the carry. Second risk: carry unwinds violently in risk-off — everyone exits simultaneously, causing EM currency crashes. August 2024 JPY short squeeze is a great recent example.'},
+  ];
+  return <div>
+    <SH>Interview Prep</SH>
+    <p style={{fontSize:13,color:C.muted,marginBottom:20}}>Click any question to see the answer framework</p>
+    <Sub>Coffee Chat Framework</Sub>
+    <Card accent={C.cyan}>{[['A market theme you\'re following + why','"I\'ve been focused on the second tightening cycle — Warsh\'s anti-guidance stance and what it means for rate vol…"'],['Why S&T sales specifically','Connect to client relationships, translating complex ideas, speed of feedback loops.'],['Why this bank / desk','Research the desk. Know their products, recent deals, who covers what.'],['A question for them','"How does your desk position around Warsh\'s refusal to give forward guidance?" Not "what do you do day-to-day."']].map(([q,a])=>(<div key={q} style={{marginBottom:12,paddingLeft:12,borderLeft:`2px solid ${C.cyan}44`}}><div style={{fontSize:13,fontWeight:600,color:C.text,marginBottom:3}}>{q}</div><div style={{fontSize:12,color:C.muted,lineHeight:1.5}}>{a}</div></div>))}</Card>
+    <Sub>Q&A Bank</Sub>
+    {qas.map((item,i)=>(<div key={i} onClick={()=>setOpen(open===i?null:i)} style={{cursor:'pointer',marginBottom:8}}><div style={{display:'flex',gap:10,alignItems:'center',background:C.card,border:`1px solid ${open===i?C.accent:C.border}`,borderLeft:`3px solid ${open===i?C.accent:C.dim}`,borderRadius:6,padding:'11px 14px'}}><Tag color={C.purple}>{item.cat}</Tag><span style={{fontSize:13,fontWeight:500,color:C.text,flex:1}}>{item.q}</span><span style={{fontSize:11,color:C.dim}}>{open===i?'▲':'▼'}</span></div>{open===i&&<div style={{background:C.accentLo,border:`1px solid ${C.accent}33`,borderTop:'none',borderRadius:'0 0 6px 6px',padding:'14px 16px'}}><p style={{fontSize:13,lineHeight:1.8,color:C.text,margin:0}}>{item.a}</p></div>}</div>))}
+  </div>;
+}
+
+function NicheSection(){
+  return <div>
+    <SH>Your Edge</SH>
+    <p style={{fontSize:13,color:C.muted,marginBottom:20}}>Building your US S&T story — complete Product Explorer first to specialize this</p>
+    <Card accent={C.amber}><P><strong style={{color:C.text}}>Where you are now:</strong> Exploration mode — exactly right for a rising sophomore. Goal by Fall 2026: figure out which product resonates, build genuine depth in it, have a specific niche story that connects your background to why that desk.</P></Card>
+    <Sub>What US S&T Recruiters Test at Sophomore Level</Sub>
+    {[['Genuine curiosity about markets','Can you talk about a market theme you actually found interesting? They can tell the difference immediately between genuine interest and performance.'],['Framework, not just facts','It\'s not about knowing every term. It\'s about reasoning from first principles. "If rates rise, what happens?" — they want to see the thought process.'],['Self-awareness about the role','Do you actually know what a sales desk does day-to-day? Too many candidates say "I love markets" but can\'t articulate sales vs. trading vs. research.'],['Something specific about you','What makes your application non-generic? Every strong candidate has markets knowledge. What\'s the angle that makes yours memorable?']].map(([t,d])=>(<Card key={t} accent={C.amber}><div style={{fontSize:13,fontWeight:600,color:C.text,marginBottom:6}}>{t}</div><div style={{fontSize:13,color:C.muted,lineHeight:1.6}}>{d}</div></Card>))}
+    <Sub>Your Differentiators</Sub>
+    {[['Shenzhen background + international education','Gives you a genuinely different perspective on global macro. You grew up seeing China\'s economic growth from the inside. Use it as texture when discussing EM macro or global rate dynamics — not as your primary pitch, but as what makes your perspective different.'],['UChicago academic rigor','Econ and social science programs are taken seriously in finance. The analytical approach signals capability. Reference relevant coursework where it connects to markets.'],['PAIR investment club','You\'ve already done real investment analysis (Salesforce memo). Prepare 1-2 investment stories from PAIR you can walk through. Real evidence, not just "I\'m interested in markets."'],['Timing','You\'re building the foundation now as a sophomore. Most candidates start much later. By Fall 2027, you\'ll have a year of genuine market fluency. That compounds significantly.']].map(([t,d])=>(<Card key={t} accent={C.cyan}><div style={{fontSize:13,fontWeight:600,color:C.text,marginBottom:6}}>{t}</div><div style={{fontSize:13,color:C.muted,lineHeight:1.6}}>{d}</div></Card>))}
+    <Sub>Sophomore Programs to Target</Sub>
+    {[{p:'Goldman Sachs Possibilities',timing:'Jan–Mar applications',w:'GS sophomore S&T pipeline. Work your UChicago GS alumni network before applications open.'},
+    {p:'JPMorgan Sophomore Edge',timing:'Jan–Feb applications',w:'JPM\'s sophomore program specifically for S&T and markets. NY-based. One of the best on-ramps at a BB.'},
+    {p:'Morgan Stanley Sophomore Diversity',timing:'Feb–Mar applications',w:'MS has a strong sophomore pipeline for diverse S&T candidates.'},
+    {p:'Bank of America Global Markets',timing:'Feb–Mar applications',w:'BofA\'s markets sophomore program. Slightly lower competition than GS/JPM while still a top BB.'},
+    {p:'UChicago Alumni Coffee Chats',timing:'Year-round — start now',w:'Most important thing you can do now. Find UChicago alumni at BB S&T desks in NY. Coffee chats this year = network for Fall 2027 recruiting.'}].map(p=>(<Card key={p.p}><div style={{display:'flex',justifyContent:'space-between',alignItems:'baseline',marginBottom:5}}><span style={{fontSize:13,fontWeight:600,color:C.text}}>{p.p}</span><Tag color={C.amber}>{p.timing}</Tag></div><div style={{fontSize:13,color:C.muted,lineHeight:1.5}}>{p.w}</div></Card>))}
+    <Sub>Base Recruiting Narrative (Pre-Specialization)</Sub>
+    <Card accent={C.accent}><p style={{fontSize:13,lineHeight:1.85,color:C.text,margin:0,fontStyle:'italic'}}>"I'm targeting S&T sales because I'm drawn to the intersection of macro analysis and client-facing work — the translation of complex market dynamics into actionable decisions. I grew up in Shenzhen and went through international education, which gave me a different lens on how global macro plays out in practice. At UChicago I've been building technical foundations through coursework and through PAIR, our investment club. Right now I'm exploring different product areas to figure out where my strengths and interests best align — I've been spending time understanding rates, equities, and credit to get a genuine feel for each desk."</p></Card>
+  </div>;
+}
+
+function ApiKeySetup({onSave}){
+  const[k,setK]=useState('');
+  return <div style={{minHeight:'100vh',background:C.bg,display:'flex',alignItems:'center',justifyContent:'center'}}>
+    <div style={{background:C.surface,border:`1px solid ${C.border}`,borderRadius:12,padding:'40px 40px',maxWidth:460,width:'90%'}}>
+      <div style={{fontSize:10,fontFamily:'monospace',color:C.dim,letterSpacing:'0.12em',marginBottom:8}}>US S&T RECRUITING HUB</div>
+      <div style={{fontSize:24,fontWeight:800,color:C.text,marginBottom:8,letterSpacing:'-0.02em'}}>GINA'S DESK</div>
+      <p style={{fontSize:13,color:C.muted,lineHeight:1.7,marginBottom:24}}>Add your Anthropic API key to enable the live daily brief and AI tutor. It's stored in your browser only — never sent anywhere except the Anthropic API directly.</p>
+      <div style={{fontSize:11,color:C.muted,marginBottom:6}}>ANTHROPIC API KEY</div>
+      <input value={k} onChange={e=>setK(e.target.value)} onKeyDown={e=>e.key==='Enter'&&k.startsWith('sk-')&&onSave(k)} placeholder="sk-ant-..." type="password" style={{width:'100%',background:C.card,border:`1px solid ${C.border}`,borderRadius:6,padding:'10px 14px',color:C.text,fontSize:13,outline:'none',marginBottom:8,boxSizing:'border-box'}}/>
+      <button onClick={()=>onSave(k)} disabled={!k.startsWith('sk-')} style={{width:'100%',padding:'11px',background:C.accent,border:'none',borderRadius:6,color:'#fff',fontSize:13,fontWeight:600,cursor:k.startsWith('sk-')?'pointer':'not-allowed',opacity:k.startsWith('sk-')?1:0.4,marginBottom:16}}>Save & Open Hub</button>
+      <p style={{fontSize:11,color:C.dim,lineHeight:1.6}}>Get your API key at <span style={{color:C.accent}}>console.anthropic.com</span>. The static content (glossary, macro framework, interview prep) works without a key — you only need it for the live brief and Learn tutor.</p>
+      <button onClick={()=>onSave('')} style={{width:'100%',padding:'9px',background:'none',border:`1px solid ${C.border}`,borderRadius:6,color:C.muted,fontSize:12,cursor:'pointer',marginTop:8}}>Continue without API key (static content only)</button>
+    </div>
+  </div>;
+}
+
+function App(){
+  const[active,setActive]=useState('today');
+  const[apiKey,setApiKey]=useState(()=>localStorage.getItem('ant_key')||null);
+  const[editKey,setEditKey]=useState(false);
+  const[keyInput,setKeyInput]=useState('');
+
+  function saveKey(k){
+    if(k){localStorage.setItem('ant_key',k);}
+    setApiKey(k||'none');
+    setEditKey(false);
+  }
+
+  if(apiKey===null) return <ApiKeySetup onSave={saveKey}/>;
+
+  const nav=[
+    {id:'today',icon:'⚡',label:'Today'},
+    {id:'learn',icon:'◎',label:'Learn'},
+    {id:'products',icon:'⟐',label:'Product Explorer'},
+    {id:'sources',icon:'↗',label:'Sources'},
+    {id:'model',icon:'◈',label:'Mental Model'},
+    {id:'macro',icon:'∿',label:'Macro'},
+    {id:'assets',icon:'◆',label:'Asset Classes'},
+    {id:'glossary',icon:'⊕',label:'Glossary'},
+    {id:'narrative',icon:'⊙',label:'Market History'},
+    {id:'interview',icon:'▷',label:'Interview Prep'},
+    {id:'niche',icon:'★',label:'Your Edge'},
+  ];
+  const sections={today:<TodaySection/>,learn:<LearnSection/>,products:<ProductsSection/>,sources:<SourcesSection/>,model:<ModelSection/>,macro:<MacroSection/>,assets:<AssetsSection/>,glossary:<GlossarySection/>,narrative:<NarrativeSection/>,interview:<InterviewSection/>,niche:<NicheSection/>};
+
+  return <div style={{display:'flex',height:'100vh',background:C.bg,color:C.text,fontFamily:'system-ui,-apple-system,sans-serif',overflow:'hidden'}}>
+    <div style={{width:188,background:C.surface,borderRight:`1px solid ${C.border}`,display:'flex',flexDirection:'column',flexShrink:0}}>
+      <div style={{padding:'18px 16px 12px',borderBottom:`1px solid ${C.border}`}}>
+        <div style={{fontSize:10,fontFamily:'monospace',color:C.dim,letterSpacing:'0.12em',marginBottom:3}}>US S&T RECRUITING</div>
+        <div style={{fontSize:16,fontWeight:800,color:C.text,letterSpacing:'-0.02em'}}>GINA'S DESK</div>
+        <div style={{fontSize:11,color:C.muted,marginTop:3}}>UChicago · NY S&T · 2028</div>
+      </div>
+      <nav style={{padding:'8px 0',flex:1,overflowY:'auto'}}>
+        {nav.map(item=>(<button key={item.id} onClick={()=>setActive(item.id)} style={{width:'100%',textAlign:'left',padding:'9px 14px',border:'none',cursor:'pointer',display:'flex',alignItems:'center',gap:8,borderLeft:active===item.id?`2px solid ${C.accent}`:'2px solid transparent',background:active===item.id?C.accentLo:'none',fontSize:13,fontWeight:active===item.id?600:400,color:active===item.id?C.text:C.muted}}><span style={{fontSize:10,color:active===item.id?C.accent:C.dim}}>{item.icon}</span>{item.label}</button>))}
+      </nav>
+      <div style={{padding:'12px 16px',borderTop:`1px solid ${C.border}`}}>
+        <div style={{fontSize:10,color:C.dim,marginBottom:2}}>Cycle</div>
+        <div style={{fontSize:11,color:C.muted,fontFamily:'monospace',marginBottom:8}}>Fall 2027 → Summer 2028</div>
+        <div style={{fontSize:10,color:C.dim,marginBottom:2}}>Fed funds</div>
+        <div style={{fontSize:11,color:C.amber,fontFamily:'monospace',marginBottom:8}}>3.75–4.00%</div>
+        {!editKey
+          ? <div onClick={()=>setEditKey(true)} style={{fontSize:10,color:apiKey&&apiKey!=='none'?C.green:C.amber,cursor:'pointer',display:'flex',alignItems:'center',gap:4}}>
+              <span>{apiKey&&apiKey!=='none'?'✓ API connected':'⚠ No API key'}</span>
+            </div>
+          : <div><input value={keyInput} onChange={e=>setKeyInput(e.target.value)} placeholder="sk-ant-..." type="password" style={{width:'100%',background:C.card,border:`1px solid ${C.border}`,borderRadius:4,padding:'5px 8px',color:C.text,fontSize:11,outline:'none',marginBottom:4,boxSizing:'border-box'}}/><button onClick={()=>{localStorage.setItem('ant_key',keyInput);setApiKey(keyInput);setEditKey(false);}} style={{fontSize:10,color:C.accent,background:'none',border:'none',cursor:'pointer',padding:0}}>Save</button></div>}
+      </div>
+    </div>
+    <div style={{flex:1,overflow:'auto',padding:'28px 32px'}}>
+      {sections[active]}
+    </div>
+  </div>;
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>
