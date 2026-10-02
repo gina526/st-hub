@@ -1,11 +1,11 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T20:53:56.203Z",
+  "generated_at": "2026-10-02T21:05:31.811Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "769.64",
-      "change": "+5.65 (0.74%)",
+      "value": "7696",
+      "change": "+57 (+0.74%)",
       "up": true
     },
     {
@@ -22,65 +22,65 @@
     },
     {
       "name": "~DXY",
-      "value": "102.47",
-      "change": "+0.10",
-      "up": true
+      "value": "~103.2",
+      "change": "-0.15%",
+      "up": false
     },
     {
       "name": "VIX",
-      "value": "N/A",
-      "change": "N/A",
-      "up": false
+      "value": "16.39",
+      "change": "+0.05",
+      "up": true
     }
   ],
   "stories": [
     {
       "headline": "G7 countries agree on release of diesel and oil stocks after US pressure",
       "source": "Reuters",
-      "summary": "G7 nations have coordinated a strategic release of petroleum reserves to stabilize global energy markets amid geopolitical tensions. The move follows sustained diplomatic pressure from the United States to address supply constraints.",
-      "why_matters": "Oil inventory releases directly influence inflation expectations and bond yields; coordinated G7 action signals macro policy coordination on energy security.",
+      "summary": "Major G7 nations have coordinated to release strategic diesel and oil reserves in response to US pressure, aimed at stabilizing global energy markets. This move reflects geopolitical coordination on commodity supply amid Middle East tensions.",
+      "why_matters": "Energy supply coordination impacts US inflation expectations and energy sector valuations; signals potential downward pressure on crude prices supports lower inflation trajectory.",
       "tag": "Macro"
     },
     {
       "headline": "Saudis plan assault on Houthis to break Red Sea chokehold",
       "source": "Reuters",
-      "summary": "Saudi Arabia is preparing military operations to counter Houthi disruptions of critical shipping lanes in the Red Sea. These blockade actions have constrained global trade flows and contributed to energy price volatility.",
-      "why_matters": "Red Sea shipping disruptions drive commodity volatility and geopolitical risk premia, affecting both oil prices and equity valuations in transport-dependent sectors.",
+      "summary": "Saudi Arabia is preparing military action against Houthis to restore shipping lanes through the Red Sea and reduce global trade disruptions. This escalation could have significant ramifications for maritime commerce and energy logistics.",
+      "why_matters": "Red Sea disruptions directly impact US import costs, supply chain inflation, and equity valuations for shipping and energy sectors; resolution critical to Fed's disinflation narrative.",
       "tag": "Macro"
     },
     {
-      "headline": "Nvidia breaks through to new record highs. Plus, more good news for Boeing",
+      "headline": "1.7 million skilled trade jobs will open annually through 2035, experts don't know who will fill them",
       "source": "CNBC",
-      "summary": "Nvidia and Boeing both delivered positive momentum, with Nvidia reaching all-time highs amid sustained AI demand and Boeing recovering on improved outlooks. The rally reflects renewed confidence in mega-cap tech and cyclical industrials.",
-      "why_matters": "Mega-cap tech strength (Nvidia) and aerospace recovery (Boeing) underscore divergent sector leadership; AI-driven growth narratives continue to support equity multiples despite higher yields.",
-      "tag": "Equities"
+      "summary": "A report projects a structural labor shortage with 1.7 million annual skilled trade job openings through 2035, but workforce pipeline concerns remain unresolved. This supply-side constraint could sustain wage pressures in key sectors.",
+      "why_matters": "Persistent skilled labor shortages support sticky wage inflation and limit Fed rate-cutting room; directly affects long-term growth and rate trajectory expectations.",
+      "tag": "Rates"
     }
   ],
   "calendar": [
     {
       "day": "Mon",
-      "event": "Initial Jobless Claims (weekly)",
+      "event": "ISM Manufacturing PMI",
       "importance": "high",
-      "note": "Labor market health indicator; impacts Fed expectations and rate trajectory"
-    },
-    {
-      "day": "Fri",
-      "event": "Non-Farm Payrolls & Unemployment Rate",
-      "importance": "high",
-      "note": "October jobs report; critical for Fed policy decisions and 2Y/10Y curve dynamics"
+      "note": "Key indicator of economic momentum; weak print could pressure equities and support rate-cut narrative."
     },
     {
       "day": "Wed",
       "event": "ADP Employment Report",
-      "importance": "medium",
-      "note": "Private sector hiring preview; guides expectations for official NFP data"
+      "importance": "high",
+      "note": "Private payroll data ahead of Friday NFP; miss could reduce Fed taper concerns and push rates lower."
+    },
+    {
+      "day": "Fri",
+      "event": "Non-Farm Payrolls (NFP)",
+      "importance": "high",
+      "note": "Critical employment data; sets tone for Fed policy and Q4 growth expectations; expected to anchor week's rate moves."
     }
   ],
   "concept": {
-    "title": "Curve Flattening & Risk-On Equity Strength",
-    "one_liner": "Falling long-duration yields coupled with equity gains signal market belief in growth resilience despite monetary restrictiveness.",
-    "explanation": "Today's data shows both the 10Y and 2Y yields declining sharply (5 and 10 bps respectively), while SPY gained 0.74% and crude fell $3.21. This pattern reflects expectations of either Fed easing or sustained growth without inflation re-acceleration. The curve steepening (2Y down more than 10Y) typically accompanies risk-on sentiment and is consistent with the equity rally and geopolitical supply coordination (oil release), suggesting markets are pricing in a 'soft landing' scenario where inflation is managed without severe growth drag.",
-    "market_link": "Yield compression + equity upside + energy supply coordination = confidence in macro stability despite geopolitical headwinds"
+    "title": "Curve Flattening with Risk-On Equity Action",
+    "one_liner": "Long-end rates fall faster than short-end despite stock rally, signaling soft-landing optimism paired with disinflation expectations.",
+    "explanation": "The 2Y Treasury dropped 10 bps while 10Y fell only 5 bps, steepening the curve slightly as the S&P 500 rose 0.74% on moderating crude prices and coordinated oil releases. This dynamic suggests markets are pricing in both reduced near-term rate cuts and confidence that inflation is cooling without triggering recession—a Goldilocks scenario where equities can rise even as yields compress.",
+    "market_link": "Energy decline (-3.21% WTI), G7 coordinated oil release, and flattening yield curve all support lower future inflation expectations, allowing equities to rally on soft-landing odds rather than recession fears."
   },
-  "narrative": "US equities rallied 0.74% as Treasury yields compressed sharply across the curve (10Y -5 bps, 2Y -10 bps), signaling diminishing inflation concerns and potential Fed accommodation ahead. Coordinated G7 energy policy and tactical military action in the Red Sea aim to stabilize commodity prices, supporting a risk-on tone that favors both growth stocks (Nvidia, Boeing) and a flatter yield curve consistent with soft-landing narratives."
+  "narrative": "The S&P 500 gained 0.74% as coordinated G7 oil releases and falling crude prices eased inflation concerns, while the 10Y and 2Y Treasury yields both fell with the 2Y outpacing (−10 bps vs −5 bps), signaling markets are pricing in durably lower inflation without sacrificing growth—a rare risk-on environment supported by stable VIX near 16."
 }
