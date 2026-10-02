@@ -36,29 +36,31 @@ async function main() {
   console.log(`Generating brief for ${today}…`);
 
   // ── Fetch all sources in parallel ──────────────────────────────────────────
-  const [spyRaw, vixRaw, newsRaw, t10Raw, t2Raw, wtiRaw, fxRaw] = await Promise.all([
+  const [gspcRaw, spyRaw, newsRaw, t10Raw, t2Raw, wtiRaw, fxRaw, vixRaw] = await Promise.all([
+    safeGet(`https://finnhub.io/api/v1/quote?symbol=%5EGSPC&token=${FINNHUB}`, '^GSPC'),
     safeGet(`https://finnhub.io/api/v1/quote?symbol=SPY&token=${FINNHUB}`, 'SPY'),
-    safeGet(`https://finnhub.io/api/v1/quote?symbol=%5EVIX&token=${FINNHUB}`, 'VIX'),
     safeGet(`https://finnhub.io/api/v1/news?category=general&token=${FINNHUB}`, 'News'),
     safeGet(`https://api.stlouisfed.org/fred/series/observations?series_id=DGS10&api_key=${FRED}&sort_order=desc&limit=2&file_type=json`, '10Y'),
     safeGet(`https://api.stlouisfed.org/fred/series/observations?series_id=DGS2&api_key=${FRED}&sort_order=desc&limit=2&file_type=json`, '2Y'),
     safeGet(`https://www.alphavantage.co/query?function=WTI&interval=daily&apikey=${AV}`, 'WTI'),
     safeGet(`https://www.alphavantage.co/query?function=FX_DAILY&from_symbol=EUR&to_symbol=USD&apikey=${AV}`, 'EUR/USD'),
+    safeGet(`https://api.stlouisfed.org/fred/series/observations?series_id=VIXCLS&api_key=${FRED}&sort_order=desc&limit=2&file_type=json`, 'VIXCLS'),
   ]);
 
-  // ── Parse SPY ──────────────────────────────────────────────────────────────
-  const spy = spyRaw?.c ? {
-    value: fmt(spyRaw.c),
-    change: fmt(spyRaw.d),
-    changePct: fmt(spyRaw.dp),
-    up: (spyRaw.d ?? 0) >= 0,
-  } : null;
+  // ── Parse S&P 500 (^GSPC preferred, SPY*10 fallback) ──────────────────────
+  let sp500 = null;
+  if (gspcRaw?.c && gspcRaw.c > 1000) {
+    sp500 = { label: 'S&P 500', value: fmt(gspcRaw.c, 0), change: fmt(gspcRaw.d, 0), changePct: fmt(gspcRaw.dp), up: (gspcRaw.d ?? 0) >= 0 };
+  } else if (spyRaw?.c) {
+    sp500 = { label: 'S&P 500 (~)', value: fmt(spyRaw.c * 10, 0), change: fmt(spyRaw.d * 10, 0), changePct: fmt(spyRaw.dp), up: (spyRaw.d ?? 0) >= 0 };
+  }
 
-  // ── Parse VIX ──────────────────────────────────────────────────────────────
-  const vix = vixRaw?.c ? {
-    value: fmt(vixRaw.c),
-    change: fmt(vixRaw.d),
-    up: (vixRaw.d ?? 0) >= 0,
+  // ── Parse VIX from FRED VIXCLS ────────────────────────────────────────────
+  const [vixCur, vixPrev] = fredLatestTwo(vixRaw);
+  const vix = vixCur ? {
+    value: fmt(parseFloat(vixCur.value)),
+    change: vixPrev ? fmt(parseFloat(vixCur.value) - parseFloat(vixPrev.value)) : 'N/A',
+    up: vixPrev ? parseFloat(vixCur.value) >= parseFloat(vixPrev.value) : false,
   } : null;
 
   // ── Parse FRED yields ──────────────────────────────────────────────────────
@@ -111,8 +113,8 @@ async function main() {
     `Date: ${today}`,
     '',
     'LIVE MARKET DATA:',
-    `SPY: $${spy?.value ?? 'N/A'}, day change: ${spy ? `$${spy.change} (${spy.changePct}%)` : 'N/A'}`,
-    `VIX: ${vix?.value ?? 'N/A'}, day change: ${vix?.change ?? 'N/A'}`,
+    `S&P 500: ${sp500 ? `${sp500.value}, day change: ${sp500.change} (${sp500.changePct}%)` : 'N/A'}`,
+    `VIX (FRED VIXCLS): ${vix ? `${vix.value}, day change: ${vix.change}` : 'N/A'}`,
     `10Y Treasury (FRED): ${t10?.value ?? 'N/A'}%, day change: ${t10?.changeBps ?? 'N/A'} bps`,
     `2Y Treasury (FRED): ${t2?.value ?? 'N/A'}%, day change: ${t2?.changeBps ?? 'N/A'} bps`,
     `WTI Crude: $${wti?.value ?? 'N/A'}, day change: $${wti?.change ?? 'N/A'}`,
@@ -190,11 +192,11 @@ Rules:
       date: today,
       generated_at: new Date().toISOString(),
       market_levels: [
-        { name: 'S&P 500',  value: spy  ? `$${spy.value}`   : 'N/A', change: spy  ? `$${spy.change} (${spy.changePct}%)` : 'N/A', up: spy?.up  ?? true  },
+        { name: sp500?.label ?? 'S&P 500', value: sp500 ? sp500.value : 'N/A', change: sp500 ? `${sp500.change} (${sp500.changePct}%)` : 'N/A', up: sp500?.up ?? true },
         { name: '10Y UST',  value: t10  ? `${t10.value}%`   : 'N/A', change: t10  ? `${t10.changeBps} bps`               : 'N/A', up: t10?.up  ?? true  },
         { name: '2Y UST',   value: t2   ? `${t2.value}%`    : 'N/A', change: t2   ? `${t2.changeBps} bps`                : 'N/A', up: t2?.up   ?? true  },
         { name: '~DXY',     value: dxy  ? dxy.eurusd         : 'N/A', change: dxy  ? dxy.eurusdChange                     : 'N/A', up: dxy?.up  ?? false },
-        { name: 'VIX',      value: vix  ? vix.value          : 'N/A', change: vix  ? vix.change                           : 'N/A', up: vix?.up  ?? false },
+        { name: 'VIX',      value: vix  ? vix.value : 'N/A', change: vix ? vix.change : 'N/A', up: vix?.up ?? false },
       ],
       stories: [{ headline: 'Brief narrative unavailable', source: 'System', summary: `Anthropic API error: ${e.message}`, why_matters: 'Check ANTHROPIC_KEY secret.', tag: 'Macro' }],
       calendar: [],
