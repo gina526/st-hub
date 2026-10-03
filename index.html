@@ -4,32 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gina's S&T Desk — US S&T 2028</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{background:#FAF9F7;color:#1C1B1A;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;height:100vh;overflow:hidden}
+body{background:#1A1A1A;color:#EBEBEB;font-family:'Inter',system-ui,sans-serif;height:100vh;overflow:hidden;font-size:15px}
 #root{height:100vh}
-input,button,textarea{font-family:inherit}
-input::placeholder,textarea::placeholder{color:#A39E9A}
+input,button,textarea{font-family:inherit;font-size:inherit}
+input::placeholder,textarea::placeholder{color:#5A5A5A}
 ::-webkit-scrollbar{width:4px;height:4px}
 ::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.15);border-radius:4px}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.12);border-radius:4px}
 </style>
 </head>
 <body>
 <div id="root"></div>
 <script type="text/babel" data-presets="react">
 const{useState,useEffect,useRef,useMemo}=React;
-const C={bg:'#FAF9F7',surface:'#F0EDE8',card:'#FFFFFF',border:'rgba(0,0,0,0.07)',accent:'#1B4FD8',accentLo:'rgba(27,79,216,0.07)',text:'#1C1B1A',muted:'#6E6B67',dim:'#A39E9A',green:'#1E7A45',red:'#B82B2B',amber:'#9C6509',purple:'#6935CC',cyan:'#0B6D9C'};
+const C={bg:'#1A1A1A',surface:'#222222',card:'#2C2C2C',border:'rgba(255,255,255,0.08)',accent:'#5B9CF6',accentLo:'rgba(91,156,246,0.1)',text:'#EBEBEB',muted:'#9A9A9A',dim:'#5A5A5A',green:'#4CAF7D',red:'#E06060',amber:'#D4942A',purple:'#A07DE8',cyan:'#4AADD6'};
 
-const Tag=({children,color=C.accent})=>(<span style={{display:'inline-block',padding:'2px 10px',borderRadius:20,fontSize:11,fontWeight:500,background:`${color}12`,color,marginRight:4}}>{children}</span>);
-const Card=({children,accent,style:sx={}})=>(<div style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:10,padding:'18px 22px',marginBottom:12,boxShadow:'0 1px 3px rgba(0,0,0,0.04)',...sx}}>{children}</div>);
-const SH=({children})=>(<h2 style={{fontSize:22,fontWeight:600,color:C.text,margin:'0 0 6px',letterSpacing:'-0.02em'}}>{children}</h2>);
-const Sub=({children,color})=>(<div style={{fontSize:11,fontWeight:600,color:color||C.dim,textTransform:'uppercase',letterSpacing:'0.08em',margin:'28px 0 12px'}}>{children}</div>);
-const P=({children})=>(<p style={{fontSize:14,lineHeight:1.8,color:C.muted,margin:'0 0 12px',maxWidth:680}}>{children}</p>);
-const TabBar=({tabs,active,set})=>(<div style={{display:'flex',gap:0,marginBottom:24,borderBottom:`1px solid ${C.border}`}}>{tabs.map(t=>(<button key={t.id} onClick={()=>set(t.id)} style={{padding:'9px 18px',background:'none',border:'none',cursor:'pointer',fontSize:13,fontWeight:active===t.id?500:400,color:active===t.id?C.text:C.muted,borderBottom:active===t.id?`1.5px solid ${C.accent}`:'1.5px solid transparent',marginBottom:-1}}>{t.label}</button>))}</div>);
+const Tag=({children,color=C.accent})=>(<span style={{display:'inline-block',padding:'2px 10px',borderRadius:20,fontSize:12,fontWeight:500,background:`${color}18`,color,marginRight:4}}>{children}</span>);
+const Card=({children,accent,style:sx={}})=>(<div style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:10,padding:'20px 24px',marginBottom:12,...sx}}>{children}</div>);
+const SH=({children})=>(<h2 style={{fontSize:24,fontWeight:600,color:C.text,margin:'0 0 6px',letterSpacing:'-0.02em'}}>{children}</h2>);
+const Sub=({children,color})=>(<div style={{fontSize:11,fontWeight:600,color:color||C.dim,textTransform:'uppercase',letterSpacing:'0.09em',margin:'28px 0 12px'}}>{children}</div>);
+const P=({children})=>(<p style={{fontSize:15,lineHeight:1.8,color:C.muted,margin:'0 0 12px',maxWidth:680}}>{children}</p>);
+const TabBar=({tabs,active,set})=>(<div style={{display:'flex',gap:0,marginBottom:24,borderBottom:`1px solid ${C.border}`}}>{tabs.map(t=>(<button key={t.id} onClick={()=>set(t.id)} style={{padding:'9px 18px',background:'none',border:'none',cursor:'pointer',fontSize:14,fontWeight:active===t.id?500:400,color:active===t.id?C.text:C.muted,borderBottom:active===t.id?`1.5px solid ${C.accent}`:'1.5px solid transparent',marginBottom:-1}}>{t.label}</button>))}</div>);
 const Grid=({children,cols=2})=>(<div style={{display:'grid',gridTemplateColumns:`repeat(${cols},1fr)`,gap:10,marginBottom:14}}>{children}</div>);
 function renderMarkdown(txt){if(!txt)return null;return txt.split(/(\*\*[^*]+\*\*)/g).map((p,i)=>p.startsWith('**')&&p.endsWith('**')?<strong key={i} style={{fontWeight:700,color:'inherit'}}>{p.slice(2,-2)}</strong>:p);}
 
@@ -251,8 +254,8 @@ function SourcesSection(){
 }
 
 function ModelSection(){
-  const PE=({col,children})=>(<div style={{fontSize:13,color:C.text,lineHeight:1.75,background:`${col||C.accent}09`,borderRadius:6,padding:'11px 14px',marginBottom:6,borderLeft:`2px solid ${col||C.accent}60`}}><span style={{fontSize:10,fontWeight:600,color:col||C.accent,letterSpacing:'0.07em',marginRight:8}}>Plain English</span>{children}</div>);
-  const TE=({children})=>(<div style={{fontSize:12,color:C.muted,lineHeight:1.75,background:'rgba(0,0,0,0.025)',borderRadius:6,padding:'11px 14px',borderLeft:`2px solid ${C.border}`}}><span style={{fontSize:10,fontWeight:600,color:C.dim,letterSpacing:'0.07em',marginRight:8}}>Technical</span>{children}</div>);
+  const PE=({col,children})=>(<div style={{fontSize:14,color:C.text,lineHeight:1.75,background:`${col||C.accent}0D`,borderRadius:6,padding:'12px 16px',marginBottom:6,borderLeft:`2px solid ${col||C.accent}55`}}><span style={{fontSize:11,fontWeight:600,color:col||C.accent,letterSpacing:'0.06em',marginRight:8}}>Plain English</span>{children}</div>);
+  const TE=({children})=>(<div style={{fontSize:13,color:C.muted,lineHeight:1.75,background:'rgba(255,255,255,0.03)',borderRadius:6,padding:'12px 16px',borderLeft:`2px solid ${C.border}`}}><span style={{fontSize:11,fontWeight:600,color:C.dim,letterSpacing:'0.06em',marginRight:8}}>Technical</span>{children}</div>);
   return <div>
     <SH>The Mental Model</SH>
     <p style={{fontSize:13,color:C.muted,marginBottom:20}}>How professionals actually think about markets — explained from scratch</p>
@@ -295,8 +298,8 @@ function ModelSection(){
 
 function MacroSection(){
   const[tab,setTab]=useState('cycle');
-  const PE=({col,children})=>(<div style={{fontSize:13,color:C.text,lineHeight:1.75,background:`${col||C.accent}09`,borderRadius:6,padding:'11px 14px',marginBottom:6,borderLeft:`2px solid ${col||C.accent}60`}}><span style={{fontSize:10,fontWeight:600,color:col||C.accent,letterSpacing:'0.07em',marginRight:8}}>Plain English</span>{children}</div>);
-  const TE=({children})=>(<div style={{fontSize:12,color:C.muted,lineHeight:1.75,background:'rgba(0,0,0,0.025)',borderRadius:6,padding:'11px 14px',borderLeft:`2px solid ${C.border}`}}><span style={{fontSize:10,fontWeight:600,color:C.dim,letterSpacing:'0.07em',marginRight:8}}>Technical</span>{children}</div>);
+  const PE=({col,children})=>(<div style={{fontSize:14,color:C.text,lineHeight:1.75,background:`${col||C.accent}0D`,borderRadius:6,padding:'12px 16px',marginBottom:6,borderLeft:`2px solid ${col||C.accent}55`}}><span style={{fontSize:11,fontWeight:600,color:col||C.accent,letterSpacing:'0.06em',marginRight:8}}>Plain English</span>{children}</div>);
+  const TE=({children})=>(<div style={{fontSize:13,color:C.muted,lineHeight:1.75,background:'rgba(255,255,255,0.03)',borderRadius:6,padding:'12px 16px',borderLeft:`2px solid ${C.border}`}}><span style={{fontSize:11,fontWeight:600,color:C.dim,letterSpacing:'0.06em',marginRight:8}}>Technical</span>{children}</div>);
   return <div>
     <SH>Macro Framework</SH>
     <p style={{fontSize:13,color:C.muted,marginBottom:20}}>The engine that drives every asset class — every term explained</p>
@@ -377,8 +380,8 @@ function MacroSection(){
 
 function AssetsSection(){
   const[tab,setTab]=useState('equities');
-  const PE=({col,children})=>(<div style={{fontSize:13,color:C.text,lineHeight:1.75,background:`${col||C.accent}09`,borderRadius:6,padding:'11px 14px',marginBottom:6,borderLeft:`2px solid ${col||C.accent}60`}}><span style={{fontSize:10,fontWeight:600,color:col||C.accent,letterSpacing:'0.07em',marginRight:8}}>Plain English</span>{children}</div>);
-  const TE=({children})=>(<div style={{fontSize:12,color:C.muted,lineHeight:1.75,background:'rgba(0,0,0,0.025)',borderRadius:6,padding:'11px 14px',borderLeft:`2px solid ${C.border}`}}><span style={{fontSize:10,fontWeight:600,color:C.dim,letterSpacing:'0.07em',marginRight:8}}>Technical</span>{children}</div>);
+  const PE=({col,children})=>(<div style={{fontSize:14,color:C.text,lineHeight:1.75,background:`${col||C.accent}0D`,borderRadius:6,padding:'12px 16px',marginBottom:6,borderLeft:`2px solid ${col||C.accent}55`}}><span style={{fontSize:11,fontWeight:600,color:col||C.accent,letterSpacing:'0.06em',marginRight:8}}>Plain English</span>{children}</div>);
+  const TE=({children})=>(<div style={{fontSize:13,color:C.muted,lineHeight:1.75,background:'rgba(255,255,255,0.03)',borderRadius:6,padding:'12px 16px',borderLeft:`2px solid ${C.border}`}}><span style={{fontSize:11,fontWeight:600,color:C.dim,letterSpacing:'0.06em',marginRight:8}}>Technical</span>{children}</div>);
   return <div>
     <SH>Asset Classes</SH>
     <p style={{fontSize:13,color:C.muted,marginBottom:20}}>The instruments you'll price and sell — explained from scratch</p>
