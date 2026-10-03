@@ -60,7 +60,7 @@ function TodaySection(){
   useEffect(()=>{
     async function tryAutoLoad(){
       try{
-        const r=await fetch('/public/brief.json?t='+Date.now());
+        const r=await fetch('public/brief.json?t='+Date.now());
         if(r.ok){const data=await r.json();if(data.date===dateKey){setBrief(data);setAutoLoaded(new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}));try{localStorage.setItem(`brief_${dateKey}`,JSON.stringify(data));}catch(e){} return;}}
       }catch(e){}
       try{const c=localStorage.getItem(`brief_${dateKey}`);if(c)setBrief(JSON.parse(c));}catch(e){}
