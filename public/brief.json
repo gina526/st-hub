@@ -1,86 +1,86 @@
 {
-  "date": "2026-10-06",
-  "generated_at": "2026-10-06T18:03:35.512Z",
+  "date": "2026-10-07",
+  "generated_at": "2026-10-07T18:36:18.810Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7802",
-      "change": "+54 (0.69%)",
-      "up": true
+      "value": "7776",
+      "change": "-15 (-0.20%)",
+      "up": false
     },
     {
       "name": "10Y UST",
-      "value": "5.28%",
-      "change": "+4.0 bps",
+      "value": "5.31%",
+      "change": "+3.0 bps",
       "up": true
     },
     {
       "name": "2Y UST",
-      "value": "4.83%",
-      "change": "+5.0 bps",
+      "value": "4.84%",
+      "change": "+1.0 bps",
       "up": true
     },
     {
       "name": "~DXY",
-      "value": "~102.8",
-      "change": "-0.29",
+      "value": "~103.5",
+      "change": "-0.15%",
       "up": false
     },
     {
       "name": "VIX",
-      "value": "15.52",
-      "change": "+0.21",
-      "up": true
+      "value": "15.01",
+      "change": "-0.51",
+      "up": false
     }
   ],
   "stories": [
     {
-      "headline": "Oil slips as Mideast exports, G7 stockpile ease supply concerns",
+      "headline": "Attacks on tankers in Hormuz hit highest of any week since start of Iran war, sources say",
       "source": "Reuters",
-      "summary": "Oil prices declined as Middle Eastern export flows remain stable and G7 strategic stockpile releases reduce near-term supply anxiety. The easing of geopolitical risk premium supports energy markets despite broader macro uncertainty.",
-      "why_matters": "Lower energy costs help contain inflation pressures, supporting Fed policy flexibility and real yields.",
+      "summary": "Maritime disruptions in the Hormuz Strait have escalated to record weekly levels amid regional Iran tensions. Elevated geopolitical risk is pressuring energy prices and broader risk sentiment.",
+      "why_matters": "Oil supply shocks and Middle East escalation directly impact US inflation, Fed policy, and equity valuations.",
       "tag": "Macro"
     },
     {
-      "headline": "What's behind an 'explosion of buying' Tuesday, including the rally in GE Vernova",
+      "headline": "Stocks made a record high. Two big bearish trades point to skepticism",
       "source": "CNBC",
-      "summary": "Broad equity buying emerged Tuesday with momentum in industrial and energy transition plays like GE Vernova. The rally suggests investor confidence in earnings growth and sectoral rotation despite rising Treasury yields.",
-      "why_matters": "Strong equity performance despite 5bps yield steepening indicates risk appetite remains resilient and earnings expectations support valuations.",
+      "summary": "Despite S&P 500 hitting record levels, institutional hedging flows and options positioning suggest market participants remain cautious. Divergence between price and sentiment indicates fragile conviction at peak valuations.",
+      "why_matters": "Elevated bearish positioning amid record highs signals potential vulnerability in equity markets and risk of sharp mean reversion.",
       "tag": "Equities"
     },
     {
-      "headline": "Iran drone plot fears led US to remove bombers from UK base, US officials say",
-      "source": "Reuters",
-      "summary": "The US relocated military assets from Fairford airbase in response to suspected Iranian drone threats against UK infrastructure. Elevated geopolitical tension reflects ongoing Middle East volatility and potential supply chain disruptions.",
-      "why_matters": "Heightened regional security risks maintain upside bias to oil volatility and defensive equity demand, impacting Fed rate-path expectations.",
-      "tag": "Macro"
+      "headline": "Another Micron triple? Where we agree with this wildly bullish call and where we don't",
+      "source": "CNBC",
+      "summary": "Analyst enthusiasm around Micron's upside potential clashes with realistic valuation and competitive headwinds in semiconductors. Selective bullishness on mega-cap tech contrasts with broader market caution.",
+      "why_matters": "Semiconductor earnings cycles and valuation extremes drive S&P 500 leadership and influence Fed rate decisions via inflation expectations.",
+      "tag": "Equities"
     }
   ],
   "calendar": [
     {
       "day": "Wed",
-      "event": "Weekly Jobless Claims (initial & continuing)",
+      "event": "Initial Jobless Claims (weekly)",
       "importance": "high",
-      "note": "Labor market data critical for Fed terminal rate assessment as yields steepen."
+      "note": "Labor market resilience indicator; influences Fed policy trajectory"
     },
     {
       "day": "Thu",
-      "event": "Producer Price Index (PPI) - September",
+      "event": "CPI (September, headline & core YoY)",
       "importance": "high",
-      "note": "Inflation gauge follows 5bps yield spike; core PPI will influence rate expectations into FOMC blackout."
+      "note": "Critical inflation data; direct impact on 10Y yield and equity risk premium"
     },
     {
       "day": "Fri",
-      "event": "Consumer Price Index (CPI) - September",
-      "importance": "high",
-      "note": "Final week inflation print ahead of mid-October FOMC meeting; closely watched amid flattening yield curve."
+      "event": "University of Michigan Sentiment (preliminary October)",
+      "importance": "medium",
+      "note": "Consumer confidence barometer amid geopolitical tension and rate uncertainty"
     }
   ],
   "concept": {
-    "title": "Yield Curve Flattening with Equity Resilience",
-    "one_liner": "The 2Y outpacing 10Y in rises (5 vs 4 bps) while equities rally suggests near-term rate peak expectations coexist with strong earnings momentum.",
-    "explanation": "The 2Y Treasury gained 5 bps while the 10Y rose only 4 bps, pushing the curve flatter despite S&P 500 climbing 0.69%. This pattern reflects markets pricing a pause or terminal Fed rate, with investors willing to buy long-duration equities on belief that higher-for-longer rates are already priced. Lower oil and stable geopolitical risk appetite (VIX +0.21 but subdued) reinforce that growth concerns are manageable.",
-    "market_link": "Flat yield curve + equity strength = confidence in soft-landing narratives and earnings resilience over rate cycle fears."
+    "title": "Curve Steepening amid Risk Aversion",
+    "one_liner": "10Y yields rising faster than 2Y despite equity weakness signals shifting growth and inflation expectations.",
+    "explanation": "Today's 3 bps rise in 10Y Treasury yield versus only 1 bps in 2Y—combined with a modest 0.20% S&P 500 decline and geopolitical headline risk—reflects a classic steepening pattern. Long-end yields are repricing expectations for either persistent inflation pressure (Hormuz tanker attacks, oil -$3.21) or slower near-term growth, causing investors to demand higher compensation for duration risk while short rates remain anchored by Fed expectations.",
+    "market_link": "10Y/2Y curve steepening (47 bps gap widening) paired with VIX compression and equity malaise typically precedes either a risk-off shock or a pivot in Fed communications toward end-of-cycle."
   },
-  "narrative": "US equities gained 0.69% while the yield curve flattened as 2Y Treasuries outpaced 10Y, signaling markets have priced most Fed tightening and expect rates to stabilize soon. Contained energy prices and geopolitical risk premium support growth expectations despite modest VIX uptick, keeping risk assets bid as earnings season approaches."
+  "narrative": "Markets remain eerily calm despite record equity levels and surging Middle East tensions: the S&P 500 flatlined, VIX fell 0.51, yet 10Y yields climbed 3 bps as geopolitical risk inflates long-term inflation premia. Institutional hedging flows and curve steepening suggest the market is pricing in either a growth shock or Fed patience—a fragile equilibrium ahead of Thursday's inflation data."
 }
