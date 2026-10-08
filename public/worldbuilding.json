@@ -1,0 +1,134 @@
+[
+  {
+    "date": "2026-10-03",
+    "blocks": [
+      {
+        "term": "10Y UST — the benchmark that prices everything",
+        "category": "rates",
+        "bullets": [
+          "US govt 10-year borrowing cost — today 5.24%, fell 5bps",
+          "Called the 'benchmark' because almost every other asset is priced relative to it: mortgages, corporate bonds, equity discount rates",
+          "Mechanically: when investors BUY Treasuries → price rises → yield falls; when they SELL → price falls → yield rises",
+          "5.24% today is historically elevated — pre-2022 decade it sat 1-3% for over a decade",
+          "Today's 5bp fall despite ongoing geopolitical risk = market pricing in oil supply relief → inflation coming down → fewer Warsh hikes needed",
+          "Every 100bps move in 10Y ≈ 8-10% compression or expansion in S&P 500 valuation (all else equal)",
+          "The 10Y also anchors mortgage rates — 10Y at 5.24% typically means 30Y fixed mortgage ~7.0-7.5%"
+        ],
+        "so_what": "Your day on a rates desk starts here — the 10Y open sets the tone for every trade, every client call, every product pricing decision that day."
+      },
+      {
+        "term": "2Y UST + the 2s10s spread",
+        "category": "rates",
+        "bullets": [
+          "2Y fell 10bps today to 4.78% — double the move in the 10Y",
+          "2Y yield moves almost in lockstep with Fed funds rate expectations over the next 2 years",
+          "2s10s spread = 10Y minus 2Y = today: 5.24% - 4.78% = +46bps (positive = normal slope)",
+          "When 2Y falls faster than 10Y, curve is 'bull flattening' — market pricing sooner Fed cuts",
+          "The 2022-2024 inversion (2Y > 10Y, spread hit -107bps) correctly predicted economic slowdown",
+          "Today's 2Y move > 10Y move = soft-landing narrative strengthening: SPR + Saudi action → oil lower → inflation lower → Fed cuts come forward",
+          "Key insight: the 2Y doesn't need the Fed to actually cut — just for markets to PRICE cuts — then 2Y falls"
+        ],
+        "so_what": "If you're watching one number to read the market's Fed view, it's the 2Y yield — it's a real-time probability-weighted bet on where the Fed will be."
+      },
+      {
+        "term": "Strategic Petroleum Reserve (SPR) — government's oil lever",
+        "category": "energy",
+        "bullets": [
+          "US emergency crude stockpile stored in salt caverns in Texas and Louisiana — ~360M barrels currently (~3.5 days of global demand)",
+          "G7 countries coordinating releases = pooling capacity from US, EU, Japan, UK, Canada, Australia",
+          "Every 1M barrel/day of extra supply roughly pushes WTI down $5-8 over 30 days",
+          "Limitation: SPR is a finite stock, not a flow — it buys time but doesn't fix the underlying supply problem (Strait of Hormuz closure)",
+          "Market reaction today: oil dropped ~2-3% on announcement → 10Y and 2Y yields fell in sympathy (less inflation risk)",
+          "The 2022 SPR release (Biden) was 180M barrels over 6 months — largest in history — only temporarily capped $120 Brent",
+          "Warsh is watching: if SPR release sustainably pushes oil below $90, core PCE path improves, he has cover to pause hikes"
+        ],
+        "so_what": "SPR news is a direct input to your inflation forecast — and your inflation forecast is a direct input to your rate positioning. Track oil after every SPR announcement to see if the supply impulse is actually holding."
+      },
+      {
+        "term": "Strait of Hormuz + Red Sea — why geography moves markets",
+        "category": "macro",
+        "bullets": [
+          "Strait of Hormuz: 21-mile wide channel between Iran and Oman — 20% of global oil and 17% of LNG must pass through it",
+          "Red Sea / Bab el-Mandeb: route connecting Europe/Americas to Asia via Suez Canal — ~12% of global trade volume",
+          "Houthi attacks (2024-2026): forced ships to reroute around Africa's Cape of Good Hope, adding 12 extra days and $1M+ per voyage",
+          "Iran partial Hormuz closure (2026): primary driver of WTI jumping from $72 (early 2025) to $100+",
+          "Supply shock math: closing even 15% of Hormuz flow = removing 3M+ barrels/day from 100M/day market = instant 5-10% price spike",
+          "Saudi assault today targeting Houthi positions to restore Red Sea navigation — if successful, shipping normalizes → WTI falls toward $85",
+          "Geopolitical risk premium: markets currently pricing ~$15-20/barrel 'conflict insurance' above fundamental oil value"
+        ],
+        "so_what": "Every S&T morning call starts with Middle East headlines because oil → CPI → Fed path → every asset price. Strait of Hormuz is the single geographic point that can change the Fed's calculus overnight."
+      },
+      {
+        "term": "VIX at 16.39 — reading the silence",
+        "category": "volatility",
+        "bullets": [
+          "VIX = CBOE's measure of implied 30-day S&P 500 volatility derived from options prices",
+          "16.39 today is in the 'calm' zone — barely moved (+0.05) despite active geopolitical headlines",
+          "Level calibration: <15 = complacent; 15-20 = mild concern; 20-30 = elevated; 30+ = fear; 40+ = crisis (COVID peaked 85, 2022 hiked to 38)",
+          "VIX flat at 16 while Saudi military action unfolds = market saying: 'this is known risk, already priced, not systemic'",
+          "VIX + equities up + yields down = classic 'goldilocks' signal — markets treating today as soft-landing progress",
+          "Low VIX = options are cheap = smart time to buy protection (puts, collars) before a catalyst changes sentiment",
+          "On S&T desks: VIX informs vol surface pricing, options structuring, and hedge fund client conversations about tail risk"
+        ],
+        "so_what": "VIX at 16 with geopolitical news is a confidence signal — the market isn't scared. But that complacency can flip: if Saudi action escalates unexpectedly, VIX can spike from 16 to 28 in a day, crushing vol sellers."
+      },
+      {
+        "term": "Bull flattening — today's yield curve move decoded",
+        "category": "rates",
+        "bullets": [
+          "'Bull' = bond prices rising (yields falling) — opposite of 'bear' where yields rise",
+          "'Flattening' = 2s10s spread narrowing (short and long rates converging toward each other)",
+          "Today: 2Y -10bps, 10Y -5bps → 2Y fell MORE → spread narrowed → bull flattening",
+          "Signal: market pulling forward rate cut expectations (2Y is most sensitive to near-term Fed expectations)",
+          "Contrast with 2026's dominant pattern: 'bear steepening' where 10Y rose faster than 2Y = inflation/fiscal fears pushing long end up",
+          "One day's bull flattening doesn't flip the macro narrative — need sustained 2Y rally and 10Y stability to confirm",
+          "P&L implication: long 2Y Treasuries made money today; long 30Y Treasuries made money but less; short positions in 2Y hurt most"
+        ],
+        "so_what": "Know these four terms cold for interviews: bull flattener, bear flattener, bull steepener, bear steepener. Every yield curve move is one of these four, and each tells a different macro story."
+      },
+      {
+        "term": "DXY at 102.65 — what dollar weakness means",
+        "category": "fx",
+        "bullets": [
+          "DXY = basket of 6 currencies vs. USD; 57.6% EUR, 13.6% JPY, 11.9% GBP, 9.1% CAD, 4.2% SEK, 3.6% CHF",
+          "102.65 is a relatively weak dollar — peaked near 115 in Sept 2022 during peak hawkish Fed expectations",
+          "USD weakened today (-0.11) alongside falling US yields: lower rate expectations → less reason to hold USD",
+          "Why dollar weakens when rates fall: investors hold USD partly for the high yield; cut that yield, money flows to higher-yielding currencies",
+          "USD at 102 is positive for: US multinationals (foreign earnings worth more when converted back), EM economies (easier to service USD debt), gold (cheaper in foreign currencies = more demand)",
+          "USD at 102 is negative for: US exporters (less competitive), anyone who shorted EM expecting USD strength",
+          "Hub uses EUR/USD as DXY proxy — they move opposite: EUR/USD up today = DXY down = USD weakening"
+        ],
+        "so_what": "Dollar weakness is one of the clearest 'risk-on' signals. When DXY falls, check if equities, EM, commodities, and high-yield are also rallying — they usually are, and it confirms the macro narrative."
+      },
+      {
+        "term": "Disinflation trade — the narrative running today's markets",
+        "category": "macro",
+        "bullets": [
+          "Disinflation = inflation still positive but FALLING (e.g., PCE dropping from 3.3% toward 2%)",
+          "Different from deflation (negative inflation) which is far more dangerous and destabilizing",
+          "Today's chain: Saudi/G7 action → oil lower → gas prices lower → CPI/PCE lower → fewer Warsh hikes → 2Y yields fall → equities bid",
+          "The 'soft landing' trade = disinflation without recession — economy slows just enough to kill inflation but not jobs",
+          "Warsh's problem: he made the Volcker/Powell 2021 mistake explicitly — he refuses to declare victory prematurely, even if one data point looks good",
+          "Market vs. Fed tension: market is pricing soft landing (equities up, VIX low, 2Y falling); Warsh is still hawkish (3.75-4.00%, signals Oct hike)",
+          "One coordinated SPR release doesn't change the structural supply problem — if Strait of Hormuz reopens, narrative accelerates; if it doesn't, today's move reverses"
+        ],
+        "so_what": "Every day you're asking: is the market right to price a soft landing, or is Warsh going to keep hiking and break something? Today's price action is a vote for soft landing — the data will adjudicate."
+      },
+      {
+        "term": "Equity breadth — why 'the market is up 0.74%' is incomplete",
+        "category": "equities",
+        "bullets": [
+          "S&P 500 +0.74% today, but headline masks 'selective risk-on' — Linde (industrial chemicals) outperforming",
+          "Breadth = what percentage of stocks are participating in a rally",
+          "Narrow rally (few mega-caps dragging index) = fragile, likely to reverse; wide rally = healthy momentum",
+          "Linde outperforming = industrial/infrastructure play, not pure risk appetite — defensive tilt within a 'risk-on' day",
+          "Market concentration risk: top 10 S&P stocks ≈ 35% of index — NVDA/MSFT/AAPL can move the index even if 490 stocks are flat",
+          "Breadth indicators: advance-decline line (how many stocks up vs. down), % of stocks above 50-day MA, equal-weight vs cap-weight SPY divergence",
+          "If S&P is up but equal-weighted S&P is flat or down: index rally is driven by a few large caps, not broad recovery"
+        ],
+        "so_what": "On an equities sales desk, you never say 'the market is up.' You say 'the market is up but breadth is narrow with defensive leadership' — that's the actual signal, and it's what your buy-side clients need to hear."
+      }
+    ],
+    "narrative": "The Oct 3 brief was a soft-landing story in real time: G7 SPR release + Saudi military action on Houthis signaled oil supply recovery, triggering a bull flattening in the Treasury curve (2Y -10bps, 10Y -5bps) as markets pulled forward Fed cut expectations. But the signal is conditional — one day's oil relief doesn't fix a structural Hormuz closure, VIX at 16 reflects comfort not conviction, and Warsh has given no indication he'll pause. The market is voting for disinflation; Warsh needs the data to confirm it before he'll follow."
+  }
+]

@@ -578,6 +578,39 @@ function ApiKeySetup({onSave}){
   </div>;
 }
 
+function WorldBuildingSection(){
+  const[wbData,setWbData]=useState(null);
+  const[wbLoad,setWbLoad]=useState(true);
+  const[expanded,setExpanded]=useState({});
+  const catCol={rates:C.accent,equities:C.green,fx:C.purple,macro:C.cyan,credit:C.amber,volatility:C.red,energy:C.amber,fundamental:C.muted};
+  useEffect(()=>{
+    fetch('public/worldbuilding.json?t='+Date.now())
+      .then(r=>r.ok?r.json():null)
+      .then(d=>{setWbData(d);setWbLoad(false);})
+      .catch(()=>setWbLoad(false));
+  },[]);
+  const StudyBlock=({block})=>{
+    const col=catCol[block.category]||C.muted;
+    return <div style={{borderLeft:`2px solid ${col}`,padding:'14px 16px',marginBottom:10,background:`${col}0D`,borderRadius:'0 6px 6px 0'}}>
+      <div style={{fontSize:13,fontWeight:600,color:col,letterSpacing:'0.06em',marginBottom:8}}>{block.term}</div>
+      <div>{(block.bullets||[]).map((b,i)=>(<div key={i} style={{fontSize:15,color:C.text,lineHeight:1.7,marginBottom:4,paddingLeft:14,position:'relative'}}><span style={{position:'absolute',left:0,color:col,fontWeight:700}}>·</span>{b}</div>))}</div>
+      {block.so_what&&<div style={{marginTop:10,fontSize:14,color:C.muted,borderTop:`1px solid ${C.border}`,paddingTop:8}}><span style={{fontWeight:600,color:col}}>→ so what: </span>{block.so_what}</div>}
+    </div>;
+  };
+  const fmtDate=d=>{try{const o=new Date(d+'T12:00:00');return o.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});}catch(e){return d;}};
+  if(wbLoad) return <div><SH>WORLD BUILDING</SH><div style={{color:C.muted,fontSize:15,padding:'20px 0'}}>Loading…</div></div>;
+  if(!wbData||!wbData.length) return <div><SH>WORLD BUILDING</SH><Card accent={C.dim} style={{textAlign:'center',padding:'40px 20px'}}><div style={{fontSize:15,color:C.muted,marginBottom:6}}>No study sets yet</div><div style={{fontSize:14,color:C.dim}}>First entry generates automatically after tomorrow's brief.</div></Card></div>;
+  const[latest,...prev]=wbData;
+  return <div>
+    <SH>WORLD BUILDING</SH>
+    <p style={{fontSize:15,color:C.muted,marginBottom:20}}>Deep study blocks — one set per brief, cumulative · {wbData.length} set{wbData.length!==1?'s':''}</p>
+    <div style={{fontSize:12,fontWeight:600,color:C.dim,textTransform:'uppercase',letterSpacing:'0.09em',marginBottom:14}}>{fmtDate(latest.date)} · {latest.blocks?.length||0} blocks</div>
+    {latest.narrative&&<div style={{fontSize:15,color:C.text,lineHeight:1.8,marginBottom:20,padding:'12px 16px',background:`${C.amber}0D`,border:`1px solid ${C.amber}33`,borderLeft:`2px solid ${C.amber}`,borderRadius:'0 6px 6px 0',fontStyle:'italic'}}><div style={{fontSize:12,fontWeight:600,color:C.amber,letterSpacing:'0.06em',marginBottom:6,fontStyle:'normal'}}>MACRO NARRATIVE</div>{latest.narrative}</div>}
+    {(latest.blocks||[]).map((b,i)=><StudyBlock key={i} block={b}/>)}
+    {prev.length>0&&<><Sub>Previous sets</Sub>{prev.map(entry=>(<div key={entry.date} style={{marginBottom:8}}><div onClick={()=>setExpanded(ex=>({...ex,[entry.date]:!ex[entry.date]}))} style={{display:'flex',alignItems:'center',justifyContent:'space-between',cursor:'pointer',background:C.card,border:`1px solid ${C.border}`,borderRadius:expanded[entry.date]?'6px 6px 0 0':6,padding:'11px 16px'}}><span style={{fontSize:15,fontWeight:500,color:C.text}}>{fmtDate(entry.date)}</span><div style={{display:'flex',gap:8,alignItems:'center'}}><span style={{fontSize:13,color:C.dim}}>{entry.blocks?.length||0} blocks</span><span style={{fontSize:13,color:C.dim}}>{expanded[entry.date]?'▲':'▼'}</span></div></div>{expanded[entry.date]&&<div style={{background:C.surface,border:`1px solid ${C.border}`,borderTop:'none',borderRadius:'0 0 6px 6px',padding:'16px 16px 6px'}}>{entry.narrative&&<div style={{fontSize:15,color:C.text,lineHeight:1.8,marginBottom:16,padding:'10px 14px',background:`${C.amber}0D`,border:`1px solid ${C.amber}33`,borderLeft:`2px solid ${C.amber}`,borderRadius:'0 6px 6px 0',fontStyle:'italic'}}><div style={{fontSize:12,fontWeight:600,color:C.amber,letterSpacing:'0.06em',marginBottom:4,fontStyle:'normal'}}>MACRO NARRATIVE</div>{entry.narrative}</div>}{(entry.blocks||[]).map((b,i)=><StudyBlock key={i} block={b}/>)}</div>}</div>))}</>}
+  </div>;
+}
+
 function App(){
   const[active,setActive]=useState('today');
   const[apiKey,setApiKey]=useState(()=>localStorage.getItem('ant_key')||null);
@@ -594,6 +627,7 @@ function App(){
 
   const nav=[
     {id:'today',icon:'⚡',label:'Today'},
+    {id:'worldbuilding',icon:'◉',label:'WORLD BUILDING'},
     {id:'learn',icon:'◎',label:'Learn'},
     {id:'products',icon:'⟐',label:'Product Explorer'},
     {id:'sources',icon:'↗',label:'Sources'},
@@ -605,7 +639,7 @@ function App(){
     {id:'interview',icon:'▷',label:'Interview Prep'},
     {id:'niche',icon:'★',label:'Your Edge'},
   ];
-  const sections={today:<TodaySection/>,learn:<LearnSection/>,products:<ProductsSection/>,sources:<SourcesSection/>,model:<ModelSection/>,macro:<MacroSection/>,assets:<AssetsSection/>,glossary:<GlossarySection/>,narrative:<NarrativeSection/>,interview:<InterviewSection/>,niche:<NicheSection/>};
+  const sections={today:<TodaySection/>,worldbuilding:<WorldBuildingSection/>,learn:<LearnSection/>,products:<ProductsSection/>,sources:<SourcesSection/>,model:<ModelSection/>,macro:<MacroSection/>,assets:<AssetsSection/>,glossary:<GlossarySection/>,narrative:<NarrativeSection/>,interview:<InterviewSection/>,niche:<NicheSection/>};
 
   return <div style={{display:'flex',height:'100vh',background:C.bg,color:C.text,fontFamily:'-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif',overflow:'hidden'}}>
     <div style={{width:200,background:C.surface,borderRight:`1px solid ${C.border}`,display:'flex',flexDirection:'column',flexShrink:0}}>
