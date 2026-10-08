@@ -1,86 +1,86 @@
 {
-  "date": "2026-10-07",
-  "generated_at": "2026-10-07T18:36:18.810Z",
+  "date": "2026-10-08",
+  "generated_at": "2026-10-08T18:35:05.633Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7776",
-      "change": "-15 (-0.20%)",
+      "value": "7728",
+      "change": "-44 (-0.57%)",
       "up": false
     },
     {
       "name": "10Y UST",
-      "value": "5.31%",
-      "change": "+3.0 bps",
+      "value": "5.27%",
+      "change": "-4.0 bps",
       "up": true
     },
     {
       "name": "2Y UST",
-      "value": "4.84%",
-      "change": "+1.0 bps",
+      "value": "4.79%",
+      "change": "-5.0 bps",
       "up": true
     },
     {
       "name": "~DXY",
-      "value": "~103.5",
-      "change": "-0.15%",
-      "up": false
+      "value": "102.88",
+      "change": "+0.0089",
+      "up": true
     },
     {
       "name": "VIX",
-      "value": "15.01",
-      "change": "-0.51",
-      "up": false
+      "value": "15.08",
+      "change": "+0.07",
+      "up": true
     }
   ],
   "stories": [
     {
-      "headline": "Attacks on tankers in Hormuz hit highest of any week since start of Iran war, sources say",
+      "headline": "Trump says US will not attack Iran before midterm elections in November",
       "source": "Reuters",
-      "summary": "Maritime disruptions in the Hormuz Strait have escalated to record weekly levels amid regional Iran tensions. Elevated geopolitical risk is pressuring energy prices and broader risk sentiment.",
-      "why_matters": "Oil supply shocks and Middle East escalation directly impact US inflation, Fed policy, and equity valuations.",
+      "summary": "The Trump administration has signaled it will not launch military action against Iran prior to November midterm elections, reducing near-term geopolitical escalation risk. This provides temporary clarity on Middle East tensions that have been driving oil and equity volatility.",
+      "why_matters": "De-escalation messaging reduces safe-haven flows and supports risk asset appetite in the near term.",
       "tag": "Macro"
     },
     {
-      "headline": "Stocks made a record high. Two big bearish trades point to skepticism",
-      "source": "CNBC",
-      "summary": "Despite S&P 500 hitting record levels, institutional hedging flows and options positioning suggest market participants remain cautious. Divergence between price and sentiment indicates fragile conviction at peak valuations.",
-      "why_matters": "Elevated bearish positioning amid record highs signals potential vulnerability in equity markets and risk of sharp mean reversion.",
+      "headline": "Lufthansa, Indian airlines suspend flights to Riyadh after Houthi attacks",
+      "source": "Reuters",
+      "summary": "Major international carriers are suspending service to Saudi Arabia following escalating Houthi drone and missile strikes on Riyadh airport. The disruptions reflect ongoing regional instability and potential supply-chain risks in critical Middle East hubs.",
+      "why_matters": "Airlines and logistics are core to US supply chains and earnings; flight suspensions signal real operational friction from geopolitical risk.",
       "tag": "Equities"
     },
     {
-      "headline": "Another Micron triple? Where we agree with this wildly bullish call and where we don't",
-      "source": "CNBC",
-      "summary": "Analyst enthusiasm around Micron's upside potential clashes with realistic valuation and competitive headwinds in semiconductors. Selective bullishness on mega-cap tech contrasts with broader market caution.",
-      "why_matters": "Semiconductor earnings cycles and valuation extremes drive S&P 500 leadership and influence Fed rate decisions via inflation expectations.",
-      "tag": "Equities"
+      "headline": "German government raises growth forecasts for 2026 and 2027",
+      "source": "Reuters",
+      "summary": "Germany has upgraded its economic outlook for the next two years, signaling improved confidence in eurozone recovery and demand. The upgrade may support EUR strength and reduce deflationary pressure in the EU.",
+      "why_matters": "Stronger European growth supports global demand and reduces recession risk for US multinational earnings.",
+      "tag": "Macro"
     }
   ],
   "calendar": [
     {
-      "day": "Wed",
+      "day": "Thu",
       "event": "Initial Jobless Claims (weekly)",
       "importance": "high",
-      "note": "Labor market resilience indicator; influences Fed policy trajectory"
-    },
-    {
-      "day": "Thu",
-      "event": "CPI (September, headline & core YoY)",
-      "importance": "high",
-      "note": "Critical inflation data; direct impact on 10Y yield and equity risk premium"
+      "note": "Labor market resilience; Fed watches closely for wage/employment signals ahead of rate decisions."
     },
     {
       "day": "Fri",
-      "event": "University of Michigan Sentiment (preliminary October)",
-      "importance": "medium",
-      "note": "Consumer confidence barometer amid geopolitical tension and rate uncertainty"
+      "event": "Consumer Sentiment (University of Michigan)",
+      "importance": "high",
+      "note": "Reflects inflation expectations and consumer confidence; key input for Fed's inflation outlook."
+    },
+    {
+      "day": "Wed",
+      "event": "PPI (Producer Price Index)",
+      "importance": "high",
+      "note": "Core inflation gauge; Treasury yields sensitive to upside surprises on rate-hike expectations."
     }
   ],
   "concept": {
-    "title": "Curve Steepening amid Risk Aversion",
-    "one_liner": "10Y yields rising faster than 2Y despite equity weakness signals shifting growth and inflation expectations.",
-    "explanation": "Today's 3 bps rise in 10Y Treasury yield versus only 1 bps in 2Y—combined with a modest 0.20% S&P 500 decline and geopolitical headline risk—reflects a classic steepening pattern. Long-end yields are repricing expectations for either persistent inflation pressure (Hormuz tanker attacks, oil -$3.21) or slower near-term growth, causing investors to demand higher compensation for duration risk while short rates remain anchored by Fed expectations.",
-    "market_link": "10Y/2Y curve steepening (47 bps gap widening) paired with VIX compression and equity malaise typically precedes either a risk-off shock or a pivot in Fed communications toward end-of-cycle."
+    "title": "The Risk-Off Equity Selloff vs. Safe-Haven Yield Decline",
+    "one_liner": "Stocks fall while bonds rally—a classic flight-to-quality pattern driven by geopolitical uncertainty and Fed hawkishness.",
+    "explanation": "Today's S&P 500 decline of -0.57% paired with a modest VIX uptick and simultaneous 4–5 bps drops in both 2Y and 10Y yields reveals a classic risk-off trade. Investors are rotating from equities into Treasuries despite Fed rate-hike signals, suggesting geopolitical concerns (Iran, Houthis, Middle East supply disruption) are overriding growth optimism. The slight USD strength (EUR/USD down 0.0063) reinforces the safety-trade narrative.",
+    "market_link": "S&P 500 -0.57%, VIX +0.07, 10Y -4 bps, 2Y -5 bps, EUR/USD -0.0063"
   },
-  "narrative": "Markets remain eerily calm despite record equity levels and surging Middle East tensions: the S&P 500 flatlined, VIX fell 0.51, yet 10Y yields climbed 3 bps as geopolitical risk inflates long-term inflation premia. Institutional hedging flows and curve steepening suggest the market is pricing in either a growth shock or Fed patience—a fragile equilibrium ahead of Thursday's inflation data."
+  "narrative": "Equities retreated modestly on Middle East geopolitical tensions and Houthi escalation, prompting a flight to quality into Treasuries despite Fed rate-hike rhetoric; meanwhile, softer EUR/USD and yield curve flattening signal investor caution ahead of this week's inflation and labor data."
 }
