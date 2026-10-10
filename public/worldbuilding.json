@@ -1,5 +1,146 @@
 [
   {
+    "date": "2026-10-09",
+    "blocks": [
+      {
+        "term": "10Y UST at 5.28% — the long end won't come down",
+        "category": "rates",
+        "bullets": [
+          "10Y at 5.28% today, +1bp — gives back a quarter of yesterday's 4bp safety rally (5.27% on Oct 8, 5.24% on Oct 3)",
+          "Yield up = price down: 10Y duration ≈ 8.5 → +1bp ≈ −0.085% on price, ≈ −$850k on a $1bn position",
+          "Rose on a day stocks rallied (+0.55%) → classic risk-on rotation: money leaves safe bonds for equities, safety bid from Wed's Houthi headlines fades",
+          "Long end is driven by growth + inflation expectations + term premium, not just the Fed — so it can rise even as front-end Fed pricing softens (see 2Y)",
+          "5.28% is ~2–3x the 2010s range (1.5–3%) → mortgages, corporate refinancing and equity discount rates all reprice off this hurdle",
+          "Reuters' 'four signs it gets uglier' piece = the bear case: heavy Treasury supply, sticky inflation, rising bond vol, and buyers demanding more term premium",
+          "Next catalyst: Sept core PCE (Fri) — a hot print pushes the whole curve up; a soft one tests whether 5.25% holds as support"
+        ],
+        "so_what": "Rates sales opens every morning call with the 10Y level and the 'why' — today's line is 'safety bid faded, long end grinding higher into PCE', and real-money clients will ask whether 5.25–5.30% is the level to add duration or wait."
+      },
+      {
+        "term": "2Y UST at 4.77% + 2s10s at +51bps (twist steepener)",
+        "category": "rates",
+        "bullets": [
+          "2Y at 4.77%, −2bps (4.79% yesterday) — the 2Y is a ~2-year bet on where the Fed funds rate averages, so a falling 2Y = market trimming hike/hold expectations",
+          "10Y +1bp while 2Y −2bps → 2s10s spread widens from +48bps to +51bps (+3bps)",
+          "Front end down + long end up = 'twist steepener' — the two ends of the curve moved in opposite directions",
+          "IMPORTANT correction: today's brief calls this 'flattening' — it isn't. Flattening = spread narrows; 51 > 48, so the curve steepened",
+          "Read-through: front end says 'Fed may not need to tighten more'; long end says 'but inflation/deficits/term premium still keep long rates high'",
+          "Positive +51bps also means the curve is no longer inverted (2Y > 10Y, as in 2022–24) — inversion is the classic recession signal, and its un-inverting historically often comes right before the slowdown, not after",
+          "Steepener trades (long 2Y / short 10Y, DV01-weighted) made ~3bps today — popular hedge-fund expression of 'Fed eases eventually, deficits stay large'"
+        ],
+        "so_what": "Curve shape is a separate trade from rate level — macro hedge funds and RV clients call the desk specifically for 2s10s steepener/flattener ideas, and getting the direction wrong (as the brief's headline did) is a credibility-killer on a client call."
+      },
+      {
+        "term": "Bull/bear steepeners & flatteners — the 4-box curve taxonomy",
+        "category": "fundamental",
+        "bullets": [
+          "Spread = long yield − short yield (2s10s = 10Y − 2Y). Steepen = spread widens; flatten = spread narrows",
+          "'Bull' = yields falling (bond prices up); 'bear' = yields rising (prices down) — named for the bond holder's P&L",
+          "Bull steepener: 2Y falls more than 10Y → market pricing Fed cuts (e.g. yesterday, Oct 8: 2Y −5, 10Y −4)",
+          "Bear steepener: 10Y rises more than 2Y → inflation/term premium/supply fears; the 'ugly' scenario in Reuters' bond piece",
+          "Bull flattener: 10Y falls more than 2Y → growth fears / flight to long duration; bear flattener: 2Y rises more → hawkish Fed hiking",
+          "Twist (today): ends move opposite ways — 2Y −2, 10Y +1 → steepener, mixed signal of 'softer Fed, stubborn long end'",
+          "Why front end = Fed and long end = everything else: 2Y tracks expected policy rate; 10Y = expected policy path + term premium (compensation for 10 years of inflation/supply uncertainty)"
+        ],
+        "so_what": "Traders describe every rates session in this vocabulary ('bear steepening into PCE') — it's the shorthand that tells a client instantly whether the move was Fed-driven or term-premium-driven, which determines which trade ideas to pitch."
+      },
+      {
+        "term": "S&P 500 at 7,782 — index up while single names crater",
+        "category": "equities",
+        "bullets": [
+          "S&P at 7,782, +42 pts (+0.55%) — recovers the Oct 8 Houthi-headline drop (7,728, −0.57%)",
+          "Index rose even as Verizon had its worst day since 2002 → S&P is cap-weighted; mega-cap tech weight dwarfs telecom (communication services is mostly Alphabet/Meta, not VZ)",
+          "Divergence between index and single names = high 'dispersion' — the market is picking winners/losers on disruption themes rather than moving as one block",
+          "Stocks up + 10Y yield up together = growth optimism outweighing discount-rate drag (at 5.28%, the earnings yield gap vs bonds is thin)",
+          "Equity risk premium logic: S&P forward earnings yield ~4–5% vs 10Y 5.28% → stocks offer little extra yield over risk-free; rallies are vulnerable to further rate spikes",
+          "Tesla (FSD rebrand) and Verizon are both idiosyncratic 'regulation/disruption' stories — they move single stocks and sector ETFs, not the macro tape"
+        ],
+        "so_what": "Cash equity sales traders frame the day as 'index calm, dispersion high' — that's the cue to pitch single-stock and sector pair trades (e.g. long space/satellite exposure vs short legacy telcos) rather than outright index direction."
+      },
+      {
+        "term": "VIX at 15.41 — rising alongside stocks",
+        "category": "volatility",
+        "bullets": [
+          "VIX 15.41, +0.33 (15.08 yesterday) — measures 30-day implied vol on S&P options; 15 ≈ market expecting ~±1% daily S&P moves (15 / √252 ≈ 0.95%)",
+          "Normally VIX and S&P move inversely; today both rose → investors buying protection even into a rally",
+          "Likely drivers: event hedging ahead of Friday PCE, plus rising bond vol (MOVE index) bleeding into equity hedging demand",
+          "Single-stock vol spikes (VZ, TSLA) raise demand for options but barely move VIX — VIX only reflects index options",
+          "Long-run VIX average ≈ 19–20; anything mid-teens = calm regime. A move above 20 would signal a regime shift worth flagging to clients",
+          "Brief's 'rising VIX = systemic stress' is overstated: +0.33 at 15.4 is noise-level; the bond-vol story is the more meaningful stress signal"
+        ],
+        "so_what": "Vol sales uses a low-but-rising VIX into a data event to pitch cheap downside hedges (e.g. S&P put spreads into PCE) — clients pay little premium now and get protection if the print surprises."
+      },
+      {
+        "term": "DXY ~98.76 — dollar flat, and a data caveat",
+        "category": "fx",
+        "bullets": [
+          "DXY ~98.76, −0.01 — essentially unchanged; DXY = dollar vs a basket (EUR ~58%, JPY ~14%, GBP ~12%, CAD, SEK, CHF)",
+          "Data caveat: yesterday's brief showed DXY ~102.88; a ~4% one-day move in DXY essentially never happens — the '~' means a proxy/approximation, so the source likely changed. Trust the daily change (−0.01), not the level comparison",
+          "Flat dollar despite 2Y falling 2bps → front-end rate differentials (the main short-term FX driver) didn't move enough to matter",
+          "Risk-on days usually soften the dollar slightly (safe-haven demand fades) — consistent with tiny decline",
+          "Big dollar drivers to watch: Friday PCE (hot = higher US yields = stronger USD), and any renewed Middle East escalation (safe-haven bid)",
+          "Strong-dollar regimes hurt US multinationals' overseas earnings and EM borrowers with USD debt — so DXY level feeds into equities and credit"
+        ],
+        "so_what": "FX salespeople must sanity-check data before quoting it — telling a corporate client 'the dollar fell 4% overnight' off a bad print would destroy trust; the real call today is 'dollar flat, waiting on PCE.'"
+      },
+      {
+        "term": "Verizon's worst day since 2002 — SpaceX and the direct-to-cell threat",
+        "category": "equities",
+        "bullets": [
+          "SpaceX announced plans for a U.S. network; VZ heads for its worst day since 2002, dragging AT&T/T-Mobile → market pricing a new national-scale competitor",
+          "Mechanism: satellites (Starlink, ~thousands in low-earth orbit) can beam signal directly to phones — no cell towers needed in coverage gaps; SpaceX bought EchoStar spectrum in 2025 to enable this",
+          "Why telcos are so exposed: business = huge sunk capex (towers, fiber, spectrum licenses worth $100bn+) recovered via slow, steady subscription fees; a cheaper entrant compresses pricing for decades",
+          "Telcos trade as 'bond proxies' — low growth, ~6% dividend yields; investors own them for income stability, so any threat to cash flow is punished hard",
+          "Leverage matters: Verizon carries roughly $140bn+ of debt → lower future cash flow raises dividend-cut and downgrade risk",
+          "Credit angle: VZ is a huge IG bond issuer — expect its bond spreads and CDS to widen too; equity shock → credit desk flow",
+          "Classic 'disruption rotation': money moves from legacy incumbents to the disruptor's ecosystem (space/satellite suppliers)"
+        ],
+        "so_what": "This is a cross-asset flow day: equity sales fields 'is the selloff overdone?' calls, while IG credit traders get asked for VZ bond/CDS levels — knowing that telco leverage links the two is what lets a salesperson pitch a coherent view across desks."
+      },
+      {
+        "term": "Tesla drops 'Full Self-Driving' name in Europe — regulatory risk on AI",
+        "category": "equities",
+        "bullets": [
+          "Tesla rebranding FSD in Europe after regulator pushback that the name overstates capability — the system is driver-supervised (Level 2), not true autonomy (Level 4–5)",
+          "Mechanism: EU car tech must pass type approval under UNECE vehicle rules; consumer-protection law bars misleading marketing — regulators can block sales or features",
+          "EU AI governance (AI Act) adds disclosure/safety obligations on high-risk AI systems → slower, costlier rollouts than in the US",
+          "Valuation link: a large chunk of Tesla's market cap is priced on autonomy/robotaxi optionality, not car sales — anything delaying autonomy hits the 'story' premium",
+          "Name change is cosmetic, but signals Europe will be a slower market for autonomy revenue (software subscriptions, robotaxi)",
+          "Broader theme: regulatory divergence (US light-touch vs EU strict) is now a recurring risk factor for US tech names selling globally"
+        ],
+        "so_what": "Equity sales traders tie headline risk to the valuation driver — for TSLA, the client question isn't 'does the name matter?' but 'does this delay autonomy revenue?', and answering that is what separates useful color from repeating the headline."
+      },
+      {
+        "term": "Bond-market stress signals — term premium, supply & bond vol",
+        "category": "rates",
+        "bullets": [
+          "Term premium = extra yield investors demand to lock up money for 10 years vs rolling short bills — rises with inflation uncertainty, deficits and Treasury supply",
+          "Supply: US deficits ≈ 6% of GDP → record Treasury issuance; weak auctions (high 'tail' = auction clears above expected yield) show buyers demanding more",
+          "Bond vol (MOVE index) = the VIX of Treasuries; rising MOVE forces risk-managed investors (VaR limits) to cut positions → can amplify selloffs",
+          "Credit transmission: higher base yields + wider spreads raise all-in borrowing costs; companies that borrowed at 3% in 2020–21 face a refinancing 'maturity wall' at 7%+",
+          "HY most exposed: weaker issuers have less cushion → defaults rise with a lag of 12–18 months after rates spike",
+          "Equity transmission: higher discount rate lowers present value of long-dated cash flows → long-duration growth stocks hit hardest",
+          "Today's mild steepening + 10Y at 5.28% is consistent with a slowly rising term premium, not an acute panic"
+        ],
+        "so_what": "When clients ask 'why are yields rising if the Fed isn't hiking?', the answer is term premium and supply — salespeople use auction results and MOVE to time when to pitch duration (after a weak auction cheapens bonds) and credit desks use it to flag refinancing-risk names."
+      },
+      {
+        "term": "Core PCE (Fri) — the Fed's preferred inflation gauge",
+        "category": "macro",
+        "bullets": [
+          "PCE = Personal Consumption Expenditures price index (BEA); 'core' strips volatile food & energy. Fed's 2% target is defined on PCE, not CPI",
+          "Differs from CPI: broader basket (includes spending paid on your behalf, e.g. employer health insurance), weights update monthly as people substitute → usually runs ~0.3–0.5pp below CPI",
+          "Mostly predictable from CPI + PPI already released, so the market reacts to the surprise vs economists' consensus, often just 0.1pp",
+          "Hot print → front-end yields jump (2Y most sensitive), curve bear-flattens, dollar firms, equities and long-duration tech fall",
+          "Soft print → extends today's 2Y rally, steepens curve further, supports risk assets",
+          "Also on deck: Thursday jobless claims (labor cooling = softer Fed) and Wednesday EIA inventories (oil → headline inflation)"
+        ],
+        "so_what": "Desks pre-position into PCE: rates traders reduce risk or set up front-end trades, and salespeople send clients a preview with consensus, whisper numbers and the expected market reaction for each outcome — the post-print call within minutes is a core sales deliverable."
+      }
+    ],
+    "narrative": "A quiet risk-on session on the surface — S&P +0.55% to 7,782, VIX barely up at 15.41, dollar flat — but under it the curve twist-steepened to +51bps as the 2Y fell to 4.77% while the 10Y edged up to 5.28%. The market is betting the Fed is close to done (front end rallying) while refusing to give up term premium at the long end, as deficits, supply and bond-vol worries keep 10-year yields pinned near 5.3%. Meanwhile disruption and regulation are driving single-name carnage (Verizon's worst day since 2002 on SpaceX, Tesla's FSD retreat in Europe), and Friday's core PCE will decide whether the front-end rally holds or the curve reprices hawkishly."
+  },
+  {
     "date": "2026-10-08",
     "blocks": [
       {
