@@ -1,86 +1,86 @@
 {
-  "date": "2026-10-09",
-  "generated_at": "2026-10-09T18:06:07.378Z",
+  "date": "2026-10-12",
+  "generated_at": "2026-10-12T21:01:54.087Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7782",
-      "change": "+42 (0.55%)",
-      "up": true
+      "value": "7781",
+      "change": "-5 (-0.06%)",
+      "up": false
     },
     {
       "name": "10Y UST",
-      "value": "5.28%",
-      "change": "+1.0 bps",
-      "up": true
+      "value": "5.22%",
+      "change": "-6.0 bps",
+      "up": false
     },
     {
       "name": "2Y UST",
-      "value": "4.77%",
+      "value": "4.75%",
       "change": "-2.0 bps",
       "up": false
     },
     {
       "name": "~DXY",
-      "value": "98.76",
-      "change": "-0.01",
-      "up": false
+      "value": "98.82",
+      "change": "+0.01",
+      "up": true
     },
     {
       "name": "VIX",
-      "value": "15.41",
-      "change": "+0.33",
-      "up": true
+      "value": "14.84",
+      "change": "-0.57",
+      "up": false
     }
   ],
   "stories": [
     {
-      "headline": "Tesla drops 'Full Self-Driving' brand name in Europe after regulator pushback",
+      "headline": "Bear to bull: A double upgrade of Salesforce illustrates the folly of the 'SaaSpocalypse'",
       "source": "CNBC",
-      "summary": "Tesla is rebranding its autonomous driving technology in Europe due to regulatory concerns over misleading claims. This marks a significant retreat in the company's European expansion strategy amid tightening AI governance standards.",
-      "why_matters": "Reflects mounting regulatory pressure on AI/autonomous systems as a key risk factor for US tech valuations in global markets.",
+      "summary": "Salesforce received consecutive analyst upgrades, signaling renewed confidence in SaaS valuations after months of bearish sentiment. The reversal reflects stabilizing enterprise software demand and improving margin profiles.",
+      "why_matters": "Cloud software sentiment shifts drive large-cap tech allocation and broader equity risk appetite in the S&P 500.",
       "tag": "Equities"
     },
     {
-      "headline": "Verizon stock heads for worst day since 2002 as SpaceX U.S. network plans whack telcos",
-      "source": "CNBC",
-      "summary": "Verizon is experiencing its worst day since 2002 following SpaceX's announcement of U.S. network plans, triggering a sector-wide selloff in legacy telecommunications. This reflects investor concern over disruption to traditional telecom business models.",
-      "why_matters": "Signals structural shifts in infrastructure competition and growth opportunity rotation away from legacy telecom toward space-based tech.",
-      "tag": "Equities"
-    },
-    {
-      "headline": "Four signs it is about to get uglier in the bond market as yields rise",
+      "headline": "Trump defends Russia diesel deal as lawmakers from both parties complain",
       "source": "Reuters",
-      "summary": "Bond market volatility signals deteriorating conditions as yields continue climbing, with multiple technical and macro indicators flashing warning signs. Higher rates threaten credit spreads and refinancing risks across the economy.",
-      "why_matters": "The steepening 10Y/2Y curve (5.28% vs 4.77%) alongside rising VIX suggests growing systemic stress in credit markets and potential headwinds for equity valuations.",
-      "tag": "Rates"
+      "summary": "The Trump administration is pushing a diesel arrangement with Russia as a vehicle for peace negotiations, drawing bipartisan criticism over sanctions implications. The deal signals a shift in geopolitical risk management affecting commodity and FX markets.",
+      "why_matters": "Energy and geopolitical risk reassessment influences crude volatility, risk premiums, and dollar strength in macro markets.",
+      "tag": "Macro"
+    },
+    {
+      "headline": "Airlines cancel flights to Saudi Arabia after Riyadh airport attacks",
+      "source": "Reuters",
+      "summary": "Multiple carriers have suspended services to Saudi Arabia following security incidents at Riyadh's main airport. Disruptions to regional travel and trade flows add to geopolitical uncertainty.",
+      "why_matters": "Middle East instability affects oil supply risk premiums, global trade flows, and safe-haven demand for rates and equities.",
+      "tag": "Macro"
     }
   ],
   "calendar": [
     {
-      "day": "Fri",
-      "event": "PCE Inflation (Sept, core YoY)",
+      "day": "Wed",
+      "event": "US CPI (September)",
       "importance": "high",
-      "note": "Key Fed inflation gauge; impacts rate expectations and bond curve"
+      "note": "Inflation data critical for 10Y/2Y curve and Fed rate expectations; 10Y at 5.22% priced for moderate pressures."
     },
     {
       "day": "Thu",
       "event": "Initial Jobless Claims (weekly)",
-      "importance": "high",
-      "note": "Labor market health indicator; watch for deterioration signals"
+      "importance": "medium",
+      "note": "Labor market indicator; flatter 2Y/10Y spread (-47 bps) suggests rate pause expectations."
     },
     {
-      "day": "Wed",
-      "event": "EIA Energy Inventory Data",
-      "importance": "medium",
-      "note": "Oil/gas supply data; relevant given energy market geopolitical tensions"
+      "day": "Fri",
+      "event": "US Retail Sales (September)",
+      "importance": "high",
+      "note": "Consumer spending update ahead of holiday season; equity and rate volatility likely if data surprises."
     }
   ],
   "concept": {
-    "title": "Curve Flattening & Regime Shift Risk",
-    "one_liner": "A flattening 2Y/10Y spread amid rising VIX signals potential transition from growth to recession pricing.",
-    "explanation": "Today's data shows the 10Y rising 1.0 bps to 5.28% while 2Y fell 2.0 bps to 4.77%, compressing the curve. Combined with VIX uptick (+0.33) and S&P modestly higher (+0.55%), this pattern historically precedes either a Fed pause or policy reversal. The bond market is pricing in duration risk and credit stress.",
-    "market_link": "Flattening curves typically coincide with equity consolidation phases and elevated rollover risk for corporates."
+    "title": "Bond Rally in Quiet Equity Markets",
+    "one_liner": "Falling rates and subdued equity action signal de-risking and flight-to-quality amid geopolitical uncertainty.",
+    "explanation": "Both 10Y and 2Y Treasury yields dropped today while the S&P 500 barely moved (-0.06%), and VIX fell to 14.84, indicating lower realized volatility. This combination—bond rallies with muted equity downside—typically reflects institutional rotation into safe havens and expectations of prolonged economic caution, even as geopolitical headlines (Saudi attacks, Russia diesel deal) create macro noise.",
+    "market_link": "The -6.0 bps decline in 10Y yields combined with a near-flat equity market suggests investors are pricing slower growth and reduced Fed tightening, reinforced by a collapsing 2Y/10Y spread."
   },
-  "narrative": "Markets are treading water on modest S&P gains while bond volatility rises and the curve flattens—a classic warning sign of economic uncertainty and potential rate-cycle inflection. Sector-specific shocks (Tesla regulatory headwinds, Verizon disruption) are playing out against a macro backdrop of sticky yields and geopolitical tension (Houthi strikes, energy concerns)."
+  "narrative": "Markets traded cautiously on October 12, with equities essentially flat and Treasury yields declining across the curve as geopolitical risks in the Middle East and Russia-US diplomacy weighed on risk sentiment. The VIX decline to 14.84 and modest bond rally suggest investors are digesting these headline risks without panic, positioning for a slower economic backdrop ahead of key inflation and employment data later this week."
 }
