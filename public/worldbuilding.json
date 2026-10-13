@@ -1,5 +1,136 @@
 [
   {
+    "date": "2026-10-12",
+    "blocks": [
+      {
+        "term": "10Y UST at 5.22% — a 6bp safety rally",
+        "category": "rates",
+        "bullets": [
+          "10Y at 5.22%, −6bps — biggest daily drop in the recent run (5.28% on Oct 9, 5.27% Oct 8, 5.24% Oct 3); erases the whole late-Sept/early-Oct grind higher",
+          "Yield down = price up: 10Y duration ≈ 8.5 → −6bps ≈ +0.51% on price ≈ +$5.1mm on a $1bn long",
+          "Rally came with stocks flat (−0.06%) → not a panic bid; reads as slow de-risking + geopolitical hedge buying (Riyadh airport attacks, Russia diesel controversy)",
+          "Long end moved 3x the 2Y → the move is in growth/term-premium expectations, not Fed pricing — investors buying duration as insurance against a slower economy",
+          "5.25% had been the line in the sand after last week; breaking back below it puts 5.20% in play as next technical level",
+          "Big catalyst Wed: Sept CPI — hot print likely reverses today's rally fast (a headline rally into data is fragile); soft print could extend toward 5.15%",
+          "Real-money (pensions, insurers) tend to buy 5%+ 10Ys on dips; fast money (hedge funds) were likely short and covering into the headlines"
+        ],
+        "so_what": "Today's morning-call line is 'long end rallied 6bps on geopolitics, not data — question is whether it survives Wednesday's CPI'; salespeople will be asked by real-money clients whether to lock in duration above 5.20% before the print."
+      },
+      {
+        "term": "2Y UST at 4.75% + 2s10s at +47bps (bull flattener)",
+        "category": "rates",
+        "bullets": [
+          "2Y at 4.75%, −2bps (4.77% Oct 9) — 2Y ≈ market's bet on average Fed funds over the next ~2 years; barely moved → Fed expectations essentially unchanged",
+          "10Y −6 vs 2Y −2 → 2s10s narrows from +51bps to +47bps (−4bps) = bull flattener (yields down, long end leading)",
+          "CORRECTION to today's brief: it lists the spread as '−47 bps' — wrong sign. 10Y (5.22%) − 2Y (4.75%) = +47bps; the curve is positively sloped, NOT inverted",
+          "Brief also calls it a 'collapsing' spread — 4bps is a normal daily move, not a collapse; it simply reverses Friday's +3bp steepening",
+          "Bull flattener read-through: market buying long bonds as a growth/geopolitical hedge, while front end still thinks the Fed holds — classic 'flight to quality' signature",
+          "Steepener trades (long 2Y / short 10Y, DV01-weighted) that made ~3bps Friday gave back ~4bps today → choppy, range-bound curve trade into CPI",
+          "Contrast: bull steepener (2Y leads lower) = 'Fed cuts coming'; today's bull flattener = 'growth fear / safe-haven demand', Fed story unchanged"
+        ],
+        "so_what": "RV and macro hedge fund clients trade curve shape separately from level — the desk needs to say 'bull flattener, +47bps, long-end-led' correctly; repeating the brief's '−47' sign error on a client call would be an instant credibility hit."
+      },
+      {
+        "term": "Flight to quality — why bonds rally when risk rises",
+        "category": "fundamental",
+        "bullets": [
+          "Definition: investors sell risky assets (stocks, HY credit, EM) and buy the safest, most liquid ones (USTs, sometimes USD, JPY, CHF, gold)",
+          "Mechanism: more buyers of Treasuries → bond prices up → yields down (price and yield move inversely because the coupon is fixed)",
+          "USTs are the safe haven because: backed by US govt, deepest market on earth (~$28tn+), can be sold instantly in size, and accepted as collateral everywhere",
+          "Today's version is a 'soft' flight to quality: 10Y −6bps, but S&P only −0.06% and VIX DOWN to 14.84 → hedging, not panic",
+          "A 'hard' flight to quality looks different: S&P −2%+, VIX spikes above 20–25, credit spreads widen, 10Y can drop 15–20bps in a day",
+          "At 5%+ yields, bonds are also a real hedge again — in 2021 (10Y ~1.5%) there was little room for yields to fall, so bonds hedged stocks poorly",
+          "Caveat: when the risk is INFLATION (not growth/geopolitics), bonds and stocks can fall together (2022) — flight to quality only works on growth scares"
+        ],
+        "so_what": "Traders constantly diagnose 'is this flow risk-off or something else?' — identifying a soft flight-to-quality vs. a data-driven move tells the desk whether the rally is likely to stick or fade, and what to pitch (duration buys vs. fading the move)."
+      },
+      {
+        "term": "VIX at 14.84 — calm under geopolitical noise",
+        "category": "volatility",
+        "bullets": [
+          "VIX at 14.84, −0.57 — measures 30-day implied vol of S&P 500 options; ~14.8 ≈ market pricing ~0.93% avg daily S&P moves (14.84 / √252)",
+          "Long-run average ~19–20; sub-15 = complacent/calm regime. Fell despite Riyadh attacks + Russia diesel controversy → market sees these as contained",
+          "Mechanism: VIX derived from prices of S&P puts and calls — when investors stop paying up for protection (puts), implied vol and VIX fall",
+          "VIX falling while bonds rallied = unusual combo; signals hedging is happening in rates, not via equity puts",
+          "Event vol: CPI Wed + Retail Sales Fri are known events — options expiring right after those dates carry extra premium even if spot VIX is low",
+          "Low VIX = cheap hedges: put spreads / VIX calls are inexpensive now, attractive for clients worried about Middle East tail risk",
+          "Vol sellers (systematic short-vol funds, overwriters) profit in this regime; a sudden geopolitical shock can force them to cover → VIX spikes fast (2018 'Volmageddon', Aug 2024)"
+        ],
+        "so_what": "Equity derivatives sales pitches 'cheap protection' when VIX is sub-15 and headline risk is elevated — today's setup (VIX 14.84 with active Middle East events) is a textbook moment to call clients about buying tail hedges into CPI."
+      },
+      {
+        "term": "S&P 500 at 7781 + the Salesforce double upgrade ('SaaSpocalypse')",
+        "category": "equities",
+        "bullets": [
+          "S&P 500 at 7781, −5 pts (−0.06%) — effectively flat; index ignored both the bond rally and geopolitical headlines",
+          "'SaaSpocalypse' = 2025–26 bear thesis that AI agents will gut software-as-a-service: fewer human seats → fewer per-user licenses → lower SaaS revenue",
+          "SaaS model: firms like Salesforce (CRM) charge recurring subscriptions, usually per user ('per seat'); valued on revenue growth, net retention, and margins",
+          "Double upgrade = analyst jumps two notches (e.g. Sell → Buy / Underweight → Overweight), skipping Neutral — rare, signals a full thesis reversal",
+          "Bull case cited: enterprise software demand stabilizing, margins improving, and AI being monetized (Salesforce's Agentforce) rather than cannibalizing seats",
+          "Rate link: SaaS = long-duration equity (most cash flows far in future) → a −6bp 10Y move helps growth/software valuations at the margin",
+          "Upgrades move stocks via flows: long-only funds rebalance toward Overweight names, short sellers who crowded the 'SaaSpocalypse' trade cover"
+        ],
+        "so_what": "Cash equity sales uses analyst upgrades as a reason to call clients ('our analyst/street flipped on CRM — are you still underweight software?'), and traders anticipate short-covering flow in crowded shorts when sentiment reverses."
+      },
+      {
+        "term": "DXY at 98.82 — the dollar didn't join the safety trade",
+        "category": "fx",
+        "bullets": [
+          "DXY at 98.82, +0.01 — flat; index of USD vs 6 currencies, ~58% weight EUR, then JPY, GBP, CAD, SEK, CHF",
+          "Normally lower US yields → weaker USD (less yield to hold dollars); offset today by mild safe-haven demand for USD → net flat",
+          "~98.8 is well below the 2022 peak (~114) — dollar has been in a softer regime as US fiscal/policy uncertainty weighed on its 'safe haven' status",
+          "USD 'smile': dollar strengthens in both crises (safe haven) AND strong-US-growth booms; weakens in the middle (calm, synchronised global growth)",
+          "Russia diesel deal angle: easing sanctions could lower European energy costs → mild EUR-positive, which would push DXY down given EUR's 58% weight",
+          "Middle East risk usually supports USD, CHF, JPY, and oil-exporter currencies (NOK, CAD) vs. oil importers (INR, KRW, JPY sometimes hurt by energy bill)"
+        ],
+        "so_what": "FX sales needs to explain why the dollar didn't move when yields fell 6bps — 'rate-differential selling offset by safe-haven buying' is the line corporate and macro clients want before deciding on hedges into CPI."
+      },
+      {
+        "term": "Russia diesel deal — sanctions as a negotiating chip",
+        "category": "energy",
+        "bullets": [
+          "Diesel = middle distillate used by trucks, rail, farm equipment, shipping, and generators — the fuel of the physical economy; Russia is historically one of the world's largest diesel exporters",
+          "Since the 2023 EU embargo + G7 price cap ($100/bbl on products like diesel), Russian diesel has been rerouted to Turkey, Brazil, Africa, Asia at a discount",
+          "Trump administration is pitching a diesel arrangement as a carrot in Russia–Ukraine peace talks → bipartisan pushback: critics say it rewards Russia and undercuts sanctions leverage",
+          "Market mechanism: more Russian diesel legally reaching Western markets → more supply → lower diesel 'crack spread' (diesel price minus crude price) and lower refiner margins",
+          "Second-order: lower diesel prices → lower transport costs → lower goods inflation at the margin — relevant ahead of Wed CPI narrative",
+          "Political risk: Congress could try to block via sanctions legislation → headline volatility; deal uncertain, so markets treat it as optionality, not base case",
+          "WTI not reported in today's brief — watch whether crude risk premium from Saudi events outweighs any bearish Russia-supply read"
+        ],
+        "so_what": "Commodities desks trade the diesel crack and refiner exposures off headlines like this, and macro sales uses it to frame the 'sanctions-easing = disinflationary' angle for clients positioning around CPI."
+      },
+      {
+        "term": "Riyadh airport attacks — Middle East oil risk premium",
+        "category": "macro",
+        "bullets": [
+          "Multiple airlines suspended Saudi flights after security incidents at Riyadh's main airport — an attack inside the Saudi capital raises fears for nearby energy infrastructure",
+          "Saudi Arabia = world's largest crude exporter (~6–7mm bbl/d), de facto leader of OPEC+, holds most of the world's spare production capacity",
+          "Risk premium = extra $/bbl priced into oil above supply-demand fundamentals because of the chance of disruption; rises on attacks, fades if no supply is lost",
+          "Precedent: Sept 2019 Abqaiq drone strike knocked out ~5.7mm bbl/d (≈5% of global supply) → Brent +15% intraday, the largest one-day jump in decades, then faded within weeks",
+          "Chokepoints: Strait of Hormuz (~20% of global oil) and Red Sea/Bab el-Mandeb — any escalation risk there amplifies the premium",
+          "Cross-asset footprint today: modest — UST rally + flat S&P + lower VIX → market judging the airport incidents as not (yet) a supply threat",
+          "Airline stocks hit directly (route cancellations + jet fuel risk); defense names and energy producers typically bid on such headlines"
+        ],
+        "so_what": "Geopolitical headlines hit oil first, then rates and FX — the desk must quickly judge 'is any barrel actually at risk?' to tell clients whether to fade the risk premium or hedge it, especially with energy-sensitive CPI data two days away."
+      },
+      {
+        "term": "CPI week — why Wednesday's print dominates everything",
+        "category": "macro",
+        "bullets": [
+          "Sept CPI out Wed 8:30am ET: measures change in prices of a basket of consumer goods/services; 'core' excludes food and energy (more stable, what the Fed watches more closely)",
+          "Desk focuses on month-over-month core — every 0.1pp surprise vs. consensus can move the 2Y ~5–10bps and the 10Y ~5–8bps in minutes",
+          "Why 2Y reacts most: CPI changes the expected Fed path directly; 2Y at 4.75% embeds a 'hold' — a hot print reprices hikes/delayed cuts",
+          "Today's rally means the market went into CPI LONGER duration → hot print = painful unwind (asymmetric risk), soft print = extension",
+          "Thursday jobless claims (weekly) = real-time labor-market gauge; rising claims support the 'slowing economy' story behind today's bull flattener",
+          "Friday Sept retail sales = consumer health ahead of holiday season (~70% of US GDP is consumption); strong print pushes yields back up",
+          "Three-data-point week → event vol in rates and equity options elevated even though spot VIX is low"
+        ],
+        "so_what": "Sales and trading spend the days before CPI positioning clients — gauging consensus, flagging where positioning is crowded (long duration after today), and preparing pre-written scenario notes so they can call clients within seconds of the 8:30 release."
+      }
+    ],
+    "narrative": "The macro story on Oct 12 is a quiet safe-haven bid: the 10Y fell 6bps to 5.22% while the 2Y fell only 2bps to 4.75% (a bull flattener to +47bps — positive, not the '−47' the brief shows), even as the S&P sat flat at 7781 and VIX slipped to 14.84, meaning investors hedged Riyadh and Russia headline risk through bonds rather than by selling stocks. The market is betting that geopolitics stays contained and growth is cooling, with Fed pricing essentially unchanged — but having gone into Wednesday's CPI longer duration, a hot inflation print is the key risk that could snap the 10Y back toward 5.30%."
+  },
+  {
     "date": "2026-10-09",
     "blocks": [
       {
