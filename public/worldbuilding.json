@@ -1,5 +1,137 @@
 [
   {
+    "date": "2026-10-13",
+    "blocks": [
+      {
+        "term": "10Y UST at 5.22% — the rally holds into CPI (with a data caveat)",
+        "category": "rates",
+        "bullets": [
+          "10Y at 5.22%, −6bps per today's brief — the exact same level and change the Oct 12 brief showed → either the long end genuinely held its gains or the yield feed didn't refresh; check a live screen before quoting it",
+          "Why it might be stale: Mon Oct 12 was Columbus Day — the cash Treasury market was closed (SIFMA holiday) while stocks traded, so holiday-period yield prints can lag or repeat",
+          "Run of closes: 5.24% (Oct 3) → 5.27% (Oct 8) → 5.28% (Oct 9) → 5.22% now → ~6bps off the highs; 5.20% is the next round-number level traders watch",
+          "Price math: 10Y modified duration ≈ 7.7 → −6bps ≈ +0.46% on price ≈ +$4.6mm on a $1bn long; DV01 ≈ $770k per bp on $1bn",
+          "Brief's read: flight-to-quality bid on Middle East + 'hybrid warfare' headlines, plus persistent rate-cut hopes — the long end moved 3x the 2Y, so this is a growth/safety trade, not a Fed repricing",
+          "Fragility: rallies built on headlines rather than data are easily reversed — Wed CPI is the test; a hot core print can give back 6bps in minutes",
+          "Real money (pensions, insurers, liability-driven investors) like buying 10Ys above 5%; a pullback toward 5.20% tests how much of that demand is left"
+        ],
+        "so_what": "On the morning call the honest line is 'long end holding ~5.22% into CPI' — and a good junior verifies the level on Bloomberg/Tradeweb first, because quoting a stale holiday print to a client is an instant credibility hit."
+      },
+      {
+        "term": "2Y UST at 4.75% — what the front end says about the Fed",
+        "category": "rates",
+        "bullets": [
+          "2Y at 4.75%, −2bps → the bond most tied to Fed policy barely moved, so the market did NOT price meaningfully more cuts today",
+          "Mechanism: 2Y yield ≈ average expected Fed funds rate over the next 2 years + a small term premium → it is a running poll on the Fed path",
+          "2s10s = 5.22% − 4.75% = +47bps (positive, upward-sloping curve); 10Y fell more than 2Y → bull flattener (yields down, curve flatter)",
+          "Brief calls it 'longer-term economic caution': investors willing to accept less extra yield for lending 10 years vs 2 → expecting slower growth/inflation further out",
+          "Price sensitivity is small: 2Y duration ≈ 1.9 → −2bps ≈ +0.04% on price; you need a big move in the 2Y to make or lose real money, which is why 2Y trades are run in larger size",
+          "CPI hits the 2Y hardest: inflation data changes the near-term Fed path directly, so expect the 2Y — not the 10Y — to lead Wednesday's reaction",
+          "Watch for a flip: hot CPI → 2Y up more than 10Y → bear flattener; soft CPI → 2Y down more → bull steepener"
+        ],
+        "so_what": "Rates sales translate front-end moves into 'cuts priced' for clients (e.g. a 25bp drop in the 2Y ≈ one extra cut in the strip), so the 2Y's quiet −2bps lets you say the Fed narrative is unchanged and today was a long-end story."
+      },
+      {
+        "term": "Discount rates & 'equity duration' — why falling yields lift Meta more than utilities",
+        "category": "fundamental",
+        "bullets": [
+          "A stock's value = today's value of all future cash flows, discounted at a rate built on the risk-free Treasury yield + an equity risk premium",
+          "Lower 10Y → lower discount rate → future cash flows worth more today → higher fair value; the brief's 'falling long-dated rates reduce discount rates for equities' is this",
+          "Gordon growth model P = D / (r − g): with r = 8%, g = 5%, a 10bp drop in r lifts value ~3.4%; with r = 7%, g = 1%, same drop lifts value only ~1.7%",
+          "→ High-growth stocks (cash flows far in the future) behave like long-duration bonds: 'long-duration equities' = tech, AI, unprofitable growth",
+          "This is why the Nasdaq/mega-cap tech often rallies on bond rallies and sells off hard when the 10Y spikes (2022: 10Y +230bps, Nasdaq −33%)",
+          "Today the effect is muted: 10Y −6bps but S&P −0.04% → the geopolitical risk premium offset the lower discount rate for the broad index",
+          "Credit benefits too: lower base yields cut refinancing costs for companies, which the brief calls 'structurally supportive for credit'"
+        ],
+        "so_what": "Equity sales and delta-one traders watch the 10Y intraday as a factor driver — when yields drop sharply, clients rotate into growth/quality and out of value/banks, and you want to be pitching that factor rotation before the client asks."
+      },
+      {
+        "term": "S&P 500 at 7,778 + Meta's AI model rally — mega-cap concentration",
+        "category": "equities",
+        "bullets": [
+          "S&P 7,778, −3pts (−0.04%) → essentially flat; ~4pts below the Oct 9 close of 7,782 and near all-time highs",
+          "Meta up a second straight day on a new AI model family → investors rewarding evidence the huge AI spend produces competitive products",
+          "Why it matters to the index: S&P is market-cap weighted → a handful of mega-caps (Nvidia, Microsoft, Apple, Alphabet, Amazon, Meta, Broadcom) are roughly a third of the index; their moves can mask the other ~490 stocks",
+          "Flat index + one mega-cap rallying → the average stock likely did worse than the headline; check equal-weight S&P (RSP) vs SPX for breadth",
+          "Meta's AI economics: monetizes models indirectly via better ad targeting/engagement across Facebook, Instagram, WhatsApp, rather than selling the models → capex (data centers, GPUs) is justified by ad revenue growth",
+          "The bull case for AI names = earnings expectations; the bear case = capex outrunning revenue — every model launch and earnings call is read through that lens",
+          "Q3 earnings season ramps from mid-October → mega-cap results in late Oct will decide whether AI optimism keeps holding the index up"
+        ],
+        "so_what": "Equity sales coverage needs a one-line 'why' for every big single-name move ('Meta +2 days on model launch, index flat = narrow tape') because PMs ask whether the index is healthy or being carried by a few names before sizing risk."
+      },
+      {
+        "term": "VIX at 15.21 (+0.37) — pre-CPI event vol, not fear",
+        "category": "volatility",
+        "bullets": [
+          "VIX at 15.21, +0.37 (vs 14.84 Oct 12, 15.41 Oct 9) → small rise while stocks were flat; long-run average ~19–20, so still calm",
+          "VIX = market's implied (expected) 30-day volatility of the S&P, backed out of SPX option prices; it rises when investors pay more for options",
+          "Translate it: 15.21 ÷ √252 ≈ 0.96% expected daily move ≈ ±75 S&P points on 7,778 (1 standard deviation); monthly ≈ 15.21 ÷ √12 ≈ 4.4% ≈ ±340pts",
+          "Why up on a flat day: known events (Wed CPI, Fri retail sales/PPI) sit inside the 30-day window → option buyers pay for the event → 'event vol' bid ahead of data",
+          "After the print, if no surprise, that premium evaporates → 'vol crush'; options sellers make money, buyers of pre-event straddles lose",
+          "Brief's framing: geopolitical risk is being hedged in bonds and options, not by selling stocks → 'uncertainty without panic'",
+          "Panic signals would be VIX >20, VIX futures curve inverting (front month above later months), and a big jump in put skew — none present"
+        ],
+        "so_what": "Derivatives sales pitch CPI-day straddles/strangles to clients by comparing the implied move (what options charge) to the historical average CPI-day move — if implied looks cheap, buy the event; if rich, sell it."
+      },
+      {
+        "term": "DXY ~102.54 — the dollar firm while yields fall (and a data warning)",
+        "category": "fx",
+        "bullets": [
+          "Brief shows ~DXY 102.54, +0.0048 — but the Oct 12 brief showed 98.82 and Oct 8 showed 102.88 → a ~3.7pt swing day-to-day is not real; the '~' means this is a proxy, likely rebuilt from EUR/USD",
+          "The '+0.0048' looks like a EUR/USD-style change (48 pips) mislabeled as DXY points — the brief's own concept section says 'USD firm (+0.48 on EUR/USD weakness)'",
+          "DXY = dollar vs a basket of 6 currencies; euro ≈ 57.6% weight, then yen ~13.6%, pound ~11.9%, CAD, SEK, CHF → DXY is mostly an inverse euro trade",
+          "Normal mechanism: lower US yields → less reward for holding dollars → weaker USD; today the dollar was firm despite the 10Y −6bps",
+          "Why: the dollar is also a safe-haven currency → geopolitical stress → global investors buy USD (and Treasuries) → the haven effect beat the yield effect",
+          "Euro weakness also matters: Europe imports most of its energy → Middle East oil risk hits EUR more than USD (US is a net energy exporter)",
+          "Takeaway: direction (USD firm, EUR/USD lower) is usable; the level isn't — always cross-check EUR/USD on a live screen"
+        ],
+        "so_what": "FX salespeople are constantly asked 'why is the dollar up if yields are down?' — the answer (safe-haven flows + energy-terms-of-trade hitting the euro) is the kind of cross-asset explanation that makes a junior useful on a client call."
+      },
+      {
+        "term": "'Hybrid warfare' & Saudi-Houthi tensions — how attacks on airports move markets",
+        "category": "macro",
+        "bullets": [
+          "Hybrid warfare = hostile action kept below the threshold of open war: drones over airports, sabotage of cables/pipelines, cyberattacks, GPS jamming, disinformation → deniable, cheap, disruptive",
+          "Airports are ideal targets: a few drone sightings can shut airspace for hours → cancellations, rerouting, stranded passengers at almost no cost to the attacker",
+          "Builds on the Riyadh airport attacks from the Oct 12 brief → airlines cancelling Saudi routes; Houthis (Iran-aligned Yemeni group) have repeatedly struck Saudi targets with drones/missiles",
+          "Saudi conference modifications → Riyadh hosts the Future Investment Initiative ('Davos in the desert') each October; scaling it back signals the kingdom itself sees security risk, which hurts its pitch for foreign capital (Vision 2030)",
+          "Market channels: (1) airline stocks & airline bonds (cancellations + higher jet fuel), (2) war-risk insurance premiums for aircraft and tankers, (3) oil risk premium, (4) safe-haven demand for Treasuries/USD/gold",
+          "The brief's inflation link: higher energy and shipping/travel costs → higher inflation expectations → complicates the Fed's ability to cut, even as the safety bid pushes yields down",
+          "Key distinction desks make: disruption headlines (temporary, priced and faded) vs damage to physical oil supply (persistent, repriced)"
+        ],
+        "so_what": "Macro and commodities sales need to tell clients within minutes whether a geopolitical headline hits physical supply or just sentiment — that determines whether to recommend hedging (oil calls, long Treasuries) or fading the move."
+      },
+      {
+        "term": "Saudi oil risk premium — why the market cares even with no barrels lost",
+        "category": "energy",
+        "bullets": [
+          "Today's brief has no WTI/Brent level → can't quote the move; the mechanism still matters given Saudi-Houthi escalation",
+          "Risk premium = extra dollars per barrel traders pay for the chance supply is disrupted, above what current supply/demand alone would justify",
+          "Why Saudi is special: largest exporter (~7mb/d of crude exports) AND holds most of OPEC+'s spare capacity → it's the world's emergency buffer; a hit to Saudi removes both supply and the shock absorber",
+          "Precedent: Sept 2019 Abqaiq drone/missile attack knocked out ~5.7mb/d (~5% of world supply) → Brent jumped ~15% in one day, but faded within weeks as output was restored",
+          "→ Pattern: oil spikes on the attack, then the premium decays unless infrastructure stays offline — traders sell rallies unless barrels are actually missing",
+          "Jet fuel is the immediate pain point for aviation: it trades as a premium ('crack spread') over crude, and spikes when refined-product supply routes (Red Sea) are threatened",
+          "Rates link: higher oil → higher breakeven inflation (TIPS) → upward pressure on nominal yields, the opposite of today's safety bid"
+        ],
+        "so_what": "Commodities and rates desks watch oil and 5Y breakevens together — if a Middle East headline lifts crude but yields fall, the market is treating it as a growth shock; if both rise, it's an inflation shock, and client hedges differ completely."
+      },
+      {
+        "term": "This week's data gauntlet — CPI (Wed), claims (Thu), retail sales + PPI (Fri)",
+        "category": "macro",
+        "bullets": [
+          "CPI (Sept, Wed 8:30am ET) = price change of a consumer basket; market focuses on CORE (ex food & energy) month-over-month, since it best signals underlying inflation",
+          "Surprise size: a 0.1pp miss vs consensus on core MoM is a big deal (annualizes to ~1.2pp) → can move the 2Y 8–15bps and S&P 1%+ in minutes",
+          "Shelter (rent + owners' equivalent rent) ≈ a third of headline CPI and over 40% of core → slow-moving, so traders also watch 'supercore' (core services ex-housing)",
+          "Initial jobless claims (Thu) = new unemployment filings that week; rising claims → weaker labor market → supports the rate-cut narrative",
+          "Retail sales (Fri) = consumer spending; the 'control group' (ex autos, gas, building materials, food services) feeds directly into GDP estimates",
+          "PPI (Fri) = producer/wholesale prices; components like airfares, healthcare, and portfolio management fees feed into core PCE, the Fed's preferred gauge → economists revise PCE forecasts right after",
+          "Set-up risk: market came into the week long duration (10Y rallied to 5.22%) → asymmetric downside for bonds if CPI is hot"
+        ],
+        "so_what": "Every desk builds a 'scenario grid' before CPI (hot/inline/soft → expected moves in 2Y, 10Y, SPX, USD), and salespeople send it to clients the night before so they're the first call when the print hits."
+      }
+    ],
+    "narrative": "The macro story on Oct 13 is 'uncertainty without panic': the 10Y held its safety rally at 5.22% (−6bps, a bull flattener with 2s10s at +47bps as the 2Y slipped only 2bps to 4.75%), VIX ticked up to 15.21 and the dollar firmed, yet the S&P sat flat at 7,778 because Meta's AI rally offset Saudi-Houthi and hybrid-warfare headline risk. The market is betting that geopolitics stays a sentiment shock rather than a physical oil-supply shock and that the Fed's easing path survives — but with investors already long duration into Wednesday's CPI and Friday's PPI/retail sales, a hot core print is the tension that could snap yields back toward 5.30% and expose how narrow the AI-led equity tape really is. (Caveat: today's 10Y/2Y print matches Oct 12 exactly and the DXY proxy is inconsistent day-to-day — verify levels on a live screen.)"
+  },
+  {
     "date": "2026-10-12",
     "blocks": [
       {
