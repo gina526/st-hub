@@ -1,86 +1,86 @@
 {
-  "date": "2026-10-13",
-  "generated_at": "2026-10-13T19:00:39.291Z",
+  "date": "2026-10-14",
+  "generated_at": "2026-10-14T16:45:26.370Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7778",
-      "change": "-3 (-0.04%)",
+      "value": "7702",
+      "change": "-78 (-1.00%)",
       "up": false
     },
     {
       "name": "10Y UST",
-      "value": "5.22%",
-      "change": "-6.0 bps",
-      "up": false
-    },
-    {
-      "name": "2Y UST",
-      "value": "4.75%",
-      "change": "-2.0 bps",
-      "up": false
-    },
-    {
-      "name": "~DXY",
-      "value": "102.54",
-      "change": "+0.0048",
+      "value": "5.24%",
+      "change": "+2.0 bps",
       "up": true
     },
     {
+      "name": "2Y UST",
+      "value": "4.80%",
+      "change": "+5.0 bps",
+      "up": true
+    },
+    {
+      "name": "~DXY",
+      "value": "~103.5",
+      "change": "-0.15",
+      "up": false
+    },
+    {
       "name": "VIX",
-      "value": "15.21",
-      "change": "+0.37",
+      "value": "15.27",
+      "change": "+0.06",
       "up": true
     }
   ],
   "stories": [
     {
-      "headline": "Meta shares rise for a second straight day as new AI model family impresses",
-      "source": "CNBC",
-      "summary": "Meta's stock continues upward momentum on positive reception of its latest AI model releases. The tech giant's innovation cycle is driving investor confidence in the mega-cap tech sector.",
-      "why_matters": "Tech strength is a key S&P 500 driver and reflects AI-driven earnings expectations that support equity valuations.",
-      "tag": "Equities"
-    },
-    {
-      "headline": "10Y Treasury yields drop 6 bps as geopolitical tensions rise and rate cut expectations persist",
-      "source": "Market Data",
-      "summary": "Long-end yields are declining despite a modestly higher VIX, signaling flight-to-quality demand amid Middle East escalation. The steeper decline in 10Y versus 2Y suggests bond traders are pricing in longer-term economic caution.",
-      "why_matters": "Falling long-dated rates reduce discount rates for equities and signal Fed easing cycle continuation, structurally supportive for credit and growth stocks.",
-      "tag": "Rates"
-    },
-    {
-      "headline": "Geopolitical conflict escalation: Airport attacks and Saudi-Houthi tensions threaten aviation and oil markets",
-      "source": "CNBC / Reuters",
-      "summary": "Rising hybrid warfare activities and Middle East escalation are creating supply-chain risk and energy market uncertainty. Saudi Arabia's conference modifications and aviation sector warnings reflect heightened geopolitical risk.",
-      "why_matters": "Energy price volatility and flight-to-safety hedging can elevate inflation expectations and redirect capital away from cyclicals, pressuring growth equity valuations.",
+      "headline": "US consumer prices accelerate in September on costlier gasoline; core CPI firmer",
+      "source": "Reuters",
+      "summary": "September CPI showed acceleration driven by higher gasoline costs, with core inflation also strengthening, adding pressure on the Fed's inflation narrative. This contradicts recent softening expectations and suggests sticky price pressures remain in the economy.",
+      "why_matters": "Sticky inflation may force the Fed to hold rates higher for longer, impacting equity valuations and the terminal rate outlook.",
       "tag": "Macro"
+    },
+    {
+      "headline": "Yemen's Houthis vow more attacks on Saudi airports, oil facilities after Aramco HQ hit; Container ship sinks near Hormuz after being hit by projectile",
+      "source": "Reuters",
+      "summary": "Escalating Houthi attacks on Saudi oil infrastructure and shipping lanes in the Strait of Hormuz are disrupting regional supply chains and threatening global energy flows. These geopolitical tensions add upside risk to crude prices and supply uncertainty.",
+      "why_matters": "Energy supply disruptions from Middle East conflict directly impact US inflation dynamics and commodity-linked equity sectors.",
+      "tag": "Macro"
+    },
+    {
+      "headline": "Gulf markets mixed; Saudi stocks hardest hit on Aramco attack",
+      "source": "Reuters",
+      "summary": "Saudi equities sold off following the Houthi strike on Aramco headquarters, signaling regional risk-off sentiment amid security concerns. The weakness reflects both direct operational risks to energy producers and broader geopolitical uncertainty.",
+      "why_matters": "Contagion to US energy stocks and flight-to-safety flows into Treasuries could amplify equity market volatility and reshape sector rotation.",
+      "tag": "Equities"
     }
   ],
   "calendar": [
     {
       "day": "Wed",
-      "event": "US CPI (Sept) - Core & Headline",
+      "event": "Initial Jobless Claims (weekly)",
       "importance": "high",
-      "note": "Critical inflation data; 10Y/2Y curve and Fed expectations hinge on this print"
+      "note": "Labor market strength remains key inflation check; watch for signs of slowdown"
     },
     {
       "day": "Thu",
-      "event": "US Initial Jobless Claims (weekly)",
-      "importance": "medium",
-      "note": "Labor market health update; supports or challenges rate-cut narrative"
+      "event": "Producer Price Index (PPI)",
+      "importance": "high",
+      "note": "Upstream inflation gauge critical after hot CPI; core PPI especially watched by Fed"
     },
     {
       "day": "Fri",
-      "event": "US Retail Sales (Sept) & Producer Prices",
+      "event": "Retail Sales & University of Michigan Sentiment",
       "importance": "high",
-      "note": "Consumer spending and upstream inflation; key drivers for Q4 GDP and Fed terminal rate"
+      "note": "Consumer health under pressure from higher rates and inflation; sentiment gauge reflects confidence erosion"
     }
   ],
   "concept": {
-    "title": "Flight-to-Quality in a Risk-On / Risk-Off Equilibrium",
-    "one_liner": "Yields fall and VIX rises simultaneously, revealing investors rotating defensively into bonds while maintaining equities—the hallmark of uncertainty without panic.",
-    "explanation": "Today's data shows a classic bifurcated market: the S&P flat (-0.04%), Treasury yields down 6 bps on the long end, yet VIX up 0.37 to 15.21, and the USD firm (+0.48 on EUR/USD weakness). This pattern reflects geopolitical risk premia offsetting rate expectations, with bond buyers seeking safety but equity sellers not yet capitulating. The 10Y-2Y curve flattening (10Y down 6 bps vs. 2Y down only 2 bps) suggests expectations for lower growth and eventual rate cuts, but equity indices hold near all-time highs on mega-cap AI strength.",
-    "market_link": "The modest VIX rise and yield decline amid stable equities confirm that current risk appetite remains anchored to tech earnings resilience, while geopolitical and credit concerns are being hedged in the bond market rather than triggering broad equity selloffs."
+    "title": "Sticky Inflation vs. Rate Cuts: The Yield Curve Trap",
+    "one_liner": "Rising core inflation and hot CPI prints are forcing longer-dated yields higher despite equity weakness, creating a policy bind for the Fed.",
+    "explanation": "Today's 1% S&P selloff coincides with a 5 bps rise in 2Y yields and 2 bps in 10Y yields, signaling that inflation concerns are outweighing recession fears. The modest VIX uptick (15.27) and positive real yields suggest markets are pricing in a higher-for-longer rate regime rather than capitulation. Geopolitical oil supply threats add a stagflationary overlay—crude up, equities down, rates up—that leaves the Fed with no clean exit.",
+    "market_link": "Core CPI acceleration trapped yields higher while equities repriced lower, widening the real yield spread and compressing earnings multiples in a stagflation scenario."
   },
-  "narrative": "Markets are digesting conflicting signals: Middle East escalation and rising geopolitical tensions are pushing long-dated Treasury yields lower and elevating the VIX, yet the S&P 500 remains nearly flat as mega-cap tech (Meta) rallies on AI optimism. The steeper decline in 10Y yields signals rate-cut expectations and safety demand, while the persistently low equity volatility reflects confidence that Fed accommodation and earnings resilience will offset near-term macro headwinds."
+  "narrative": "Equities retreated 1% as September's accelerating CPI and accelerating core inflation reignited Fed hold-higher-longer expectations, pushing 2Y yields +5 bps to 4.80%. Compounding equity pressure are Middle East geopolitical risks to oil supply, which offset energy upside and threaten stagflationary dynamics—a toxic mix of sticky inflation and growth headwinds that keeps the Fed pinned and real yields elevated."
 }
