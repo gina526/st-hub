@@ -1,5 +1,131 @@
 [
   {
+    "date": "2026-10-20",
+    "blocks": [
+      {
+        "term": "10Y UST at 5.09% (−1bp) — the end of a 12bp, four-session rally",
+        "category": "rates",
+        "bullets": [
+          "10Y at 5.09%, −1.0bp today; recent path: 5.21% (Oct 15) → 5.19% (Oct 16) → 5.10% (Oct 19, −9bps in one session) → 5.09% today",
+          "Cumulative ≈ −12bps in four sessions → most of the move came Monday Oct 19; today is consolidation, not a new leg",
+          "Price math: 10Y modified duration ≈ 7.7 → −12bps ≈ +0.9% price gain ≈ +$9mm on a $1bn long; today's −1bp ≈ +$770k (DV01 ≈ $770k/bp per $1bn)",
+          "Now sitting just above the 5.00% round number → a break below 5% would be a headline level that triggers stop-losses, option strikes and 'yields below 5%' client calls",
+          "Odd pairing: 10Y fell ~12bps while WTI rose to $101.91 → oil normally pushes inflation expectations (and yields) UP, so the bond rally is likely growth/risk/Fed-driven, not inflation-driven (see breakevens block)",
+          "10Y feeds 30Y mortgage rates (typically 10Y + ~1.7–2.5pp) → the rally should modestly ease mortgage rates ahead of Thursday's existing home sales",
+          "Caveat: brief has no headlines today (Finnhub returned 'No headlines available') → the catalyst for Monday's 9bp drop isn't in the data; treat the 'why' as inference"
+        ],
+        "so_what": "A rates salesperson opens with 'the long end has rallied 12bps in four sessions and is knocking on 5%' — real-money clients who've been waiting to extend duration ask whether to buy here or wait for a sub-5% print, and the trader needs to know where the stop-loss and option strike clusters around 5.00% sit."
+      },
+      {
+        "term": "2Y UST at 4.74% (−3bps) + 2s10s at +35bps — a bull steepener (the brief calls it 'flattening' — it isn't)",
+        "category": "rates",
+        "bullets": [
+          "2Y at 4.74%, −3bps; 10Y −1bp → 2s10s = 5.09 − 4.74 = +35bps, up from +33bps on Oct 19 → the curve STEEPENED 2bps",
+          "Brief's story says the move was 'flattening the yield curve slightly' — wrong: when the short end falls more than the long end, the gap widens = steepening",
+          "Name of the move: 'bull steepener' — 'bull' because yields fell (bond prices up), 'steepener' because the front end led → classic signature of the market pricing MORE / SOONER Fed easing",
+          "Mechanism: the 2Y ≈ average expected Fed funds rate over the next two years + a small term premium → a 3bp drop = market shaving its expected policy path, not a long-run inflation call",
+          "Bigger picture: 2s10s was +42bps on Oct 15 → +35bps today = 7bps of flattening over the week (2Y −5bps vs 10Y −12bps) → week-over-week it was a bull flattener (long end led), today it reversed to front-end-led",
+          "2Y path: 4.79% (Oct 15) → 4.82% (Oct 16) → 4.77% (Oct 19) → 4.74% → down 8bps from Friday's high in two sessions",
+          "2Y DV01 ≈ $190k/bp per $1bn (duration ≈ 1.9) → 3bps ≈ $570k on $1bn; front-end positions are sized much larger for the same risk"
+        ],
+        "so_what": "Curve traders express Fed views through 2s10s steepeners/flatteners (DV01-neutral, so they don't bet on the overall level) — getting the direction right matters, because telling a client 'the curve flattened' when it steepened 2bps would mismark their P&L and your credibility."
+      },
+      {
+        "term": "VIX at 18.44 (−1.55) — Monday's spike half-unwinds, but this isn't 'calm'",
+        "category": "volatility",
+        "bullets": [
+          "VIX 18.44, −1.55 (≈ −7.8%); path: 16.87 (Oct 15) → 16.46 (Oct 16) → 19.99 (Oct 19, +3.53) → 18.44 today → retraced ~44% of Monday's spike",
+          "What VIX is: 30-day implied volatility of the S&P 500 from option prices, annualized → 18.44 ÷ √252 ≈ 1.16% expected daily S&P move (≈ ±89pts on 7,693)",
+          "Today's realized move was +0.37% → well inside the implied 1.16% → options were 'overpriced' vs. what happened → vol sellers profit, VIX drifts lower ('vol crush')",
+          "Context: VIX long-run average ≈ 19–20 → 18.44 is roughly average, NOT complacent; earlier this month it was 14.84 (Oct 12) → the vol regime has shifted up ~3.5pts",
+          "Brief says VIX decline shows 'confidence remains intact' — partially: VIX falling while still ~2pts above last week's level = fear receding, not gone",
+          "Mean reversion: VIX spikes tend to fade fast when no follow-through selloff occurs → traders 'sell the spike' via short VIX futures or selling S&P puts, collecting the elevated premium",
+          "Watch: S&P only +0.37% while VIX −1.55 → vol fell faster than stocks rose → classic post-spike normalization, not a broad rally"
+        ],
+        "so_what": "Equity derivatives salespeople pitch put-selling or overwriting (selling calls) when VIX is elevated relative to realized vol — 18.44 implied vs a 0.37% realized day is exactly the 'implied rich to realized' setup clients look to monetize, while hedgers are told protection is ~15% pricier than it was a week ago."
+      },
+      {
+        "term": "S&P 500 at 7,693 (+28, +0.37%) — flat for a week despite a 12bp bond rally",
+        "category": "equities",
+        "bullets": [
+          "S&P 7,693, +28 (+0.37%); path: 7,694 (Oct 15) → 7,680 (Oct 16) → 7,671 (Oct 19) → 7,693 → essentially unchanged over four sessions",
+          "≈ 1.1% below the 7,782 level of Oct 9 → index has drifted sideways-to-lower through two weeks of Middle East headlines and a hot CPI",
+          "Puzzle: 10Y fell ~12bps over the same stretch → lower discount rates should lift equity valuations (esp. long-duration tech), yet the index barely moved",
+          "Interpretation: when bonds rally but stocks don't, the bond move is usually about growth worries or safety demand, not 'good' disinflation → challenges the brief's pure 'goldilocks' framing",
+          "Today's +0.37% + VIX −1.55 = textbook relief bounce after Monday's vol spike (VIX 19.99), not a new trend",
+          "Late October = peak Q3 earnings season → single-stock moves on earnings can dominate the index; the flat index may be hiding big dispersion underneath (as on Oct 9 and Oct 15)"
+        ],
+        "so_what": "Equity sales traders frame the day as 'relief bounce, index flat on the week' rather than 'risk-on' — clients positioned for a bond-rally-driven equity melt-up want to know why it hasn't happened, and the honest answer (growth/safety bid, not goldilocks) changes whether they add to or trim cyclicals."
+      },
+      {
+        "term": "DXY 102.36 & EUR/USD −0.26% — the dollar firms, with a data caveat",
+        "category": "fx",
+        "bullets": [
+          "DXY shown at 102.36, +0.03; EUR/USD −0.26% per the macro story → euro weakness = dollar strength on the day",
+          "Mechanism: DXY = weighted basket of 6 currencies vs USD, euro ≈ 57.6% of the weight → a −0.26% EUR/USD move alone should lift DXY ≈ +0.15% (≈ +0.15pts), not +0.03",
+          "Data caveat: brief labels it '~DXY' (a proxy); yesterday's brief showed '~104.2' and Oct 16 '~103.5' → a 1.8-pt one-day drop to 102.36 isn't reflected in the change field → treat the level as approximate, the direction (firmer USD) as reliable",
+          "Rate link: US 2Y fell 3bps, which normally WEAKENS the dollar (smaller US yield advantage) → dollar firming anyway suggests euro-specific weakness or modest safe-haven USD demand",
+          "Oil link: a pricier barrel ($101.91) hurts the euro area (net energy importer) more than the US (net exporter) → higher oil is a structural EUR/USD headwind",
+          "Brief says the dollar strength was 'supporting commodity prices' — backwards as a rule: oil is priced in USD, so a stronger dollar makes it costlier for non-US buyers and usually WEIGHS on commodities → oil rising despite a firmer dollar points to supply/risk-premium drivers"
+        ],
+        "so_what": "FX salespeople explain moves by decomposing them — rate differentials vs. terms-of-trade (oil) vs. risk sentiment — and today's 'USD up despite US yields down' is a terms-of-trade story a corporate client hedging EUR receivables would want flagged."
+      },
+      {
+        "term": "WTI at $101.91 (+$1.05) — triple-digit oil and the inflation pass-through",
+        "category": "energy",
+        "bullets": [
+          "WTI $101.91, +$1.05 (≈ +1.0%) → prior close ≈ $100.86 → holding above the psychological $100 level",
+          "Backdrop: recent briefs flagged Houthi attacks/threats on Saudi Arabia and Riyadh → a geopolitical risk premium (extra $/bbl for potential supply disruption) is embedded even without lost barrels",
+          "Pass-through math: 1 barrel = 42 gallons → +$10/bbl ≈ +24¢/gal of gasoline cost → gasoline is ~3–4% of the CPI basket, so sustained $100+ oil keeps headline CPI sticky",
+          "Second-round effects: diesel/jet fuel feed into freight, airfares and goods prices with a lag → the Fed watches whether energy leaks into core inflation and wage demands",
+          "Growth flip side: high oil acts like a tax on consumers (less money for other spending) → can be inflationary AND growth-negative at once = 'stagflation' risk",
+          "Market winners/losers: energy equities and oil-exporter currencies (CAD, NOK) benefit; airlines, chemicals, and energy-importing economies (euro area, Japan, India) suffer"
+        ],
+        "so_what": "Commodities and macro desks track oil as the transmission belt from geopolitics to inflation to rates — a salesperson covering airlines or refiners pitches hedges (swaps, collars) off levels like $100, and a rates trader asks whether $100+ oil makes the 10Y rally below 5.10% fragile."
+      },
+      {
+        "term": "Breakevens vs. real yields — decomposing a nominal yield move",
+        "category": "fundamental",
+        "bullets": [
+          "Identity: nominal Treasury yield ≈ real yield (TIPS yield) + breakeven inflation (market's implied average inflation over the bond's life)",
+          "TIPS = Treasury Inflation-Protected Securities → principal adjusts with CPI, so their yield is the 'real' return; breakeven = nominal yield − TIPS yield",
+          "Why it matters today: oil +1% would normally push breakevens UP → if the 10Y nominal still fell 1bp (and ~12bps on the week), real yields must have fallen even more",
+          "Falling real yields = market pricing weaker growth and/or easier Fed policy → that's the 'growth scare' reading, not the 'goldilocks' reading",
+          "Falling breakevens with stable real yields = disinflation (the brief's 'moderating inflation' story) → the two explanations look identical in the nominal yield but mean opposite things",
+          "Brief has no TIPS/breakeven data → the decomposition is the first thing to check on a terminal (e.g. 10Y breakeven, 10Y TIPS yield) before repeating the 'disinflation' narrative"
+        ],
+        "so_what": "Inflation-linked desks and rates strategists split every yield move into real vs. breakeven before calling it — saying 'yields fell on disinflation' when it was actually real yields (growth fear) gets you corrected by any client running a TIPS book."
+      },
+      {
+        "term": "'Goldilocks' vs. stagflation — two stories for the same tape",
+        "category": "macro",
+        "bullets": [
+          "Goldilocks = growth 'not too hot, not too cold' → inflation cools without recession → bonds and stocks rally together, vol falls → the brief's concept box: 'risk-on without rate repricing'",
+          "Evidence for: today S&P +0.37%, VIX −1.55, 2Y −3bps, 10Y −1bp → all four moved in the goldilocks direction on the day",
+          "Evidence against: oil at $101.91 (inflationary), S&P flat over a week while 10Y −12bps, VIX still ~3.5pts above Oct 12 → looks more like a cautious growth/safety bid than a clean goldilocks",
+          "Stagflation = high inflation + weak growth → the worst mix for markets because the Fed can't cut to support growth without risking more inflation → stocks AND bonds can fall together",
+          "$100+ oil is the classic stagflation trigger (1970s, 2022) → it's the main threat to the goldilocks narrative",
+          "One-day vs. trend: a single session matching a regime label means little; the regime is confirmed by weeks of consistent cross-asset behavior"
+        ],
+        "so_what": "Macro salespeople sell 'narratives' — the morning call needs a regime label, but the best salespeople flag the counter-evidence (oil, flat equities on a bond rally) so clients aren't blindsided if goldilocks flips to stagflation."
+      },
+      {
+        "term": "This week's data — jobless claims (Thu), existing home sales, UMich sentiment (Fri)",
+        "category": "macro",
+        "bullets": [
+          "Initial jobless claims: weekly count of new unemployment-insurance filings, released Thursdays 8:30am ET (brief lists it under Wed but notes it's typically Thursday) → the most timely labor-market read",
+          "Claims mechanism: rising claims = layoffs picking up → weaker labor market → Fed more likely to cut → 2Y yields fall; a low print does the reverse → most direct test of the 2Y's 8bp drop since Friday",
+          "Existing home sales (September): closings of previously owned homes → driven by mortgage rates (≈ 10Y + spread), so 10Y at 5%+ has kept sales depressed; Sept closings reflect contracts signed at higher rates weeks earlier",
+          "Housing 'lock-in': owners with low pandemic-era mortgages won't sell and take a ~7% rate → keeps inventory and sales low regardless of demand",
+          "UMich Consumer Sentiment (Oct prelim): survey of household mood + 1-yr and 5–10-yr inflation expectations → the inflation-expectations sub-index is what bond traders actually watch, especially with gas prices tied to $100+ oil",
+          "Order of impact: claims (high importance) > UMich inflation expectations > existing home sales (medium) → claims is the one that can move the 2Y several bps"
+        ],
+        "so_what": "Traders pre-position into data and salespeople send previews ('consensus X, a print above Y would reverse this week's front-end rally') — knowing which sub-component moves which instrument (claims → 2Y, UMich inflation expectations → breakevens) is what makes a preview useful."
+      }
+    ],
+    "narrative": "The bond market has done the heavy lifting: the 10Y has fallen ~12bps in four sessions to 5.09% and the 2Y 8bps from Friday to 4.74%, with today's front-end-led move a bull steepener (2s10s +35bps) that says the market is pricing a softer Fed path. Equities and vol cheered on the day (S&P +0.37% to 7,693, VIX −1.55 to 18.44), but the S&P is flat on the week and WTI is holding $101.91 — so the tension is whether this is genuine goldilocks disinflation or a growth/safety bid that triple-digit oil could turn into a stagflation scare. Thursday's jobless claims are the first real test of the front end's bet."
+  },
+  {
     "date": "2026-10-15",
     "blocks": [
       {
