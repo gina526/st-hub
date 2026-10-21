@@ -1,59 +1,59 @@
 {
-  "date": "2026-10-20",
-  "generated_at": "2026-10-20T16:31:13.045Z",
+  "date": "2026-10-21",
+  "generated_at": "2026-10-21T16:48:12.626Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7693",
-      "change": "+28 (0.37%)",
+      "value": "7731",
+      "change": "+40 (0.52%)",
       "up": true
     },
     {
       "name": "10Y UST",
-      "value": "5.09%",
-      "change": "-1.0 bps",
-      "up": false
+      "value": "N/A%",
+      "change": "N/A bps",
+      "up": null
     },
     {
       "name": "2Y UST",
-      "value": "4.74%",
-      "change": "-3.0 bps",
-      "up": false
+      "value": "N/A%",
+      "change": "N/A bps",
+      "up": null
     },
     {
       "name": "~DXY",
-      "value": "102.36",
-      "change": "+0.0326",
-      "up": true
+      "value": "99.73",
+      "change": "-0.23",
+      "up": false
     },
     {
       "name": "VIX",
-      "value": "18.44",
-      "change": "-1.55",
-      "up": false
+      "value": "N/A",
+      "change": "N/A",
+      "up": null
     }
   ],
   "stories": [
     {
-      "headline": "No headlines available",
-      "source": "Finnhub",
-      "summary": "Market data reflects a modest risk-on session with equities gaining 0.37% while safe-haven demand modestly reduces volatility. The VIX decline to 18.44 suggests investor confidence remains intact despite global uncertainties.",
-      "why_matters": "Stable equity performance and falling VIX indicate markets are pricing in continued economic resilience without major policy shocks.",
+      "headline": "Meta stock advances ahead of after-the-bell earnings. What we're looking for",
+      "source": "CNBC",
+      "summary": "Meta is gaining momentum into earnings as investors await guidance on AI monetization and capex efficiency. Earnings will likely drive near-term tech sector sentiment and validate valuations in the high-multiple AI infrastructure play.",
+      "why_matters": "Mega-cap tech earnings are crucial barometers for overall equity risk appetite and S&T spending trajectories in the U.S.",
       "tag": "Equities"
     },
     {
-      "headline": "No headlines available",
-      "source": "Finnhub",
-      "summary": "Treasury yields declined across the curve with the 2Y dropping 3 basis points and the 10Y falling 1 basis point, flattening the yield curve slightly. This repricing may reflect expectations of moderating inflation or Fed policy stability.",
-      "why_matters": "Curve dynamics directly influence corporate borrowing costs and signal market expectations for near-term rate trajectories affecting capital allocation.",
-      "tag": "Rates"
+      "headline": "Putin agrees to resume 3-way peace talks with Ukraine and US - Reuters",
+      "source": "Reuters",
+      "summary": "Russia has signaled willingness to resume tripartite negotiations involving Ukraine and the U.S., potentially easing geopolitical tensions. De-escalation rhetoric often supports risk-on sentiment and energy price stability.",
+      "why_matters": "Geopolitical de-escalation reduces tail risk premiums in equities and commodity markets, benefiting U.S. growth prospects.",
+      "tag": "Macro"
     },
     {
-      "headline": "No headlines available",
-      "source": "Finnhub",
-      "summary": "EUR/USD weakened slightly by 0.26% while crude oil gained $1.05 to $101.91, reflecting modest energy demand resilience. The dollar strengthened inversely to euro weakness, supporting commodity prices.",
-      "why_matters": "Energy price stability above $100/bbl and currency dynamics affect US inflation expectations and corporate earnings in multinational sectors.",
-      "tag": "Macro"
+      "headline": "OpenAI expands ChatGPT Ads to 26 new countries as diversification push accelerates",
+      "source": "CNBC",
+      "summary": "OpenAI is broadening its advertising platform globally, signaling monetization ambitions beyond enterprise API sales. Geographic expansion in AI services underscores the strategic shift toward diversified revenue streams.",
+      "why_matters": "U.S. AI software leadership and revenue diversification bolster confidence in tech sector structural growth and long-term profitability.",
+      "tag": "Equities"
     }
   ],
   "calendar": [
@@ -61,26 +61,26 @@
       "day": "Wed",
       "event": "Initial Jobless Claims (weekly)",
       "importance": "high",
-      "note": "Labor market indicator; typically released Thursdays but critical for Fed assessment"
+      "note": "Labor market pulse; Fed policy sensitive"
     },
     {
       "day": "Thu",
-      "event": "Existing Home Sales (September)",
-      "importance": "medium",
-      "note": "Housing sector data; sensitive to mortgage rates given recent yield moves"
+      "event": "Durable Goods Orders (Sept preliminary)",
+      "importance": "high",
+      "note": "Capital spending and manufacturing health indicator"
     },
     {
       "day": "Fri",
-      "event": "University of Michigan Consumer Sentiment (October preliminary)",
-      "importance": "medium",
-      "note": "Consumer confidence gauge amid stable equity markets"
+      "event": "PCE Inflation & Personal Income (Sept)",
+      "importance": "high",
+      "note": "Fed's preferred inflation gauge; critical for rate path expectations"
     }
   ],
   "concept": {
-    "title": "Goldilocks Reprieve: Risk-On Without Rate Repricing",
-    "one_liner": "Markets rally while yields compress, suggesting investors are pricing stability rather than fresh monetary easing.",
-    "explanation": "Today's data—S&P 500 +0.37%, VIX -1.55, and 2Y yields down 3 bps—illustrates a sweet spot where equities rise on resilience without requiring aggressive Fed cuts. The 2-3 bps compression across the curve indicates mild disinflation expectations, while the 0.37% gain and falling volatility suggest earnings optimism offsetting rate concerns. This 'goldilocks' backdrop typically persists when growth remains adequate and inflation isn't alarming.",
-    "market_link": "The simultaneous strength in equities, lower volatility, and moderating yields reflects investor confidence that the economy can grow without triggering either deflation scares or hawkish policy surprises."
+    "title": "Risk-On Rotation: Geopolitical Relief Driving Equity Gains",
+    "one_liner": "De-escalation signals and AI earnings optimism push equities higher while the dollar softens on reduced safe-haven demand.",
+    "explanation": "The S&P 500's +0.52% gain coupled with EUR/USD strength (+0.0026) and an estimated DXY decline reflects a classic risk-on environment. Easing geopolitical tensions (Putin peace talks) and continued AI platform expansion remove tail risks and support equity valuations. Simultaneously, the weaker dollar signals confidence in growth over safe havens, a hallmark of genuine risk appetite rather than liquidity-driven rallies.",
+    "market_link": "Today's equity advance and dollar weakness are consistent with a macro backdrop favoring growth assets over defensive positioning."
   },
-  "narrative": "October 20 marked a textbook risk-on session: the S&P 500 rose 0.37% to 7693, VIX contracted by 1.55 to 18.44, and Treasury yields fell 1–3 basis points across the curve, signaling that markets are comfortable with economic resilience and stable policy without demanding fresh monetary accommodation. The compression in rates despite equity gains reflects a data-dependent Fed outlook where neither inflation nor recession fears are driving the narrative."
+  "narrative": "The S&P 500 rallies 0.52% on the back of geopolitical de-escalation rhetoric and bullish AI narratives, while EUR/USD strength reflects diminishing dollar-as-safe-haven demand. Market sentiment remains tilted toward equities and growth, though Treasury yield data unavailability limits insight into bond market positioning ahead of Friday's critical PCE print."
 }
