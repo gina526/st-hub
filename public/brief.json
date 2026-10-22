@@ -1,6 +1,6 @@
 {
   "date": "2026-10-22",
-  "generated_at": "2026-10-22T19:08:47.734Z",
+  "generated_at": "2026-10-22T19:11:12.136Z",
   "market_levels": [
     {
       "name": "S&P 500",
@@ -22,8 +22,8 @@
     },
     {
       "name": "~DXY",
-      "value": "98.2",
-      "change": "+0.004",
+      "value": "~103.5",
+      "change": "up (EUR/USD N/A)",
       "up": true
     },
     {
@@ -37,22 +37,22 @@
     {
       "headline": "The perfect storm behind the Nasdaq's rout — plus, some of the bright spots in the market",
       "source": "CNBC",
-      "summary": "Tech-heavy indices face renewed selling pressure as growth concerns resurface amid mixed economic signals. Defensive sectors and selective pockets of strength offer shelter in an uneasy market environment.",
-      "why_matters": "Equity volatility and sector rotation directly influence Fed policy trajectory and credit conditions for US corporates.",
+      "summary": "Tech stocks are selling off sharply as investors rotate out of AI-exposed names into defensive sectors. Despite the weakness, select data center plays and infrastructure beneficiaries are showing resilience.",
+      "why_matters": "Sector rotation signals shifting risk appetite and potential implications for growth equity valuations and duration positioning.",
       "tag": "Equities"
     },
     {
       "headline": "Jobless claims near the lowest since the 1960s as low-fire trend continues",
       "source": "CNBC",
-      "summary": "US labor market remains exceptionally tight with jobless claims at generational lows, signaling persistent wage pressure and inflation stickiness. This resilience complicates the Fed's rate-cut calculus heading into year-end.",
-      "why_matters": "Core inflation expectations and employment data anchor medium-term US interest rate expectations and sovereign debt dynamics.",
+      "summary": "US labor market remains exceptionally tight with jobless claims hovering near historic lows, defying recession concerns. The persistent strength in employment supports consumer spending but complicates Fed pivot expectations.",
+      "why_matters": "Ultra-low jobless claims sustain wage pressure and inflation dynamics, keeping the 10Y yield elevated despite today's 3bp decline.",
       "tag": "Macro"
     },
     {
-      "headline": "Citi sees oil risks skewed to upside despite recovery in Gulf exports",
+      "headline": "Gulf markets fall as fresh Houthi strikes on Saudi Arabia raise regional risk",
       "source": "Reuters",
-      "summary": "Geopolitical tensions in the Middle East, including fresh Houthi strikes on Saudi Arabia, keep crude supply uncertainty elevated despite partial Gulf recovery. WTI holding above $107 reflects lingering supply-side risk premium.",
-      "why_matters": "Oil price volatility influences US inflation expectations, energy sector earnings, and the Fed's inflation-fighting credibility.",
+      "summary": "Renewed geopolitical tensions in the Middle East from Houthi attacks on Saudi infrastructure elevate oil supply risk premiums. Citi warns upside risks remain skewed higher for crude despite current Gulf export recovery.",
+      "why_matters": "Oil supply shocks and stagflationary tail risks drive commodity volatility that can sustain real rates and complicate monetary policy outlook.",
       "tag": "Macro"
     }
   ],
@@ -61,26 +61,26 @@
       "day": "Thu",
       "event": "Initial Jobless Claims (weekly)",
       "importance": "high",
-      "note": "Continued trend watch; currently near 1960s lows signals tight labor market"
+      "note": "Ongoing monitor of labor market tightness; recent data shows claims near 1960s lows"
     },
     {
       "day": "Fri",
-      "event": "Personal Income & Spending (Sept preliminary)",
+      "event": "PCE Inflation (final read)",
       "importance": "high",
-      "note": "PCE inflation gauge; critical for Fed's next policy decision"
+      "note": "Core inflation gauge critical for Fed policy trajectory amid persistent labor strength"
     },
     {
       "day": "Fri",
-      "event": "University of Michigan Consumer Sentiment (Oct final)",
+      "event": "Retail Sales (monthly)",
       "importance": "medium",
-      "note": "Consumer confidence amid equity volatility and rate uncertainty"
+      "note": "Consumer spending data relevant to growth outlook as equity volatility tests demand"
     }
   ],
   "concept": {
-    "title": "Curve Inversion & Growth Concerns",
-    "one_liner": "Flattening yield curve (2Y +2bps, 10Y -3bps) amid equity selloff signals recession fears despite tight labor markets.",
-    "explanation": "Today's data reveals a classic paradox: jobless claims at 60-year lows underscore labor market resilience, yet the S&P 500's 1.43% drop and modest VIX decline suggest investors are re-pricing growth risk. The 2Y steepening relative to a falling 10Y implies near-term rate expectations remain elevated while long-duration assets reprice lower for slower future growth—a hallmark of late-cycle dynamics.",
-    "market_link": "Equity volatility, rate curve shape, and jobless claims alignment"
+    "title": "Rotation Amid Rate Persistence",
+    "one_liner": "Equities sell off while the long end holds firm as labor strength keeps terminal rates elevated despite AI sector weakness.",
+    "explanation": "The S&P 500's 1.43% decline paired with a steeper 2Y (+2bps) versus 10Y (-3bps) curve reflects investor rotation out of growth names into defensives. Jobless claims at 1960s lows signal continued wage pressure, anchoring long rates despite equity weakness and a VIX decline. This disconnect—risk-off equities but sticky rates—is characteristic of stagflation concerns rather than pure recession fears.",
+    "market_link": "10Y sticky at 5.12% despite equity selloff suggests Fed hold bias persists; rate-sensitive sectors underperform while defensives outperform in a 'lower for longer' growth scenario."
   },
-  "narrative": "The US equity market is repricing growth concerns (S&P -1.43%) while the labor market remains exceptionally tight (jobless claims near 60-year lows), forcing investors to navigate an uneasy mix of inflation stickiness and recession hedging. A flattening yield curve (10Y down 3bps, 2Y up 2bps) and soft VIX suggest defensive positioning is kicking in, even as geopolitical oil risks ($107.89 WTI) and AI sector rotation hint at underlying market fragility."
+  "narrative": "Equities declined 1.43% as the Nasdaq's AI rout accelerated sector rotation into defensives, yet the 10Y Treasury held firm at 5.12% (-3bps only) because ultra-tight labor conditions—jobless claims near 1960s lows—continue to anchor inflation expectations and rate terminal assumptions. The S&P's weakness without a sharp yield collapse underscores market anxiety about stagflationary persistence rather than recession imminent."
 }
