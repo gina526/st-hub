@@ -33,3 +33,31 @@ jobs:
           git add public/brief.json
           git diff --staged --quiet || git commit -m "brief: $(date -u +%Y-%m-%d) [skip netlify]"
           git push
+
+  generate-worldbuilding:
+    runs-on: ubuntu-latest
+    needs: generate-brief
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main  # pick up brief.json committed by generate-brief
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate world building
+        env:
+          ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_KEY }}
+        run: node scripts/generate-worldbuilding.js
+
+      - name: Commit and push worldbuilding.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/worldbuilding.json
+          git diff --staged --quiet || git commit -m "worldbuilding: $(date -u +%Y-%m-%d) [skip netlify]"
+          git push
