@@ -70,28 +70,27 @@ function TodaySection(){
     }
     tryAutoLoad();
   },[]);
-  async function generate(){
+  async function refresh(){
     setLoading(true);setError(null);
-    const prompt=`Today is ${today}. Search for the latest US financial market data and news. Return ONLY a JSON object, no markdown: {"date":"${today}","market_levels":[{"name":"S&P 500","value":"...","change":"...","up":true},{"name":"10Y UST","value":"...%","change":"... bps","up":true},{"name":"2Y UST","value":"...%","change":"... bps","up":true},{"name":"DXY","value":"...","change":"...","up":false},{"name":"VIX","value":"...","change":"...","up":false}],"stories":[{"headline":"...","source":"...","summary":"2-3 sentences","why_matters":"...","tag":"Rates|Equities|FX|Macro|Credit"},{"headline":"...","source":"...","summary":"...","why_matters":"...","tag":"..."},{"headline":"...","source":"...","summary":"...","why_matters":"...","tag":"..."}],"calendar":[{"day":"...","event":"...","importance":"high|medium","note":"..."},{"day":"...","event":"...","importance":"medium","note":"..."}],"concept":{"title":"...","one_liner":"...","explanation":"2-3 sentences","market_link":"How this connects to today"},"narrative":"1-2 sentence macro narrative update"}`;
     try{
-      const text=await callClaude([{role:'user',content:prompt}],'You are a US financial markets assistant. Search for current market data and news. Return ONLY valid JSON without any markdown fences or explanation text before or after.',true,'claude-haiku-4-5-20251001',2500);
-      const cleaned=text.replace(/```json|```/g,'').trim();
-      const start=cleaned.indexOf('{');const end=cleaned.lastIndexOf('}');
-      const b=JSON.parse(cleaned.slice(start,end+1));
-      setBrief(b);
-      try{localStorage.setItem(`brief_${dateKey}`,JSON.stringify(b));}catch(e){}
-    }catch(err){setError(err.message);}
+      const r=await fetch('public/brief.json?t='+Date.now());
+      if(!r.ok)throw new Error('not found');
+      const data=await r.json();
+      setBrief(data);
+      setAutoLoaded(new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}));
+      try{localStorage.setItem(`brief_${dateKey}`,JSON.stringify(data));}catch(e){}
+    }catch(err){setError('Brief not available yet — it auto-generates on weekdays around 8am ET.');}
     setLoading(false);
   }
   const tagColor=t=>({Rates:C.amber,Equities:C.green,FX:C.purple,Macro:C.cyan,Credit:C.red}[t]||C.muted);
   return <div>
     <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:20}}>
       <div><SH>Today's Brief</SH><div style={{fontSize:15,color:C.muted,marginTop:2}}>{today}{autoLoaded&&<span style={{marginLeft:10,fontSize:13,color:C.green,fontWeight:600}}>✓ Auto-loaded · {autoLoaded}</span>}</div></div>
-      <button onClick={generate} disabled={loading} style={{padding:'9px 18px',background:C.accent,border:'none',borderRadius:6,color:'#fff',fontSize:15,fontWeight:600,cursor:loading?'not-allowed':'pointer',opacity:loading?0.6:1}}>{loading?'Fetching…':brief?'↻ Refresh':'⚡ Generate Today\'s Brief'}</button>
+      <button onClick={refresh} disabled={loading} style={{padding:'9px 18px',background:C.accent,border:'none',borderRadius:6,color:'#fff',fontSize:15,fontWeight:600,cursor:loading?'not-allowed':'pointer',opacity:loading?0.6:1}}>{loading?'Loading…':'↻ Refresh Brief'}</button>
     </div>
     {error&&<Card accent={C.red}><div style={{fontSize:15,color:C.red}}>{error}</div></Card>}
-    {!brief&&!loading&&<Card accent={C.dim} style={{textAlign:'center',padding:'40px 20px'}}><div style={{fontSize:32,marginBottom:12}}>⚡</div><div style={{fontSize:16,color:C.muted,marginBottom:6}}>Hit Generate to pull live market data + today's top stories</div><div style={{fontSize:14,color:C.dim}}>Searches the web — saves so you don't re-fetch the same day</div></Card>}
-    {loading&&<Card accent={C.accent} style={{textAlign:'center',padding:'40px 20px'}}><div style={{fontSize:15,color:C.muted}}>Searching market data and news…</div></Card>}
+    {!brief&&!loading&&<Card accent={C.dim} style={{textAlign:'center',padding:'40px 20px'}}><div style={{fontSize:28,marginBottom:12}}>⏰</div><div style={{fontSize:16,color:C.muted,marginBottom:6}}>Brief auto-generates on weekdays around 8am ET</div><div style={{fontSize:14,color:C.dim}}>Hit Refresh Brief to check — or come back after the morning run</div></Card>}
+    {loading&&<Card accent={C.accent} style={{textAlign:'center',padding:'40px 20px'}}><div style={{fontSize:15,color:C.muted}}>Loading brief…</div></Card>}
     {brief&&<>
       <Sub>Market Levels</Sub>
       <div style={{display:'grid',gridTemplateColumns:'repeat(5,1fr)',gap:8,marginBottom:20}}>
