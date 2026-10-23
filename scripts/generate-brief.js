@@ -55,7 +55,7 @@ async function main() {
     safeGet(`https://www.alphavantage.co/query?function=WTI&interval=daily&apikey=${AV}`, 'WTI'),
     safeGet(`https://www.alphavantage.co/query?function=FX_DAILY&from_symbol=EUR&to_symbol=USD&apikey=${AV}`, 'EUR/USD'),
     safeGet(`https://api.stlouisfed.org/fred/series/observations?series_id=VIXCLS&api_key=${FRED}&sort_order=desc&limit=2&file_type=json`, 'VIXCLS'),
-    safeGet(`https://finnhub.io/api/v1/calendar/economic?from=${weekFrom}&to=${weekTo}&token=${FINNHUB}`, 'EconCalendar'),
+    safeGet(`https://api.stlouisfed.org/fred/releases/dates?api_key=${FRED}&realtime_start=${weekFrom}&realtime_end=${weekTo}&file_type=json&include_release_dates_with_no_data=true&limit=20`, 'EconCalendar'),
   ]);
 
   // ── Parse S&P 500 (^GSPC preferred, SPY*10 fallback) ──────────────────────
@@ -127,14 +127,13 @@ async function main() {
     : '(no recent headlines in last 48 hours)';
   console.log(`News: ${recentNews.length} articles in last 48h`);
 
-  // ── Parse economic calendar ────────────────────────────────────────────────
-  const econEvents = Array.isArray(calRaw?.economicCalendar)
-    ? calRaw.economicCalendar
-        .filter(e => e.impact === 'high' || e.impact === 'medium')
-        .slice(0, 8)
-        .map(e => `- ${e.time?.split('T')[0] ?? '?'} | ${e.event} | impact:${e.impact} | actual:${e.actual ?? 'pending'} | est:${e.estimate ?? 'N/A'}`)
+  // ── Parse FRED release calendar ───────────────────────────────────────────
+  const econEvents = Array.isArray(calRaw?.release_dates)
+    ? calRaw.release_dates
+        .slice(0, 10)
+        .map(e => `- ${e.date} | ${e.release_name}`)
         .join('\n')
-    : '(calendar unavailable)';
+    : '(calendar unavailable — Claude should note this)';
 
   // ── Build prompt ───────────────────────────────────────────────────────────
   const rawData = [
@@ -181,7 +180,7 @@ Required structure:
     {"headline": "...", "source": "...", "summary": "2 sentences based only on what the headline says", "why_matters": "1 sentence on US S&T relevance", "tag": "Rates"}
   ],
   "calendar": [
-    {"day": "Mon", "event": "...", "importance": "high", "actual": "...", "estimate": "...", "note": "1 sentence why this matters"}
+    {"day": "Mon", "event": "...", "importance": "high", "note": "1 sentence why this matters for markets"}
   ],
   "concept": {"title": "...", "one_liner": "...", "explanation": "2-3 sentences tied to today's actual data above", "market_link": "..."},
   "narrative": "1-2 sentence macro summary using only the data above"
@@ -190,7 +189,7 @@ Required structure:
 Additional rules:
 - market_levels: copy values exactly from the data above. All 5 required.
 - stories: pick exactly 3 from the headlines above. Tag each as: Rates, Equities, FX, Macro, or Credit.
-- calendar: include 2-4 events from the economic calendar above. If actual value is available, include it. If no calendar data, write [].
+- calendar: include 2-4 events from the FRED release calendar above. Pick the most market-relevant ones (GDP, CPI, PCE, jobs, FOMC preferred). If no calendar data, write [].
 - Output only the JSON object, nothing else.`;
 
   // ── Call Anthropic ──────────────────────────────────────────────────────────
