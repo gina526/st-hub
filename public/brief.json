@@ -1,11 +1,11 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T17:42:04.307Z",
+  "generated_at": "2026-10-23T17:44:00.160Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7604",
-      "change": "-35 (-0.46%)",
+      "value": "7606",
+      "change": "-34 (-0.44%)",
       "up": false
     },
     {
@@ -21,9 +21,9 @@
       "up": true
     },
     {
-      "name": "~DXY",
-      "value": "1.1214 EUR/USD",
-      "change": "-0.0018",
+      "name": "WTI Crude",
+      "value": "$107.89",
+      "change": "-$2.12",
       "up": false
     },
     {
@@ -37,31 +37,50 @@
     {
       "headline": "Trump weighs quick end to Iran war against letting conflict 'wither'",
       "source": "Reuters",
-      "summary": "President Trump is evaluating policy options regarding the ongoing Iran conflict, considering either rapid resolution or a prolonged containment strategy. The decision reflects broader geopolitical tensions affecting energy markets and defense spending.",
-      "why_matters": "US military and diplomatic posture toward Iran directly impacts oil prices, defense contractor valuations, and Middle East stability—all material to equity and commodity markets.",
+      "summary": "The Trump administration is evaluating strategic options for the Iran conflict, considering either rapid resolution or a prolonged approach. This reflects shifting geopolitical priorities ahead of midterm elections.",
+      "why_matters": "Geopolitical de-escalation could reduce oil price volatility and stabilize energy markets critical to US inflation dynamics.",
       "tag": "Macro"
     },
     {
       "headline": "US consumer sentiment near record low ahead of midterm elections",
       "source": "Reuters",
-      "summary": "American consumer confidence has fallen to near-record lows as midterm elections approach, signaling potential weakness in consumer spending and economic growth. Deteriorating sentiment reflects broader macroeconomic headwinds.",
-      "why_matters": "Weak consumer sentiment typically precedes reduced discretionary spending and earnings pressure on retail and cyclical equities, directly threatening equity valuations.",
+      "summary": "Consumer sentiment in the US has deteriorated to near-record lows as midterm elections approach. This weakness reflects broader concerns about economic conditions and purchasing power.",
+      "why_matters": "Depressed consumer sentiment threatens earnings growth and equity multiples, directly pressuring equity valuations amid already-soft market tone.",
       "tag": "Equities"
     },
     {
       "headline": "Ship attacks in Strait of Hormuz hit record high in October",
       "source": "Reuters",
-      "summary": "October 2026 has seen record-high incidents of maritime attacks in the Strait of Hormuz, a critical chokepoint for global oil shipments. Escalating shipping risks threaten regional stability and energy supply chains.",
-      "why_matters": "Increased Hormuz disruptions directly impact crude oil prices and energy security; geopolitical risk premiums typically lift energy stocks and volatility while pressuring broader equity sentiment.",
+      "summary": "October has seen a record number of ship attacks in the Strait of Hormuz, a critical chokepoint for global oil trade. This escalation heightens supply-chain risk and energy security concerns.",
+      "why_matters": "Disruptions to Persian Gulf shipping directly threaten crude supply stability and could reignite oil price spikes, affecting inflation expectations and Fed policy.",
       "tag": "Macro"
     }
   ],
-  "calendar": [],
+  "calendar": [
+    {
+      "day": "Fri",
+      "event": "FOMC Press Release",
+      "importance": "high",
+      "note": "Central bank policy communication is critical for rate expectations; today's release will signal Fed stance on inflation, employment, and future hikes."
+    },
+    {
+      "day": "Fri",
+      "event": "Economic Policy Uncertainty",
+      "importance": "high",
+      "note": "Rising EPU indices correlate with equity volatility and credit spreads; today's reading amid geopolitical tensions and political cycle may shift risk sentiment."
+    },
+    {
+      "day": "Fri",
+      "event": "Federal Funds Data",
+      "importance": "high",
+      "note": "Real-time Fed funds rate data anchors all short-term borrowing costs and informs market expectations for near-term policy moves."
+    }
+  ],
   "concept": {
-    "title": "Risk-Off Unwind Amid Geopolitical Escalation",
-    "one_liner": "Equity weakness, rising volatility, and yield curve flattening reflect investor repricing of geopolitical and consumer-demand risks.",
-    "explanation": "The S&P 500 fell 0.46% while VIX spiked +2.35 points to 19.03, signaling renewed caution. Simultaneous steepening pressure (2Y +2bps, 10Y +1bp) and dollar strength (EUR/USD -0.0018) point to flight-to-safety flows. Headline risks—Iran policy uncertainty, record Hormuz attacks, and record-low consumer sentiment—are compressing equity multiples and driving hedging demand.",
-    "market_link": "Geopolitical escalation and weak consumer sentiment typically trigger concurrent equity selloffs, yield curve flattening, and VIX spikes; the data here shows all three occurring together."
+    "title": "Geopolitical Risk Premium & Consumer Demand Collapse",
+    "one_liner": "Simultaneous shocks—Hormuz shipping attacks, Iran conflict uncertainty, and near-record consumer despair—compress equity multiples while energy inflation risks offset bond rallies.",
+    "explanation": "Today's data shows equities down 44bps on weak sentiment and geopolitical headlines, while VIX rose 2.35pts and crude fell $2.12 despite record Strait of Hormuz attacks. This disconnect signals two competing forces: demand destruction from low consumer confidence pushing energy lower, versus supply-chain risk that could reverse if escalation accelerates. The 2Y/10Y curve steepening slightly (+2bps vs +1bps) reflects uncertainty about whether the Fed holds or cuts—a function of both inflation persistence from energy shocks and growth headwinds from consumer pullback.",
+    "market_link": "Risk-off sentiment (VIX +2.35) and midterm election anxiety amplify safe-haven demand for duration, but geopolitical tail risks to oil keep real rates volatile and equity valuations under pressure."
   },
-  "narrative": "Equities retreated 0.46% as geopolitical tensions (Iran strategy, Hormuz shipping attacks) and deteriorating US consumer sentiment weighed on risk appetite. Rising VIX (+2.35) and modest yield curve moves reflect investors repricing downside tail risks amid election-year uncertainty."
+  "narrative": "US equities retreated 44bps with consumer sentiment near record lows, while VIX rose 2.35pts amid headline risk from Iran policy review and record Hormuz shipping attacks. Two-year yields hardened 2bps despite energy weakness, suggesting market positioning for Fed policy uncertainty as geopolitical tail risks clash with demand destruction."
 }
