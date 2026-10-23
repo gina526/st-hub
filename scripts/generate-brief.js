@@ -35,8 +35,18 @@ async function main() {
   const today = new Date().toISOString().split('T')[0];
   console.log(`Generating brief for ${today}…`);
 
+  // Week bounds for economic calendar (Mon–Fri of current week)
+  const now = new Date();
+  const dayOfWeek = now.getUTCDay(); // 0=Sun, 1=Mon … 6=Sat
+  const monday = new Date(now);
+  monday.setUTCDate(now.getUTCDate() - (dayOfWeek === 0 ? 6 : dayOfWeek - 1));
+  const friday = new Date(monday);
+  friday.setUTCDate(monday.getUTCDate() + 4);
+  const weekFrom = monday.toISOString().split('T')[0];
+  const weekTo   = friday.toISOString().split('T')[0];
+
   // ── Fetch all sources in parallel ──────────────────────────────────────────
-  const [gspcRaw, spyRaw, newsRaw, t10Raw, t2Raw, wtiRaw, fxRaw, vixRaw] = await Promise.all([
+  const [gspcRaw, spyRaw, newsRaw, t10Raw, t2Raw, wtiRaw, fxRaw, vixRaw, calRaw] = await Promise.all([
     safeGet(`https://finnhub.io/api/v1/quote?symbol=%5EGSPC&token=${FINNHUB}`, '^GSPC'),
     safeGet(`https://finnhub.io/api/v1/quote?symbol=SPY&token=${FINNHUB}`, 'SPY'),
     safeGet(`https://finnhub.io/api/v1/news?category=general&token=${FINNHUB}`, 'News'),
@@ -45,6 +55,7 @@ async function main() {
     safeGet(`https://www.alphavantage.co/query?function=WTI&interval=daily&apikey=${AV}`, 'WTI'),
     safeGet(`https://www.alphavantage.co/query?function=FX_DAILY&from_symbol=EUR&to_symbol=USD&apikey=${AV}`, 'EUR/USD'),
     safeGet(`https://api.stlouisfed.org/fred/series/observations?series_id=VIXCLS&api_key=${FRED}&sort_order=desc&limit=2&file_type=json`, 'VIXCLS'),
+    safeGet(`https://finnhub.io/api/v1/calendar/economic?from=${weekFrom}&to=${weekTo}&token=${FINNHUB}`, 'EconCalendar'),
   ]);
 
   // ── Parse S&P 500 (^GSPC preferred, SPY*10 fallback) ──────────────────────
@@ -103,30 +114,57 @@ async function main() {
     }
   }
 
-  // ── Parse news headlines ───────────────────────────────────────────────────
-  const headlines = Array.isArray(newsRaw)
-    ? newsRaw.slice(0, 10).map(n => `- ${n.headline} (${n.source})`).join('\n')
-    : '(no headlines available)';
+  // ── Parse news headlines (filter to last 48h, include date) ──────────────
+  const cutoff48h = Math.floor(Date.now() / 1000) - 48 * 3600;
+  const recentNews = Array.isArray(newsRaw)
+    ? newsRaw.filter(n => n.datetime && n.datetime >= cutoff48h)
+    : [];
+  const headlines = recentNews.length > 0
+    ? recentNews.slice(0, 10).map(n => {
+        const d = new Date(n.datetime * 1000).toISOString().split('T')[0];
+        return `- [${d}] ${n.headline} (${n.source})`;
+      }).join('\n')
+    : '(no recent headlines in last 48 hours)';
+  console.log(`News: ${recentNews.length} articles in last 48h`);
+
+  // ── Parse economic calendar ────────────────────────────────────────────────
+  const econEvents = Array.isArray(calRaw?.economicCalendar)
+    ? calRaw.economicCalendar
+        .filter(e => e.impact === 'high' || e.impact === 'medium')
+        .slice(0, 8)
+        .map(e => `- ${e.time?.split('T')[0] ?? '?'} | ${e.event} | impact:${e.impact} | actual:${e.actual ?? 'pending'} | est:${e.estimate ?? 'N/A'}`)
+        .join('\n')
+    : '(calendar unavailable)';
 
   // ── Build prompt ───────────────────────────────────────────────────────────
   const rawData = [
-    `Date: ${today}`,
+    `Brief date: ${today}`,
+    `Generated at: ${new Date().toISOString()} (before US market open — all equity/FX/commodity prices are previous session close)`,
     '',
-    'LIVE MARKET DATA:',
-    `S&P 500: ${sp500 ? `${sp500.value}, day change: ${sp500.change} (${sp500.changePct}%)` : 'N/A'}`,
-    `VIX (FRED VIXCLS): ${vix ? `${vix.value}, day change: ${vix.change}` : 'N/A'}`,
-    `10Y Treasury (FRED): ${t10?.value ?? 'N/A'}%, day change: ${t10?.changeBps ?? 'N/A'} bps`,
-    `2Y Treasury (FRED): ${t2?.value ?? 'N/A'}%, day change: ${t2?.changeBps ?? 'N/A'} bps`,
-    `WTI Crude: $${wti?.value ?? 'N/A'}, day change: $${wti?.change ?? 'N/A'}`,
-    `EUR/USD: ${dxy?.eurusd ?? 'N/A'} (DXY moves inverse — EUR/USD up = DXY down), day change: ${dxy?.eurusdChange ?? 'N/A'}`,
+    'MARKET DATA (sourced from live APIs — use only these numbers, do not substitute your own):',
+    `S&P 500 (Finnhub, prev close): ${sp500 ? `${sp500.value}, change: ${sp500.change} (${sp500.changePct}%)` : 'N/A'}`,
+    `VIX (FRED VIXCLS, as of ${vixCur?.date ?? 'unknown'}): ${vix ? `${vix.value}, change: ${vix.change}` : 'N/A'}`,
+    `10Y Treasury (FRED, as of ${t10cur?.date ?? 'unknown'}): ${t10?.value ?? 'N/A'}%, change: ${t10?.changeBps ?? 'N/A'} bps`,
+    `2Y Treasury (FRED, as of ${t2cur?.date ?? 'unknown'}): ${t2?.value ?? 'N/A'}%, change: ${t2?.changeBps ?? 'N/A'} bps`,
+    `WTI Crude (Alpha Vantage, daily): $${wti?.value ?? 'N/A'}, change: $${wti?.change ?? 'N/A'}`,
+    `EUR/USD (Alpha Vantage, daily): ${dxy?.eurusd ?? 'N/A'}, change: ${dxy?.eurusdChange ?? 'N/A'} (DXY moves inverse)`,
     '',
-    'TOP NEWS HEADLINES (Finnhub):',
+    `TOP NEWS HEADLINES (Finnhub, filtered to last 48h — dates shown in brackets):`,
     headlines,
+    '',
+    `ECONOMIC CALENDAR THIS WEEK ${weekFrom} to ${weekTo} (Finnhub real data):`,
+    econEvents,
   ].join('\n');
 
   const prompt = `${rawData}
 
-Using the real market data above, return ONLY a valid JSON object — no markdown, no text before or after the JSON.
+Using ONLY the real data above, return a valid JSON object — no markdown, no text before or after the JSON.
+
+CRITICAL RULES:
+- Use ONLY the numbers and headlines provided above. Do not invent, substitute, or hallucinate any data.
+- For stories: only pick from the headlines listed above (with their [date] prefix). Do not fabricate headlines.
+- For calendar: use ONLY the economic events listed above. Do not add events from your training data.
+- If a field is N/A or missing, write "N/A" — never make up a number.
 
 Required structure:
 {
@@ -136,25 +174,24 @@ Required structure:
     {"name": "S&P 500", "value": "...", "change": "...", "up": true},
     {"name": "10Y UST", "value": "...%", "change": "... bps", "up": true},
     {"name": "2Y UST", "value": "...%", "change": "... bps", "up": true},
-    {"name": "DXY", "value": "...", "change": "...", "up": false},
+    {"name": "~DXY", "value": "...", "change": "...", "up": false},
     {"name": "VIX", "value": "...", "change": "...", "up": false}
   ],
   "stories": [
-    {"headline": "...", "source": "...", "summary": "2 sentences", "why_matters": "1 sentence on US S&T relevance", "tag": "Rates"}
+    {"headline": "...", "source": "...", "summary": "2 sentences based only on what the headline says", "why_matters": "1 sentence on US S&T relevance", "tag": "Rates"}
   ],
   "calendar": [
-    {"day": "Mon", "event": "...", "importance": "high", "note": "..."}
+    {"day": "Mon", "event": "...", "importance": "high", "actual": "...", "estimate": "...", "note": "1 sentence why this matters"}
   ],
-  "concept": {"title": "...", "one_liner": "...", "explanation": "2-3 sentences tied to today's data", "market_link": "..."},
-  "narrative": "1-2 sentence macro summary tied to today's actual numbers"
+  "concept": {"title": "...", "one_liner": "...", "explanation": "2-3 sentences tied to today's actual data above", "market_link": "..."},
+  "narrative": "1-2 sentence macro summary using only the data above"
 }
 
-Rules:
-- market_levels: use the actual fetched values above. For DXY, estimate from EUR/USD (label it as ~DXY). All 5 items required.
-- stories: exactly 3 items from the headlines above, tag each as one of: Rates, Equities, FX, Macro, Credit
-- calendar: 2-3 key US economic events happening THIS week (use your knowledge of what's scheduled)
-- concept: choose a concept directly illustrated by today's market data
-- Output only the JSON object, nothing else`;
+Additional rules:
+- market_levels: copy values exactly from the data above. All 5 required.
+- stories: pick exactly 3 from the headlines above. Tag each as: Rates, Equities, FX, Macro, or Credit.
+- calendar: include 2-4 events from the economic calendar above. If actual value is available, include it. If no calendar data, write [].
+- Output only the JSON object, nothing else.`;
 
   // ── Call Anthropic ──────────────────────────────────────────────────────────
   console.log('Calling Anthropic API…');
