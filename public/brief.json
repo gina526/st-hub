@@ -1,11 +1,11 @@
 {
   "date": "2026-10-26",
-  "generated_at": "2026-10-26T14:09:12.327Z",
+  "generated_at": "2026-10-26T18:24:26.282Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7631",
-      "change": "+31 (0.41%)",
+      "value": "7657",
+      "change": "+57 (0.75%)",
       "up": true
     },
     {
@@ -35,25 +35,25 @@
   ],
   "stories": [
     {
-      "headline": "Oil spill off UAE widens, satellite images show, prompting more beach closures",
+      "headline": "Egypt approves military support for Saudi Arabia after Houthi attacks escalate",
       "source": "Reuters",
-      "summary": "An expanding oil spill off the UAE coast has triggered additional beach closures as satellite imagery tracks the environmental incident. The spill's widening scope raises concerns about regional ecological and economic impacts.",
-      "why_matters": "Oil supply disruptions and environmental crises can affect energy prices and risk appetite in US markets.",
+      "summary": "Egypt has approved military support for Saudi Arabia in response to escalating Houthi attacks in the region. This move signals deeper regional involvement in Middle Eastern tensions.",
+      "why_matters": "Middle East geopolitical escalation directly threatens energy supply chains and US strategic interests, potentially impacting crude prices and risk appetite.",
       "tag": "Macro"
     },
     {
-      "headline": "Cracking AI trade has Wall Street looking for a hedge. An ex-Citadel quant may have the answer",
-      "source": "CNBC",
-      "summary": "Wall Street traders are seeking hedges against concentrated AI stock exposure as valuations remain elevated. A former Citadel quantitative expert is reportedly offering strategies to manage this concentration risk.",
-      "why_matters": "AI dominates S&P 500 gains; hedge demand signals concern about equity concentration and potential drawdown risk.",
+      "headline": "Galp, Moeve scrap downstream merger as Iran war boosts refinery valuations",
+      "source": "Reuters",
+      "summary": "Galp and Moeve have cancelled their planned downstream merger due to rising refinery valuations caused by Iran-related conflict risks. The deal termination reflects changed market conditions favoring standalone refinery assets.",
+      "why_matters": "Energy sector restructuring tied to geopolitical risk repricing affects upstream capex, inflation expectations, and commodity-linked equity valuations.",
       "tag": "Equities"
     },
     {
-      "headline": "Egypt's pound hits record low against dollar",
-      "source": "Reuters",
-      "summary": "Egypt's currency has reached a new low against the US dollar, reflecting broader emerging market currency pressure. The weakness may exacerbate inflation and external debt challenges for the economy.",
-      "why_matters": "Emerging market currency crises can trigger capital flight and affect global risk sentiment, impacting US equity and FX volatility.",
-      "tag": "FX"
+      "headline": "Mortgage rates above 7% are the 'new normal'—here's why",
+      "source": "CNBC",
+      "summary": "Mortgage rates have settled above 7% and are being characterized as the 'new normal' for the housing market. This reflects broader trends in interest rate expectations.",
+      "why_matters": "Sustained 7%+ mortgage rates signal persistent real yields and potential consumer credit stress, impacting housing demand, equities, and Fed policy interpretation.",
+      "tag": "Rates"
     }
   ],
   "calendar": [
@@ -61,32 +61,20 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "FOMC communications remain the most market-moving data point; yields already down 16–17 bps, signaling rate-cut expectations."
+      "note": "FOMC communications on Friday will set Fed expectations and may drive Treasury curve repricing amid geopolitical risk and mortgage rate dynamics."
     },
     {
       "day": "Fri",
       "event": "Employment Cost Index",
       "importance": "high",
-      "note": "Labor cost data is critical for Fed inflation assessment and near-term monetary policy direction."
-    },
-    {
-      "day": "Fri",
-      "event": "Economic Policy Uncertainty",
-      "importance": "medium",
-      "note": "EPU index measures tail-risk sentiment and can correlate with VIX moves and bond volatility."
-    },
-    {
-      "day": "Fri",
-      "event": "Federal Funds Data",
-      "importance": "high",
-      "note": "Realised fed funds effective rate confirms actual monetary conditions and near-term money-market stress."
+      "note": "ECI data Friday is critical for assessing wage inflation persistence in context of sustained 7%+ mortgage rates and labor market tightness."
     }
   ],
   "concept": {
-    "title": "Yield Curve Flattening & Risk-Off Rotation",
-    "one_liner": "Steeper yield declines and rising VIX signal defensive repositioning ahead of FOMC clarity.",
-    "explanation": "10Y and 2Y Treasuries both fell 16–17 bps, compressing term premium and suggesting flight-to-safety demand. VIX rose 0.42 points despite a modest S&P 500 gain, indicating hedging interest in equities—corroborated by CNBC's story on AI-trade hedging. Geopolitical risks (UAE oil spill, Houthi attacks, Iran tensions) and emerging market stress (Egypt pound record low) are driving global risk-off sentiment.",
-    "market_link": "Falling yields + rising VIX + weakening EM currencies = classic risk-off setup entering FOMC week; expect continued Treasury demand and selective equity de-risking."
+    "title": "Geopolitical Risk Premium on Hold",
+    "one_liner": "Middle East escalation and Iran tensions are reshaping energy sector valuations and keeping rates higher longer despite marginal Treasury yield declines.",
+    "explanation": "Headlines spanning Egypt-Saudi military coordination, Hezbollah mobilization, and refinery merger cancellations reflect a live geopolitical risk repricing affecting commodities and inflation expectations. The 10Y/2Y both fell ~16-17 bps yet VIX rose 0.42, suggesting equity sellers are pricing tail risks while bond buyers flee duration. Mortgage rates anchored above 7% indicate the real yield floor remains sticky despite tactical bond strength.",
+    "market_link": "Energy-driven inflation fears and Middle East supply-chain uncertainty are sustaining term premium even as near-term rate cuts are delayed by fiscal and geopolitical headwinds."
   },
-  "narrative": "Bond yields fell 16–17 bps and VIX ticked up despite a flat equity open, signaling defensive repositioning and hedging demand before Friday's FOMC release. Geopolitical shocks (UAE oil spill, Houthi disruptions) and EM currency weakness (Egypt pound at record low) are fueling safe-haven flows into US Treasuries and equity volatility hedges."
+  "narrative": "S&P 500 gained 0.75% in a quiet session as Treasuries rallied 16–17 bps on mixed signals: bond buying amid geopolitical risk, but VIX ticked up and mortgage rates remain stuck above 7%, signaling the Fed's real-yield floor is holding firm despite Middle East tensions now reshaping energy valuations and regional defense spending."
 }
