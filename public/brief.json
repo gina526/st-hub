@@ -1,59 +1,59 @@
 {
-  "date": "2026-10-23",
-  "generated_at": "2026-10-23T17:44:00.160Z",
+  "date": "2026-10-26",
+  "generated_at": "2026-10-26T14:09:12.327Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7606",
-      "change": "-34 (-0.44%)",
-      "up": false
+      "value": "7631",
+      "change": "+31 (0.41%)",
+      "up": true
     },
     {
       "name": "10Y UST",
-      "value": "5.13%",
-      "change": "+1.0 bps",
+      "value": "4.96%",
+      "change": "-17.0 bps",
       "up": true
     },
     {
       "name": "2Y UST",
-      "value": "4.81%",
-      "change": "+2.0 bps",
+      "value": "4.65%",
+      "change": "-16.0 bps",
       "up": true
     },
     {
-      "name": "WTI Crude",
-      "value": "$107.89",
-      "change": "-$2.12",
+      "name": "~DXY",
+      "value": "1.1202",
+      "change": "-0.0012",
       "up": false
     },
     {
       "name": "VIX",
-      "value": "19.03",
-      "change": "+2.35",
+      "value": "19.45",
+      "change": "+0.42",
       "up": true
     }
   ],
   "stories": [
     {
-      "headline": "Trump weighs quick end to Iran war against letting conflict 'wither'",
+      "headline": "Oil spill off UAE widens, satellite images show, prompting more beach closures",
       "source": "Reuters",
-      "summary": "The Trump administration is evaluating strategic options for the Iran conflict, considering either rapid resolution or a prolonged approach. This reflects shifting geopolitical priorities ahead of midterm elections.",
-      "why_matters": "Geopolitical de-escalation could reduce oil price volatility and stabilize energy markets critical to US inflation dynamics.",
+      "summary": "An expanding oil spill off the UAE coast has triggered additional beach closures as satellite imagery tracks the environmental incident. The spill's widening scope raises concerns about regional ecological and economic impacts.",
+      "why_matters": "Oil supply disruptions and environmental crises can affect energy prices and risk appetite in US markets.",
       "tag": "Macro"
     },
     {
-      "headline": "US consumer sentiment near record low ahead of midterm elections",
-      "source": "Reuters",
-      "summary": "Consumer sentiment in the US has deteriorated to near-record lows as midterm elections approach. This weakness reflects broader concerns about economic conditions and purchasing power.",
-      "why_matters": "Depressed consumer sentiment threatens earnings growth and equity multiples, directly pressuring equity valuations amid already-soft market tone.",
+      "headline": "Cracking AI trade has Wall Street looking for a hedge. An ex-Citadel quant may have the answer",
+      "source": "CNBC",
+      "summary": "Wall Street traders are seeking hedges against concentrated AI stock exposure as valuations remain elevated. A former Citadel quantitative expert is reportedly offering strategies to manage this concentration risk.",
+      "why_matters": "AI dominates S&P 500 gains; hedge demand signals concern about equity concentration and potential drawdown risk.",
       "tag": "Equities"
     },
     {
-      "headline": "Ship attacks in Strait of Hormuz hit record high in October",
+      "headline": "Egypt's pound hits record low against dollar",
       "source": "Reuters",
-      "summary": "October has seen a record number of ship attacks in the Strait of Hormuz, a critical chokepoint for global oil trade. This escalation heightens supply-chain risk and energy security concerns.",
-      "why_matters": "Disruptions to Persian Gulf shipping directly threaten crude supply stability and could reignite oil price spikes, affecting inflation expectations and Fed policy.",
-      "tag": "Macro"
+      "summary": "Egypt's currency has reached a new low against the US dollar, reflecting broader emerging market currency pressure. The weakness may exacerbate inflation and external debt challenges for the economy.",
+      "why_matters": "Emerging market currency crises can trigger capital flight and affect global risk sentiment, impacting US equity and FX volatility.",
+      "tag": "FX"
     }
   ],
   "calendar": [
@@ -61,26 +61,32 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "Central bank policy communication is critical for rate expectations; today's release will signal Fed stance on inflation, employment, and future hikes."
+      "note": "FOMC communications remain the most market-moving data point; yields already down 16–17 bps, signaling rate-cut expectations."
+    },
+    {
+      "day": "Fri",
+      "event": "Employment Cost Index",
+      "importance": "high",
+      "note": "Labor cost data is critical for Fed inflation assessment and near-term monetary policy direction."
     },
     {
       "day": "Fri",
       "event": "Economic Policy Uncertainty",
-      "importance": "high",
-      "note": "Rising EPU indices correlate with equity volatility and credit spreads; today's reading amid geopolitical tensions and political cycle may shift risk sentiment."
+      "importance": "medium",
+      "note": "EPU index measures tail-risk sentiment and can correlate with VIX moves and bond volatility."
     },
     {
       "day": "Fri",
       "event": "Federal Funds Data",
       "importance": "high",
-      "note": "Real-time Fed funds rate data anchors all short-term borrowing costs and informs market expectations for near-term policy moves."
+      "note": "Realised fed funds effective rate confirms actual monetary conditions and near-term money-market stress."
     }
   ],
   "concept": {
-    "title": "Geopolitical Risk Premium & Consumer Demand Collapse",
-    "one_liner": "Simultaneous shocks—Hormuz shipping attacks, Iran conflict uncertainty, and near-record consumer despair—compress equity multiples while energy inflation risks offset bond rallies.",
-    "explanation": "Today's data shows equities down 44bps on weak sentiment and geopolitical headlines, while VIX rose 2.35pts and crude fell $2.12 despite record Strait of Hormuz attacks. This disconnect signals two competing forces: demand destruction from low consumer confidence pushing energy lower, versus supply-chain risk that could reverse if escalation accelerates. The 2Y/10Y curve steepening slightly (+2bps vs +1bps) reflects uncertainty about whether the Fed holds or cuts—a function of both inflation persistence from energy shocks and growth headwinds from consumer pullback.",
-    "market_link": "Risk-off sentiment (VIX +2.35) and midterm election anxiety amplify safe-haven demand for duration, but geopolitical tail risks to oil keep real rates volatile and equity valuations under pressure."
+    "title": "Yield Curve Flattening & Risk-Off Rotation",
+    "one_liner": "Steeper yield declines and rising VIX signal defensive repositioning ahead of FOMC clarity.",
+    "explanation": "10Y and 2Y Treasuries both fell 16–17 bps, compressing term premium and suggesting flight-to-safety demand. VIX rose 0.42 points despite a modest S&P 500 gain, indicating hedging interest in equities—corroborated by CNBC's story on AI-trade hedging. Geopolitical risks (UAE oil spill, Houthi attacks, Iran tensions) and emerging market stress (Egypt pound record low) are driving global risk-off sentiment.",
+    "market_link": "Falling yields + rising VIX + weakening EM currencies = classic risk-off setup entering FOMC week; expect continued Treasury demand and selective equity de-risking."
   },
-  "narrative": "US equities retreated 44bps with consumer sentiment near record lows, while VIX rose 2.35pts amid headline risk from Iran policy review and record Hormuz shipping attacks. Two-year yields hardened 2bps despite energy weakness, suggesting market positioning for Fed policy uncertainty as geopolitical tail risks clash with demand destruction."
+  "narrative": "Bond yields fell 16–17 bps and VIX ticked up despite a flat equity open, signaling defensive repositioning and hedging demand before Friday's FOMC release. Geopolitical shocks (UAE oil spill, Houthi disruptions) and EM currency weakness (Egypt pound at record low) are fueling safe-haven flows into US Treasuries and equity volatility hedges."
 }
