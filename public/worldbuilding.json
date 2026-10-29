@@ -1,5 +1,128 @@
 [
   {
+    "date": "2026-10-29",
+    "blocks": [
+      {
+        "term": "10-Year US Treasury Yield (10Y UST)",
+        "category": "rates",
+        "bullets": [
+          "Trading at 4.99% today, down 1.0 bps — signals market pricing in potential Fed easing cycle ahead",
+          "Decline driven by crude oil weakness ($1.88 drop to $103.37) reducing inflation expectations; lower oil = lower CPI expectations = lower long-term rates",
+          "Inverted 2Y-10Y spread (-29 bps) means short rates above long rates — historically predicts recession; market betting Fed cuts rates in 2027",
+          "10Y serves as anchor for mortgage rates, corporate bond yields, and equity discount rates; 1 bps move = billions in portfolio value swings",
+          "Friday FOMC decision will validate or challenge this disinflationary narrative; if Fed hawkish, 10Y could spike back to 5.10%+",
+          "Duration plays: long-dated bonds outperform if oil stays weak and Fed eases; short if geopolitical escalation reignites inflation fears"
+        ],
+        "so_what": "Rates traders use 10Y as pricing benchmark for bond portfolios and Fed rate path bets; salespeople pitch duration extension to clients if they believe easing is coming, or duration reduction as geopolitical hedge"
+      },
+      {
+        "term": "2-Year US Treasury Yield (2Y UST)",
+        "category": "rates",
+        "bullets": [
+          "At 4.70% today, UP 2.0 bps — reflects near-term Fed expectations still sticky despite long-end declining",
+          "2Y is most sensitive to near-term Fed policy; rise suggests market still pricing some hawkishness Friday, not full pivot to cuts",
+          "Creates inverted curve vs. 10Y (2Y above 10Y by 29 bps in negative territory) — unusual signal of policy transition uncertainty",
+          "Employment Cost Index (ECI) Friday will drive 2Y: if wage growth accelerates, Fed stays higher for longer; if softens, 2Y drops toward 4.50%",
+          "Repo traders and dealers watch 2Y closely for front-end hedging and collateral valuation in financing markets",
+          "2Y-10Y steepness drives carry trades: negative spread means short end expensive, penalizes bullet strategies vs. barbell positions"
+        ],
+        "so_what": "Repo desk uses 2Y-10Y spread to size curve positioning bets; credit salespeople pitch curve steepeners (buy 10Y, sell 2Y) if they expect Fed to cut while front end remains elevated"
+      },
+      {
+        "term": "S&P 500 Index",
+        "category": "equities",
+        "bullets": [
+          "Closed at 7692, down 31 points (-0.40%) — mild selloff indicating risk-off sentiment but contained by lower rates tailwind",
+          "Decline despite 10Y yield falling suggests equity selling decoupled from rate relief; may reflect profit-taking ahead of FOMC or Middle East escalation anxiety",
+          "Negative correlation with oil (oil down $1.88) not translating to S&P gains — typical of 'stagflation fear' where low growth + geopolitical risk dominate",
+          "Energy sector (XLE) headwind from $103.37 crude; financials may benefit from higher rates if 2Y stickiness persists",
+          "VIX compression (-0.61 to 16.91) shows complacency hasn't broken yet; tail risk hedges still priced cheap for geopolitical buyers",
+          "Friday FOMC could trigger +/- 100 bps intraday swings; consensus calls for 25 bps cut, but dot plot guidance on terminal rate will drive post-decision moves"
+        ],
+        "so_what": "Equity desk uses S&P level and sector rotation to communicate macro positioning to clients; if S&P breaks 7600, salespeople pivot from 'boring stable equity' to 'defensive dividend' narrative to retain AUM"
+      },
+      {
+        "term": "VIX (Volatility Index)",
+        "category": "volatility",
+        "bullets": [
+          "At 16.91, down 0.61 from prior close — indicates investor complacency and reduced hedging demand for tail risk",
+          "Below 20 suggests 'Goldilocks' narrative (not too hot, not too cold); but single-event risk (Strait of Hormuz escalation, FOMC shock) could spike VIX to 22-25 intraday",
+          "Low VIX makes out-of-the-money put spreads cheap for equity protection; salespeople pushing hedges hard to clients ahead of Friday event risk",
+          "Inverted curve (-29 bps 2Y-10Y) usually correlates with elevated volatility; VIX compression suggests market still pricing diplomatic resolution, not escalation",
+          "South Korea's Strait of Hormuz deployment signals tail risk, yet VIX declining — market mispricing geopolitical fat tail or betting on Qatar/Iran negotiation success",
+          "Call spreads on S&P 500 and crude oil popular hedges; if geopolitical news hits Friday, vol surface reprices from 16% to 24% implied vol in 2 hours"
+        ],
+        "so_what": "Volatility traders and salespeople use VIX sub-17 levels to sell strangles (short OTM calls/puts) and collect premium; risk managers pitch tail-risk hedges (long puts, VIX calls) to equity portfolios when VIX is cheap relative to geopolitical event probability"
+      },
+      {
+        "term": "WTI Crude Oil & Diplomacy Premium Vs. Supply Tail Risk",
+        "category": "energy",
+        "bullets": [
+          "WTI at $103.37, down $1.88 today — decline despite South Korea military deployment signals market betting on diplomatic resolution over escalation",
+          "Oil above $105 re-ignites inflation narrative, steepens yield curve (10Y rises, 2Y falls), pressures equity multiples; below $101 validates disinflationary view and supports rate cuts",
+          "Strait of Hormuz (20% global oil flow) closure scenario would spike crude to $120+; South Korea's deployment is de-escalation signal, not escalation",
+          "Kalshi's $40B valuation (prediction market for macro outcomes) reflects institutional appetite for probabilistic pricing of geopolitical events; traders using Kalshi odds to price oil tail risk",
+          "OPEC+ spare capacity limits: if crude rallies to $110, Saudi Arabia can cushion, but Iran sanctions evasion creates wild card; diplomatic failure = supply shock, rate shock upside",
+          "Refiners and airlines (SW, AAL, UAL) hedge crude exposure; every $5/barrel move = 1-2% earnings impact; sales teams pitch crude collars and crack spreads to energy clients"
+        ],
+        "so_what": "Commodities traders use $103-105 range as pivot; if crude breaks $105, they flip from short to long and pitch inflationary trade to macro hedge funds; energy salespeople link oil moves to client P&Ls (airline hedges, refinery margins) to drive engagement"
+      },
+      {
+        "term": "2Y-10Y Yield Curve Inversion & Rate Expectations",
+        "category": "rates",
+        "bullets": [
+          "Spread at -29 bps (2Y 4.70%, 10Y 4.99%) — inverted curve typically predicts recession within 12-18 months; market now pricing 2-3 rate cuts by end of 2027",
+          "Inversion driven by Fed holding short rates high (restrictive policy) while long-end reprices lower growth + lower inflation; normal yield curve would have 10Y > 2Y by 100+ bps",
+          "Market expects ECI data Friday to validate 'wage growth cooling' narrative, justifying 25 bps cut in December; if ECI surprises hot (+0.5% vs. +0.3% forecast), curve re-steepens and 10Y rises",
+          "Barbell positioning (long ultra-long bonds like 20Y, short 5Y) profits from further steepening if easing begins; bullet in 10Y profits if curve stays inverted",
+          "Mortgage originators (Wells, BOFA) see net interest margin compression from inverted curve; deposit flows pressure — sales teams pitch deposit alternatives (money market funds) to retail",
+          "Portfolio managers using curve inversion as macro signal to rotate equity → bonds; if inversion holds post-FOMC, institutional money shifts to defensive positioning"
+        ],
+        "so_what": "Rates strategists use curve inversion to justify client rotation from duration-heavy bonds to steepeners and carry trades; credit salespeople pitch IG/HY spread tightening as economic slowdown fears limit default risk, supporting credit outperformance"
+      },
+      {
+        "term": "FOMC Policy Decision & Market Guidance Framework",
+        "category": "macro",
+        "bullets": [
+          "Friday FOMC announcement: consensus expects 25 bps cut (Fed funds to 4.50-4.75%), but forward guidance ('dot plot') on terminal rate will drive 2Y-10Y repricing",
+          "If Fed signals 4.00% terminal rate (vs. market-implied 3.75%), 2Y sells off (rises 5-10 bps) and curve re-steepens; if 3.50% terminal rate, 2Y crashes and curve inverts further",
+          "ECI release (same day) is 'tell' on labor market softness; if wage growth stays hot, Fed may signal pause or fewer cuts, triggering equity selloff and yield curve steepening (bad for bonds)",
+          "Market pricing embedded in options: S&P 500 straddles (long calls + puts) worth $25/contract today; if FOMC hawkish, straddles expire worthless; if dovish surprise, calls rally 15-20%",
+          "Kalshi prediction market odds show ~65% probability of 25 bps cut Friday; if actual guidance more hawkish, Kalshi odds flip and institutional traders caught long equities get stopped out",
+          "Post-FOMC sell-off risk: if Fed maintains 'higher for longer' narrative, 10Y doesn't rally, equity risk premium compresses, S&P could drop 100-150 bps into month-end"
+        ],
+        "so_what": "Trading desks run scenario models (hawkish/dovish/baseline FOMC outcomes) to size equity/rates/FX positioning ahead of Friday; salespeople briefing clients Thursday on 'what changes if Fed cuts vs. holds' to prepare for flow management and hedging decisions post-announcement"
+      },
+      {
+        "term": "Prediction Markets (Kalshi) as Institutional Risk Pricing",
+        "category": "fundamental",
+        "bullets": [
+          "Kalshi achieved $40B valuation, now largest US regulated prediction market; enabling real-time probability pricing of macro/political events (Fed rate outcomes, geopolitical escalation odds)",
+          "Mechanism: institutional traders (hedge funds, prop shops) buy/sell shares on event outcomes (e.g., 'Oil above $105 by Dec 31'); market price = probability; volatility of contracts = tail risk severity",
+          "South Korea Strait of Hormuz deployment odds on Kalshi rising (supply disruption risk 35%+ implied probability); as odds rise, oil option markets reprice, selling short-duration calls and buying long-duration puts",
+          "Traders arbitrage Kalshi odds vs. traditional derivative prices: if Kalshi implies 70% cut Friday but S&P 500 straddle implies 55% move, arb opportunity exists to sell straddles and buy Kalshi contract",
+          "Real-time pricing advantage vs. traditional models: Kalshi updates millisecond-by-millisecond; 24/5 trading means flows captured before traditional markets open Friday morning",
+          "Regulatory approval (2022) legitimized prediction markets as hedging tool; banks now integrating Kalshi data into risk dashboards to validate model-based tail risk pricing vs. market consensus"
+        ],
+        "so_what": "Prop traders and hedge fund clients use Kalshi odds to validate or challenge desk risk models; salespeople cite Kalshi probabilities in client calls to argue for tail hedges ('market now pricing 40% geopolitical upside risk — you're unhedged') and justify strategy fees"
+      },
+      {
+        "term": "Macro Narrative: Diplomacy Premium, Peak Inflation, & Rate Easing Expectations",
+        "category": "macro",
+        "bullets": [
+          "Market consensus: oil weakness ($103.37, -$1.88) + 10Y decline (-1 bps to 4.99%) signals belief that diplomacy will hold Middle East tensions, preventing supply shock",
+          "Peak inflation narrative supported by crude retreat; if oil stays sub-$105, CPI momentum continues lower, justifying Fed easing cycle starting December 2026",
+          "S&P 500 mild down day (-0.40%) despite rate tailwind suggests investors cautious on earnings growth; inverted curve (-29 bps) flags economic slowdown risk, pressuring equity multiples despite lower rates",
+          "South Korea deployment is de-escalation theater, not war signal; military presence reduces tail risk of unilateral Iranian action, reassures markets that shipping routes stay open",
+          "Employment Cost Index Friday is 'make or break' for rate easing narrative; if ECI +0.4% QoQ (vs. +0.3% forecast), Fed pauses cuts and market reprices to 'rates higher longer' (bad for bonds, good for USD)",
+          "Kalshi prediction market pricing reflects ~65% cut probability vs. market options pricing ~60% move; small divergence suggests institutional consensus but retail hedging demand still present"
+        ],
+        "so_what": "Portfolio managers use this macro narrative to drive tactical allocation: buy duration (long bonds) if diplomacy holds + ECI soft = easy Fed easing; sell duration and buy cyclicals if escalation fears spike or ECI surprises hot = stagflation regime shift"
+      }
+    ],
+    "narrative": "U.S. equities opened marginally lower (-0.40% to 7692) as investors balanced dovish rate signals (10Y at 4.99%, down 1 bp; inverted 2Y-10Y at -29 bps) against Friday's FOMC decision risk and Middle East geopolitical uncertainty. WTI crude retreated $1.88 to $103.37 on diplomacy hopes, validating peak-inflation narrative that supports market pricing for 25 bps December rate cut, yet South Korea's Strait of Hormuz deployment signals tail risk remains priced cheap (VIX 16.91, down 0.61) relative to probability of supply disruption. The fragile equilibrium hinges on Friday's ECI data and FOMC dot plot: if wage growth softens, 10Y rallies to 4.90% and equity multiples re-rate higher; if labor remains hot, curve re-steepens and S&P faces 100-150 bps downside into month-end."
+  },
+  {
     "date": "2026-10-28",
     "blocks": [
       {
