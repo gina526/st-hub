@@ -1,59 +1,59 @@
 {
-  "date": "2026-10-28",
-  "generated_at": "2026-10-28T18:00:46.233Z",
+  "date": "2026-10-29",
+  "generated_at": "2026-10-29T14:10:10.513Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7712",
-      "change": "+15 (0.20%)",
-      "up": true
+      "value": "7692",
+      "change": "-31 (-0.40%)",
+      "up": false
     },
     {
       "name": "10Y UST",
-      "value": "5.00%",
-      "change": "0 bps",
+      "value": "4.99%",
+      "change": "-1.0 bps",
       "up": true
     },
     {
       "name": "2Y UST",
-      "value": "4.68%",
-      "change": "-1.0 bps",
-      "up": false
+      "value": "4.70%",
+      "change": "+2.0 bps",
+      "up": true
     },
     {
       "name": "~DXY",
-      "value": "1.1122 EUR/USD",
-      "change": "-0.0050",
+      "value": "N/A",
+      "change": "N/A",
       "up": false
     },
     {
       "name": "VIX",
-      "value": "17.52",
-      "change": "-0.87",
+      "value": "16.91",
+      "change": "-0.61",
       "up": false
     }
   ],
   "stories": [
     {
-      "headline": "Iran sees only unacceptable ideas in latest mediation to end war, official says",
+      "headline": "Oil falls as diplomacy hopes outweigh Middle East escalation fears",
       "source": "Reuters",
-      "summary": "Iran has rejected the latest mediation proposals aimed at resolving the ongoing conflict. The impasse signals continued geopolitical tension in the Middle East.",
-      "why_matters": "Unresolved Middle East conflict risks oil supply disruptions and elevated risk premiums across equities and fixed income.",
+      "summary": "WTI crude fell $1.88 to $103.37 as market participants weighed diplomatic progress against geopolitical tensions in the Middle East. The decline reflects cautious optimism that negotiation could temper supply disruption risks.",
+      "why_matters": "Oil price stability supports inflation expectations and shapes Fed policy trajectory for rate decisions.",
       "tag": "Macro"
     },
     {
-      "headline": "Jim Cramer sees buying opportunities in these 2 beaten-down stocks",
+      "headline": "South Korea says considering deployment options to Strait of Hormuz, including aircraft",
+      "source": "Reuters",
+      "summary": "South Korea is evaluating potential military deployment to one of the world's most critical energy chokepoints. This signals regional engagement in Middle East security dynamics that could affect global shipping and energy flows.",
+      "why_matters": "Military escalation in the Strait of Hormuz poses tail risk to oil supply and global growth, impacting equity and bond valuations.",
+      "tag": "Macro"
+    },
+    {
+      "headline": "Kalshi valuation jumps to $40 billion in latest funding round",
       "source": "CNBC",
-      "summary": "Jim Cramer identifies two undervalued stocks as potential buys in the current market. The call reflects selective equity opportunity hunting amid broader market conditions.",
-      "why_matters": "Sector rotation and stock-specific volatility signal continued dispersion in equity valuations post-selloff.",
+      "summary": "Kalshi, a prediction market platform, achieved a $40 billion valuation in its latest funding round. The unicorn status reflects surging investor appetite for real-time probability assessments of macro and political outcomes.",
+      "why_matters": "Rising valuation of prediction market infrastructure signals growing institutional demand for tail-risk pricing and event-driven trading strategies.",
       "tag": "Equities"
-    },
-    {
-      "headline": "America's largest budget airline reports 71% jump in airfare",
-      "source": "CNBC",
-      "summary": "A major US budget carrier has announced a sharp 71% increase in average fares. The surge reflects tighter capacity and elevated demand in the travel sector.",
-      "why_matters": "Rising airfare costs feed into consumer inflation and labor cost pressures for airlines, affecting both CPI and earnings growth.",
-      "tag": "Macro"
     }
   ],
   "calendar": [
@@ -61,26 +61,26 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "FOMC guidance and rate decisions are the primary driver of yield curve and risk asset repricing; critical for 10Y/2Y inversion signal."
+      "note": "FOMC policy decision and guidance will set tone for rate expectations; 2Y-10Y curve inversion (-29 bps) suggests market prices in potential easing cycle."
     },
     {
       "day": "Fri",
       "event": "Employment Cost Index",
       "importance": "high",
-      "note": "Wage growth and benefit cost data feed directly into Fed inflation assessment and terminal rate expectations."
+      "note": "Labor cost inflation remains key Fed watching point to validate or challenge disinflationary trend implied by 10Y Treasury decline."
     },
     {
       "day": "Fri",
-      "event": "Federal Funds Data",
-      "importance": "high",
-      "note": "Overnight funding rates and reserve dynamics reflect real-time monetary policy transmission and liquidity conditions."
+      "event": "Economic Policy Uncertainty",
+      "importance": "medium",
+      "note": "EPU gauge will reflect geopolitical tensions and election-related volatility captured in today's political ad and Iran-related headlines."
     }
   ],
   "concept": {
-    "title": "Geopolitical Risk Premium Containment",
-    "one_liner": "VIX remains subdued despite Middle East escalation risks, suggesting markets price stable rates and equity resilience.",
-    "explanation": "The VIX has fallen 0.87 points to 17.52 even as Iran rejects peace mediation and conflict risks persist. This reflects market confidence that the Fed's 5.00% terminal rate and solid 0.20% S&P 500 gains provide a cushion against tail risks. However, the 10Y/2Y curve remains flat (32 bps spread), indicating lingering recession concerns that could amplify volatility if geopolitical shocks materialize.",
-    "market_link": "Geopolitical stability assumptions underpin the current equity valuation; if Middle East tensions escalate sharply, risk-off flows could steepen the curve and compress equity multiples."
+    "title": "Diplomacy Premium vs. Supply Tail Risk",
+    "one_liner": "Oil's $1.88 decline signals market belief that negotiation outweighs Middle East escalation, but fragile equilibrium.",
+    "explanation": "WTI crude fell despite South Korea's Strait of Hormuz deployment signals and Iran sanctions-evasion reports, suggesting traders are pricing in near-term diplomatic relief over long-term geopolitical risk. The VIX compression (-0.61 to 16.91) and S&P 500 mild decline (-0.40%) indicate risk appetite remains intact but cautious. This dynamic hinges on the outcome of ongoing Middle East negotiations, which could flip if diplomacy falters.",
+    "market_link": "If diplomacy fails or escalates, oil above $105 could reignite inflation expectations, steepening the yield curve and pressuring equities; conversely, sustained crude weakness supports the 10Y Treasury's 1 bps decline toward 4.95%."
   },
-  "narrative": "Markets opened Wednesday with modest S&P 500 gains (+0.20%) and declining volatility (-0.87 VIX) despite ongoing Middle East tensions and Iran's rejection of peace mediation. The 10Y Treasury held steady at 5.00% while the 2Y inched lower, keeping the yield curve flat and signaling investor caution on growth, though near-term equity momentum remains intact as airlines raise fares and Fed guidance looms Friday."
+  "narrative": "U.S. equities opened marginally lower as investors await FOMC decision Friday, while crude oil retreated on diplomacy hopes despite Middle East military posturing. Treasury yields remain compressed with the 2Y-10Y spread inverted at -29 bps, signaling market expectations for policy easing alongside a peak-inflation narrative supported by cooling oil prices."
 }
