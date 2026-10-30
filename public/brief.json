@@ -1,59 +1,59 @@
 {
-  "date": "2026-10-29",
-  "generated_at": "2026-10-29T18:10:30.551Z",
+  "date": "2026-10-30",
+  "generated_at": "2026-10-30T14:09:28.863Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7676",
-      "change": "-47 (-0.61%)",
+      "value": "7599",
+      "change": "-94 (-1.22%)",
       "up": false
     },
     {
       "name": "10Y UST",
-      "value": "4.99%",
-      "change": "-1.0 bps",
+      "value": "5.05%",
+      "change": "+6.0 bps",
       "up": true
     },
     {
       "name": "2Y UST",
-      "value": "4.70%",
-      "change": "+2.0 bps",
-      "up": true
+      "value": "4.67%",
+      "change": "-3.0 bps",
+      "up": false
     },
     {
       "name": "~DXY",
-      "value": "N/A",
-      "change": "N/A",
+      "value": "1.1178 EUR/USD",
+      "change": "+0.0026",
       "up": false
     },
     {
       "name": "VIX",
-      "value": "16.91",
-      "change": "-0.61",
-      "up": false
+      "value": "17.20",
+      "change": "+0.29",
+      "up": true
     }
   ],
   "stories": [
     {
-      "headline": "Aon CEO warns AI data center insurance risks could threaten financing",
-      "source": "CNBC",
-      "summary": "The CEO of Aon has raised concerns that emerging insurance risks tied to AI data center infrastructure could pose financing challenges for the sector. This signals growing recognition of tail risks in the data center build-out cycle.",
-      "why_matters": "AI capex funding is critical to tech valuations and equity markets; insurance gaps could slow deployment and repricing.",
-      "tag": "Equities"
-    },
-    {
-      "headline": "EXCLUSIVE: QatarEnergy buys US, other LNG to hedge future Hormuz disruptions",
+      "headline": "FBI and US Secret Service working with Binance after $6.3 billion hack, source says",
       "source": "Reuters",
-      "summary": "QatarEnergy is purchasing LNG supplies from the US and other sources to hedge against potential disruptions in the Strait of Hormuz. This reflects energy security concerns and diversification away from choke-point dependency.",
-      "why_matters": "Geopolitical energy hedging can influence commodity prices and inflation expectations, affecting bond yields and risk sentiment.",
-      "tag": "Macro"
+      "summary": "Binance suffered a $6.3 billion hack and federal law enforcement agencies are now engaged in the investigation. This represents one of the largest cryptocurrency theft incidents on record.",
+      "why_matters": "Crypto market stability and regulatory scrutiny could impact risk sentiment and digital asset valuations in US equity and fixed income markets.",
+      "tag": "Credit"
     },
     {
-      "headline": "Steve Eisman gets more conservative with portfolio as AI trade nears 'tipping point'",
+      "headline": "Swiss central bank posts bumper $23bn profit as gold, foreign assets soar",
       "source": "CNBC",
-      "summary": "Prominent investor Steve Eisman is reducing risk exposure as he views the AI investment cycle reaching a critical inflection point. His shift signals concerns about valuation sustainability in growth-heavy portfolios.",
-      "why_matters": "Major fund repositioning can amplify equity volatility and may presage broader de-risking among institutional allocators.",
-      "tag": "Equities"
+      "summary": "The Swiss National Bank reported exceptional profitability driven by gains in gold and foreign exchange holdings. This reflects strong central bank balance sheet expansion amid volatile markets.",
+      "why_matters": "Central bank strength and foreign reserve appreciation signal currency stability and global monetary confidence, relevant to FX and cross-border capital flows.",
+      "tag": "FX"
+    },
+    {
+      "headline": "Trump on Iran war: It's going to get wrapped up soon",
+      "source": "Reuters",
+      "summary": "Former President Trump suggested that tensions with Iran are approaching resolution. Concurrent reports indicate ongoing naval incidents in the Strait of Hormuz with limpet mine attacks on tankers.",
+      "why_matters": "Geopolitical de-escalation or continued conflict directly impacts crude oil pricing, energy sector valuations, and broader macroeconomic risk premia.",
+      "tag": "Macro"
     }
   ],
   "calendar": [
@@ -61,26 +61,26 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "FOMC communication on rates is the highest-impact data point for equities, bonds, and FX; the 2Y/10Y spread move today may reflect market positioning ahead of this release."
+      "note": "Federal Reserve policy guidance directly affects Treasury yields, equity valuations, and forward rate expectations."
     },
     {
       "day": "Fri",
       "event": "Employment Cost Index",
       "importance": "high",
-      "note": "Wage growth data is key input to inflation and Fed policy expectations; will directly influence rate-sensitive asset pricing."
+      "note": "Wage and benefit growth data is critical for inflation forecasts and Fed rate path determination."
     },
     {
       "day": "Fri",
-      "event": "H.15 Selected Interest Rates",
+      "event": "Economic Policy Uncertainty",
       "importance": "medium",
-      "note": "Benchmark rates snapshot supports market calibration during a volatile macro period."
+      "note": "Elevated uncertainty readings can amplify VIX and influence equity market positioning."
     }
   ],
   "concept": {
-    "title": "De-Risking into Policy Clarity",
-    "one_liner": "Major allocators are trimming positions ahead of Friday's FOMC release as tail risks (AI insurance, geopolitical energy hedges, rate curve inversion) compound.",
-    "explanation": "The S&P 500 declined 0.61% and VIX compressed lower despite the selloff, suggesting defensive repositioning rather than panic. Simultaneously, the 2Y Treasury rose 2bps while the 10Y fell 1bp, flattening the curve—classic behavior when investors rotate away from equities and shorten duration ahead of policy signals. Steve Eisman's conservative stance and Aon's warning on AI capex insurance risks are concrete signals of institutional caution.",
-    "market_link": "If Friday's FOMC signals hawkish hold or delayed cuts, the mild equity decline today may be a preview of larger repricing in growth and rate-sensitive sectors."
+    "title": "Yield Curve Steepening amid Geopolitical Uncertainty",
+    "one_liner": "10Y Treasury yields rise while 2Y falls, reflecting long-end repricing on inflation persistence and geopolitical risk premiums.",
+    "explanation": "The 10Y/2Y spread is widening as the 10Y rose 6 bps to 5.05% while the 2Y fell 3 bps to 4.67%. This steepening typically occurs when markets price in sustained inflation or tail risks—here, tanker attacks in the Strait of Hormuz and Iran tensions create energy cost uncertainty. Simultaneously, S&P 500 weakness (-1.22%) and VIX uptick (+0.29 to 17.20) reflect equity de-rating as investors demand higher long-dated risk premiums.",
+    "market_link": "Rising long yields compress equity multiples and widen credit spreads, while geopolitical oil risk keeps inflation expectations anchored above 5% on the 10Y."
   },
-  "narrative": "Equities slipped 0.61% and the yield curve flattened as major investors reduced risk into Friday's FOMC decision. Geopolitical hedging (QatarEnergy LNG buys), insurance-sector warnings on AI infrastructure, and high-profile portfolio conservatism signal mounting caution about both growth sustainability and tail risks, even as VIX remains subdued at 16.91."
+  "narrative": "US equities fell 1.22% ahead of Friday's FOMC announcement as the yield curve steepened—10Y Treasury yields rose 6 bps to 5.05% amid persistent inflation concerns and escalating Middle East tensions (tanker attacks, Iran negotiations), while the 2Y fell 3 bps, reflecting near-term rate hold expectations. The $6.3 billion Binance hack and broader crypto sector volatility add tail-risk sentiment, pushing VIX 0.29 points higher, though EUR/USD strength signals modest US dollar weakness as markets await FOMC guidance and employment data."
 }
