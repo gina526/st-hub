@@ -1,5 +1,129 @@
 [
   {
+    "date": "2026-11-02",
+    "blocks": [
+      {
+        "term": "10-Year Treasury Yield (10Y UST)",
+        "category": "rates",
+        "bullets": [
+          "10Y at 4.98% this morning, down 7 bps — back below the 5.00% handle after printing 5.05% Friday (+6 bps that day)",
+          "Two-session round trip: +6 Fri, −7 Mon → long end has fully unwound Friday's selloff; the move is a reversal, not a new trend (yet)",
+          "Mechanism: 10Y ≈ expected avg short rate over 10 yrs + term premium; a −7 bp day with no new data usually = term premium compressing (fear/hedging bid) rather than a repricing of the Fed path",
+          "Price math: 10Y modified duration ~7.8 → −7 bps ≈ +0.55% price gain; DV01 ≈ $780 per $1mm notional, so a $100mm long made ~$55k today",
+          "5.00% is a psychological / technical level — real-money buyers (pensions, insurers) tend to add duration above 5%, which caps selloffs and fuels rallies back through it",
+          "Context carried from Friday's brief: St. Louis Fed's Musalem said tighter policy may be needed 'soon' — the long end is rallying anyway, i.e. markets are leaning against hawkish Fed talk",
+          "Mortgage rates, IG corporate coupons and equity DCF discount rates all key off the 10Y — sub-5% eases financial conditions economy-wide"
+        ],
+        "so_what": "A rates salesperson opens the morning call with '10s back through 5, unwinding Friday' and uses the level to steer clients — e.g. telling a pension that bought duration at 5.05% they are up ~0.5% in a day, or flagging to corporate issuers that sub-5% is a window to price new long bonds."
+      },
+      {
+        "term": "2-Year Treasury Yield (2Y UST)",
+        "category": "rates",
+        "bullets": [
+          "2Y at 4.61%, down 6 bps — second straight decline (was 4.67%, −3 bps, on Friday) → 9 bps lower over two sessions",
+          "2Y is the market's cleanest read on the Fed path over the next ~24 months: it moves on FOMC guidance, Fed speakers and jobs/inflation data",
+          "Falling 2Y despite Musalem's hawkish 'tighten soon' comment = market fading the hike scenario; traders are pricing a hold/eventual easing, not tightening",
+          "Lower duration than 10Y (~1.9) → −6 bps ≈ +0.11% price; DV01 ≈ $190 per $1mm — 2Y moves matter for P&L via size (leveraged funds trade it in billions)",
+          "Upcoming catalysts: US midterm elections Tue Nov 3 and the October jobs report (scheduled first-Friday release, Nov 6) — both can swing 2Y 5–10 bps",
+          "Spread of 2Y vs fed funds tells you direction priced: 2Y well below funds = cuts priced; above = hikes priced — the gap is the 'policy expectations' trade"
+        ],
+        "so_what": "Front-end traders and macro-fund salespeople use the 2Y to express Fed views; when a Fed speaker is hawkish and the 2Y still falls, the desk flags that positioning is stubbornly dovish — a setup where a strong payrolls print could cause a sharp, painful 2Y selloff for clients long the front end."
+      },
+      {
+        "term": "Bull Flattening (2s10s Curve)",
+        "category": "fundamental",
+        "bullets": [
+          "2s10s = 10Y − 2Y = 4.98% − 4.61% = 37 bps today, vs 38 bps Friday → curve flattened 1 bp",
+          "'Bull' = yields falling (bond prices up — good for bondholders); 'flattening' = long end falls more than short end (10Y −7 vs 2Y −6)",
+          "Four regimes: bull steepener (front leads rally — Fed cuts priced), bull flattener (long end leads rally — growth/haven fears), bear steepener (long end sells off — inflation/term premium), bear flattener (front sells off — hikes priced)",
+          "Friday was a twist steepener (10Y +6, 2Y −3: curve +9 bps in a day); today mostly reverses the long-end leg",
+          "Positive 37 bps = un-inverted curve; investors are paid extra to lend for 10 yrs vs 2 yrs — historically normal, vs. the deep inversions of 2022–24",
+          "Curve trades are DV01-weighted: ~4x 2Y notional per 1x 10Y (≈$190 vs ≈$780 DV01/mm) so the position bets only on the spread, not the overall level"
+        ],
+        "so_what": "Desks describe every day's rates move with this vocabulary ('bull flattener, long end leading'); salespeople pitch curve trades (steepeners/flatteners) to hedge funds as a way to express a Fed or inflation view without taking outright duration risk."
+      },
+      {
+        "term": "S&P 500 Index",
+        "category": "equities",
+        "bullets": [
+          "S&P at ~7,604, up 46 pts (+0.61%) at time of brief — partial rebound after Friday's −147 pt (−1.91%) drop",
+          "Recovered roughly 1/3 of Friday's loss → a 'bounce', not a full reversal; dip buyers stepped in but conviction is limited",
+          "Primary driver today = rates: 10Y −7 bps lowers the discount rate on future earnings, lifting the present value of stocks — long-duration growth/tech benefits most",
+          "Rule of thumb: equity value ∝ earnings ÷ (discount rate − growth); a lower risk-free rate shrinks the denominator → higher multiples",
+          "Stocks up and bonds up together = 'everything rally' driven by lower yields — contrast with Friday where stocks fell while 2Y also fell (growth fear)",
+          "Caveat: VIX rose 2.22 even as stocks rallied (see VIX block) → the market is buying protection into the rally, so the bounce is hedged, not euphoric"
+        ],
+        "so_what": "Equity sales traders frame the open for clients ('S&P +60bps, bouncing on the rates rally, but vol is bid') and flag which sectors are moving on yields — rate-sensitive growth names vs. defensives — so clients can rebalance or add hedges before the midterm event."
+      },
+      {
+        "term": "VIX (CBOE Volatility Index)",
+        "category": "volatility",
+        "bullets": [
+          "VIX at 19.42, up 2.22 pts (~+13%) from 17.20 — rising on a day the S&P is UP",
+          "VIX = market's 30-day implied volatility on the S&P, derived from option prices; annualized % expected move",
+          "Convert to daily: 19.42 ÷ √252 ≈ 1.22% → market prices a ~1-sd daily S&P move of ~93 pts at 7,604",
+          "Normally spot and vol move opposite (stocks up → VIX down); 'spot up, vol up' signals demand for hedges/event protection, not complacency",
+          "Likely driver: event risk — US midterm elections Tue Nov 3 now sit inside the VIX's 30-day window, plus Oct payrolls Fri Nov 6",
+          "Sub-20 VIX = moderate regime; ~20 is the line traders watch between 'calm' and 'stressed' — today sits right at the edge"
+        ],
+        "so_what": "Volatility and equity derivatives desks see 'spot up, vol up' as a flow signal — clients are paying up for puts or event straddles — and salespeople use it to pitch hedges (put spreads, collars) or, for clients who think the event is overpriced, vol-selling into the print."
+      },
+      {
+        "term": "Event Volatility & Election Premium",
+        "category": "volatility",
+        "bullets": [
+          "Options expiring just after a known event (election, FOMC, CPI, payrolls) carry extra implied vol because they include the 'jump' day",
+          "US midterms Tue Nov 3: control of Congress shapes fiscal policy (spending, deficits, tax) → affects Treasury supply expectations, sector winners, and the dollar",
+          "Term structure kinks: near-dated vol including the event trades rich vs. dates before it; the bump is the 'event premium'",
+          "After the result lands, uncertainty collapses → 'vol crush': implied vol drops sharply even if markets move, hurting option buyers who didn't get a big enough move",
+          "Breakeven logic: buying a straddle only pays if the realized move exceeds the implied move priced in — traders compare today's implied move to historical election-day moves",
+          "Rates angle: a divided vs. unified Congress changes deficit/issuance outlook → long-end term premium, which is exactly what drives the 10Y moves we've seen Fri/Mon"
+        ],
+        "so_what": "Derivatives salespeople pitch event trades days ahead ('the market is pricing an X% move through the election — do you think it's more or less?'), and traders on every desk scale down risk or pre-hedge before a binary event so an overnight gap doesn't blow up the book."
+      },
+      {
+        "term": "DXY (US Dollar Index)",
+        "category": "fx",
+        "bullets": [
+          "No DXY print in today's brief (data feed returned N/A) — note Friday's '~DXY 1.1178' was on a EUR/USD scale, not DXY (DXY trades ~90–110)",
+          "DXY = trade-weighted value of USD vs 6 currencies; EUR ≈ 57.6% weight, then JPY 13.6%, GBP 11.9%, CAD 9.1%, SEK 4.2%, CHF 3.6%",
+          "Because EUR dominates, DXY and EUR/USD move almost mirror-image: EUR/USD up = DXY down",
+          "Core mechanism: rate differentials — when US yields fall relative to Germany/Japan (like today's −6/−7 bps in 2Y/10Y), holding USD pays less carry → dollar tends to soften",
+          "Counterforce: in genuine risk-off / geopolitical stress (e.g. Friday's Hormuz tanker attacks) USD gets a safe-haven bid even if yields fall",
+          "Election angle: fiscal outcomes from the midterms shift expected Treasury supply and growth → a key overnight FX driver Tue/Wed"
+        ],
+        "so_what": "FX salespeople talk to corporates hedging foreign revenue and to macro funds; knowing that a US-yield rally usually weakens the dollar (unless it's a haven move) lets them frame the morning flow and check whether the rates move is being confirmed in FX — a key cross-asset sanity check."
+      },
+      {
+        "term": "Price/Yield Relationship & DV01",
+        "category": "fundamental",
+        "bullets": [
+          "Bond pays fixed coupons; if market yields fall, existing higher-coupon bonds are worth more → price up. Yield ↓ = price ↑, always",
+          "1 bp = 0.01%; today's 10Y −7 bps means yield went from 5.05% to 4.98%",
+          "Duration = % price change per 1% (100 bp) yield move; 10Y ≈ 7.8, 2Y ≈ 1.9 → long bonds are ~4x more sensitive",
+          "DV01 = dollar value of 1 bp: ≈ $780 per $1mm 10Y, ≈ $190 per $1mm 2Y — the unit desks use to size and hedge positions",
+          "Convexity: price gains from yield drops are slightly larger than losses from equal yield rises — matters more for long bonds and big moves",
+          "Why stocks care: Treasury yield = risk-free discount rate; lower yields mechanically raise the PV of all future cash flows (why S&P rallied with bonds today)"
+        ],
+        "so_what": "Every rates trader thinks in DV01 — risk limits, hedge ratios and P&L are all quoted per bp — so a salesperson who can instantly translate '7 bps on $50mm 10s' into ~$273k of P&L sounds like a desk native rather than a student."
+      },
+      {
+        "term": "Fed Speak vs. Market Pricing (the 'Fade')",
+        "category": "macro",
+        "bullets": [
+          "Friday: St. Louis Fed President Musalem said tighter policy may be needed 'soon' — a hawkish signal",
+          "Market reaction since: 2Y −3 bps Fri, −6 bps Mon (4.67% → 4.61%) — yields falling, the opposite of what a credible hike signal does",
+          "Regional Fed presidents rotate as FOMC voters; markets weight comments by voter status, by the Chair's alignment, and by whether data back them up",
+          "When markets 'fade' Fed speak, they're betting data (jobs, inflation) will force the Fed's hand rather than rhetoric — Oct payrolls Fri Nov 6 is the next test",
+          "Risk: if data comes in hot, the gap between Fed talk and market pricing closes violently — front-end selloffs are fastest when positioning is one-sided",
+          "Brief note: today's AI-generated stories failed (API error), so no new headlines today — Friday's Fed/Hormuz context is the latest narrative available"
+        ],
+        "so_what": "Strategists and salespeople constantly compare what the Fed says to what futures/2Y price; spotting the divergence lets them pitch asymmetric trades (e.g. cheap hedges against a hawkish surprise) to clients positioned for a dovish path."
+      }
+    ],
+    "narrative": "Monday is a relief rally ahead of event risk: the 10Y fell 7 bps back below 5% (4.98%) and the 2Y dropped 6 bps to 4.61% in a bull flattener, fully unwinding Friday's long-end selloff and lifting the S&P +0.61% to ~7,604. The market is fading Musalem's hawkish 'tighten soon' warning and betting the Fed holds — yet the VIX rising 2.22 to 19.42 on an up day shows investors are paying for protection into Tuesday's midterms and Friday's payrolls, where a hot print could snap the gap between Fed rhetoric and dovish pricing."
+  },
+  {
     "date": "2026-10-30",
     "blocks": [
       {
