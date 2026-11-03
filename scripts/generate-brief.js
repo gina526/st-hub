@@ -192,26 +192,39 @@ Additional rules:
 - calendar: include 2-4 events from the FRED release calendar above. Pick the most market-relevant ones (GDP, CPI, PCE, jobs, FOMC preferred). If no calendar data, write [].
 - Output only the JSON object, nothing else.`;
 
-  // ── Call Anthropic ──────────────────────────────────────────────────────────
+  // ── Call Anthropic (with retry on transient errors) ────────────────────────
   console.log('Calling Anthropic API…');
   let brief;
   try {
-    const r = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': ANTHROPIC,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 1500,
-        messages: [{ role: 'user', content: prompt }],
-      }),
-      signal: AbortSignal.timeout(30000),
-    });
+    let r, lastErr;
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        r = await fetch('https://api.anthropic.com/v1/messages', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': ANTHROPIC,
+            'anthropic-version': '2023-06-01',
+          },
+          body: JSON.stringify({
+            model: 'claude-haiku-4-5-20251001',
+            max_tokens: 1500,
+            messages: [{ role: 'user', content: prompt }],
+          }),
+          signal: AbortSignal.timeout(30000),
+        });
+        if (r.ok) break;
+        lastErr = `HTTP ${r.status}: ${await r.text()}`;
+        console.warn(`Attempt ${attempt} failed: ${lastErr}`);
+        if (attempt < 3) await new Promise(res => setTimeout(res, 30000));
+      } catch (fetchErr) {
+        lastErr = fetchErr.message;
+        console.warn(`Attempt ${attempt} error: ${lastErr}`);
+        if (attempt < 3) await new Promise(res => setTimeout(res, 30000));
+      }
+    }
+    if (!r?.ok) throw new Error(lastErr || 'All retries failed');
 
-    if (!r.ok) throw new Error(`HTTP ${r.status}: ${await r.text()}`);
     const result = await r.json();
     const text = result.content.filter(b => b.type === 'text').map(b => b.text).join('');
 
