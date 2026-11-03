@@ -235,23 +235,8 @@ Additional rules:
     brief = JSON.parse(text.slice(start, end + 1));
     console.log('Brief generated successfully.');
   } catch (e) {
-    console.error('Anthropic failed:', e.message);
-    // Graceful fallback — raw numbers, no AI narrative
-    brief = {
-      date: today,
-      generated_at: new Date().toISOString(),
-      market_levels: [
-        { name: sp500?.label ?? 'S&P 500', value: sp500 ? sp500.value : 'N/A', change: sp500 ? `${sp500.change} (${sp500.changePct}%)` : 'N/A', up: sp500?.up ?? true },
-        { name: '10Y UST',  value: t10  ? `${t10.value}%`   : 'N/A', change: t10  ? `${t10.changeBps} bps`               : 'N/A', up: t10?.up  ?? true  },
-        { name: '2Y UST',   value: t2   ? `${t2.value}%`    : 'N/A', change: t2   ? `${t2.changeBps} bps`                : 'N/A', up: t2?.up   ?? true  },
-        { name: '~DXY',     value: dxy  ? dxy.eurusd         : 'N/A', change: dxy  ? dxy.eurusdChange                     : 'N/A', up: dxy?.up  ?? false },
-        { name: 'VIX',      value: vix  ? vix.value : 'N/A', change: vix ? vix.change : 'N/A', up: vix?.up ?? false },
-      ],
-      stories: [{ headline: 'Brief narrative unavailable', source: 'System', summary: `Anthropic API error: ${e.message}`, why_matters: 'Check ANTHROPIC_KEY secret.', tag: 'Macro' }],
-      calendar: [],
-      concept: { title: 'N/A', one_liner: '', explanation: '', market_link: '' },
-      narrative: `Raw market data loaded. AI narrative failed: ${e.message}`,
-    };
+    console.error('Anthropic failed after all retries:', e.message);
+    process.exit(1);
   }
 
   // ── Write output ────────────────────────────────────────────────────────────
