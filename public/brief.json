@@ -1,24 +1,24 @@
 {
   "date": "2026-11-03",
-  "generated_at": "2026-11-03T19:13:50.279Z",
+  "generated_at": "2026-11-03T21:51:26.481Z",
   "market_levels": [
     {
-      "name": "S&P 500 (~)",
-      "value": "7554",
-      "change": "33 (0.44%)",
+      "name": "S&P 500",
+      "value": "7544",
+      "change": "+23 (0.30%)",
       "up": true
     },
     {
       "name": "10Y UST",
-      "value": "4.94%",
-      "change": "-4.0 bps",
+      "value": "4.91%",
+      "change": "-3.0 bps",
       "up": false
     },
     {
       "name": "2Y UST",
-      "value": "4.56%",
-      "change": "-5.0 bps",
-      "up": false
+      "value": "4.59%",
+      "change": "+3.0 bps",
+      "up": true
     },
     {
       "name": "~DXY",
@@ -29,25 +29,52 @@
     {
       "name": "VIX",
       "value": "21.15",
-      "change": "1.73",
+      "change": "+1.73",
       "up": true
     }
   ],
   "stories": [
     {
-      "headline": "Brief narrative unavailable",
-      "source": "System",
-      "summary": "Anthropic API error: HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CggXZbotdECZh9QXvQ7HE\"}",
-      "why_matters": "Check ANTHROPIC_KEY secret.",
+      "headline": "Election Day: Here is the No. 1 issue we're watching as a signal for stocks",
+      "source": "CNBC",
+      "summary": "Markets are closely monitoring election outcomes as a key signal for equity direction on November 3, 2026. Political uncertainty has historically driven volatility in stock performance.",
+      "why_matters": "Election results can shift policy expectations around fiscal spending, regulation, and tax rates that directly affect corporate earnings.",
+      "tag": "Equities"
+    },
+    {
+      "headline": "Oil edges up after report of US strike on Iran's Qeshm Island",
+      "source": "Reuters",
+      "summary": "Oil prices show geopolitical sensitivity with reports of US military activity near Iran's strategic island. Crude is down $1.88 to $103.37 but remains volatile amid Middle East tensions.",
+      "why_matters": "Energy price swings influence inflation expectations and corporate profit margins across transportation and manufacturing sectors.",
       "tag": "Macro"
+    },
+    {
+      "headline": "Binance co-CEO Richard Teng says hackers used fake job interviews, AI tool to steal $6.3 billion in crypto",
+      "source": "CNBC",
+      "summary": "Binance reported a $6.3 billion cryptocurrency theft exploiting fake job interviews and AI tools used by bad actors. The breach highlights growing cybersecurity risks in digital asset custody.",
+      "why_matters": "Large-scale crypto losses can trigger credit stress in affiliated financial institutions and increase regulatory scrutiny on digital asset safeguards.",
+      "tag": "Credit"
     }
   ],
-  "calendar": [],
+  "calendar": [
+    {
+      "day": "Fri",
+      "event": "Employment Situation",
+      "importance": "high",
+      "note": "Jobs data on Nov 6 will signal labor market health and influence Fed policy expectations as markets digest election results."
+    },
+    {
+      "day": "Fri",
+      "event": "Economic Policy Uncertainty",
+      "importance": "high",
+      "note": "Post-election policy uncertainty gauge will reflect how much political outcomes shift market positioning on fiscal and regulatory fronts."
+    }
+  ],
   "concept": {
-    "title": "N/A",
-    "one_liner": "",
-    "explanation": "",
-    "market_link": ""
+    "title": "Election-Day Volatility & Yield Curve Flattening",
+    "one_liner": "US equity gains on election day coincide with 10Y yield compression and rising VIX, signaling cautious positioning ahead of policy clarity.",
+    "explanation": "The S&P 500 gained 0.30% while the 10Y Treasury fell 3 bps and VIX rose 1.73 points, a mixed signal typical of election-day uncertainty. The 2Y/10Y curve continues to flatten with the 2Y up 3 bps while the 10Y declined, reflecting near-term Fed policy caution versus longer-term growth concerns. Elevated VIX and falling long yields suggest investors are hedging equity exposure until post-election policy direction becomes clearer.",
+    "market_link": "Investors should watch Friday's employment report for confirmation of labor market resilience; a soft jobs print could trigger yield curve inversion deeper and equities lower if growth fears dominate."
   },
-  "narrative": "Raw market data loaded. AI narrative failed: HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CggXZbotdECZh9QXvQ7HE\"}"
+  "narrative": "US equities ticked higher on election day (+0.30%) while bond markets priced in mixed signals: the 10Y fell 3 bps but the 2Y rose 3 bps, flattening the curve amid lingering policy uncertainty. VIX edged up 1.73 to 21.15, reflecting cautious hedging, while oil slipped $1.88 on demand concerns despite geopolitical tension."
 }
