@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-02",
-  "generated_at": "2026-11-02T21:29:28.961Z",
+  "date": "2026-11-03",
+  "generated_at": "2026-11-03T15:09:52.702Z",
   "market_levels": [
     {
       "name": "S&P 500 (~)",
-      "value": "7521",
-      "change": "-36 (-0.48%)",
-      "up": false
+      "value": "7542",
+      "change": "21 (0.28%)",
+      "up": true
     },
     {
       "name": "10Y UST",
@@ -28,8 +28,8 @@
     },
     {
       "name": "VIX",
-      "value": "19.42",
-      "change": "2.22",
+      "value": "21.15",
+      "change": "1.73",
       "up": true
     }
   ],
@@ -37,7 +37,7 @@
     {
       "headline": "Brief narrative unavailable",
       "source": "System",
-      "summary": "Anthropic API error: HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgep6d7kAsBVh1kZ4uNdL\"}",
+      "summary": "Anthropic API error: HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CggCxbsnB7fKcgBs7ZF5P\"}",
       "why_matters": "Check ANTHROPIC_KEY secret.",
       "tag": "Macro"
     }
@@ -49,5 +49,5 @@
     "explanation": "",
     "market_link": ""
   },
-  "narrative": "Raw market data loaded. AI narrative failed: HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgep6d7kAsBVh1kZ4uNdL\"}"
+  "narrative": "Raw market data loaded. AI narrative failed: HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CggCxbsnB7fKcgBs7ZF5P\"}"
 }
