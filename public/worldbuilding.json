@@ -1,5 +1,128 @@
 [
   {
+    "date": "2026-11-03",
+    "blocks": [
+      {
+        "term": "10-Year Treasury Yield (10Y UST)",
+        "category": "rates",
+        "bullets": [
+          "10Y at 4.94%, down 4 bps — third straight session lower: 5.05% Fri → 4.98% Mon → 4.94% Tue = −11 bps in two days",
+          "Now 6 bps below the 5.00% handle — the 'buy duration above 5%' real-money bid has turned a Friday spike into a sustained rally",
+          "Mechanism: 10Y ≈ market's expected avg Fed funds over 10 yrs + term premium (extra yield for locking money up long); rally on an election morning with no data = mostly term premium/hedging demand, not a new Fed view",
+          "Price math: modified duration ~7.8 → −4 bps ≈ +0.31% price; DV01 ≈ $780 per $1mm → a $100mm long made ~$31k today, ~$86k over two days",
+          "Election-day dynamics: results land overnight while cash Treasuries trade thinly in Asia hours — some clients square up/buy duration as a hedge before the 'jump'",
+          "Knock-on: sub-4.95% 10Y feeds into lower mortgage rates, cheaper IG corporate issuance and higher equity valuations (lower DCF discount rate)"
+        ],
+        "so_what": "A rates salesperson frames the morning as '10s grinding lower into the vote, 11 bps off Friday's high' and asks real-money clients whether they want to keep extending duration or take profit before overnight election headlines widen bid/ask in Asia."
+      },
+      {
+        "term": "2-Year Treasury Yield (2Y UST)",
+        "category": "rates",
+        "bullets": [
+          "2Y at 4.56%, down 5 bps — third straight decline: 4.67% Fri → 4.61% Mon → 4.56% Tue = −11 bps since Friday morning",
+          "2Y is the purest read on the expected Fed path over ~24 months; −11 bps ≈ the market removing roughly 40% of one 25 bp hike from the outlook",
+          "Context carried from last week: St. Louis Fed's Musalem warned tighter policy may be needed 'soon' — the front end is now firmly fading that hawkish signal",
+          "Duration ~1.9 → −5 bps ≈ +0.10% price; DV01 ≈ $190 per $1mm — small per bond, but hedge funds run 2Y positions in the billions with leverage",
+          "Next catalyst: October jobs report Fri Nov 6 — a hot payrolls/wage print is the main thing that could reverse this rally and re-price hikes",
+          "Rule of thumb: 2Y trading meaningfully below Fed funds = market expects cuts; trading above = expects hikes — watch where 4.56% sits vs the policy rate"
+        ],
+        "so_what": "Front-end traders use the 2Y as the scoreboard for 'Fed vs. market' — a salesperson pitches clients on whether 11 bps of dovish repricing in two sessions is overdone heading into Friday's payrolls, e.g. offering 2Y payer/receiver ideas around the print."
+      },
+      {
+        "term": "Bull Steepening (2s10s Curve)",
+        "category": "rates",
+        "bullets": [
+          "2s10s = 4.94% − 4.56% = 38 bps today vs 37 bps Monday → curve steepened 1 bp",
+          "'Bull' = yields falling (bond prices rising); 'steepening' = short end falling faster than long end (2Y −5 vs 10Y −4)",
+          "Flip from Monday's bull flattener (long end led): today the front end leads, i.e. the move is driven by Fed expectations, not term premium",
+          "Classic bull steepener story = market pricing an easier Fed sooner; the opposite (bear steepener) = long-end selloff on fiscal/inflation fears",
+          "Positive 38 bps slope: investors get paid more for 10Y than 2Y — normal shape, after the 2022–24 period when 2s10s was deeply inverted (negative)",
+          "Trade expression: 'steepener' = long 2Y / short 10Y, DV01-weighted (~4:1 notional since 2Y DV01 ≈ ¼ of 10Y) so P&L depends only on the spread, not the level"
+        ],
+        "so_what": "Curve traders quote the day as '2s10s +1 to 38, bull steepener' — salespeople use the label to tell clients in one phrase what's driving rates (Fed path vs. term premium) and to pitch DV01-neutral curve trades around the election and payrolls."
+      },
+      {
+        "term": "S&P 500 Index",
+        "category": "equities",
+        "bullets": [
+          "S&P at ~7,542, up 21 pts (+0.28%) at time of brief (~10am ET)",
+          "Implied prior close ~7,521 → Monday faded hard: was ~7,604 (+0.61%) at Monday's morning brief, so the index gave back ~80 pts intraday",
+          "Price level is still ~1.5% below where it sat before Friday's −147 pt (−1.91%) drop — rebound is partial and choppy, not a V",
+          "Falling yields support equities: lower 10Y = lower discount rate in DCF models → higher present value of future earnings, especially long-duration growth/tech",
+          "Market-cap weighted: a handful of mega-caps drive most index moves, so a +0.28% headline can hide weak breadth (equal-weight may lag)",
+          "Election day: sector baskets (defense, healthcare, energy, banks, clean energy) tend to move more on results than the index itself"
+        ],
+        "so_what": "An equity sales-trader opens with 'S&P +0.3% after giving back Monday's open' and steers flow conversations to sector/policy baskets rather than the index, since election outcomes reprice regulation- and spending-sensitive sectors far more than SPX."
+      },
+      {
+        "term": "VIX (CBOE Volatility Index)",
+        "category": "volatility",
+        "bullets": [
+          "VIX at 21.15, up 1.73 pts (~+9%) from ~19.42 — back above the psychologically important 20 level",
+          "Two-day climb: 17.20 → 19.42 → 21.15 = +3.95 pts (~+23%) while the S&P is UP both mornings",
+          "Mechanism: VIX = 30-day implied vol from S&P 500 option prices, in annualized % terms; 21 implies ~±1.3% daily S&P move expected (21 ÷ √252 ≈ 1.33)",
+          "Above 20 is the rough line between 'calm' and 'stressed' regimes — many systematic/vol-targeting funds cut equity exposure as implied/realized vol rises",
+          "Rising into a scheduled event is normal: the 30-day window now includes election night + Friday payrolls, so option sellers demand more premium",
+          "Expect 'vol crush' after the event resolves: if results are uncontested, implied vol often drops several points within a day as the event premium decays"
+        ],
+        "so_what": "Derivatives salespeople pitch hedges with the VIX level — at 21 puts are pricier than last week, so they'd steer clients to put spreads or short-dated event straddles and flag the likely post-election vol crush to clients thinking of selling premium."
+      },
+      {
+        "term": "US Midterm Elections (Nov 3, 2026) as a Market Event",
+        "category": "macro",
+        "bullets": [
+          "Today is US midterm Election Day: all 435 House seats and ~⅓ of the Senate are up; results roll in overnight Tue → Wed",
+          "Mechanism for markets: control of Congress determines what fiscal policy (tax, spending, debt ceiling) can pass in the next two years",
+          "Divided government (president's party loses a chamber) historically = gridlock → fewer big fiscal surprises → often read as mildly market-friendly",
+          "Unified government = more room for large spending/tax bills → bigger deficits → more Treasury issuance → upward pressure on long-end yields (term premium)",
+          "Tail risk = slow/contested counts in close races: uncertainty can persist for days, keeping vol bid",
+          "Sector sensitivity: healthcare (drug pricing), defense, energy/clean energy, and banks (regulation) reprice most on control of committees and agendas"
+        ],
+        "so_what": "Desks run election 'scenario maps' (red sweep / blue sweep / split) with expected moves in 10Y, curve, sectors and the dollar, and salespeople use them overnight and on Wednesday's open to tell clients how to position as each chamber is called."
+      },
+      {
+        "term": "Term Premium & Fiscal Risk",
+        "category": "fundamental",
+        "bullets": [
+          "Term premium = extra yield investors demand to hold a 10Y instead of rolling 2Y/3-month bills for 10 years — compensation for inflation, supply and uncertainty risk",
+          "Not directly observable — estimated by models (e.g. NY Fed ACM model); 10Y yield = expected path of short rates + term premium",
+          "Bigger deficits → Treasury must sell more long bonds → supply needs a higher yield to clear → term premium rises",
+          "Why it matters today: elections change the fiscal outlook, so the long end (10Y/30Y) is more exposed to results than the Fed-driven 2Y",
+          "Today's split: 2Y −5 vs 10Y −4 suggests the market is focused on the Fed path rather than repricing fiscal risk ahead of results",
+          "Auction tie-in: weak demand at Treasury auctions (big 'tail' vs pre-auction yield) is a real-time signal that term premium is being re-demanded"
+        ],
+        "so_what": "Rates strategists and salespeople use term premium to explain long-end moves that the Fed can't — e.g. telling a client a post-election 10Y selloff with a steady 2Y is a fiscal/supply story, which favors steepeners over outright shorts."
+      },
+      {
+        "term": "Spot-Vol Correlation ('Spot Up, Vol Up')",
+        "category": "volatility",
+        "bullets": [
+          "Normal relationship: S&P up → VIX down; S&P down → VIX up (correlation typically around −0.7 to −0.8)",
+          "Today breaks it: S&P +0.28% while VIX +1.73 — second straight day of 'spot up, vol up'",
+          "Why it happens: investors are buying protection (puts/straddles) for a known future event while still holding stocks — demand for options lifts implied vol regardless of spot",
+          "Also a sign of upside call demand / short-covering in some regimes, but around scheduled events the hedging explanation dominates",
+          "Read-through: equity holders are not selling, they're insuring — the market is calm on the surface but nervous about the next 72 hours",
+          "Watch for normalization: if election passes cleanly, vol should fall back toward high-teens even if spot barely moves"
+        ],
+        "so_what": "Vol traders flag 'spot up, vol up' to the desk as a sign that event hedging is crowded — useful for pitching clients who are long vol to monetize after the event, or for timing when dealers' hedging flows may reverse."
+      },
+      {
+        "term": "Reading Mixed Risk Signals (Risk-On vs Risk-Off)",
+        "category": "fundamental",
+        "bullets": [
+          "Risk-on = buying riskier assets (stocks, HY credit, EM, high-beta FX) → stocks up, vol down, safe-haven yields up",
+          "Risk-off = flight to safety → stocks down, VIX up, Treasuries rally (yields down), dollar/yen/CHF often up",
+          "Today's tape is mixed: stocks up (risk-on) BUT VIX up and Treasuries rallying 4–5 bps (risk-off/hedging)",
+          "Interpretation: positioning ahead of event risk — clients keeping core stock exposure while buying bonds and options as insurance",
+          "Dollar is the missing tiebreaker today: DXY feed returned N/A in the brief, so no read on whether safe-haven FX demand is building",
+          "Mixed signals usually resolve after the catalyst — the asset that 'was right' (bonds or stocks) tells you which narrative wins"
+        ],
+        "so_what": "In the morning meeting a salesperson must summarize the tape in one line — 'equities shrugging, rates and vol hedging into the vote' — and that framing decides which clients get called first (rates/vol accounts today, equity accounts after results)."
+      }
+    ],
+    "narrative": "Election Day tape is defensive under a calm surface: Treasuries rallied for a third session (10Y −4 bps to 4.94%, 2Y −5 bps to 4.56%, a bull steepener to 38 bps on 2s10s) as the market keeps fading Musalem's hawkish 'tighten soon' warning and pricing a Fed on hold. The S&P is up a modest 0.28% to ~7,542 after giving back most of Monday's gains, yet the VIX jumped 1.73 to 21.15 — back above 20 with spot higher — showing investors are insuring rather than selling ahead of overnight midterm results and Friday's payrolls, either of which could snap the gap between dovish pricing and Fed rhetoric."
+  },
+  {
     "date": "2026-11-02",
     "blocks": [
       {
