@@ -1,86 +1,80 @@
 {
-  "date": "2026-11-06",
-  "generated_at": "2026-11-06T19:00:48.419Z",
+  "date": "2026-11-09",
+  "generated_at": "2026-11-09T22:01:59.567Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7389",
-      "change": "+59 (0.80%)",
+      "value": "7527",
+      "change": "+174 (+2.37%)",
       "up": true
     },
     {
       "name": "10Y UST",
-      "value": "4.90%",
-      "change": "-5.0 bps",
+      "value": "4.86%",
+      "change": "+2.0 bps",
       "up": true
     },
     {
       "name": "2Y UST",
-      "value": "4.58%",
-      "change": "-3.0 bps",
+      "value": "4.51%",
+      "change": "+5.0 bps",
       "up": true
     },
     {
-      "name": "~DXY",
-      "value": "1.1218 EUR/USD",
-      "change": "-0.0009",
+      "name": "EUR/USD",
+      "value": "1.1143",
+      "change": "-0.0075",
       "up": false
     },
     {
       "name": "VIX",
-      "value": "28.18",
-      "change": "+11.57",
+      "value": "25.64",
+      "change": "-2.54",
       "up": false
     }
   ],
   "stories": [
     {
-      "headline": "AI crush is powering one stock to sky-high valuations",
-      "source": "CNBC",
-      "summary": "A single stock is experiencing extreme valuation gains amid continued enthusiasm for artificial intelligence. The rally reflects ongoing investor appetite for AI-linked equities despite broader market volatility.",
-      "why_matters": "AI concentration risk is a key driver of equity market dispersion and could signal fragility if sentiment shifts.",
+      "headline": "Skydance outlines its $6 billion in planned cost savings. Here's the breakdown",
+      "source": "CNBC [2026-11-09]",
+      "summary": "Skydance announced $6 billion in planned cost-saving measures. The company provided detailed breakdown of operational efficiencies and structural improvements.",
+      "why_matters": "Corporate restructuring signals confidence despite macro headwinds and supports equity valuations in a 2.37% rally environment.",
       "tag": "Equities"
     },
     {
-      "headline": "Wall Street's fear gauge may be flashing a buy sign",
-      "source": "CNBC",
-      "summary": "The VIX at elevated levels is being interpreted by some market participants as a potential contrarian buying opportunity. High volatility readings historically have preceded rebounds in risk assets.",
-      "why_matters": "VIX at 28.18 suggests fear-driven selling pressure; tactical traders view this as a technical entry point.",
+      "headline": "Boeing to cut 5% of commercial airplane workforce as production increase is slower than expected",
+      "source": "CNBC [2026-11-09]",
+      "summary": "Boeing announced a 5% reduction in its commercial airplane workforce citing slower-than-expected production increases. The move reflects challenges in ramping manufacturing capacity.",
+      "why_matters": "Defense/industrial sector weakness amid labor rationalization pressures the broader equity rally and signals supply-chain constraints.",
       "tag": "Equities"
     },
     {
-      "headline": "Data center double-down: Hassett says Blue Wave won't stop AI build-out",
-      "source": "CNBC",
-      "summary": "Post-midterm policy signals indicate continued support for AI infrastructure investment regardless of political outcome. Government backing for data center expansion is expected to persist.",
-      "why_matters": "Bipartisan AI infrastructure support could underpin capital expenditure cycles and earnings growth in semiconductors and cloud sectors.",
-      "tag": "Macro"
+      "headline": "Eli Lilly's Foundayo obesity pill eases sleep apnea in late-stage trial, paving way for approval",
+      "source": "CNBC [2026-11-09]",
+      "summary": "Eli Lilly's Foundayo obesity medication demonstrated efficacy in reducing sleep apnea symptoms in late-stage clinical trials. The positive data strengthens the regulatory pathway toward approval.",
+      "why_matters": "Pharma innovation in obesity/metabolic disease supports mega-cap healthcare valuations and offsets sector rotation risk in today's strong equity close.",
+      "tag": "Equities"
     }
   ],
   "calendar": [
     {
       "day": "Fri",
-      "event": "Employment Situation",
-      "importance": "high",
-      "note": "Labor market data is critical for FOMC policy expectations; weak jobs figures could accelerate rate-cut pricing amid elevated VIX."
-    },
-    {
-      "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "Forward guidance and policy stance will directly influence Treasury yields and equity valuations; signals on rate trajectory expected."
+      "note": "Fed communications on monetary policy will drive rate expectations; 2Y/10Y Treasury moves (+5/+2 bps today) suggest market is pricing rate path uncertainty ahead of announcement."
     },
     {
       "day": "Fri",
-      "event": "Chicago Fed Advance Retail Trade Summary",
+      "event": "Economic Policy Uncertainty",
       "importance": "medium",
-      "note": "Regional retail strength indicator helps gauge consumer demand and inflation pressures ahead of major data."
+      "note": "Political uncertainty (Trump/Democrat cooperation signals per Paul Ryan headline) may amplify EPU index, impacting volatility structure given VIX is still elevated at 25.64."
     }
   ],
   "concept": {
-    "title": "Volatility as Contrarian Signal",
-    "one_liner": "Elevated VIX (28.18) paired with Treasury yield compression may indicate panic selling creating tactical entry points.",
-    "explanation": "The VIX has spiked 11.57 points while the S&P 500 managed a 0.80% gain, signaling fear-driven repricing rather than fundamental weakness. Treasury yields fell across the curve (10Y down 5 bps, 2Y down 3 bps), reflecting flight-to-safety and lower rate expectations. Historically, these inversions between equity gains and volatility spikes create asymmetric risk/reward for contrarian buyers.",
-    "market_link": "Persistent AI tailwinds (per Hassett/infrastructure narrative) meet near-term fear, creating a potential washout-and-bounce setup if employment data does not disappoint sharply."
+    "title": "Risk-On with Sticky Yields",
+    "one_liner": "Equities rally +2.37% while Treasury yields rise—classic risk-on with rate hawkishness, not cuts.",
+    "explanation": "The S&P 500 surged 174 points (2.37%) while both 2Y and 10Y yields moved higher (+5 and +2 bps respectively). VIX fell 2.54 points, signaling reduced tail-risk anxiety. This combination—strong equity performance paired with rising yields—suggests market is repricing growth and inflation expectations higher, not fleeing to safety. Corporate cost-cutting announcements (Skydance, Boeing) and pharma wins (Eli Lilly) buttress fundamentals, reducing demand for bonds.",
+    "market_link": "Treasury yield steepness and low VIX support a cyclical risk-on narrative; however, 10Y at 4.86% remains a headwind for duration-heavy valuations, particularly in high-multiple tech names."
   },
-  "narrative": "Markets are caught between post-midterm policy confidence in AI capex and near-term sell-off panic reflected in the VIX spike; Treasury yields have compressed on flight-to-safety, while the S&P 500's modest 0.80% gain masks underlying volatility and rotation out of stretched valuations. Today's Employment Situation and FOMC guidance will be critical to determining whether the elevated VIX is a buying opportunity or a signal of deeper macro concern."
+  "narrative": "US equities posted a robust 2.37% rally on Monday's close as corporate restructuring, pharma pipeline progress, and political optimism offset slower Boeing production growth. Rising yields (+2–5 bps across the curve) indicate the market is pricing durability in growth and sticky inflation rather than anticipating Fed easing, while a declining VIX (25.64, -2.54) reflects receding systemic risk despite lingering uncertainty."
 }
