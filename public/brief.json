@@ -1,30 +1,30 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T15:09:16.228Z",
+  "generated_at": "2026-11-10T19:26:38.473Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7518",
-      "change": "-9 (-0.12%)",
+      "value": "7485",
+      "change": "-42 (-0.55%)",
       "up": false
     },
     {
       "name": "10Y UST",
       "value": "4.86%",
-      "change": "+2.0 bps",
+      "change": "2.0 bps",
       "up": true
     },
     {
       "name": "2Y UST",
       "value": "4.51%",
-      "change": "+5.0 bps",
+      "change": "5.0 bps",
       "up": true
     },
     {
-      "name": "EUR/USD",
+      "name": "~DXY",
       "value": "1.1223",
-      "change": "+0.0080",
-      "up": true
+      "change": "0.0080",
+      "up": false
     },
     {
       "name": "VIX",
@@ -35,24 +35,24 @@
   ],
   "stories": [
     {
-      "headline": "Fed to raise rates once more in December as inflation risks stay high: Reuters poll",
+      "headline": "Fed officials open door to a half-point hike after inflation beats expectations",
       "source": "Reuters",
-      "summary": "A Reuters poll indicates the Federal Reserve plans one additional rate hike in December despite concerns over inflation persistence. This signals the Fed views price pressures as a continued threat requiring tighter monetary policy.",
-      "why_matters": "December rate expectations directly impact equity valuations and bond yields; markets are pricing terminal rates higher.",
+      "summary": "Fed officials signaled openness to a 50 basis point rate hike following inflation data that exceeded forecasts. This marks a potential shift toward more aggressive monetary tightening.",
+      "why_matters": "Rate expectations drive equity valuations and bond yields; hawkish Fed guidance directly impacts S&P 500 and Treasury pricing.",
       "tag": "Rates"
     },
     {
-      "headline": "S&P 500 futures fall sharply after October inflation data",
+      "headline": "Wall St falls as hot inflation data fuels rate-hike jitters",
       "source": "Reuters",
-      "summary": "S&P 500 futures declined following October inflation figures, suggesting hotter-than-expected price data spooked equity investors. The inflation print appears to have reinforced Fed hawkishness concerns.",
-      "why_matters": "Inflation data drives both rate expectations and real earnings growth; higher inflation reduces equity multiples.",
+      "summary": "Wall Street declined as stronger-than-expected inflation data triggered concerns about further Federal Reserve rate increases. The market selloff reflects investor anxiety over monetary policy tightening.",
+      "why_matters": "Inflation surprises and rate-hike expectations are primary drivers of equity drawdowns and volatility spikes like today's 0.55% S&P 500 decline.",
       "tag": "Equities"
     },
     {
-      "headline": "Does anyone feel safe from layoffs right now?",
-      "source": "CNBC",
-      "summary": "A CNBC piece raises concerns about labor market stability and widespread layoff anxiety among workers. The sentiment reflects growing uncertainty about employment durability in the current economic environment.",
-      "why_matters": "Labor market weakness signals potential demand destruction and recession risk, affecting consumer spending and corporate earnings.",
+      "headline": "Rubio tells G7 US will keep imposing 'devastating' costs on Iran, diplomats say",
+      "source": "Reuters",
+      "summary": "Secretary of State Rubio conveyed to G7 nations that the US will continue an economic campaign against Iran with severe consequences. This reflects escalation in US-Iran tensions.",
+      "why_matters": "Geopolitical escalation with Iran affects crude oil supply expectations and global risk sentiment, impacting energy markets and equities.",
       "tag": "Macro"
     }
   ],
@@ -61,26 +61,26 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "FOMC communications on 2026-11-13 will be closely parsed for December rate guidance; critical for equity and fixed-income repricing."
+      "note": "FOMC announcement on November 13 will clarify Fed's stance on rate hikes given recent hot inflation data; direct catalyst for rates and equity repricing."
     },
     {
       "day": "Fri",
       "event": "Federal Funds Data",
       "importance": "high",
-      "note": "Fed funds data release aligns with FOMC communications and provides real-time monetary policy transmission signals."
+      "note": "Current federal funds rates and forward guidance will be critical for confirming market expectations of a potential 50 bps hike."
     },
     {
       "day": "Fri",
       "event": "H.15 Selected Interest Rates",
-      "importance": "high",
-      "note": "This release covers benchmark rates across maturities; essential for tracking the yield curve response to Fed policy."
+      "importance": "medium",
+      "note": "Survey of key interest rates will provide context on lending conditions and market-implied rate expectations following inflation surprises."
     }
   ],
   "concept": {
-    "title": "The Inflation-Rate Cycle and Equity Vulnerability",
-    "one_liner": "Higher inflation data in October has lifted 2Y/10Y yields and triggered equity futures selling, while the Fed signals one more December hike, compressing multiples.",
-    "explanation": "October inflation prints triggered S&P 500 futures selloff and steepened the yield curve (2Y +5 bps, 10Y +2 bps), signaling market concern that rate hikes are not finished. The Reuters poll confirms a December hike is likely, which keeps real rates elevated and discount rates high for equities. VIX fell 5.72 points despite equity weakness, suggesting volatility is being repriced lower as the market digests 'peak hawkishness,' but earnings multiples remain under pressure.",
-    "market_link": "When inflation stays sticky and the Fed commits to another hike, equities face dual headwinds: higher discount rates and lower earnings growth expectations. The 35 bps steepening in the 2Y-10Y curve reflects exactly this tension—short rates anchored higher, long rates stable—leaving investors vulnerable to any disappointment."
+    "title": "Inflation-Driven Rate-Hike Surprise",
+    "one_liner": "Hot inflation data reverses dovish rate expectations, triggering equity selloff and Treasury yield surge.",
+    "explanation": "Yesterday's inflation beat prompted Fed officials to signal a potential 50 bps rate hike, contradicting market expectations for cuts or pauses. This sparked a 0.55% decline in the S&P 500 and a 5 bps rise in 2Y Treasuries as investors repriced terminal rate expectations. The risk-off sentiment is reflected in a VIX decline of 5.72 points and rising real yields, which compress equity valuations by increasing discount rates.",
+    "market_link": "Fed credibility on inflation control directly determines the path of terminal rates, which anchors all equity multiples and corporate borrowing costs."
   },
-  "narrative": "US equities ended down 9 points (-0.12%) on heightened inflation concerns and Fed hiking signals; October inflation data triggered S&P 500 futures declines, while Treasury yields rose across the curve (2Y +5 bps, 10Y +2 bps) and the Fed signals a December rate increase remains likely. Layoff anxiety and labor uncertainty loom, even as VIX compression suggests some complacency returning."
+  "narrative": "US equities fell 0.55% as hotter-than-expected inflation data reopened the possibility of a 50 bps Fed rate hike, driving Treasury yields higher (2Y +5 bps, 10Y +2 bps) and triggering a reassessment of monetary policy duration. Geopolitical tensions with Iran and economic policy uncertainty persist alongside the rate-hike jitters, keeping risk sentiment cautious ahead of Friday's FOMC press release."
 }
