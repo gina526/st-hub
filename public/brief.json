@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-09",
-  "generated_at": "2026-11-09T22:01:59.567Z",
+  "date": "2026-11-10",
+  "generated_at": "2026-11-10T15:09:16.228Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7527",
-      "change": "+174 (+2.37%)",
-      "up": true
+      "value": "7518",
+      "change": "-9 (-0.12%)",
+      "up": false
     },
     {
       "name": "10Y UST",
@@ -22,38 +22,38 @@
     },
     {
       "name": "EUR/USD",
-      "value": "1.1143",
-      "change": "-0.0075",
-      "up": false
+      "value": "1.1223",
+      "change": "+0.0080",
+      "up": true
     },
     {
       "name": "VIX",
-      "value": "25.64",
-      "change": "-2.54",
+      "value": "19.92",
+      "change": "-5.72",
       "up": false
     }
   ],
   "stories": [
     {
-      "headline": "Skydance outlines its $6 billion in planned cost savings. Here's the breakdown",
-      "source": "CNBC [2026-11-09]",
-      "summary": "Skydance announced $6 billion in planned cost-saving measures. The company provided detailed breakdown of operational efficiencies and structural improvements.",
-      "why_matters": "Corporate restructuring signals confidence despite macro headwinds and supports equity valuations in a 2.37% rally environment.",
+      "headline": "Fed to raise rates once more in December as inflation risks stay high: Reuters poll",
+      "source": "Reuters",
+      "summary": "A Reuters poll indicates the Federal Reserve plans one additional rate hike in December despite concerns over inflation persistence. This signals the Fed views price pressures as a continued threat requiring tighter monetary policy.",
+      "why_matters": "December rate expectations directly impact equity valuations and bond yields; markets are pricing terminal rates higher.",
+      "tag": "Rates"
+    },
+    {
+      "headline": "S&P 500 futures fall sharply after October inflation data",
+      "source": "Reuters",
+      "summary": "S&P 500 futures declined following October inflation figures, suggesting hotter-than-expected price data spooked equity investors. The inflation print appears to have reinforced Fed hawkishness concerns.",
+      "why_matters": "Inflation data drives both rate expectations and real earnings growth; higher inflation reduces equity multiples.",
       "tag": "Equities"
     },
     {
-      "headline": "Boeing to cut 5% of commercial airplane workforce as production increase is slower than expected",
-      "source": "CNBC [2026-11-09]",
-      "summary": "Boeing announced a 5% reduction in its commercial airplane workforce citing slower-than-expected production increases. The move reflects challenges in ramping manufacturing capacity.",
-      "why_matters": "Defense/industrial sector weakness amid labor rationalization pressures the broader equity rally and signals supply-chain constraints.",
-      "tag": "Equities"
-    },
-    {
-      "headline": "Eli Lilly's Foundayo obesity pill eases sleep apnea in late-stage trial, paving way for approval",
-      "source": "CNBC [2026-11-09]",
-      "summary": "Eli Lilly's Foundayo obesity medication demonstrated efficacy in reducing sleep apnea symptoms in late-stage clinical trials. The positive data strengthens the regulatory pathway toward approval.",
-      "why_matters": "Pharma innovation in obesity/metabolic disease supports mega-cap healthcare valuations and offsets sector rotation risk in today's strong equity close.",
-      "tag": "Equities"
+      "headline": "Does anyone feel safe from layoffs right now?",
+      "source": "CNBC",
+      "summary": "A CNBC piece raises concerns about labor market stability and widespread layoff anxiety among workers. The sentiment reflects growing uncertainty about employment durability in the current economic environment.",
+      "why_matters": "Labor market weakness signals potential demand destruction and recession risk, affecting consumer spending and corporate earnings.",
+      "tag": "Macro"
     }
   ],
   "calendar": [
@@ -61,20 +61,26 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "Fed communications on monetary policy will drive rate expectations; 2Y/10Y Treasury moves (+5/+2 bps today) suggest market is pricing rate path uncertainty ahead of announcement."
+      "note": "FOMC communications on 2026-11-13 will be closely parsed for December rate guidance; critical for equity and fixed-income repricing."
     },
     {
       "day": "Fri",
-      "event": "Economic Policy Uncertainty",
-      "importance": "medium",
-      "note": "Political uncertainty (Trump/Democrat cooperation signals per Paul Ryan headline) may amplify EPU index, impacting volatility structure given VIX is still elevated at 25.64."
+      "event": "Federal Funds Data",
+      "importance": "high",
+      "note": "Fed funds data release aligns with FOMC communications and provides real-time monetary policy transmission signals."
+    },
+    {
+      "day": "Fri",
+      "event": "H.15 Selected Interest Rates",
+      "importance": "high",
+      "note": "This release covers benchmark rates across maturities; essential for tracking the yield curve response to Fed policy."
     }
   ],
   "concept": {
-    "title": "Risk-On with Sticky Yields",
-    "one_liner": "Equities rally +2.37% while Treasury yields rise—classic risk-on with rate hawkishness, not cuts.",
-    "explanation": "The S&P 500 surged 174 points (2.37%) while both 2Y and 10Y yields moved higher (+5 and +2 bps respectively). VIX fell 2.54 points, signaling reduced tail-risk anxiety. This combination—strong equity performance paired with rising yields—suggests market is repricing growth and inflation expectations higher, not fleeing to safety. Corporate cost-cutting announcements (Skydance, Boeing) and pharma wins (Eli Lilly) buttress fundamentals, reducing demand for bonds.",
-    "market_link": "Treasury yield steepness and low VIX support a cyclical risk-on narrative; however, 10Y at 4.86% remains a headwind for duration-heavy valuations, particularly in high-multiple tech names."
+    "title": "The Inflation-Rate Cycle and Equity Vulnerability",
+    "one_liner": "Higher inflation data in October has lifted 2Y/10Y yields and triggered equity futures selling, while the Fed signals one more December hike, compressing multiples.",
+    "explanation": "October inflation prints triggered S&P 500 futures selloff and steepened the yield curve (2Y +5 bps, 10Y +2 bps), signaling market concern that rate hikes are not finished. The Reuters poll confirms a December hike is likely, which keeps real rates elevated and discount rates high for equities. VIX fell 5.72 points despite equity weakness, suggesting volatility is being repriced lower as the market digests 'peak hawkishness,' but earnings multiples remain under pressure.",
+    "market_link": "When inflation stays sticky and the Fed commits to another hike, equities face dual headwinds: higher discount rates and lower earnings growth expectations. The 35 bps steepening in the 2Y-10Y curve reflects exactly this tension—short rates anchored higher, long rates stable—leaving investors vulnerable to any disappointment."
   },
-  "narrative": "US equities posted a robust 2.37% rally on Monday's close as corporate restructuring, pharma pipeline progress, and political optimism offset slower Boeing production growth. Rising yields (+2–5 bps across the curve) indicate the market is pricing durability in growth and sticky inflation rather than anticipating Fed easing, while a declining VIX (25.64, -2.54) reflects receding systemic risk despite lingering uncertainty."
+  "narrative": "US equities ended down 9 points (-0.12%) on heightened inflation concerns and Fed hiking signals; October inflation data triggered S&P 500 futures declines, while Treasury yields rose across the curve (2Y +5 bps, 10Y +2 bps) and the Fed signals a December rate increase remains likely. Layoff anxiety and labor uncertainty loom, even as VIX compression suggests some complacency returning."
 }
