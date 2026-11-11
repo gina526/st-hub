@@ -1,59 +1,59 @@
 {
-  "date": "2026-11-10",
-  "generated_at": "2026-11-10T19:26:38.473Z",
+  "date": "2026-11-11",
+  "generated_at": "2026-11-11T19:21:05.003Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7485",
-      "change": "-42 (-0.55%)",
-      "up": false
+      "value": "7598",
+      "change": "+99 (1.32%)",
+      "up": true
     },
     {
       "name": "10Y UST",
-      "value": "4.86%",
-      "change": "2.0 bps",
+      "value": "4.88%",
+      "change": "+2.0 bps",
       "up": true
     },
     {
       "name": "2Y UST",
-      "value": "4.51%",
-      "change": "5.0 bps",
+      "value": "4.56%",
+      "change": "+5.0 bps",
       "up": true
     },
     {
       "name": "~DXY",
-      "value": "1.1223",
-      "change": "0.0080",
+      "value": "1.1163",
+      "change": "-0.0060",
       "up": false
     },
     {
       "name": "VIX",
-      "value": "19.92",
-      "change": "-5.72",
+      "value": "19.46",
+      "change": "-0.46",
       "up": false
     }
   ],
   "stories": [
     {
-      "headline": "Fed officials open door to a half-point hike after inflation beats expectations",
-      "source": "Reuters",
-      "summary": "Fed officials signaled openness to a 50 basis point rate hike following inflation data that exceeded forecasts. This marks a potential shift toward more aggressive monetary tightening.",
-      "why_matters": "Rate expectations drive equity valuations and bond yields; hawkish Fed guidance directly impacts S&P 500 and Treasury pricing.",
-      "tag": "Rates"
-    },
-    {
-      "headline": "Wall St falls as hot inflation data fuels rate-hike jitters",
-      "source": "Reuters",
-      "summary": "Wall Street declined as stronger-than-expected inflation data triggered concerns about further Federal Reserve rate increases. The market selloff reflects investor anxiety over monetary policy tightening.",
-      "why_matters": "Inflation surprises and rate-hike expectations are primary drivers of equity drawdowns and volatility spikes like today's 0.55% S&P 500 decline.",
+      "headline": "Meta head of infrastructure will leave and be succeeded by former AWS cloud exec",
+      "source": "CNBC",
+      "summary": "Meta is replacing its infrastructure head with a veteran from AWS, signaling a strategic shift in cloud and AI infrastructure priorities. The move reflects intensifying competition in cloud and AI capabilities among mega-cap tech firms.",
+      "why_matters": "Leadership transitions at trillion-dollar tech firms influence sector rotation, capex cycles, and AI infrastructure spending trends critical to US innovation leadership.",
       "tag": "Equities"
     },
     {
-      "headline": "Rubio tells G7 US will keep imposing 'devastating' costs on Iran, diplomats say",
+      "headline": "Russia and Ukraine say some progress made at talks, US cites a lack of trust - Reuters",
       "source": "Reuters",
-      "summary": "Secretary of State Rubio conveyed to G7 nations that the US will continue an economic campaign against Iran with severe consequences. This reflects escalation in US-Iran tensions.",
-      "why_matters": "Geopolitical escalation with Iran affects crude oil supply expectations and global risk sentiment, impacting energy markets and equities.",
+      "summary": "Diplomatic discussions between Russia and Ukraine have shown modest progress, though U.S. officials remain skeptical about underlying trust and durability of any agreements. Geopolitical uncertainty continues to weigh on global energy and capital markets.",
+      "why_matters": "Unresolved Ukraine conflict drives oil volatility, risk premiums in equities, and Treasury demand as safe-haven flows.",
       "tag": "Macro"
+    },
+    {
+      "headline": "Jim Cramer's top 10 things to watch in the stock market Wednesday",
+      "source": "CNBC",
+      "summary": "Cramer identifies key market themes and individual stock catalysts for near-term trading focus. The commentary reflects broad equity sentiment amid a strong prior session (+1.32% S&P 500).",
+      "why_matters": "Retail and institutional positioning signals shape intraday volatility and sector momentum in a rising-rate environment.",
+      "tag": "Equities"
     }
   ],
   "calendar": [
@@ -61,26 +61,26 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "FOMC announcement on November 13 will clarify Fed's stance on rate hikes given recent hot inflation data; direct catalyst for rates and equity repricing."
+      "note": "Fed policy communications will clarify rate trajectory and QT stance, directly impacting the 10Y/2Y curve currently at 4.88%/4.56%."
+    },
+    {
+      "day": "Fri",
+      "event": "H.15 Selected Interest Rates",
+      "importance": "high",
+      "note": "Official Fed interest rate data provides benchmark for bond yields and mortgage rates in a 2-year uptrend across the curve."
     },
     {
       "day": "Fri",
       "event": "Federal Funds Data",
       "importance": "high",
-      "note": "Current federal funds rates and forward guidance will be critical for confirming market expectations of a potential 50 bps hike."
-    },
-    {
-      "day": "Fri",
-      "event": "H.15 Selected Interest Rates",
-      "importance": "medium",
-      "note": "Survey of key interest rates will provide context on lending conditions and market-implied rate expectations following inflation surprises."
+      "note": "Real-time fed funds trading volume and rates inform market expectations for overnight funding costs and reserve management."
     }
   ],
   "concept": {
-    "title": "Inflation-Driven Rate-Hike Surprise",
-    "one_liner": "Hot inflation data reverses dovish rate expectations, triggering equity selloff and Treasury yield surge.",
-    "explanation": "Yesterday's inflation beat prompted Fed officials to signal a potential 50 bps rate hike, contradicting market expectations for cuts or pauses. This sparked a 0.55% decline in the S&P 500 and a 5 bps rise in 2Y Treasuries as investors repriced terminal rate expectations. The risk-off sentiment is reflected in a VIX decline of 5.72 points and rising real yields, which compress equity valuations by increasing discount rates.",
-    "market_link": "Fed credibility on inflation control directly determines the path of terminal rates, which anchors all equity multiples and corporate borrowing costs."
+    "title": "Risk-On Reversal in a Steeper Curve",
+    "one_liner": "S&P 500 surges 1.32% as VIX falls; 2Y UST outpaces 10Y, signaling confidence in near-term growth over terminal-rate fears.",
+    "explanation": "Yesterday's 99-point rally and 46-bps VIX compression suggest risk appetite is returning despite the 2Y rising 5 bps versus 2 bps on the 10Y—a steepening that typically reflects expectations of eventual rate cuts. Meta's leadership reshuffle and airline/hospitality demand signals (American, JetBlue) point to cyclical optimism, while geopolitical tensions (Russia–Ukraine) remain a latent tail risk. The USD weakness (-60 pips EUR/USD) further supports equity multiples and emerging-market flows.",
+    "market_link": "The combination of falling VIX, rising equities, and curve steepening into Friday's FOMC release creates a setup where Fed language on terminal rates and QT could either extend the rally or trigger profit-taking if hawkish surprises emerge."
   },
-  "narrative": "US equities fell 0.55% as hotter-than-expected inflation data reopened the possibility of a 50 bps Fed rate hike, driving Treasury yields higher (2Y +5 bps, 10Y +2 bps) and triggering a reassessment of monetary policy duration. Geopolitical tensions with Iran and economic policy uncertainty persist alongside the rate-hike jitters, keeping risk sentiment cautious ahead of Friday's FOMC press release."
+  "narrative": "U.S. equities posted a strong 1.32% gain with VIX compressing 46 bps, reflecting renewed risk appetite despite a steeper Treasury curve (2Y +5 bps vs 10Y +2 bps) and USD weakness (EUR/USD -60 pips). With FOMC press and Fed rate data due Friday, the market is pricing confidence in near-term growth while remaining cautious about terminal-rate duration, even as geopolitical risks (Ukraine talks) and tech leadership transitions (Meta) introduce tactical uncertainty."
 }
