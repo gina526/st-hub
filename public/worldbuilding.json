@@ -1,5 +1,141 @@
 [
   {
+    "date": "2026-11-11",
+    "blocks": [
+      {
+        "term": "2-Year Treasury (2Y UST) — The Fed-Sensitive End",
+        "category": "rates",
+        "bullets": [
+          "2Y at 4.51%, +5.0bps on the day — biggest mover on the curve, 2.5x the 10Y's +2bps",
+          "Mechanism: a 2Y note is roughly the average expected fed funds rate over the next 2 years + a small term premium, so it reprices almost 1-for-1 with changes in expected Fed policy",
+          "Trigger: inflation print beat forecasts → Fed officials floated a 50bp hike instead of the usual 25bp → market pulled forward/raised its expected hike path → 2Y sold off",
+          "+5bps in one session = meaningful re-pricing of the next few meetings, not noise; 2Y daily moves are usually low single digits",
+          "2Y price falls as yield rises: a ~1.9-duration note loses ~0.09–0.10 points of price per 5bps",
+          "Watch into Fri 11/13 FOMC: a 50bp delivery or hawkish guidance likely pushes 2Y higher; a 25bp move with calm language could see a relief rally (yields down)"
+        ],
+        "so_what": "The 2Y is the desk's real-time read on 'what the Fed will do' — rates salespeople open client calls with the 2Y move to frame Fed repricing, and STIR/front-end traders hedge client flow in 2Y futures (TU) when the policy path shifts."
+      },
+      {
+        "term": "10-Year Treasury (10Y UST) & Bear Flattening",
+        "category": "rates",
+        "bullets": [
+          "10Y at 4.86%, +2.0bps — moved less than half as much as the 2Y",
+          "2s10s spread = 4.86% − 4.51% = 35bps; was ~38bps before today → curve flattened ~3bps",
+          "Bear flattener = yields rise (bonds sell off, 'bear') with the short end rising more than the long end ('flattening') — classic signature of a hawkish Fed surprise",
+          "Why the long end lags: 10Y = expected average short rate over 10 yrs + term premium; more hikes now can mean slower growth/lower inflation later, which partly offsets the near-term jump",
+          "10Y is the benchmark discount rate for equities, mortgages (30Y mortgage ≈ 10Y + spread) and corporate bond pricing — even +2bps ripples across asset classes",
+          "If the Fed over-tightens, the curve can keep flattening or invert (2Y > 10Y), historically read as a recession signal"
+        ],
+        "so_what": "Curve traders express today's view via 2s10s flatteners (sell 2Y / buy 10Y, DV01-neutral), and salespeople pitch curve trades to macro hedge funds who want to bet on the Fed without taking outright duration risk."
+      },
+      {
+        "term": "50bp Hike vs 25bp Hike — How the Fed Signals",
+        "category": "rates",
+        "bullets": [
+          "Standard Fed move = 25bps; a 50bp ('half-point') hike signals urgency — the Fed believes it is behind on inflation",
+          "Fed officials 'opening the door' = speeches/interviews deliberately shifting market expectations before the meeting, so the decision itself isn't a shock",
+          "FOMC announcement Fri 11/13: statement + rate decision, then the Chair's press conference — markets react to both the number and the forward-guidance language",
+          "Three outcomes to map: 50bp (hawkish, priced partially already), 25bp + hawkish tone ('hawkish hike'), 25bp + softer tone (dovish relative to the new expectations)",
+          "Market reaction depends on surprise vs pricing, not the absolute decision — if 50bp is ~fully priced, delivering it can cause little move",
+          "Higher policy rate → higher funding costs for banks, dealers' repo financing, leveraged investors → tighter financial conditions economy-wide"
+        ],
+        "so_what": "Before FOMC, desks build a scenario grid (decision × tone → expected moves in 2Y, 10Y, S&P, USD) so salespeople can tell clients instantly whether the outcome was hawkish or dovish versus pricing and suggest the trade."
+      },
+      {
+        "term": "Inflation Surprise — Why a 'Beat' Moves Everything",
+        "category": "macro",
+        "bullets": [
+          "'Beat expectations' = actual inflation print came in above the economist consensus (e.g., Bloomberg/Reuters survey median)",
+          "Markets price the consensus in advance; only the gap (actual − consensus) moves prices — a 0.1pp miss on monthly core can swing the 2Y 5–15bps",
+          "Core (ex-food & energy) matters more than headline: it reflects sticky domestic price pressure the Fed can actually influence",
+          "Hot inflation → Fed must keep rates higher for longer → bond yields up, equities down, dollar up — today: 2Y +5bps, S&P −0.55%",
+          "Second-order: higher expected inflation erodes the real value of fixed coupons, so long-bond investors demand more yield",
+          "Fed's dual mandate (stable prices + max employment) — a beat tilts the Fed toward the price-stability side even if growth is slowing"
+        ],
+        "so_what": "Data-release days are the highest-volume days for flow desks; traders pre-position on the consensus and salespeople must deliver a one-line 'beat/miss, by how much, and what it means for the Fed' to clients within seconds of the print."
+      },
+      {
+        "term": "S&P 500 Selloff — Discount-Rate Mechanism",
+        "category": "equities",
+        "bullets": [
+          "S&P 500 at 7,485, −42 points (−0.55%) on rate-hike jitters",
+          "A stock's value ≈ present value of future cash flows; higher rates raise the discount rate → lower present value → lower price, even if earnings are unchanged",
+          "Long-duration equities (growth/tech, whose profits sit far in the future) are hit hardest; value/financials often outperform when rates rise",
+          "Equity risk premium squeeze: with 10Y at 4.86%, 'risk-free' Treasuries compete harder with stocks for capital",
+          "−0.55% is a modest, orderly decline — consistent with re-pricing, not panic",
+          "Higher rates also hurt via fundamentals: more expensive corporate borrowing, weaker consumer credit demand, slower growth"
+        ],
+        "so_what": "Equity sales traders use rate moves to explain sector rotation to clients (e.g., 'growth underperforming on higher yields') and cash/delta-one desks see flows into rate-hedged or value baskets on days like this."
+      },
+      {
+        "term": "VIX at 19.92 — Reading a Confusing Signal",
+        "category": "volatility",
+        "bullets": [
+          "VIX at 19.92, −5.72 points per brief — a large drop for a day when the S&P fell",
+          "VIX = market's 30-day expected annualized S&P volatility, backed out of S&P option prices; 19.92 ≈ expected daily moves of ~1.25% (20/√252)",
+          "Normal relationship: stocks down → VIX up (investors buy puts for protection); a VIX fall on a down day is unusual",
+          "Possible explanations: prior-day VIX was elevated (~25.6) and event risk is being resolved (Fed now telegraphing its move); orderly selloff without panic hedging; or a data/timing artifact in the brief's comparison — verify before quoting",
+          "~20 is the rough dividing line between 'calm' (low teens) and 'stressed' (25+) regimes",
+          "Event vol: FOMC on Fri 11/13 sits inside the 30-day window, so some Fed premium remains embedded"
+        ],
+        "so_what": "Vol traders sell or buy event-straddle premium around FOMC based on whether implied vol looks rich vs expected moves, and salespeople flag unusual spot-vol behavior (like today's) to clients because it can signal positioning or hedging unwinds."
+      },
+      {
+        "term": "Dollar Proxy (~DXY at 1.1223) — Rate Differentials Drive FX",
+        "category": "fx",
+        "bullets": [
+          "Brief lists '~DXY' at 1.1223, change 0.0080, marked down — a value near 1.12 looks like a EUR/USD quote, not the DXY index (which trades near ~100)",
+          "If it's EUR/USD down 80 pips (~0.7%): euro weaker, dollar stronger — consistent with a hawkish Fed",
+          "Mechanism: higher US rates vs Europe → USD deposits/bonds pay more → capital flows into dollars → USD appreciates",
+          "DXY is ~58% euro-weighted, so EUR/USD is the dominant driver of the index and a reasonable proxy",
+          "Carry: wider US–EU rate gap makes 'long USD, short EUR' pay positive carry, attracting momentum and macro funds",
+          "Stronger dollar tightens global financial conditions: harder for EM borrowers with USD debt, hurts US multinationals' foreign earnings"
+        ],
+        "so_what": "FX salespeople frame dollar moves through rate differentials ('2Y spread widened, so USD bid') and corporate FX desks see hedging demand from multinationals locking in rates when the dollar moves sharply."
+      },
+      {
+        "term": "US Economic Pressure on Iran — Sanctions & Oil Risk",
+        "category": "energy",
+        "bullets": [
+          "Rubio told G7 the US will keep imposing 'devastating' costs on Iran — continued economic pressure campaign",
+          "Main lever: secondary sanctions — penalizing non-US banks, shippers and refiners that buy Iranian oil, cutting Iran off from dollar clearing",
+          "Iranian crude often still flows (largely to China) via 'shadow fleet' tankers and discounted sales; enforcement intensity determines how many barrels leave the market",
+          "Tail risk: Strait of Hormuz — ~20% of global oil passes through; any threat to shipping adds a geopolitical risk premium to Brent/WTI",
+          "No WTI print in today's brief — watch crude separately; higher oil feeds headline inflation, reinforcing the Fed's hawkish problem",
+          "G7 coordination matters: allied enforcement makes sanctions bite harder than unilateral US action"
+        ],
+        "so_what": "Commodities traders price a risk premium into crude and options skew on escalation headlines, and macro salespeople connect geopolitics → oil → inflation → Fed for clients, linking today's Iran and rates stories into one trade narrative."
+      },
+      {
+        "term": "Basis Points & Price/Yield Inverse Relationship",
+        "category": "fundamental",
+        "bullets": [
+          "1 basis point (bp) = 0.01%; 100bps = 1%. Today: 2Y +5bps = 4.46% → 4.51%",
+          "Bonds pay fixed coupons; if new bonds offer higher yields, existing bonds must drop in price to compete → yield up = price down",
+          "Duration ≈ % price change per 1% yield move; a 10Y (duration ~8) loses ~0.16% of price for today's +2bps",
+          "'Bonds sold off' = prices fell = yields rose — traders use these interchangeably",
+          "DV01 (dollar value of 1bp) = $ change in a position's value per 1bp; how desks size and hedge risk",
+          "A 50bp Fed hike = 0.50 percentage points on the policy rate"
+        ],
+        "so_what": "Every rates conversation on a desk is in bps and DV01 — salespeople quote moves in bps, and traders hedge client trades by matching DV01, so fluency here is non-negotiable in interviews and day one."
+      },
+      {
+        "term": "Terminal Rate & Market-Implied Fed Pricing",
+        "category": "fundamental",
+        "bullets": [
+          "Terminal rate = the peak fed funds rate in a hiking cycle; markets constantly re-estimate it",
+          "Pricing comes from fed funds futures and OIS swaps — their prices imply probabilities of 25bp vs 50bp moves at each meeting",
+          "Today's hot inflation + Fed comments → probability of 50bp at 11/13 up, and terminal rate expectations nudged higher",
+          "Higher terminal rate = higher discount rate for all assets → explains today's combo: 2Y up, S&P down, dollar up",
+          "Tension: market vs Fed — if the Fed delivers less than priced, assets rally; more than priced, further selloff",
+          "Analysts phrase it as 'X bps of hikes priced through [month]' — know how to read and say this"
+        ],
+        "so_what": "Desks quote 'what's priced' before every Fed event, and salespeople pitch trades as bets on the gap between market pricing and their house view of the Fed path."
+      }
+    ],
+    "narrative": "A hotter-than-expected inflation print led Fed officials to float a 50bp hike, and markets repriced the policy path: the 2Y jumped 5bps to 4.51% versus the 10Y's +2bps to 4.86%, bear-flattening 2s10s to ~35bps, while the S&P 500 slipped 0.55% to 7,485 and the dollar firmed. The market is now betting the Fed tightens harder into Friday's 11/13 FOMC, with Iran sanctions risk threatening to add oil-driven inflation on top. The key tension is whether the Fed delivers the 50bp now being priced — anything softer would likely spark a relief rally, while a hawkish delivery extends the selloff."
+  },
+  {
     "date": "2026-11-10",
     "blocks": [
       {
