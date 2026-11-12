@@ -1,5 +1,149 @@
 [
   {
+    "date": "2026-11-12",
+    "blocks": [
+      {
+        "term": "2-Year Treasury at 4.56% — Front End Still Pricing a Hawkish Fed",
+        "category": "rates",
+        "bullets": [
+          "2Y at 4.56%, +5.0bps on the day; up from 4.51% in the prior brief, so the front end has sold off two sessions running",
+          "Mechanism: 2Y yield ≈ average expected fed funds rate over the next 2 years + a small term premium, so it moves almost 1-for-1 with changes in expected Fed policy",
+          "+5bps on the 2Y vs +2bps on the 10Y = the market is repricing near-term Fed path (more/longer hikes), not long-run growth or inflation",
+          "Equities rallied 1.32% the same day, so this was not a fear move; front-end selling + equity buying reads as 'Fed stays tight because the economy can take it'",
+          "Price impact: 2Y modified duration ~1.9 → +5bps ≈ -0.09% price; on $100mm of 2Y notes that is ~$95k mark-to-market loss",
+          "Into Friday's FOMC release the 2Y is the cleanest scorecard: hawkish surprise → 2Y up further; dovish/no-hike signal → 2Y rallies hardest"
+        ],
+        "so_what": "Rates salespeople lead the morning call with the 2Y move because it tells clients exactly how much Fed tightening got added or removed overnight, which drives hedging flows from banks, money funds, and corporates with floating-rate debt."
+      },
+      {
+        "term": "10-Year Treasury at 4.88% & 2s10s Bear Flattening to 32bps",
+        "category": "rates",
+        "bullets": [
+          "10Y at 4.88%, +2.0bps; 2Y at 4.56%, +5.0bps → 2s10s spread = 32bps, down from ~35bps last brief",
+          "Correction to the brief: it calls this a 'steeper curve', but the 2Y rising more than the 10Y NARROWS the gap = bear flattening (bear = yields up, flattening = spread down)",
+          "10Y = expected average short rate over 10 years + term premium (extra pay for locking up money long), so it is less tied to the next few Fed meetings",
+          "Flattening on higher front-end yields = market thinks the Fed tightens more now, which slows growth/inflation later, so long yields rise less",
+          "10Y is the benchmark for 30Y mortgages, corporate bond pricing (IG spreads quoted over it), and equity discount rates, so 4.88% sets financing costs economy-wide",
+          "DV01 rule of thumb: $10mm 10Y notes ≈ $7.8k per bp; today's +2bps ≈ -$16k for that position",
+          "Curve traders express this view with a 2s10s flattener (short 2Y / long 10Y, DV01-weighted) that profits if the spread keeps narrowing into FOMC"
+        ],
+        "so_what": "Getting the curve label right (bear flattener vs bear steepener) is basic credibility on a rates desk: clients trade the shape of the curve, not just the level, and a salesperson who mislabels it loses trust immediately."
+      },
+      {
+        "term": "S&P 500 at 7,598 (+99, +1.32%) — Rally Despite Higher Yields",
+        "category": "equities",
+        "bullets": [
+          "S&P 500 closed at 7,598, +99pts / +1.32%, a sharp reversal after the prior session's -0.55% inflation-scare selloff",
+          "+1.32% is a large move for an index: with VIX ~19.5 the expected 1-day move is ~1.2%, so yesterday was roughly a 1-standard-deviation up day",
+          "Rallied while 2Y and 10Y yields rose: usually higher discount rates hurt valuations, so the bid had to come from growth optimism and positioning, not rates relief",
+          "Positioning mechanism: after a selloff, funds that bought downside protection or went short unwind (short covering) → mechanical buying that can overshoot fundamentals",
+          "Cyclical signals cited in the brief: airlines (American, JetBlue) and hospitality demand = consumer still spending, which supports the 'economy can handle a tight Fed' read",
+          "Mega-cap tech (Meta etc.) is ~1/3 of S&P market cap, so AI/infrastructure headlines have outsized index impact",
+          "Key risk: rally was into Friday's FOMC; if the Fed is hawkish, the same short-covering buyers are gone and the move can retrace fast"
+        ],
+        "so_what": "Equity sales traders need to tell clients whether a +1.3% day was real demand (long-only buying, broad breadth) or short covering (concentrated in the most-shorted names), because that decides whether to chase it or fade it into the Fed."
+      },
+      {
+        "term": "VIX at 19.46 (-0.46 pts) — Event Vol Before the Fed",
+        "category": "volatility",
+        "bullets": [
+          "VIX at 19.46, down 0.46 POINTS; the brief's '46 bps' is wrong unit-wise: VIX is quoted in vol points, bps are for yields/spreads",
+          "VIX = market-implied annualized volatility of the S&P over the next 30 days, backed out of S&P option prices",
+          "Conversion: daily expected move = VIX / √252 = 19.46 / 15.9 ≈ 1.23% ≈ ±93 S&P points (1 standard deviation)",
+          "Monthly expected move = VIX / √12 ≈ 5.6% ≈ ±425 S&P points",
+          "Long-run VIX average ~19-20, so 19.46 is 'normal-ish', not complacent (<14) and not stressed (>30)",
+          "VIX only dipped slightly on a +1.32% rally: options buyers are holding protection into Friday's FOMC = event-risk premium stays in the price",
+          "After the event, implied vol usually drops sharply ('vol crush') if the outcome is in line, which hurts anyone who bought options just for the event"
+        ],
+        "so_what": "Vol traders and derivatives salespeople use the VIX-to-expected-move math daily to tell clients whether options are cheap or expensive relative to how much the market actually moves, which drives whether to sell premium or buy hedges before FOMC."
+      },
+      {
+        "term": "EUR/USD Proxy at 1.1163 (-60 pips) — The Dollar Actually Strengthened",
+        "category": "fx",
+        "bullets": [
+          "Brief's '~DXY' line is really EUR/USD: 1.1163, down 0.0060 from 1.1223 last brief (-0.53%)",
+          "Quote convention: EUR/USD = dollars per 1 euro; it FALLING means each euro buys fewer dollars → the dollar strengthened, contrary to the brief's 'USD weakness'",
+          "Pip = 0.0001 for EUR/USD; 60 pips on a €10mm position = $60k P&L",
+          "Euro is ~58% of the DXY basket, so a -0.53% EUR/USD move maps to roughly +0.3% on DXY",
+          "Mechanism: US 2Y up 5bps widens the US-vs-Germany short-rate gap → holding dollars pays more → money flows into USD (rate-differential driver)",
+          "Ukraine talks are also euro-relevant: Europe bears more of the energy/security cost of the war, so stalled progress weighs on EUR",
+          "Stronger dollar = headwind for S&P multinationals' overseas earnings (translated back into fewer dollars) and for EM borrowers with USD debt"
+        ],
+        "so_what": "FX salespeople must read quote direction instantly; telling a corporate treasurer 'the dollar weakened' when EUR/USD fell 60 pips would mean advising the wrong side of their hedge."
+      },
+      {
+        "term": "Hyperscaler AI Capex & Meta's Infrastructure Leadership Change",
+        "category": "equities",
+        "bullets": [
+          "Meta's head of infrastructure is leaving; successor is a former AWS cloud executive, i.e. someone from the company that runs the world's largest cloud",
+          "Hyperscalers (Meta, Microsoft, Alphabet, Amazon) spend tens of billions a year each on data centers, GPUs, networking and power = AI capex",
+          "Capex chain: hyperscaler budgets → orders for chips (Nvidia, Broadcom), memory, servers, power equipment, utilities → those stocks trade off capex guidance",
+          "Infrastructure head controls how that budget gets spent, so the hire signals priorities: more cloud-style efficiency, possibly selling compute or building like AWS",
+          "Funding mechanism: capex this large is increasingly financed with debt (jumbo IG bond deals, private-credit JVs for data centers), so it moves credit markets too",
+          "Investor tension: capex lifts suppliers but compresses the spender's free cash flow; markets reward it only if AI revenue visibly follows",
+          "Leadership change itself rarely moves the index; the read-through to capex guidance and supplier orders is what traders watch"
+        ],
+        "so_what": "Equity and credit salespeople translate a hyperscaler headline into the trade it implies across the supply chain (semis, utilities, data-center REITs, new bond issuance), which is how a single news item turns into client flow on multiple desks."
+      },
+      {
+        "term": "Russia-Ukraine Talks — Geopolitical Risk Premium",
+        "category": "macro",
+        "bullets": [
+          "Both sides report 'some progress' at talks; US officials cite lack of trust → markets treat it as a reduced chance of escalation, not a deal",
+          "Risk premium = extra return investors demand for uncertainty; peace progress shrinks it, setbacks inflate it",
+          "Energy channel: Russia is a major oil and gas exporter under Western sanctions, so a credible deal could add supply and lower crude/European gas prices; collapse does the opposite",
+          "Inflation link: lower energy → lower headline inflation → less pressure on the Fed; this matters a lot while the market is pricing a hawkish FOMC",
+          "Safe-haven channel: escalation sends money into Treasuries (yields down), USD, gold; de-escalation unwinds those flows",
+          "Regional exposure: European equities, EUR, and defense stocks are the most sensitive; defense names often fall on peace headlines",
+          "Headline-driven: talks produce many contradictory quotes, so moves often reverse within hours"
+        ],
+        "so_what": "Macro and commodity salespeople must quickly map a geopolitical headline to the assets it hits (crude, EUR, defense, Treasuries) and judge whether it is new information or noise before clients ask why their positions moved."
+      },
+      {
+        "term": "FOMC Release, Fed Funds Data & H.15 — Friday's Fed Event Stack",
+        "category": "rates",
+        "bullets": [
+          "FOMC = the Fed's 12-voter rate-setting committee; its press release states the fed funds target range plus balance-sheet (QT) guidance",
+          "Fed funds rate = overnight rate banks charge each other for reserves; the Fed sets a target range and steers the effective rate (EFFR) with interest on reserves and its reverse repo facility",
+          "Markets read the release word by word versus the prior statement; a one-word change on inflation or 'further tightening' can move the 2Y 10bps+",
+          "QT (quantitative tightening) = the Fed letting bonds mature without reinvesting, shrinking its balance sheet → less demand for Treasuries → upward pressure on long yields",
+          "H.15 = the Fed's statistical release of daily benchmark rates (Treasury yields, fed funds, commercial paper); a reference source, not a policy decision",
+          "Fed funds data (EFFR and volume) shows whether funding markets are calm; EFFR drifting toward the top of the range signals reserves getting scarce",
+          "Market already priced hawkishness via the 2Y at 4.56%, so the trade is about surprise vs pricing, not the decision itself"
+        ],
+        "so_what": "On FOMC day every desk positions around the gap between what futures price and what the Fed says; salespeople pre-wire clients with scenarios (hawkish/in-line/dovish) and the expected move in 2Y, USD and S&P for each."
+      },
+      {
+        "term": "Curve Shape Vocabulary: Bull/Bear × Steepen/Flatten",
+        "category": "fundamental",
+        "bullets": [
+          "Bull = yields falling (bond prices rising); bear = yields rising (bond prices falling); bond prices and yields always move in opposite directions",
+          "Steepen = long-end yield minus short-end yield gets bigger; flatten = it shrinks; usually measured as 2s10s (10Y minus 2Y)",
+          "Bear flattener (today: 2Y +5, 10Y +2): front end leads selloff → market pricing a more hawkish Fed",
+          "Bear steepener: long end leads selloff → worries about inflation, deficits, or term premium",
+          "Bull steepener: front end rallies most → market pricing Fed cuts, often in a slowdown",
+          "Bull flattener: long end rallies most → growth fears / flight to safety into long bonds",
+          "2s10s at +32bps is positive (normal); negative 2s10s = inverted curve, historically a recession warning"
+        ],
+        "so_what": "These four labels are how rates desks summarize every day's move in one phrase, and they come up in interviews constantly; describing today as a 'bear flattener driven by Fed repricing' is the expected answer."
+      },
+      {
+        "term": "Stocks Up, Yields Up — Reading the Stock-Bond Correlation",
+        "category": "fundamental",
+        "bullets": [
+          "Two usual regimes: (1) growth-driven, where good news lifts both stocks and yields; (2) inflation/Fed-driven, where higher yields hurt stocks",
+          "Yesterday (S&P +1.32%, 2Y +5bps, 10Y +2bps) was regime 1: market read the economy as strong enough to handle a tighter Fed",
+          "Prior session (inflation beat, S&P -0.55%, yields up) was regime 2: same yield direction, opposite equity reaction because the driver was inflation, not growth",
+          "Discount-rate mechanism: stock value = future earnings discounted at a rate tied to Treasury yields; higher yields lower that value unless earnings expectations rise more",
+          "Positive stock-bond correlation (prices move together) means bonds stop hedging equities, which hurts balanced 60/40 portfolios",
+          "Risk-on/risk-off is the shorthand: risk-on = stocks up, VIX down, haven demand down; yesterday fit with S&P up and VIX down"
+        ],
+        "so_what": "Cross-asset salespeople diagnose which regime the market is in each morning because it tells clients whether Treasuries are currently a hedge for their equity book or another source of the same risk."
+      }
+    ],
+    "narrative": "Equities snapped back hard (S&P +1.32% to 7,598, VIX down to 19.46) even as the front end sold off again: the 2Y rose 5bps to 4.56% against the 10Y's +2bps to 4.88%, bear-flattening 2s10s to ~32bps, while EUR/USD fell 60 pips to 1.1163, meaning the dollar strengthened. The market is betting the economy is strong enough to absorb a hawkish Fed, so it is pricing more tightening and buying stocks at the same time. The tension into Friday's FOMC release is that this holds only if the Fed delivers no more than what the 2Y already prices; a hawkish surprise would hit both the rally and the fragile Ukraine-driven drop in risk premium."
+  },
+  {
     "date": "2026-11-11",
     "blocks": [
       {
