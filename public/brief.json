@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-11",
-  "generated_at": "2026-11-11T19:21:05.003Z",
+  "date": "2026-11-12",
+  "generated_at": "2026-11-12T19:39:35.410Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7598",
-      "change": "+99 (1.32%)",
-      "up": true
+      "value": "7577",
+      "change": "-21 (-0.27%)",
+      "up": false
     },
     {
       "name": "10Y UST",
@@ -21,38 +21,38 @@
       "up": true
     },
     {
-      "name": "~DXY",
-      "value": "1.1163",
-      "change": "-0.0060",
+      "name": "WTI Crude",
+      "value": "$99.64",
+      "change": "-$0.42",
       "up": false
     },
     {
       "name": "VIX",
-      "value": "19.46",
-      "change": "-0.46",
+      "value": "17.49",
+      "change": "-1.97",
       "up": false
     }
   ],
   "stories": [
     {
-      "headline": "Meta head of infrastructure will leave and be succeeded by former AWS cloud exec",
+      "headline": "In a policy switch, the Fed says its October 2027 meeting will not see a vote on interest rates",
       "source": "CNBC",
-      "summary": "Meta is replacing its infrastructure head with a veteran from AWS, signaling a strategic shift in cloud and AI infrastructure priorities. The move reflects intensifying competition in cloud and AI capabilities among mega-cap tech firms.",
-      "why_matters": "Leadership transitions at trillion-dollar tech firms influence sector rotation, capex cycles, and AI infrastructure spending trends critical to US innovation leadership.",
-      "tag": "Equities"
+      "summary": "The Federal Reserve announced that its October 2027 meeting will not include a vote on interest rates, marking a notable shift in policy procedure. This decision changes the scheduled voting calendar for future FOMC meetings.",
+      "why_matters": "Directly affects expectations around Fed meeting protocols and long-term rate policy transparency for markets.",
+      "tag": "Rates"
     },
     {
-      "headline": "Russia and Ukraine say some progress made at talks, US cites a lack of trust - Reuters",
+      "headline": "Four tankers struck by explosions in Strait of Hormuz, Iran says",
       "source": "Reuters",
-      "summary": "Diplomatic discussions between Russia and Ukraine have shown modest progress, though U.S. officials remain skeptical about underlying trust and durability of any agreements. Geopolitical uncertainty continues to weigh on global energy and capital markets.",
-      "why_matters": "Unresolved Ukraine conflict drives oil volatility, risk premiums in equities, and Treasury demand as safe-haven flows.",
+      "summary": "Four oil tankers were struck by explosions in the Strait of Hormuz according to Iranian reports. This follows earlier reports of an oil tanker struck off UAE's Ras Al-Khaimah with all crew reported safe.",
+      "why_matters": "Geopolitical risks in critical energy shipping lanes support elevated oil prices and macro volatility.",
       "tag": "Macro"
     },
     {
-      "headline": "Jim Cramer's top 10 things to watch in the stock market Wednesday",
+      "headline": "Sitting on big gains in Nvidia? Jim Cramer's advice on what to do next",
       "source": "CNBC",
-      "summary": "Cramer identifies key market themes and individual stock catalysts for near-term trading focus. The commentary reflects broad equity sentiment amid a strong prior session (+1.32% S&P 500).",
-      "why_matters": "Retail and institutional positioning signals shape intraday volatility and sector momentum in a rising-rate environment.",
+      "summary": "Jim Cramer offered guidance on portfolio management for investors holding large Nvidia positions. The commentary reflects ongoing investor focus on mega-cap technology stocks.",
+      "why_matters": "Nvidia concentration and sentiment drive S&P 500 composition and equity market momentum.",
       "tag": "Equities"
     }
   ],
@@ -61,26 +61,26 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "Fed policy communications will clarify rate trajectory and QT stance, directly impacting the 10Y/2Y curve currently at 4.88%/4.56%."
-    },
-    {
-      "day": "Fri",
-      "event": "H.15 Selected Interest Rates",
-      "importance": "high",
-      "note": "Official Fed interest rate data provides benchmark for bond yields and mortgage rates in a 2-year uptrend across the curve."
+      "note": "Critical for forward guidance on rates and policy stance, especially given today's announcement of the October 2027 voting change."
     },
     {
       "day": "Fri",
       "event": "Federal Funds Data",
       "importance": "high",
-      "note": "Real-time fed funds trading volume and rates inform market expectations for overnight funding costs and reserve management."
+      "note": "Provides real-time insight into interbank lending conditions and monetary policy transmission."
+    },
+    {
+      "day": "Fri",
+      "event": "H.15 Selected Interest Rates",
+      "importance": "medium",
+      "note": "Updates on broader rate structure including prime rate and other benchmark yields affecting credit conditions."
     }
   ],
   "concept": {
-    "title": "Risk-On Reversal in a Steeper Curve",
-    "one_liner": "S&P 500 surges 1.32% as VIX falls; 2Y UST outpaces 10Y, signaling confidence in near-term growth over terminal-rate fears.",
-    "explanation": "Yesterday's 99-point rally and 46-bps VIX compression suggest risk appetite is returning despite the 2Y rising 5 bps versus 2 bps on the 10Y—a steepening that typically reflects expectations of eventual rate cuts. Meta's leadership reshuffle and airline/hospitality demand signals (American, JetBlue) point to cyclical optimism, while geopolitical tensions (Russia–Ukraine) remain a latent tail risk. The USD weakness (-60 pips EUR/USD) further supports equity multiples and emerging-market flows.",
-    "market_link": "The combination of falling VIX, rising equities, and curve steepening into Friday's FOMC release creates a setup where Fed language on terminal rates and QT could either extend the rally or trigger profit-taking if hawkish surprises emerge."
+    "title": "Geopolitical Risk Premium in Energy Markets",
+    "one_liner": "Strait of Hormuz tensions support crude oil prices near $100 despite broader equity weakness.",
+    "explanation": "Multiple tanker incidents in critical shipping zones (Strait of Hormuz and UAE waters) are sustaining WTI at $99.64 despite a 0.27% S&P 500 decline. Iran-related tensions and Middle East escalation create a structural risk premium that decouples energy from equities. With the VIX falling 1.97 points to 17.49, equity volatility remains subdued even as geopolitical tail risks persist.",
+    "market_link": "Oil price support limits downside risk to energy stocks and inflation expectations, while Strait chokepoint risks justify defensive positioning in energy inflation hedges."
   },
-  "narrative": "U.S. equities posted a strong 1.32% gain with VIX compressing 46 bps, reflecting renewed risk appetite despite a steeper Treasury curve (2Y +5 bps vs 10Y +2 bps) and USD weakness (EUR/USD -60 pips). With FOMC press and Fed rate data due Friday, the market is pricing confidence in near-term growth while remaining cautious about terminal-rate duration, even as geopolitical risks (Ukraine talks) and tech leadership transitions (Meta) introduce tactical uncertainty."
+  "narrative": "US equities edged down 0.27% to 7577 as Treasury yields rose (10Y +2 bps to 4.88%, 2Y +5 bps to 4.56%), signaling tighter financial conditions despite a Fed policy shift on October 2027 voting. Geopolitical escalation in the Hormuz Strait kept crude near $100, balancing energy concerns against declining volatility (VIX -1.97 to 17.49)."
 }
