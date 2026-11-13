@@ -1,11 +1,11 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13T15:19:17.027Z",
+  "generated_at": "2026-11-13T19:20:39.092Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7491",
-      "change": "-80 (-1.06%)",
+      "value": "7537",
+      "change": "-34 (-0.45%)",
       "up": false
     },
     {
@@ -35,46 +35,58 @@
   ],
   "stories": [
     {
-      "headline": "World oil market is returning to surplus as Gulf exports recover, IEA says",
+      "headline": "Bessent, Fed's Goolsbee divided on role of energy shock in inflation - Reuters [2026-11-13]",
       "source": "Reuters",
-      "summary": "The IEA reports that global oil markets are moving toward surplus conditions as Gulf producers ramp up exports. This shift suggests near-term relief in commodity prices despite geopolitical tensions.",
-      "why_matters": "Lower energy costs ease inflation pressures and support consumer spending and corporate margins.",
-      "tag": "Macro"
+      "summary": "Treasury Secretary Bessent and Federal Reserve official Goolsbee disagreed on whether energy price movements are a driver of inflation. This divergence reflects ongoing debate within policymaking circles on inflation transmission mechanisms.",
+      "why_matters": "Conflicting views on energy's inflation role could signal policy uncertainty as rates have risen 10–17 bps this week.",
+      "tag": "Rates"
     },
     {
-      "headline": "Iran says tanker carrying LNG hit mine, suffered explosion in Hormuz",
-      "source": "Reuters",
-      "summary": "An Iranian LNG tanker reported hitting a mine and sustaining an explosion in the Strait of Hormuz. This incident escalates regional tensions and could threaten global energy supply routes.",
-      "why_matters": "Disruption to Hormuz transit risks spiking oil prices and widening geopolitical risk premiums across equities.",
-      "tag": "Macro"
-    },
-    {
-      "headline": "Nvidia scandal draws in Commerce Secretary Lutnick, who reportedly agrees to testify about China chip sales",
+      "headline": "Goldman Sachs looks to cash in on Anthropic's IPO, twice. Here's how and who else wants to [2026-11-13]",
       "source": "CNBC",
-      "summary": "Commerce Secretary Lutnick has agreed to testify about Nvidia's China chip sales amid an ongoing scandal. This development signals potential regulatory scrutiny on semiconductor exports and geopolitical trade policy.",
-      "why_matters": "Semiconductor export restrictions could reshape tech sector margins and US-China trade dynamics, pressuring large-cap equities.",
+      "summary": "Goldman Sachs is positioning itself to benefit from Anthropic's initial public offering through multiple revenue channels. Other major financial players are also seeking exposure to the AI company's market debut.",
+      "why_matters": "Major AI IPO activity indicates continued equity capital demand despite S&P 500's 0.45% decline today.",
       "tag": "Equities"
+    },
+    {
+      "headline": "EXCLUSIVE: Iraq turns to trucks to export oil in overland Syrian route revival - Reuters [2026-11-13]",
+      "source": "Reuters",
+      "summary": "Iraq is reviving an overland export route through Syria using trucks to ship oil, circumventing traditional maritime channels. This shift reflects geopolitical adaptation in Middle Eastern energy logistics.",
+      "why_matters": "Alternative oil export routes affect global crude supply dynamics and potential energy price trajectories relevant to inflation and equity markets.",
+      "tag": "Macro"
     }
   ],
   "calendar": [
     {
       "day": "Fri",
-      "event": "FOMC Press Release",
+      "event": "FOMC Press Release [2026-11-13]",
       "importance": "high",
-      "note": "Fed communications on rates and policy stance could drive Treasury yields and equity volatility given already-elevated 2Y/10Y moves today."
+      "note": "FOMC communications today could explain elevated 2Y/10Y yields (+17/+10 bps) and influence forward guidance expectations."
     },
     {
       "day": "Fri",
-      "event": "Economic Policy Uncertainty",
+      "event": "Federal Funds Data [2026-11-13]",
       "importance": "high",
-      "note": "EPU index release may reflect heightened geopolitical and regulatory risks evident in today's Iran/Nvidia headlines and VIX uptick."
+      "note": "Real-time Fed operational data critical for assessing monetary policy transmission as VIX has risen 1.21 points."
+    },
+    {
+      "day": "Fri",
+      "event": "Economic Policy Uncertainty [2026-11-13]",
+      "importance": "medium",
+      "note": "EPU readings help contextualize the 45 bp equity selloff and rising volatility environment."
+    },
+    {
+      "day": "Fri",
+      "event": "Key ECB Interest Rates [2026-11-13]",
+      "importance": "medium",
+      "note": "ECB rate decisions influence EUR/USD (down 0.36%) and broader dollar strength signals."
     }
   ],
   "concept": {
-    "title": "Risk-Off Rotation amid Geopolitical & Regulatory Uncertainty",
-    "one_liner": "Equities decline while bond yields rise and volatility spikes as Iran tensions and tech regulation clouds sentiment.",
-    "explanation": "The S&P 500 fell 1.06% while the VIX rose 1.21 points on Friday morning, driven by geopolitical escalation (Iranian tanker incident), regulatory uncertainty (Nvidia/China chip sales scrutiny), and a steeper yield curve (2Y +17 bps, 10Y +10 bps). EUR/USD weakened as the dollar strengthened, typical of risk-off conditions. Headline risks from Hormuz transit disruptions and semiconductor export policy are elevating policy uncertainty and pulling money into safer rates.",
-    "market_link": "When equity risk premiums widen and yields climb on policy uncertainty, investors typically rotate from stocks to Treasuries and higher-quality assets—a pattern consistent with today's -1.06% S&P move paired with rising VIX and steeper yields."
+    "title": "Divergence Inflation Signals Amid Rising Yields",
+    "one_liner": "Policy makers split on energy's inflation role while Treasury yields spike, creating tactical uncertainty for equities.",
+    "explanation": "Treasury yields rose sharply today (+10 bps on 10Y, +17 bps on 2Y) amid FOMC communication and conflicting inflation narratives between Bessent and Goolsbee. The S&P 500 fell 0.45% and VIX climbed 1.21, signaling risk-off sentiment. This disconnect suggests markets are pricing in either persistent inflation or policy hawkishness without consensus on the underlying driver.",
+    "market_link": "When rate expectations rise while inflation narratives fracture, equity valuations face compression risk and volatility expands—classic sell signal."
   },
-  "narrative": "US equities opened down 1.06% on Friday as geopolitical tensions (Iran tanker incident, IAEA concerns), regulatory headwinds (Nvidia China chip testimony), and higher Treasury yields (2Y +17 bps, 10Y +10 bps) triggered a risk-off shift. The VIX climbed to 18.70, the dollar strengthened (EUR/USD -0.0036), and a weakening oil market surplus outlook failed to offset broader uncertainty, signaling cautious sentiment ahead of FOMC communications today."
+  "narrative": "S&P 500 declined 0.45% as Treasury yields surged (+10–17 bps) and VIX rose on FOMC-day communications and conflicting inflation views between top officials. Dollar strength (EUR/USD down 0.36%) and rising rate volatility reflect heightened economic policy uncertainty amid debate over energy shocks and Fed forward guidance."
 }
