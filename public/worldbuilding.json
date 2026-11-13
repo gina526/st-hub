@@ -1,5 +1,141 @@
 [
   {
+    "date": "2026-11-13",
+    "blocks": [
+      {
+        "term": "S&P 500 Equity Index",
+        "category": "equities",
+        "bullets": [
+          "S&P 500 down 80 points (-1.06%) to 7491 on 2026-11-13 morning, marking risk-off rotation",
+          "Decline driven by two macro shocks: Iran tanker incident (geopolitical tail risk) and Nvidia/Commerce Secretary testimony (regulatory/trade policy uncertainty)",
+          "Large-cap tech exposure (Nvidia, semiconductors) particularly vulnerable to China export restriction headlines",
+          "Equity risk premium widening as investors reassess probability of supply chain disruption and margin compression in chip sector",
+          "1.06% decline paired with VIX +1.21 and 2Y yields +17 bps confirms classic risk-off: equities sold, volatility bought, bonds rallied",
+          "Salesperson context: clients hedging long equity exposure via index puts; traders positioning for continued rotation if FOMC signals hawkish hold on rates"
+        ],
+        "so_what": "On an equity desk, this 1.06% drop with rising uncertainty signals time to update client hedging recommendations and prepare for sector rotation calls—tech likely outflows to healthcare/utilities if Nvidia China story escalates before FOMC."
+      },
+      {
+        "term": "10-Year US Treasury Yield",
+        "category": "rates",
+        "bullets": [
+          "10Y UST yield at 4.98%, up 10 basis points (0.10%) intraday on 2026-11-13",
+          "Counterintuitive rise during risk-off: normally equities down = safe-haven Treasuries up = yields fall; instead yields rising signals Fed-hold expectations and inflation persistence",
+          "2Y-10Y spread steepening (2Y +17 bps vs 10Y +10 bps) = curve steepening signal; market pricing longer-duration risk but expecting short rates held firm by Fed",
+          "FOMC Press Release scheduled today (Friday) = key catalyst; yields may extend higher if Fed signals no imminent rate cuts despite equity volatility",
+          "Real yield (nominal 4.98% minus inflation expectations) remains elevated, pressuring duration-sensitive equities and growth stocks",
+          "Bond traders using 10Y as barometer for inflation tail risk; if Iran Hormuz disruption persists, oil/energy inflation could push 10Y even higher"
+        ],
+        "so_what": "Fixed income sales teams use the 10Y move to guide client conversations on portfolio rebalancing—clients rotating from growth stocks into longer-duration bonds will demand analysis of whether 4.98% offers fair value if Fed stays put through 2027."
+      },
+      {
+        "term": "2-Year US Treasury Yield",
+        "category": "rates",
+        "bullets": [
+          "2Y UST yield at 4.73%, up 17 basis points (0.17%) on 2026-11-13 — larger move than 10Y, steepening the curve",
+          "2Y more sensitive to near-term Fed expectations; +17 bps spike suggests market repricing odds of rate hold or even future hikes despite equity selloff",
+          "Historically, when equities fall 1%+ but short rates rise (not fall), market is pricing policy TIGHTNESS, not ease — suggests inflation fears overriding growth concerns",
+          "2Y-10Y spread widening (2Y up 17 vs 10Y up 10) = classic steepener, typically bullish for banks (wider net interest margins) and bearish for long-duration growth",
+          "Today's move driven by EPU (Economic Policy Uncertainty) index expectations and FOMC communications; traders watching for Fed's tone on rate path",
+          "FX carry trades sensitive to 2Y moves; higher short rates in USD strengthen dollar, consistent with DXY strength and EUR/USD -0.0036 today"
+        ],
+        "so_what": "Rates traders use 2Y-10Y spread as trade signal: steepening curve on policy uncertainty typically means hedge short-duration risk and buy long-end convexity; sales teams pitch clients on locking in 4.73% on 2Y ladder before FOMC."
+      },
+      {
+        "term": "EUR/USD Exchange Rate & US Dollar Index (DXY)",
+        "category": "fx",
+        "bullets": [
+          "EUR/USD at 1.1053, down 0.0036 (36 pips), reflecting dollar strength in risk-off environment",
+          "Dollar strengthens when US yields rise faster than eurozone yields, attracting carry traders and safe-haven flows; today's +10/+17 bps Treasury moves pull capital into USD",
+          "Risk-off rotation = capital repatriation to US assets; foreign investors reduce euro exposure, sell EUR/USD, buy dollar-denominated bonds at 4.98% (10Y)",
+          "Geopolitical tail risk (Iran) and regulatory uncertainty (Nvidia) increase demand for dollar liquidity and safe-haven currency positioning",
+          "DXY (broad dollar index vs 6 major currencies) strengthening amid euro weakness is consistent with eurozone economic growth concerns and ECB divergence from Fed policy",
+          "Energy importers (eurozone) particularly hit by Hormuz/oil supply risk; weaker euro growth outlook pressures EUR/USD from both rate differential and growth repricing angles"
+        ],
+        "so_what": "FX desks use EUR/USD moves to time client hedging and treasury management: corporate clients with euro revenue exposure will demand hedges as dollar strengthens; sales teams pitch currency forwards to lock in 1.1053 USD/EUR before potential further euro weakness."
+      },
+      {
+        "term": "VIX Volatility Index",
+        "category": "volatility",
+        "bullets": [
+          "VIX at 18.70, up 1.21 points on 2026-11-13, reflecting elevated implied volatility in S&P 500 options",
+          "VIX rise despite moderate -1.06% equity decline signals market pricing tail risk: investors buying out-of-money puts as Iran/Nvidia headlines create binary event risk",
+          "18.70 VIX is elevated (historical normal ~15-16) but not crisis-level; market not yet fully panicked, suggesting volatility buyers still have room to accumulate hedges",
+          "Geopolitical events (Hormuz tanker, mine) and regulatory uncertainty (Commerce Secretary Nvidia testimony) create asymmetric payoff structure — limited downside from de-escalation, large upside from escalation",
+          "Options desks pricing volatility term structure: front-month implied vol (near Friday FOMC) high relative to 30-day realized; signals event premium before Fed comms",
+          "VIX-to-equity ratio today shows risk-off: equities down 1.06%, VIX up 6.9% (1.21 / 18.70) — more volatility per unit equity move indicates fear premium"
+        ],
+        "so_what": "Volatility traders on S&T desks use VIX spikes above 18 to execute volatility sell programs (short straddles on S&P futures) if they believe spike is overblown; tail-risk buyers use 18.70 level to price put spreads protecting against Hormuz disruption scenarios."
+      },
+      {
+        "term": "Strait of Hormuz Energy Supply Chain Risk",
+        "category": "energy",
+        "bullets": [
+          "Iran tanker incident (mine explosion) in Strait of Hormuz elevates geopolitical tail risk; ~21% of global oil supply transits Hormuz daily",
+          "Mechanism: Hormuz disruption = oil supply shock = commodity inflation spike = energy sector margin expansion but broader economy inflation drag = stagflation scenario",
+          "Today's brief notes 'oil market returning to surplus' per IEA, but Iran mine incident creates binary tail risk: either de-escalates (surplus thesis intact, oil stays soft) or escalates (supply shock, oil +15-20%+)",
+          "WTI/Brent crude sensitive to Hormuz headlines; higher energy costs flow through inflation expectations, supporting Treasury yields (today +10/+17 bps) and pressuring equity growth multiples",
+          "LNG tanker hit = geopolitical escalation signal that markets are pricing into risk premium; potential for further incidents means energy market remains on tail-risk watch",
+          "Salesperson intelligence: energy/utility sector clients will demand hedging advice if Hormuz risk pricing escalates; traders monitoring crude volatility term structure for supply risk repricing"
+        ],
+        "so_what": "Energy sector specialists on S&T desks use Hormuz incident to justify overweighting or underweighting energy equities in client conversations; traders pair long energy equity/crude call spreads with hedges on broader equity/credit if Hormuz escalation damages growth outlook."
+      },
+      {
+        "term": "Semiconductor Export Controls & Trade Policy Uncertainty",
+        "category": "equities",
+        "bullets": [
+          "Nvidia Commerce Secretary Lutnick testimony on China chip sales represents regulatory escalation risk; Commerce Dept controls semiconductor export licensing to China",
+          "Mechanism: US restricts advanced chip exports to China → Nvidia/TSMC/Qualcomm lose China revenue → sector margin compression → mega-cap tech (Nvidia, Apple supply chain) re-rated lower",
+          "Trade policy uncertainty (EPU index) acts as hidden tax on semiconductor sector multiples; equity investors discount stocks when geopolitical policy path is unclear",
+          "Today's brief notes Nvidia scandal + testimony = regulatory scrutiny signal; if export controls tighten, 10-15% of Nvidia revenue at risk, cascading into foundry/EDA/chipmaker stocks",
+          "Broader implication: US-China tech decoupling scenario pressures large-cap tech multiples and tilts equity markets toward domestic/isolated-from-China companies",
+          "VIX +1.21 today partly reflects Nvidia/semiconductor repricing; if FOMC today signals no rate cuts to support growth, tech sector faces dual headwind (regulation + no monetary support)"
+        ],
+        "so_what": "Equity sales teams use Nvidia testimony to initiate semiconductor sector underweight calls with clients; traders pair Nvidia short call spreads with long energy/healthcare rotations; institutional clients demand ESG/China-exposure clarity in portfolio meetings."
+      },
+      {
+        "term": "Risk-Off Rotation & Safe-Haven Bid Mechanism",
+        "category": "fundamental",
+        "bullets": [
+          "Risk-off = simultaneous reduction in equity exposure, volatility spike, flight to US Treasuries/dollar, and widening credit spreads (mechanism: repricing tail risk across asset classes)",
+          "Today's pattern: S&P -1.06%, VIX +1.21, 10Y +10 bps, EUR/USD -0.0036 confirms classic risk-off; capital rotating from equities → Treasuries, from euros → dollars, from risk assets → optionality",
+          "Safe-haven bid in Treasuries despite rising yields (counterintuitive) occurs because risk-premium increase > duration loss; 10Y at 4.98% still offers value vs equity risk repricing",
+          "Duration = mathematical measure of bond price sensitivity to yield changes; rising Treasury yields on risk-off signals market pricing INFLATION + POLICY TIGHTNESS (not rate cuts)",
+          "Equity salability declining as bid-ask spreads widen (liquidity cost of selling in a risk-off day); clients holding equities face execution risk, adding urgency to hedge buying and moving cash to Treasuries",
+          "Historical precedent: 2018 vol spike, March 2020 covid crash, 2022 taper tantrum all followed this pattern — geopolitical/policy shock → equity re-pricing → Treasuries rally on uncertainty repricing"
+        ],
+        "so_what": "Portfolio managers and S&T traders use risk-off playbook to anticipate client behavior: expect cash flows into money market funds and short-duration bonds; set hedging strategies (long index puts, long credit protection) early in the risk-off cascade rather than waiting for VIX spike."
+      },
+      {
+        "term": "Economic Policy Uncertainty (EPU) Index & FOMC Communications",
+        "category": "macro",
+        "bullets": [
+          "EPU index expected to rise today (calendar item) due to Iran geopolitical escalation + Nvidia regulatory scrutiny; elevated EPU directly correlates with equity valuation compression",
+          "Mechanism: Higher policy uncertainty = higher discount rate applied to future corporate cash flows = lower equity valuations; EPU spiking 10-20% can justify 2-3% equity pullback",
+          "FOMC Press Release on Friday (today) is major catalyst; market watching for Fed's stance on rate path amid equity volatility and inflation persistence",
+          "Fed communications on tape today will determine whether today's yield rise (+17 bps in 2Y) reflects market repricing of rate hold OR new expectations of future hikes",
+          "If FOMC signals no cuts through 2027, equity risk premium widens further; if FOMC hints at future ease, yields could reverse hard (sell-off in bonds, rally in equities)",
+          "Trader positioning: options market pricing binary outcomes on FOMC; strangle buyers betting on large move in either direction (either hawkish surprise or dovish cut signal)"
+        ],
+        "so_what": "S&T sales teams briefing clients before FOMC release today explain why EPU spike is self-reinforcing (uncertainty depresses valuations, lower valuations trigger more hedging, hedging creates liquidity dry-ups); clients prepare for potential 2-3% equity swings on Fed statement."
+      },
+      {
+        "term": "Yield Curve Shape & Duration Risk Repricing",
+        "category": "rates",
+        "bullets": [
+          "2Y-10Y curve steepening today (2Y +17 bps, 10Y +10 bps) is structural repricing of near-term vs long-term rate expectations; market pricing Fed hold in near term, inflation persistence beyond 2027",
+          "Steeper curve typically bullish for bank earnings (wider net interest margins) but bearish for long-duration growth stocks (higher real discount rates on far-future cash flows)",
+          "Duration = measure of long-term bond price sensitivity to yields; today's 10Y at 4.98% + rising short rates = difficult environment for 60/40 (stock/bond) portfolios seeking diversification",
+          "Curve steepening often precedes recession when it comes after equity selloff; market is implicitly saying 'no rate cuts now, but economy will weaken later requiring cuts in 2027-28'",
+          "Inflation breakevens (implied CPI in TIPS market) likely rising with Hormuz geopolitical risk; longer-duration investors demanding compensation for inflation tail risk",
+          "Historical precedent: post-2018 fed hikes, curve steepened before 2019 recession; today's steepening amid geopolitical shock follows similar pattern"
+        ],
+        "so_what": "Portfolio managers use curve steepness to tilt duration allocation: in steepening environment, ladder bonds across 2Y-10Y maturities; rates traders execute curve flattener trades (long 2Y, short 10Y) if they believe steepening is overdone relative to recession risk."
+      }
+    ],
+    "narrative": "US equities fell 1.06% to 7491 on Friday as geopolitical escalation (Iran tanker incident in Hormuz) and regulatory uncertainty (Nvidia China chip sales testimony) triggered a broad risk-off rotation. Treasury yields rose counterintuitively—2Y to 4.73% (+17 bps) and 10Y to 4.98% (+10 bps)—reflecting market repricing of inflation persistence and Fed policy hold despite equity volatility; the 2Y-10Y curve steepened, signaling near-term rate support but longer-term recession risk. The VIX climbed to 18.70 (+1.21), EUR/USD weakened to 1.1053 (-36 pips) as the dollar strengthened, and capital rotated into safe-haven Treasuries and away from tech equities exposed to China sanctions risk. Today's FOMC press release will be decisive: any signal that the Fed remains hawkish despite equity stress could extend the yield rally and equity selloff, while a dovish surprise could trigger sharp curve inversion and equity bounce."
+  },
+  {
     "date": "2026-11-12",
     "blocks": [
       {
