@@ -1,58 +1,58 @@
 {
-  "date": "2026-11-12",
-  "generated_at": "2026-11-12T19:39:35.410Z",
+  "date": "2026-11-13",
+  "generated_at": "2026-11-13T15:19:17.027Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7577",
-      "change": "-21 (-0.27%)",
+      "value": "7491",
+      "change": "-80 (-1.06%)",
       "up": false
     },
     {
       "name": "10Y UST",
-      "value": "4.88%",
-      "change": "+2.0 bps",
+      "value": "4.98%",
+      "change": "+10.0 bps",
       "up": true
     },
     {
       "name": "2Y UST",
-      "value": "4.56%",
-      "change": "+5.0 bps",
+      "value": "4.73%",
+      "change": "+17.0 bps",
       "up": true
     },
     {
-      "name": "WTI Crude",
-      "value": "$99.64",
-      "change": "-$0.42",
+      "name": "~DXY",
+      "value": "1.1053 EUR/USD",
+      "change": "-0.0036",
       "up": false
     },
     {
       "name": "VIX",
-      "value": "17.49",
-      "change": "-1.97",
-      "up": false
+      "value": "18.70",
+      "change": "+1.21",
+      "up": true
     }
   ],
   "stories": [
     {
-      "headline": "In a policy switch, the Fed says its October 2027 meeting will not see a vote on interest rates",
-      "source": "CNBC",
-      "summary": "The Federal Reserve announced that its October 2027 meeting will not include a vote on interest rates, marking a notable shift in policy procedure. This decision changes the scheduled voting calendar for future FOMC meetings.",
-      "why_matters": "Directly affects expectations around Fed meeting protocols and long-term rate policy transparency for markets.",
-      "tag": "Rates"
-    },
-    {
-      "headline": "Four tankers struck by explosions in Strait of Hormuz, Iran says",
+      "headline": "World oil market is returning to surplus as Gulf exports recover, IEA says",
       "source": "Reuters",
-      "summary": "Four oil tankers were struck by explosions in the Strait of Hormuz according to Iranian reports. This follows earlier reports of an oil tanker struck off UAE's Ras Al-Khaimah with all crew reported safe.",
-      "why_matters": "Geopolitical risks in critical energy shipping lanes support elevated oil prices and macro volatility.",
+      "summary": "The IEA reports that global oil markets are moving toward surplus conditions as Gulf producers ramp up exports. This shift suggests near-term relief in commodity prices despite geopolitical tensions.",
+      "why_matters": "Lower energy costs ease inflation pressures and support consumer spending and corporate margins.",
       "tag": "Macro"
     },
     {
-      "headline": "Sitting on big gains in Nvidia? Jim Cramer's advice on what to do next",
+      "headline": "Iran says tanker carrying LNG hit mine, suffered explosion in Hormuz",
+      "source": "Reuters",
+      "summary": "An Iranian LNG tanker reported hitting a mine and sustaining an explosion in the Strait of Hormuz. This incident escalates regional tensions and could threaten global energy supply routes.",
+      "why_matters": "Disruption to Hormuz transit risks spiking oil prices and widening geopolitical risk premiums across equities.",
+      "tag": "Macro"
+    },
+    {
+      "headline": "Nvidia scandal draws in Commerce Secretary Lutnick, who reportedly agrees to testify about China chip sales",
       "source": "CNBC",
-      "summary": "Jim Cramer offered guidance on portfolio management for investors holding large Nvidia positions. The commentary reflects ongoing investor focus on mega-cap technology stocks.",
-      "why_matters": "Nvidia concentration and sentiment drive S&P 500 composition and equity market momentum.",
+      "summary": "Commerce Secretary Lutnick has agreed to testify about Nvidia's China chip sales amid an ongoing scandal. This development signals potential regulatory scrutiny on semiconductor exports and geopolitical trade policy.",
+      "why_matters": "Semiconductor export restrictions could reshape tech sector margins and US-China trade dynamics, pressuring large-cap equities.",
       "tag": "Equities"
     }
   ],
@@ -61,26 +61,20 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "Critical for forward guidance on rates and policy stance, especially given today's announcement of the October 2027 voting change."
+      "note": "Fed communications on rates and policy stance could drive Treasury yields and equity volatility given already-elevated 2Y/10Y moves today."
     },
     {
       "day": "Fri",
-      "event": "Federal Funds Data",
+      "event": "Economic Policy Uncertainty",
       "importance": "high",
-      "note": "Provides real-time insight into interbank lending conditions and monetary policy transmission."
-    },
-    {
-      "day": "Fri",
-      "event": "H.15 Selected Interest Rates",
-      "importance": "medium",
-      "note": "Updates on broader rate structure including prime rate and other benchmark yields affecting credit conditions."
+      "note": "EPU index release may reflect heightened geopolitical and regulatory risks evident in today's Iran/Nvidia headlines and VIX uptick."
     }
   ],
   "concept": {
-    "title": "Geopolitical Risk Premium in Energy Markets",
-    "one_liner": "Strait of Hormuz tensions support crude oil prices near $100 despite broader equity weakness.",
-    "explanation": "Multiple tanker incidents in critical shipping zones (Strait of Hormuz and UAE waters) are sustaining WTI at $99.64 despite a 0.27% S&P 500 decline. Iran-related tensions and Middle East escalation create a structural risk premium that decouples energy from equities. With the VIX falling 1.97 points to 17.49, equity volatility remains subdued even as geopolitical tail risks persist.",
-    "market_link": "Oil price support limits downside risk to energy stocks and inflation expectations, while Strait chokepoint risks justify defensive positioning in energy inflation hedges."
+    "title": "Risk-Off Rotation amid Geopolitical & Regulatory Uncertainty",
+    "one_liner": "Equities decline while bond yields rise and volatility spikes as Iran tensions and tech regulation clouds sentiment.",
+    "explanation": "The S&P 500 fell 1.06% while the VIX rose 1.21 points on Friday morning, driven by geopolitical escalation (Iranian tanker incident), regulatory uncertainty (Nvidia/China chip sales scrutiny), and a steeper yield curve (2Y +17 bps, 10Y +10 bps). EUR/USD weakened as the dollar strengthened, typical of risk-off conditions. Headline risks from Hormuz transit disruptions and semiconductor export policy are elevating policy uncertainty and pulling money into safer rates.",
+    "market_link": "When equity risk premiums widen and yields climb on policy uncertainty, investors typically rotate from stocks to Treasuries and higher-quality assets—a pattern consistent with today's -1.06% S&P move paired with rising VIX and steeper yields."
   },
-  "narrative": "US equities edged down 0.27% to 7577 as Treasury yields rose (10Y +2 bps to 4.88%, 2Y +5 bps to 4.56%), signaling tighter financial conditions despite a Fed policy shift on October 2027 voting. Geopolitical escalation in the Hormuz Strait kept crude near $100, balancing energy concerns against declining volatility (VIX -1.97 to 17.49)."
+  "narrative": "US equities opened down 1.06% on Friday as geopolitical tensions (Iran tanker incident, IAEA concerns), regulatory headwinds (Nvidia China chip testimony), and higher Treasury yields (2Y +17 bps, 10Y +10 bps) triggered a risk-off shift. The VIX climbed to 18.70, the dollar strengthened (EUR/USD -0.0036), and a weakening oil market surplus outlook failed to offset broader uncertainty, signaling cautious sentiment ahead of FOMC communications today."
 }
