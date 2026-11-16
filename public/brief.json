@@ -1,29 +1,29 @@
 {
   "date": "2026-11-16",
-  "generated_at": "2026-11-16T15:10:08.402Z",
+  "generated_at": "2026-11-16T21:44:26.480Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7451",
-      "change": "-92 (-1.22%)",
+      "value": "7400",
+      "change": "-144 (-1.91%)",
       "up": false
     },
     {
       "name": "10Y UST",
-      "value": "5.10%",
-      "change": "N/A bps",
+      "value": "5.15%",
+      "change": "+5.0 bps",
       "up": true
     },
     {
       "name": "2Y UST",
-      "value": "4.86%",
-      "change": "N/A bps",
+      "value": "4.88%",
+      "change": "+2.0 bps",
       "up": true
     },
     {
-      "name": "~DXY",
-      "value": "1.1021 EUR/USD",
-      "change": "-0.0032",
+      "name": "WTI Crude",
+      "value": "$89.62",
+      "change": "$0.00",
       "up": false
     },
     {
@@ -35,46 +35,57 @@
   ],
   "stories": [
     {
-      "headline": "Bitcoin slides to $62,000 following liquidation cascade, then rebounds slightly",
+      "headline": "Eli Lilly makes a deal outside obesity. Plus, another word of caution on Nvidia",
       "source": "CNBC",
-      "summary": "Bitcoin experienced a sharp sell-off that triggered margin liquidations, sliding to $62,000 before recovering partially. The move reflects volatility in digital asset markets amid broader market stress.",
-      "why_matters": "Crypto liquidations can signal deleveraging across asset classes and correlate with equities during risk-off episodes.",
+      "summary": "Eli Lilly announced a strategic deal expanding beyond its obesity franchise while market commentary warns investors to reassess Nvidia exposure. The move signals diversification amid broader equity market caution.",
+      "why_matters": "Signals sector rotation away from mega-cap AI plays toward healthcare diversification",
       "tag": "Equities"
     },
     {
-      "headline": "Nvidia's Colette Kress confronts key questions in first earnings report since Jensen Huang's exit",
-      "source": "CNBC",
-      "summary": "Nvidia's new CFO is navigating her first earnings call amid leadership transition and investor scrutiny. The report will be closely watched for forward guidance and capital allocation signals.",
-      "why_matters": "Nvidia is a mega-cap driver of S&P 500 returns and AI sector sentiment; leadership and guidance shifts directly impact equity valuations.",
-      "tag": "Equities"
+      "name": "2026-11-20 | FOMC Press Release",
+      "importance": "high",
+      "note": "Federal Reserve policy decisions directly influence rate trajectory and equity valuations amid current market volatility"
     },
     {
-      "headline": "Big-ticket holiday items may be harder to find as shipping costs rise",
+      "headline": "U.S. crude oil declines to $87 a barrel on recovering Middle East exports",
       "source": "CNBC",
-      "summary": "Rising freight and logistics expenses are creating supply-chain pressures ahead of the holiday shopping season. Higher shipping costs may be passed to consumers or compress retailer margins.",
-      "why_matters": "Elevated shipping costs are a component of inflation transmission and consumer demand headwinds, affecting rate expectations and retail earnings.",
+      "summary": "Oil prices are declining as Middle East production recovers and exports normalize. This easing of supply constraints helps moderate energy inflation expectations.",
+      "why_matters": "Lower crude supports inflation narrative and reduces cost pressures on corporate earnings",
+      "tag": "Macro"
+    },
+    {
+      "headline": "Bank of Canada Governor Macklem to step down once term ends in 2027 - Reuters",
+      "source": "Reuters",
+      "summary": "The Bank of Canada's Governor Macklem announced plans to step down when his term concludes in 2027. This signals potential policy transition risk for CAD and North American monetary coordination.",
+      "why_matters": "Central bank leadership transitions can affect cross-border capital flows and FX volatility",
       "tag": "Macro"
     }
   ],
   "calendar": [
     {
       "day": "Fri",
-      "event": "FOMC Press Release",
+      "event": "2026-11-20 | FOMC Press Release",
       "importance": "high",
-      "note": "FOMC communications drive rate expectations and near-term equity/bond volatility; this Friday release follows the most recent meeting."
+      "note": "FOMC communication is paramount given elevated VIX (19.30) and S&P selloff; markets await guidance on rate path"
     },
     {
       "day": "Fri",
-      "event": "Economic Policy Uncertainty",
+      "event": "2026-11-20 | Federal Funds Data",
+      "importance": "high",
+      "note": "Official Fed rates data confirms current stance amid 10Y/2Y yield curve repositioning"
+    },
+    {
+      "day": "Fri",
+      "event": "2026-11-20 | Economic Policy Uncertainty",
       "importance": "medium",
-      "note": "EPU index reflects investor sentiment on policy risk; elevated readings often correlate with VIX spikes and equity weakness."
+      "note": "EPU index captures market stress; elevated amid geopolitical headlines and earnings concerns"
     }
   ],
   "concept": {
-    "title": "Cascading Liquidations and Risk-Off Sentiment",
-    "one_liner": "Margin calls in crypto and equities signal deleveraging as VIX rises and growth assets face selling pressure.",
-    "explanation": "Bitcoin's liquidation cascade and the S&P 500's 1.22% decline reflect a risk-off environment where investors are reducing leverage and rotating away from high-beta assets. The VIX uptick to 19.30 and weak equity action, combined with headlines of shipping cost inflation and leadership transitions, suggest a market concerned about both cyclical earnings headwinds and macro uncertainty. The modest long-end Treasury yields (10Y at 5.10%) indicate flight-to-safety demand amid equity weakness.",
-    "market_link": "When leveraged positions unwind, equities, crypto, and credit spreads all suffer; the Friday FOMC release and EPU data will be critical for assessing whether policy support arrives or policy risk escalates further."
+    "title": "Rate Volatility + Equity Selloff = Flight to Quality",
+    "one_liner": "Rising long-end yields (10Y +5bps) amid equity weakness (-1.91%) signals repricing of growth and Fed path",
+    "explanation": "The S&P 500 declined 1.91% while 10Y Treasury yields rose 5 basis points, a classic bearish steepening pattern. This suggests investors are simultaneously reducing equity exposure and demanding higher yields on safe-haven bonds. The uptick in VIX to 19.30 and mixed messaging on mega-cap tech (Nvidia caution vs. J&J strength) indicate selective de-risking rather than broad panic, but the direction is toward defensive repositioning ahead of Friday's FOMC press release.",
+    "market_link": "With FOMC communication Friday and crude stabilizing around $89.62, the narrative hinges on whether the Fed signals cuts or holds—a decision that will either validate the equity selloff or trigger a relief rally"
   },
-  "narrative": "US equities fell 1.22% and VIX rose 0.60 to 19.30 on Friday amid liquidation cascades in crypto and broad deleveraging pressure, while headline risks from supply-chain inflation and corporate leadership transitions weigh on sentiment heading into a holiday-shortened week that culminates in an FOMC press release."
+  "narrative": "U.S. equities fell 1.91% to 7400 as long-end Treasury yields rose 5bps to 5.15%, signaling a tactical shift toward safety and re-pricing of Fed policy expectations ahead of Friday's FOMC press release. Oil stabilization and mixed sector momentum (Lilly diversification, Nvidia skepticism) suggest rotational weakness rather than systemic capitulation, but elevated VIX (19.30) reflects genuine near-term uncertainty."
 }
