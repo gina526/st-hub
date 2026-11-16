@@ -1,92 +1,80 @@
 {
-  "date": "2026-11-13",
-  "generated_at": "2026-11-13T19:20:39.092Z",
+  "date": "2026-11-16",
+  "generated_at": "2026-11-16T15:10:08.402Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7537",
-      "change": "-34 (-0.45%)",
+      "value": "7451",
+      "change": "-92 (-1.22%)",
       "up": false
     },
     {
       "name": "10Y UST",
-      "value": "4.98%",
-      "change": "+10.0 bps",
+      "value": "5.10%",
+      "change": "N/A bps",
       "up": true
     },
     {
       "name": "2Y UST",
-      "value": "4.73%",
-      "change": "+17.0 bps",
+      "value": "4.86%",
+      "change": "N/A bps",
       "up": true
     },
     {
       "name": "~DXY",
-      "value": "1.1053 EUR/USD",
-      "change": "-0.0036",
+      "value": "1.1021 EUR/USD",
+      "change": "-0.0032",
       "up": false
     },
     {
       "name": "VIX",
-      "value": "18.70",
-      "change": "+1.21",
+      "value": "19.30",
+      "change": "+0.60",
       "up": true
     }
   ],
   "stories": [
     {
-      "headline": "Bessent, Fed's Goolsbee divided on role of energy shock in inflation - Reuters [2026-11-13]",
-      "source": "Reuters",
-      "summary": "Treasury Secretary Bessent and Federal Reserve official Goolsbee disagreed on whether energy price movements are a driver of inflation. This divergence reflects ongoing debate within policymaking circles on inflation transmission mechanisms.",
-      "why_matters": "Conflicting views on energy's inflation role could signal policy uncertainty as rates have risen 10–17 bps this week.",
-      "tag": "Rates"
-    },
-    {
-      "headline": "Goldman Sachs looks to cash in on Anthropic's IPO, twice. Here's how and who else wants to [2026-11-13]",
+      "headline": "Bitcoin slides to $62,000 following liquidation cascade, then rebounds slightly",
       "source": "CNBC",
-      "summary": "Goldman Sachs is positioning itself to benefit from Anthropic's initial public offering through multiple revenue channels. Other major financial players are also seeking exposure to the AI company's market debut.",
-      "why_matters": "Major AI IPO activity indicates continued equity capital demand despite S&P 500's 0.45% decline today.",
+      "summary": "Bitcoin experienced a sharp sell-off that triggered margin liquidations, sliding to $62,000 before recovering partially. The move reflects volatility in digital asset markets amid broader market stress.",
+      "why_matters": "Crypto liquidations can signal deleveraging across asset classes and correlate with equities during risk-off episodes.",
       "tag": "Equities"
     },
     {
-      "headline": "EXCLUSIVE: Iraq turns to trucks to export oil in overland Syrian route revival - Reuters [2026-11-13]",
-      "source": "Reuters",
-      "summary": "Iraq is reviving an overland export route through Syria using trucks to ship oil, circumventing traditional maritime channels. This shift reflects geopolitical adaptation in Middle Eastern energy logistics.",
-      "why_matters": "Alternative oil export routes affect global crude supply dynamics and potential energy price trajectories relevant to inflation and equity markets.",
+      "headline": "Nvidia's Colette Kress confronts key questions in first earnings report since Jensen Huang's exit",
+      "source": "CNBC",
+      "summary": "Nvidia's new CFO is navigating her first earnings call amid leadership transition and investor scrutiny. The report will be closely watched for forward guidance and capital allocation signals.",
+      "why_matters": "Nvidia is a mega-cap driver of S&P 500 returns and AI sector sentiment; leadership and guidance shifts directly impact equity valuations.",
+      "tag": "Equities"
+    },
+    {
+      "headline": "Big-ticket holiday items may be harder to find as shipping costs rise",
+      "source": "CNBC",
+      "summary": "Rising freight and logistics expenses are creating supply-chain pressures ahead of the holiday shopping season. Higher shipping costs may be passed to consumers or compress retailer margins.",
+      "why_matters": "Elevated shipping costs are a component of inflation transmission and consumer demand headwinds, affecting rate expectations and retail earnings.",
       "tag": "Macro"
     }
   ],
   "calendar": [
     {
       "day": "Fri",
-      "event": "FOMC Press Release [2026-11-13]",
+      "event": "FOMC Press Release",
       "importance": "high",
-      "note": "FOMC communications today could explain elevated 2Y/10Y yields (+17/+10 bps) and influence forward guidance expectations."
+      "note": "FOMC communications drive rate expectations and near-term equity/bond volatility; this Friday release follows the most recent meeting."
     },
     {
       "day": "Fri",
-      "event": "Federal Funds Data [2026-11-13]",
-      "importance": "high",
-      "note": "Real-time Fed operational data critical for assessing monetary policy transmission as VIX has risen 1.21 points."
-    },
-    {
-      "day": "Fri",
-      "event": "Economic Policy Uncertainty [2026-11-13]",
+      "event": "Economic Policy Uncertainty",
       "importance": "medium",
-      "note": "EPU readings help contextualize the 45 bp equity selloff and rising volatility environment."
-    },
-    {
-      "day": "Fri",
-      "event": "Key ECB Interest Rates [2026-11-13]",
-      "importance": "medium",
-      "note": "ECB rate decisions influence EUR/USD (down 0.36%) and broader dollar strength signals."
+      "note": "EPU index reflects investor sentiment on policy risk; elevated readings often correlate with VIX spikes and equity weakness."
     }
   ],
   "concept": {
-    "title": "Divergence Inflation Signals Amid Rising Yields",
-    "one_liner": "Policy makers split on energy's inflation role while Treasury yields spike, creating tactical uncertainty for equities.",
-    "explanation": "Treasury yields rose sharply today (+10 bps on 10Y, +17 bps on 2Y) amid FOMC communication and conflicting inflation narratives between Bessent and Goolsbee. The S&P 500 fell 0.45% and VIX climbed 1.21, signaling risk-off sentiment. This disconnect suggests markets are pricing in either persistent inflation or policy hawkishness without consensus on the underlying driver.",
-    "market_link": "When rate expectations rise while inflation narratives fracture, equity valuations face compression risk and volatility expands—classic sell signal."
+    "title": "Cascading Liquidations and Risk-Off Sentiment",
+    "one_liner": "Margin calls in crypto and equities signal deleveraging as VIX rises and growth assets face selling pressure.",
+    "explanation": "Bitcoin's liquidation cascade and the S&P 500's 1.22% decline reflect a risk-off environment where investors are reducing leverage and rotating away from high-beta assets. The VIX uptick to 19.30 and weak equity action, combined with headlines of shipping cost inflation and leadership transitions, suggest a market concerned about both cyclical earnings headwinds and macro uncertainty. The modest long-end Treasury yields (10Y at 5.10%) indicate flight-to-safety demand amid equity weakness.",
+    "market_link": "When leveraged positions unwind, equities, crypto, and credit spreads all suffer; the Friday FOMC release and EPU data will be critical for assessing whether policy support arrives or policy risk escalates further."
   },
-  "narrative": "S&P 500 declined 0.45% as Treasury yields surged (+10–17 bps) and VIX rose on FOMC-day communications and conflicting inflation views between top officials. Dollar strength (EUR/USD down 0.36%) and rising rate volatility reflect heightened economic policy uncertainty amid debate over energy shocks and Fed forward guidance."
+  "narrative": "US equities fell 1.22% and VIX rose 0.60 to 19.30 on Friday amid liquidation cascades in crypto and broad deleveraging pressure, while headline risks from supply-chain inflation and corporate leadership transitions weigh on sentiment heading into a holiday-shortened week that culminates in an FOMC press release."
 }
