@@ -1,11 +1,11 @@
 {
-  "date": "2026-11-16",
-  "generated_at": "2026-11-16T21:44:26.480Z",
+  "date": "2026-11-17",
+  "generated_at": "2026-11-17T15:17:48.814Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7400",
-      "change": "-144 (-1.91%)",
+      "value": "7368",
+      "change": "-32 (-0.43%)",
       "up": false
     },
     {
@@ -21,71 +21,72 @@
       "up": true
     },
     {
-      "name": "WTI Crude",
-      "value": "$89.62",
-      "change": "$0.00",
+      "name": "~DXY",
+      "value": "1.0996",
+      "change": "-0.0025",
       "up": false
     },
     {
       "name": "VIX",
-      "value": "19.30",
-      "change": "+0.60",
+      "value": "22.91",
+      "change": "+3.61",
       "up": true
     }
   ],
   "stories": [
     {
-      "headline": "Eli Lilly makes a deal outside obesity. Plus, another word of caution on Nvidia",
+      "headline": "Homebuilder sentiment plunges to 14-year low, leading more builders to drop prices",
       "source": "CNBC",
-      "summary": "Eli Lilly announced a strategic deal expanding beyond its obesity franchise while market commentary warns investors to reassess Nvidia exposure. The move signals diversification amid broader equity market caution.",
-      "why_matters": "Signals sector rotation away from mega-cap AI plays toward healthcare diversification",
+      "summary": "US homebuilder confidence has collapsed to its lowest level in 14 years, forcing developers to reduce asking prices to attract buyers. This signals weakening demand in residential real estate amid elevated mortgage rates.",
+      "why_matters": "Housing weakness suggests consumer confidence erosion and potential drag on GDP growth ahead.",
+      "tag": "Macro"
+    },
+    {
+      "headline": "Investors look to Nvidia's earnings and Anthropic's IPO to refresh the tech rally",
+      "source": "CNBC",
+      "summary": "Markets are pivoting to major tech catalysts including Nvidia earnings results and Anthropic's highly anticipated IPO debut. These events are expected to reignite momentum in the artificial intelligence and semiconductor sectors.",
+      "why_matters": "Tech earnings and IPO reception will test equity valuations and signal investor appetite for growth after recent S&P 500 weakness.",
       "tag": "Equities"
     },
     {
-      "name": "2026-11-20 | FOMC Press Release",
-      "importance": "high",
-      "note": "Federal Reserve policy decisions directly influence rate trajectory and equity valuations amid current market volatility"
-    },
-    {
-      "headline": "U.S. crude oil declines to $87 a barrel on recovering Middle East exports",
-      "source": "CNBC",
-      "summary": "Oil prices are declining as Middle East production recovers and exports normalize. This easing of supply constraints helps moderate energy inflation expectations.",
-      "why_matters": "Lower crude supports inflation narrative and reduces cost pressures on corporate earnings",
-      "tag": "Macro"
-    },
-    {
-      "headline": "Bank of Canada Governor Macklem to step down once term ends in 2027 - Reuters",
-      "source": "Reuters",
-      "summary": "The Bank of Canada's Governor Macklem announced plans to step down when his term concludes in 2027. This signals potential policy transition risk for CAD and North American monetary coordination.",
-      "why_matters": "Central bank leadership transitions can affect cross-border capital flows and FX volatility",
-      "tag": "Macro"
+      "headline": "FOMC Press Release",
+      "source": "Federal Reserve",
+      "summary": "The Federal Reserve's policy announcement and guidance on interest rates is scheduled for release on November 20. This follows recent yield curve steepening with 10Y yields rising 5 bps.",
+      "why_matters": "FOMC communications will determine near-term rate expectations and bond market direction given current 5.15% 10Y yield and elevated VIX at 22.91.",
+      "tag": "Rates"
     }
   ],
   "calendar": [
     {
       "day": "Fri",
-      "event": "2026-11-20 | FOMC Press Release",
+      "event": "FOMC Press Release",
       "importance": "high",
-      "note": "FOMC communication is paramount given elevated VIX (19.30) and S&P selloff; markets await guidance on rate path"
+      "note": "Federal Reserve policy decision will anchor rate expectations; critical given 10Y already up 5 bps this week."
     },
     {
       "day": "Fri",
-      "event": "2026-11-20 | Federal Funds Data",
+      "event": "Economic Policy Uncertainty",
       "importance": "high",
-      "note": "Official Fed rates data confirms current stance amid 10Y/2Y yield curve repositioning"
+      "note": "EPU index reflects market stress; elevated VIX at 22.91 suggests data will be closely watched."
     },
     {
       "day": "Fri",
-      "event": "2026-11-20 | Economic Policy Uncertainty",
+      "event": "H.15 Selected Interest Rates",
       "importance": "medium",
-      "note": "EPU index captures market stress; elevated amid geopolitical headlines and earnings concerns"
+      "note": "Interest rate survey will provide context on Fed policy transmission amid ongoing yield volatility."
+    },
+    {
+      "day": "Fri",
+      "event": "Federal Funds Data",
+      "importance": "high",
+      "note": "Fed funds rate data confirms current policy stance affecting mortgage rates and homebuilder sentiment."
     }
   ],
   "concept": {
-    "title": "Rate Volatility + Equity Selloff = Flight to Quality",
-    "one_liner": "Rising long-end yields (10Y +5bps) amid equity weakness (-1.91%) signals repricing of growth and Fed path",
-    "explanation": "The S&P 500 declined 1.91% while 10Y Treasury yields rose 5 basis points, a classic bearish steepening pattern. This suggests investors are simultaneously reducing equity exposure and demanding higher yields on safe-haven bonds. The uptick in VIX to 19.30 and mixed messaging on mega-cap tech (Nvidia caution vs. J&J strength) indicate selective de-risking rather than broad panic, but the direction is toward defensive repositioning ahead of Friday's FOMC press release.",
-    "market_link": "With FOMC communication Friday and crude stabilizing around $89.62, the narrative hinges on whether the Fed signals cuts or holds—a decision that will either validate the equity selloff or trigger a relief rally"
+    "title": "Yield Curve Steepening & Housing Demand Collapse",
+    "one_liner": "Rising long-end rates (10Y +5 bps) are compressing affordability just as homebuilder sentiment hits a 14-year low, creating a vicious cycle of reduced demand and price capitulation.",
+    "explanation": "The 10Y Treasury moved 5 bps higher to 5.15% while 2Y rose only 2 bps, steepening the curve but locking in higher mortgage rates for marginal buyers. Simultaneously, homebuilder sentiment plunged to its worst level in 14 years, forcing price cuts. This dynamic reveals rate sensitivity in housing and consumer resilience stress—a leading indicator of potential GDP weakness ahead of Friday's FOMC decision.",
+    "market_link": "S&P 500 down 0.43% and VIX up 3.61 points reflect this macro headwind; Nvidia earnings and Anthropic IPO (Friday/this week) will test whether growth-at-any-cost thesis survives housing deterioration."
   },
-  "narrative": "U.S. equities fell 1.91% to 7400 as long-end Treasury yields rose 5bps to 5.15%, signaling a tactical shift toward safety and re-pricing of Fed policy expectations ahead of Friday's FOMC press release. Oil stabilization and mixed sector momentum (Lilly diversification, Nvidia skepticism) suggest rotational weakness rather than systemic capitulation, but elevated VIX (19.30) reflects genuine near-term uncertainty."
+  "narrative": "Equities declined 0.43% while volatility spiked 3.61 VIX points as homebuilder sentiment hit a 14-year low amid rising rates (10Y +5 bps to 5.15%), signaling housing demand stress that could weigh on consumer confidence and GDP growth. Markets await Friday's FOMC release and major tech catalysts (Nvidia, Anthropic IPO) to determine whether the rally can be sustained or if rate-driven headwinds will dominate."
 }
