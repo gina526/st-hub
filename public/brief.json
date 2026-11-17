@@ -1,11 +1,11 @@
 {
   "date": "2026-11-17",
-  "generated_at": "2026-11-17T15:17:48.814Z",
+  "generated_at": "2026-11-17T20:35:09.504Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7368",
-      "change": "-32 (-0.43%)",
+      "value": "7312",
+      "change": "-87 (-1.18%)",
       "up": false
     },
     {
@@ -21,39 +21,39 @@
       "up": true
     },
     {
-      "name": "~DXY",
-      "value": "1.0996",
-      "change": "-0.0025",
-      "up": false
-    },
-    {
       "name": "VIX",
       "value": "22.91",
       "change": "+3.61",
       "up": true
+    },
+    {
+      "name": "WTI Crude",
+      "value": "$89.62",
+      "change": "$0.00",
+      "up": false
     }
   ],
   "stories": [
     {
-      "headline": "Homebuilder sentiment plunges to 14-year low, leading more builders to drop prices",
+      "headline": "Wall Street's fear gauge is surging again and this time it's not just about AI jitters",
       "source": "CNBC",
-      "summary": "US homebuilder confidence has collapsed to its lowest level in 14 years, forcing developers to reduce asking prices to attract buyers. This signals weakening demand in residential real estate amid elevated mortgage rates.",
-      "why_matters": "Housing weakness suggests consumer confidence erosion and potential drag on GDP growth ahead.",
-      "tag": "Macro"
-    },
-    {
-      "headline": "Investors look to Nvidia's earnings and Anthropic's IPO to refresh the tech rally",
-      "source": "CNBC",
-      "summary": "Markets are pivoting to major tech catalysts including Nvidia earnings results and Anthropic's highly anticipated IPO debut. These events are expected to reignite momentum in the artificial intelligence and semiconductor sectors.",
-      "why_matters": "Tech earnings and IPO reception will test equity valuations and signal investor appetite for growth after recent S&P 500 weakness.",
+      "summary": "The VIX jumped 3.61 points to 22.91, signaling renewed market anxiety beyond sector-specific concerns. Broader volatility is spiking as investors reassess risk across equities.",
+      "why_matters": "Rising fear gauge typically precedes equity pullbacks and influences Fed policy expectations.",
       "tag": "Equities"
     },
     {
-      "headline": "FOMC Press Release",
-      "source": "Federal Reserve",
-      "summary": "The Federal Reserve's policy announcement and guidance on interest rates is scheduled for release on November 20. This follows recent yield curve steepening with 10Y yields rising 5 bps.",
-      "why_matters": "FOMC communications will determine near-term rate expectations and bond market direction given current 5.15% 10Y yield and elevated VIX at 22.91.",
-      "tag": "Rates"
+      "headline": "Wall Street falters ahead of Nvidia earnings, Anthropic debut",
+      "source": "Reuters",
+      "summary": "The S&P 500 fell 87 points (-1.18%) as markets await major tech earnings and new IPO listings. Investor sentiment is fragile ahead of key corporate events.",
+      "why_matters": "Mega-cap tech earnings drive equity valuations and broader market direction; Anthropic debut signals AI sector momentum.",
+      "tag": "Equities"
+    },
+    {
+      "headline": "Yemen's Houthis say they launched drones towards Saudi East-West pipeline",
+      "source": "Reuters",
+      "summary": "Houthi forces reported launching drone strikes against critical Saudi oil infrastructure. Geopolitical tensions in the Middle East continue to escalate.",
+      "why_matters": "Oil supply disruptions drive WTI prices and inflation expectations; crude currently at $89.62 with no change but risk remains elevated.",
+      "tag": "Macro"
     }
   ],
   "calendar": [
@@ -61,32 +61,26 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "Federal Reserve policy decision will anchor rate expectations; critical given 10Y already up 5 bps this week."
-    },
-    {
-      "day": "Fri",
-      "event": "Economic Policy Uncertainty",
-      "importance": "high",
-      "note": "EPU index reflects market stress; elevated VIX at 22.91 suggests data will be closely watched."
-    },
-    {
-      "day": "Fri",
-      "event": "H.15 Selected Interest Rates",
-      "importance": "medium",
-      "note": "Interest rate survey will provide context on Fed policy transmission amid ongoing yield volatility."
+      "note": "Federal Reserve communications drive Treasury yields and equity sentiment; 10Y and 2Y both moved higher, signaling rate expectations remain anchored."
     },
     {
       "day": "Fri",
       "event": "Federal Funds Data",
       "importance": "high",
-      "note": "Fed funds rate data confirms current policy stance affecting mortgage rates and homebuilder sentiment."
+      "note": "Official Fed funds data influences short-end Treasury pricing and policy trajectory expectations."
+    },
+    {
+      "day": "Fri",
+      "event": "Economic Policy Uncertainty",
+      "importance": "medium",
+      "note": "EPU index reflects investor concerns about macro shocks; relevant given current geopolitical tensions and earnings volatility."
     }
   ],
   "concept": {
-    "title": "Yield Curve Steepening & Housing Demand Collapse",
-    "one_liner": "Rising long-end rates (10Y +5 bps) are compressing affordability just as homebuilder sentiment hits a 14-year low, creating a vicious cycle of reduced demand and price capitulation.",
-    "explanation": "The 10Y Treasury moved 5 bps higher to 5.15% while 2Y rose only 2 bps, steepening the curve but locking in higher mortgage rates for marginal buyers. Simultaneously, homebuilder sentiment plunged to its worst level in 14 years, forcing price cuts. This dynamic reveals rate sensitivity in housing and consumer resilience stress—a leading indicator of potential GDP weakness ahead of Friday's FOMC decision.",
-    "market_link": "S&P 500 down 0.43% and VIX up 3.61 points reflect this macro headwind; Nvidia earnings and Anthropic IPO (Friday/this week) will test whether growth-at-any-cost thesis survives housing deterioration."
+    "title": "Fear Gauge Surge amid Earnings & Geopolitical Risk",
+    "one_liner": "Rising VIX, falling equities, and stable-to-higher yields reflect a market torn between tech earnings jitters and Middle East tensions.",
+    "explanation": "The S&P 500 dropped 1.18% while VIX spiked 3.61 points, suggesting investors are repricing risk ahead of Nvidia earnings and broader macro uncertainty. Treasury yields climbed slightly (10Y +5 bps, 2Y +2 bps), indicating the Fed's policy stance remains firm even as growth concerns mount. Houthi drone threats to Saudi oil infrastructure add geopolitical tail risk, keeping crude near $89.62 and inflation expectations in focus.",
+    "market_link": "Elevated VIX typically caps equity rallies; Treasuries higher suggest 'risk-off' flows; Houthi strikes could spike oil if infrastructure damage widens."
   },
-  "narrative": "Equities declined 0.43% while volatility spiked 3.61 VIX points as homebuilder sentiment hit a 14-year low amid rising rates (10Y +5 bps to 5.15%), signaling housing demand stress that could weigh on consumer confidence and GDP growth. Markets await Friday's FOMC release and major tech catalysts (Nvidia, Anthropic IPO) to determine whether the rally can be sustained or if rate-driven headwinds will dominate."
+  "narrative": "U.S. equities fell 1.18% and VIX surged 3.61 points as nervousness builds ahead of Nvidia earnings and new IPO debuts, while Middle East tensions (Yemen Houthi drone strikes) add geopolitical risk; Treasuries edged higher with 10Y at 5.15%, reflecting persistent inflation and Fed policy expectations amid slowing growth signals."
 }
