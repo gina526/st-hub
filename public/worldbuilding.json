@@ -1,5 +1,132 @@
 [
   {
+    "date": "2026-11-17",
+    "blocks": [
+      {
+        "term": "10-Year US Treasury Yield (10Y UST)",
+        "category": "rates",
+        "bullets": [
+          "Currently 5.15%, up 5 basis points today—steepest move of the yield curve",
+          "Long-end yields rising faster than short-end (2Y up only 2 bps) = curve steepening signal",
+          "10Y directly anchors 30-year mortgage rates; each 5 bps move increases monthly payment ~$10–15 per $100K borrowed",
+          "At 5.15%, mortgage affordability index compressing exactly as homebuilders report 14-year sentiment lows—causal linkage",
+          "FOMC decision Friday will either validate or correct this 5 bps move; market repricing rate-cut odds downward",
+          "Steeper curve benefits bond traders (selling long duration, buying short) but signals growth concerns ahead"
+        ],
+        "so_what": "On a rates desk, you're watching whether the 5 bps move holds or reverses post-FOMC; if 10Y stays above 5.15%, mortgage origination volume drops further, which is a leading indicator clients in housing finance/real estate are about to cut capex and hiring."
+      },
+      {
+        "term": "2-Year US Treasury Yield (2Y UST)",
+        "category": "rates",
+        "bullets": [
+          "Currently 4.88%, up only 2 basis points vs. 5 bps on 10Y—demonstrating curve steepening (10Y-2Y spread widening)",
+          "2Y moves are Fed-sensitive; small rise suggests market still pricing in potential rate cuts in 2027, not immediate hikes",
+          "Inversion risk (2Y > 10Y) has been a recession predictor; today's steepening reverses that risk signal slightly",
+          "Market implies Fed will not cut rates into 2027 as aggressively as priced 3 weeks ago; near-term terminal rate holding",
+          "Carry trade unwind risk: if 2Y-10Y spread continues steepening, it attracts 'boring' duration buyers (pensions, insurance)"
+        ],
+        "so_what": "Salespeople on government trading desks use the 2Y-10Y slope to pitch positioning: if steepening persists, clients ladder into 2Y/5Y/10Y bonds for yield pickup without taking duration risk; if curve flattens again, they go defensive with short-duration bills."
+      },
+      {
+        "term": "S&P 500 Index",
+        "category": "equities",
+        "bullets": [
+          "Currently 7368, down 32 points (-0.43%) on day—modest decline despite elevated VIX and housing data",
+          "Decline is not capitulation (would be -2% to -3%); suggests selective selling into strength or profit-taking",
+          "Market is bifurcated: mega-cap tech (Nvidia, Anthropic IPO hopeful) still supported, while rate-sensitive sectors (Financials, REITs) under pressure",
+          "Homebuilder sentiment collapse (14-year low) has historically preceded 3–6 month equity weakness via consumer confidence erosion",
+          "Nvidia earnings and Anthropic IPO this week are FOMC-timed catalysts to validate whether growth stocks can decouple from housing deterioration"
+        ],
+        "so_what": "Equity sales reps are fielding calls from asset managers asking: 'Is this a housing rotation or the start of a broader sell-off?' You need to explain that tech earnings (Friday) + FOMC (Friday) will determine if 7368 holds or breaks lower; until then, clients are hedging with puts rather than selling outright."
+      },
+      {
+        "term": "VIX (Volatility Index)",
+        "category": "volatility",
+        "bullets": [
+          "Currently 22.91, up 3.61 points—above the 15–20 'complacency zone' but below 30 (panic threshold)",
+          "Elevated VIX reflects uncertainty around FOMC (Friday) + housing data + tech earnings; not crisis-level but material risk-off shift",
+          "VIX of 22.91 implies ~30-day realized volatility will be ~23%; options traders are pricing tail risk in equity indices",
+          "Housing news + curve steepening typically pushes VIX toward 25–28 as portfolio rebalancing triggers protective buying",
+          "Friday FOMC decision is a volatile event risk; VIX tends to spike into Fed releases if expectations are misaligned"
+        ],
+        "so_what": "Volatility traders and equity derivatives salespeople are selling upside calls (betting vol contracts as VIX mean-reverts post-FOMC) and buying puts for clients hedging Friday event risk; at 22.91, vol is expensive enough to sell into weakness but not expensive enough to panic-buy."
+      },
+      {
+        "term": "US Dollar Index (DXY)",
+        "category": "fx",
+        "bullets": [
+          "Currently 1.0996, down 0.0025 (-0.23%) despite rising Treasury yields—counterintuitive weakness",
+          "Normally, 10Y yields +5 bps should support DXY via higher real rates; weakness suggests risk-off FX flow or EM carry unwind",
+          "Housing data weakness = recession risk = dollar weakness (USD typically weakens in recession as risk appetite declines globally)",
+          "DXY down while 10Y up = 'Volcker-era terminal rate' priced in; bonds rising because growth slowing, not because Fed is hawkish",
+          "FOMC Friday critical: if Fed signals cuts or pauses, DXY could break lower; if Fed stays hawkish, DXY stabilizes or rebounds"
+        ],
+        "so_what": "FX salespeople pitching to corporates: if DXY breaks 1.09 (EM strength), exporters should consider hedging revenues; if DXY rallies post-FOMC, importers buy forward protection. Dollar weakness today despite yield strength is a subtle risk signal."
+      },
+      {
+        "term": "Yield Curve Steepening & Rate Transmission Mechanism",
+        "category": "rates",
+        "bullets": [
+          "Steepening = 10Y-2Y spread widening (long yields rising faster than short yields); today: 10Y +5bps, 2Y +2bps = +3bps flattening reversal",
+          "Mortgage rate = 10Y Treasury yield + ~1.5–2.0% lender spread; 5 bps move = $10–15 monthly payment increase per $100K borrowed",
+          "Homebuilders are price-takers in a yield-driven market: when 10Y rises, demand-side buyer affordability collapses instantly; supply-side pricing power vanishes",
+          "Fed Funds rate (set by FOMC Friday) controls overnight rate; 2Y yields move on Fed rate expectations; 10Y moves on growth + inflation expectations",
+          "Today's steepening signals market expects Fed to hold/pause rates longer than previously thought, while long-end reprices lower growth outlook"
+        ],
+        "so_what": "Rate strategists pitch steepening trades (buy 10Y, sell 2Y, or buy long-dated swaps) to clients expecting growth slowdown; homebuilders and mortgage originators are natural hedgers selling duration into this curve, creating bid-ask imbalance you can trade around."
+      },
+      {
+        "term": "Homebuilder Sentiment Collapse & Housing Demand Elasticity",
+        "category": "macro",
+        "bullets": [
+          "Sentiment hit 14-year low (last time: 2012 post-crisis); indicates builder confidence in future orders deteriorating rapidly",
+          "Housing is the most rate-sensitive sector of the economy: 1% yield move = 15–20% demand swing in marginal buyers",
+          "Price cuts signal builders cannot pass through cost inflation; margin compression ahead unless volumes stabilize",
+          "Housing weakness = leading economic indicator (precedes consumer spending erosion by 2–3 quarters); GDP growth at risk",
+          "Consumer confidence linkage: weak housing = reduced home equity extraction = reduced consumer spending = potential recession signal"
+        ],
+        "so_what": "Macro salespeople use housing sentiment as a 'canary in the coal mine' for clients: when builders capitulate, consumption models need downward revisions, and equity analysts cut FY2027 earnings. This is a sell trigger for 2025–2026 earnings-dependent equities."
+      },
+      {
+        "term": "Tech Earnings & IPO Catalysts (Nvidia, Anthropic) as Growth Counterweight",
+        "category": "equities",
+        "bullets": [
+          "Nvidia earnings + Anthropic IPO both scheduled this week (around FOMC Friday); intentional or coincidental market test",
+          "Market narrative: if Nvidia beats and Anthropic IPO oversubscribed, growth-at-any-cost thesis survives housing downturn",
+          "If Nvidia guides lower or Anthropic IPO is weak, it signals AI/semiconductor enthusiasm is slowing—major risk-off catalyst",
+          "AI/semiconductor stocks have outperformed 65% YTD; they are the primary S&P 500 price engine; weakness here is systemic",
+          "This week is a 'prove it' moment for equities: either tech earnings validate 7368 as a floor, or housing recession fears dominate"
+        ],
+        "so_what": "Equity sales pitches around Nvidia/Anthropic are binary: clients are either overweighting tech (betting on AI productivity cycle) or underweighting it (hedging rate/recession risk). Your job is to quantify which thesis is embedded in client positioning and suggest portfolio rebalancing accordingly."
+      },
+      {
+        "term": "Federal Reserve Policy Decision (FOMC) & Rate Expectations Anchoring",
+        "category": "rates",
+        "bullets": [
+          "FOMC decision Friday (Nov 20) will announce Fed Funds rate unchanged or changed, plus forward guidance on 2027",
+          "Fed Funds rate currently set by FOMC; market is pricing ~90% odds of hold, ~10% odds of small cut (unlikely on Nov 20)",
+          "FOMC communications ('dot plot' + Chair Powell press conference) will reset rate-cut expectations for 2027; critical for 2Y-10Y repricing",
+          "Housing data strength + curve steepening suggest Fed will NOT cut rates as aggressively as priced 6 weeks ago",
+          "If Fed signals 'patient' or 'paused' stance, 10Y could rise further; if Fed signals cuts, 10Y could fall 5–10 bps instantly"
+        ],
+        "so_what": "Bond traders are front-running FOMC by positioning for steepening (long 10Y, short 2Y); fixed income sales reps are advising clients to stay underweight duration until FOMC guidance clarifies. This is THE event risk for rates this week—position sizing happens around it."
+      },
+      {
+        "term": "Economic Policy Uncertainty (EPU) & Risk-Off Sentiment",
+        "category": "macro",
+        "bullets": [
+          "EPU index reflects survey-based measure of business uncertainty; elevated reading (Friday calendar) suggests elevated economic stress",
+          "Risk-off sentiment shown by: VIX +3.61, S&P -0.43%, DXY down (dollar weakness = EM carry unwind), housing collapse",
+          "Elevated EPU typically precedes inventory correction, capex cuts, and hiring freezes (3–6 month lag)",
+          "Causes: Fed policy uncertainty (FOMC Friday), housing recession risk, geopolitical events, election cycles",
+          "EPU inversion signal: when EPU spikes and equity volatility spikes, it usually precedes recession within 12 months"
+        ],
+        "so_what": "Credit and corporate strategists monitor EPU as a leading input to default rate models; when EPU + VIX diverge (vol high, EPU low), spreads typically tighten; when both rise together, it's a recession warning and a sell credit signal."
+      }
+    ],
+    "narrative": "US equities declined 0.43% to 7368 as homebuilder sentiment collapsed to its 14-year low, signaling housing demand erosion driven by rising mortgage rates (10Y Treasury +5 bps to 5.15%). The yield curve steepened (10Y +5 bps vs. 2Y +2 bps), suggesting the market is pricing slower growth ahead rather than Fed hawkishness, with VIX spiking 3.61 points to 22.91 and DXY weakening despite higher yields—a classic risk-off setup. Markets are awaiting Friday's FOMC decision and major tech catalysts (Nvidia earnings, Anthropic IPO) to determine whether growth-driven equities can decouple from rate-induced housing deterioration or if near-term recession concerns will dominate."
+  },
+  {
     "date": "2026-11-16",
     "blocks": [
       {
