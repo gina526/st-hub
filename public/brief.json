@@ -1,59 +1,59 @@
 {
-  "date": "2026-11-17",
-  "generated_at": "2026-11-17T20:35:09.504Z",
+  "date": "2026-11-18",
+  "generated_at": "2026-11-18T15:04:28.638Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7312",
-      "change": "-87 (-1.18%)",
-      "up": false
+      "value": "7329",
+      "change": "4 (0.06%)",
+      "up": true
     },
     {
       "name": "10Y UST",
-      "value": "5.15%",
-      "change": "+5.0 bps",
+      "value": "5.12%",
+      "change": "-3.0 bps",
       "up": true
     },
     {
       "name": "2Y UST",
-      "value": "4.88%",
-      "change": "+2.0 bps",
+      "value": "4.83%",
+      "change": "-5.0 bps",
       "up": true
+    },
+    {
+      "name": "~DXY",
+      "value": "1.0997 EUR/USD",
+      "change": "0.0001",
+      "up": false
     },
     {
       "name": "VIX",
-      "value": "22.91",
-      "change": "+3.61",
-      "up": true
-    },
-    {
-      "name": "WTI Crude",
-      "value": "$89.62",
-      "change": "$0.00",
+      "value": "25.46",
+      "change": "2.55",
       "up": false
     }
   ],
   "stories": [
     {
-      "headline": "Wall Street's fear gauge is surging again and this time it's not just about AI jitters",
+      "headline": "Small investor enthusiasm for Anthropic IPO to rival SpaceX debut",
       "source": "CNBC",
-      "summary": "The VIX jumped 3.61 points to 22.91, signaling renewed market anxiety beyond sector-specific concerns. Broader volatility is spiking as investors reassess risk across equities.",
-      "why_matters": "Rising fear gauge typically precedes equity pullbacks and influences Fed policy expectations.",
+      "summary": "Retail investor interest in the Anthropic IPO is building momentum comparable to the SpaceX listing debut. The offering signals continued capital market appetite for AI-focused technology companies.",
+      "why_matters": "AI IPO demand reflects persistent equity market confidence in AI innovation despite bubble concerns cited in concurrent headlines.",
       "tag": "Equities"
     },
     {
-      "headline": "Wall Street falters ahead of Nvidia earnings, Anthropic debut",
-      "source": "Reuters",
-      "summary": "The S&P 500 fell 87 points (-1.18%) as markets await major tech earnings and new IPO listings. Investor sentiment is fragile ahead of key corporate events.",
-      "why_matters": "Mega-cap tech earnings drive equity valuations and broader market direction; Anthropic debut signals AI sector momentum.",
-      "tag": "Equities"
+      "headline": "Fed officials set to raise rates again in December, but the future still looks murky",
+      "source": "CNBC",
+      "summary": "Federal Reserve officials are signaling another rate increase in December while acknowledging uncertainty about the path forward. This mixed messaging reflects ongoing inflation concerns and economic ambiguity.",
+      "why_matters": "December rate expectations directly impact the 10Y/2Y curve and mortgage demand, both showing weakness today as rates remain elevated.",
+      "tag": "Rates"
     },
     {
-      "headline": "Yemen's Houthis say they launched drones towards Saudi East-West pipeline",
-      "source": "Reuters",
-      "summary": "Houthi forces reported launching drone strikes against critical Saudi oil infrastructure. Geopolitical tensions in the Middle East continue to escalate.",
-      "why_matters": "Oil supply disruptions drive WTI prices and inflation expectations; crude currently at $89.62 with no change but risk remains elevated.",
-      "tag": "Macro"
+      "headline": "Worried about the AI bubble popping? How investing pros say to adjust your strategy",
+      "source": "CNBC",
+      "summary": "Professional investors are offering guidance on portfolio positioning amid concerns about AI valuation excess. The advice signals growing awareness of concentration risk in mega-cap tech.",
+      "why_matters": "AI concentration risk in the S&P 500 is a key driver of equity volatility and VIX elevation, relevant to today's 2.55-point VIX jump.",
+      "tag": "Equities"
     }
   ],
   "calendar": [
@@ -61,26 +61,26 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "Federal Reserve communications drive Treasury yields and equity sentiment; 10Y and 2Y both moved higher, signaling rate expectations remain anchored."
+      "note": "FOMC announcement and projections will clarify December rate path and forward guidance, directly impacting bond yields and equity volatility."
     },
     {
       "day": "Fri",
       "event": "Federal Funds Data",
       "importance": "high",
-      "note": "Official Fed funds data influences short-end Treasury pricing and policy trajectory expectations."
+      "note": "Official federal funds rates and overnight funding conditions confirm monetary policy stance and liquidity conditions in money markets."
     },
     {
       "day": "Fri",
-      "event": "Economic Policy Uncertainty",
+      "event": "H.15 Selected Interest Rates",
       "importance": "medium",
-      "note": "EPU index reflects investor concerns about macro shocks; relevant given current geopolitical tensions and earnings volatility."
+      "note": "Broad interest rate survey including mortgage and commercial lending rates will show transmission of policy into real economy credit conditions."
     }
   ],
   "concept": {
-    "title": "Fear Gauge Surge amid Earnings & Geopolitical Risk",
-    "one_liner": "Rising VIX, falling equities, and stable-to-higher yields reflect a market torn between tech earnings jitters and Middle East tensions.",
-    "explanation": "The S&P 500 dropped 1.18% while VIX spiked 3.61 points, suggesting investors are repricing risk ahead of Nvidia earnings and broader macro uncertainty. Treasury yields climbed slightly (10Y +5 bps, 2Y +2 bps), indicating the Fed's policy stance remains firm even as growth concerns mount. Houthi drone threats to Saudi oil infrastructure add geopolitical tail risk, keeping crude near $89.62 and inflation expectations in focus.",
-    "market_link": "Elevated VIX typically caps equity rallies; Treasuries higher suggest 'risk-off' flows; Houthi strikes could spike oil if infrastructure damage widens."
+    "title": "Rate Uncertainty + VIX Spike + Mortgage Demand Collapse",
+    "one_liner": "Fed hawkishness signals are colliding with mortgage demand weakness, triggering VIX elevation despite modest equity gains.",
+    "explanation": "With the 10Y at 5.12% and 2Y at 4.83%, the yield curve remains inverted and mortgage demand has turned lower as rates hit three-week highs. The VIX spiked 2.55 points even as the S&P 500 managed a +0.06% gain, suggesting investors are pricing tail risk around December Fed decisions and AI valuation concentration. Fed officials' own ambiguity about the future—despite December hike signals—is leaving markets unmoored.",
+    "market_link": "Fed hawkishness is pushing out longer-duration asset valuations (bonds rallying slightly in yield terms) while creating equity volatility from AI sector rotation concerns and uncertainty about growth."
   },
-  "narrative": "U.S. equities fell 1.18% and VIX surged 3.61 points as nervousness builds ahead of Nvidia earnings and new IPO debuts, while Middle East tensions (Yemen Houthi drone strikes) add geopolitical risk; Treasuries edged higher with 10Y at 5.15%, reflecting persistent inflation and Fed policy expectations amid slowing growth signals."
+  "narrative": "The S&P 500 is flat to slightly positive at 7329, but the VIX spike of 2.55 and two-day Treasury yield drops reveal hidden stress: Fed officials are signaling December rate hikes despite murky forward guidance, mortgage demand is collapsing, and investors are increasingly worried about AI bubble valuations. This mix of rate uncertainty, equity concentration risk, and credit weakness is the market's real story today."
 }
