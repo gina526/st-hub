@@ -1,12 +1,12 @@
 {
   "date": "2026-11-18",
-  "generated_at": "2026-11-18T15:04:28.638Z",
+  "generated_at": "2026-11-18T20:07:34.758Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7329",
-      "change": "4 (0.06%)",
-      "up": true
+      "value": "7311",
+      "change": "-14 (-0.19%)",
+      "up": false
     },
     {
       "name": "10Y UST",
@@ -22,37 +22,37 @@
     },
     {
       "name": "~DXY",
-      "value": "1.0997 EUR/USD",
-      "change": "0.0001",
+      "value": "N/A",
+      "change": "N/A",
       "up": false
     },
     {
       "name": "VIX",
       "value": "25.46",
       "change": "2.55",
-      "up": false
+      "up": true
     }
   ],
   "stories": [
     {
-      "headline": "Small investor enthusiasm for Anthropic IPO to rival SpaceX debut",
+      "headline": "Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show",
       "source": "CNBC",
-      "summary": "Retail investor interest in the Anthropic IPO is building momentum comparable to the SpaceX listing debut. The offering signals continued capital market appetite for AI-focused technology companies.",
-      "why_matters": "AI IPO demand reflects persistent equity market confidence in AI innovation despite bubble concerns cited in concurrent headlines.",
-      "tag": "Equities"
-    },
-    {
-      "headline": "Fed officials set to raise rates again in December, but the future still looks murky",
-      "source": "CNBC",
-      "summary": "Federal Reserve officials are signaling another rate increase in December while acknowledging uncertainty about the path forward. This mixed messaging reflects ongoing inflation concerns and economic ambiguity.",
-      "why_matters": "December rate expectations directly impact the 10Y/2Y curve and mortgage demand, both showing weakness today as rates remain elevated.",
+      "summary": "Federal Reserve officials signaled expectation of additional rate hikes while expressing concern about artificial intelligence's potential inflationary effects based on recent meeting minutes. This guidance reflects ongoing policy uncertainty despite recent Treasury yield declines.",
+      "why_matters": "Fed rate expectations directly drive equity valuations and bond yields; AI inflation risk is critical to future monetary policy trajectory.",
       "tag": "Rates"
     },
     {
-      "headline": "Worried about the AI bubble popping? How investing pros say to adjust your strategy",
+      "headline": "Nvidia interim CEO Kress tells employees 'let's move forward' at first all-hands meeting since Jensen Huang exit",
       "source": "CNBC",
-      "summary": "Professional investors are offering guidance on portfolio positioning amid concerns about AI valuation excess. The advice signals growing awareness of concentration risk in mega-cap tech.",
-      "why_matters": "AI concentration risk in the S&P 500 is a key driver of equity volatility and VIX elevation, relevant to today's 2.55-point VIX jump.",
+      "summary": "Nvidia's interim CEO Colette Kress addressed employees for the first time following Jensen Huang's departure, signaling continuity at the semiconductor giant. This leadership transition comes amid broader tech sector volatility and mixed earnings sentiment.",
+      "why_matters": "Nvidia is a mega-cap index constituent; leadership stability and operational messaging affect confidence in AI hardware demand and S&P 500 trajectory.",
+      "tag": "Equities"
+    },
+    {
+      "headline": "Why Anthropic's hot IPO is bringing out sellers — plus, a silver lining of the down market",
+      "source": "CNBC",
+      "summary": "Anthropic's IPO is triggering rotation and selling pressure in existing equities as investors reallocate capital to the new AI offering. Market weakness is creating both risk and opportunity for tactical positioning.",
+      "why_matters": "IPO activity and sector rotation dynamics shape equity flows and volatility; the down market environment affects investor appetite for growth and risk assets.",
       "tag": "Equities"
     }
   ],
@@ -61,26 +61,26 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "FOMC announcement and projections will clarify December rate path and forward guidance, directly impacting bond yields and equity volatility."
+      "note": "Central bank communications on rate outlook will clarify inflation and AI-related policy concerns mentioned in recent minutes."
     },
     {
       "day": "Fri",
       "event": "Federal Funds Data",
       "importance": "high",
-      "note": "Official federal funds rates and overnight funding conditions confirm monetary policy stance and liquidity conditions in money markets."
+      "note": "Official Fed funds rate and overnight financing data provide real-time insight into money market conditions and monetary policy transmission."
     },
     {
       "day": "Fri",
       "event": "H.15 Selected Interest Rates",
       "importance": "medium",
-      "note": "Broad interest rate survey including mortgage and commercial lending rates will show transmission of policy into real economy credit conditions."
+      "note": "Broad interest rate snapshot helps assess yield curve positioning and credit market stress signals."
     }
   ],
   "concept": {
-    "title": "Rate Uncertainty + VIX Spike + Mortgage Demand Collapse",
-    "one_liner": "Fed hawkishness signals are colliding with mortgage demand weakness, triggering VIX elevation despite modest equity gains.",
-    "explanation": "With the 10Y at 5.12% and 2Y at 4.83%, the yield curve remains inverted and mortgage demand has turned lower as rates hit three-week highs. The VIX spiked 2.55 points even as the S&P 500 managed a +0.06% gain, suggesting investors are pricing tail risk around December Fed decisions and AI valuation concentration. Fed officials' own ambiguity about the future—despite December hike signals—is leaving markets unmoored.",
-    "market_link": "Fed hawkishness is pushing out longer-duration asset valuations (bonds rallying slightly in yield terms) while creating equity volatility from AI sector rotation concerns and uncertainty about growth."
+    "title": "Rate Volatility and AI Inflation Risk",
+    "one_liner": "Fed officials expect more hikes despite AI concerns, pushing Treasury yields lower while equity sentiment falters.",
+    "explanation": "The 2Y Treasury declined 5 bps and 10Y fell 3 bps, yet VIX surged 2.55 points and the S&P 500 fell 14 points, signaling a disconnect between falling bond yields and equity stress. Fed minutes showing additional rate hikes expected while worrying about AI-driven inflation suggest policymakers remain hawkish despite growth concerns. This combination—rate expectations unresolved, AI uncertainty high, and equity inflows redirecting to new IPOs—creates tactical volatility and near-term downside bias.",
+    "market_link": "Treasury yields moving lower would normally support equities, but Fed hawkishness and Nvidia leadership transitions are driving offsetting seller pressure and VIX expansion."
   },
-  "narrative": "The S&P 500 is flat to slightly positive at 7329, but the VIX spike of 2.55 and two-day Treasury yield drops reveal hidden stress: Fed officials are signaling December rate hikes despite murky forward guidance, mortgage demand is collapsing, and investors are increasingly worried about AI bubble valuations. This mix of rate uncertainty, equity concentration risk, and credit weakness is the market's real story today."
+  "narrative": "US equities declined 0.19% on November 18 as Fed rate expectations and leadership uncertainty at mega-cap Nvidia offset modest Treasury yield declines, while VIX jumped 2.55 and capital rotated toward new IPO opportunities, reflecting shifting investor risk appetite in a higher-for-longer rate environment shadowed by AI inflation concerns."
 }
