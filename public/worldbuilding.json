@@ -1,5 +1,140 @@
 [
   {
+    "date": "2026-11-20",
+    "blocks": [
+      {
+        "term": "S&P 500 Selloff & Risk-Off Repricing",
+        "category": "equities",
+        "bullets": [
+          "S&P 500 down 205 points (-2.86%) as of market close; reflects simultaneous compression of equity risk premium across large-cap and growth indices",
+          "Selloff triggered by convergence of three tail risks: US shutdown gridlock, Iran geopolitical escalation, and labor market instability (pent-up quits wave)",
+          "2.86% single-day decline suggests institutional deleveraging and position-squaring, not panic liquidation; VIX spike to 28.44 is elevated but not crisis-level (pre-2008 crisis VIX regularly 60+)",
+          "Contrarian accumulation already evident (per CNBC story)—market participants deploying dry powder into weakness, signaling technical support building near current levels",
+          "Decline disproportionately hits high-beta, duration-sensitive equities (growth, unprofitable tech); value and defensive sectors showing relative resilience",
+          "Recovery catalyst hinges on FOMC press release (Thu) and Fed rate guidance; any dovish signal could trigger short-covering rally into month-end"
+        ],
+        "so_what": "Equity sales desk uses this to pitch tactical entry points to PM clients; repo traders and equity derivatives teams monitor short-covering flows to identify reversal signals; prime brokers adjust margin requirements based on VIX regime"
+      },
+      {
+        "term": "10Y Treasury Yield Compression (5.07%, -3 bps) & Flight-to-Safety",
+        "category": "rates",
+        "bullets": [
+          "10Y UST yield fell 3 bps to 5.07% despite risk-off environment and equities down 2.86%—classic 'risk-off' Treasury rally as investors rotate from stocks to safe havens",
+          "Compression at longer end (10Y) while 2Y held flat (4.80%, 0 bps) suggests market is pricing in economic slowdown mid-term but not aggressive Fed cuts in near-term",
+          "10Y/2Y curve remains relatively flat (27 bps inversion zone); 10Y decline without 2Y follow-through indicates investors expect Fed to hold rates steady through early 2027, then eventual normalization",
+          "Flight to safety mechanism: shutdown risk + Iran tensions = perceived probability of policy error or geopolitical shock; Treasury bonds seen as ultimate risk-off hedge",
+          "Duration buyers (insurance funds, pension plans, foreign central banks) stepped in aggressively on the selloff, pushing 10Y yields lower despite inflation concerns",
+          "If FOMC signals rate cuts or pauses tightening Thu, 10Y could break below 5.00%; if hawkish, 10Y could spike back above 5.20%"
+        ],
+        "so_what": "Fixed-income traders use 10Y/2Y curve flattening as a signal to rotate out of equities and extend duration; rates salespeople pitch 10Y ladder strategies to clients hedging inflation tail risk; portfolio managers use 10Y breakevens to assess real rate expectations"
+      },
+      {
+        "term": "2Y Treasury Yield (4.80%, flat at 0 bps) & Near-Term Rate Expectations",
+        "category": "rates",
+        "bullets": [
+          "2Y UST yield unchanged at 4.80% despite 10Y down 3 bps and S&P down 2.86%—indicates market has locked in near-term Fed rate expectations and sees minimal near-term cut probability",
+          "2Y represents 'Fed funds forward curve' over next 24 months; flatness vs 10Y decline signals market expects Fed to stay on pause (likely holding at 4.50-4.75% range through Q1 2027)",
+          "Pent-up quits story directly impacts 2Y: if labor market suddenly loosens (wages stay sticky), Fed maintains higher-for-longer stance; this keeps 2Y anchored",
+          "2Y insensitivity to equity decline suggests institutional money managers view near-term rate path as 'set in stone' by Fed communications; focus is on tail-risk hedging (buying 10Y duration, not front-end)",
+          "Shutdown scenario favors 2Y buying (recession prep, Fed cuts later in 2027); Iran escalation favors 2Y selling (oil spike, inflation risk); stalemate keeps it pinned"
+        ],
+        "so_what": "Rates traders use 2Y/10Y slope compression/flattening to call a potential recession or slowdown 18-24 months out; repo desk monitors 2Y/10Y financing to arbitrage curve positioning; salespeople pitch floating-rate note hedges to corporates when 2Y is elevated"
+      },
+      {
+        "term": "VIX Spike to 28.44 (+3.88 pts) & Volatility Regime Shift",
+        "category": "volatility",
+        "bullets": [
+          "VIX up 3.88 points to 28.44 (from ~24.56 baseline); represents sharp increase in implied volatility of S&P 500 put options, pricing in heightened tail risk",
+          "VIX at 28 is 'elevated caution' zone—not crisis (pre-2020 COVID crash hit 82), but signals institutional hedging acceleration and demand for downside protection",
+          "Spike mechanism: equity portfolio managers buying 1-month S&P 500 puts at higher premiums to hedge geopolitical + shutdown tail risks; call selling dries up as risk-off sentiment dominates",
+          "Options volatility surface likely showing steep skew (put premiums far above call premiums), incentivizing vol-selling strategies (covered calls, put spreads) for income-seeking players",
+          "VIX futures (term structure) showing contango (longer-dated vol cheaper than spot), indicating market expects volatility to normalize if shutdown and Iran tensions resolve by early Dec",
+          "Tactical VIX trading: short VIX call spreads (buy 30, sell 35 calls) attractive to volatility funds betting on mean reversion; long VIX tail hedges expensive but essential for portfolio CIO risk managers"
+        ],
+        "so_what": "Derivatives sales pitch VIX call spreads and S&P 500 put spreads to hedge-fund clients seeking income; risk managers buy VIX calls/upside volatility as portfolio insurance; algorithmic traders monitor VIX term structure to trigger tactical vol-selling when contango steepens"
+      },
+      {
+        "term": "US Shutdown Risk & Policy Gridlock Mechanism",
+        "category": "macro",
+        "bullets": [
+          "Congress faces deadline (usually mid-to-late Dec for current fiscal year) to pass spending bill or trigger government shutdown; Iran policy disagreements are blocking agreement",
+          "Shutdown mechanism: when Congress fails to fund federal government, non-essential agencies halt operations, federal workers furloughed unpaid, Treasury cash balance deteriorates, and economic uncertainty spikes",
+          "Market impact of shutdown: government spending freeze reduces GDP growth near-term (hits consumer spending, federal contractor revenues), delays economic data releases (creates information vacuum), and forces Fed into reactive mode",
+          "Trader implications: shutdown risk typically triggers 'defensive trade'—sell cyclicals, buy Treasuries, reduce leverage; each day of shutdown extends duration of economic headwind",
+          "Current gridlock suggests elevated probability of brief shutdown (3-7 days) or last-minute continuing resolution (CR) that extends uncertainty into 2027; either scenario keeps risk premium elevated",
+          "Shutdown would delay Q4 jobs report, ISM manufacturing, and other key inflation indicators until early January, forcing FOMC into blind policy stance; this risk is priced into 10Y/2Y flattening"
+        ],
+        "so_what": "Macro strategists model GDP impact scenarios (mild recession vs stall) based on shutdown length; credit analysts downgrade federal contractor ratings during shutdown; equity salespeople advise clients to rotate into utility/dividend-paying stocks that benefit from risk-off sentiment; FX traders position for USD strength if shutdown = safe-haven bid"
+      },
+      {
+        "term": "'Pent-Up Quits' Wave & Labor Market Spring-Loading",
+        "category": "macro",
+        "bullets": [
+          "Labor market 'coiled spring' narrative: workers have suppressed job-switching due to 2023-24 rate hikes and recession fears; pent-up demand for job mobility has accumulated",
+          "When economic conditions 'normalize' (rates pause or pivot), workers release suppressed mobility, triggering sudden surge in quit rates and job-switching; historical precedent: 2021-22 'Great Resignation' post-COVID",
+          "Quits spike mechanism creates wage pressure: employers forced to raise wages to retain talent and attract external candidates; wage growth re-accelerates even as unemployment ticks up",
+          "Implications for Fed: if quits surge in 2027, wage growth persists above 3-4% target despite higher unemployment; forces Fed to maintain higher rates longer (delays 'pivot') or risks re-igniting inflation",
+          "Market pricing: quits wave reduces 2Y cut probability (keeps front-end rates elevated) but increases long-term recession probability (10Y should fall further if quits trigger demand destruction)",
+          "Current market positioning: 10Y/2Y flattening reflects this dual risk—uncertainty around exact timing and magnitude of quits wave creates optionality that favors duration buyers"
+        ],
+        "so_what": "Rates salespeople use quits forecasts to pitch duration extensions and 10Y ladders to pension funds (delays 'rate cut windfall'); equity analysts downgrade consumer discretionary names if wage growth spike erodes margins; FX traders watch quits data as USD strength signal (higher real rates longer)"
+      },
+      {
+        "term": "10Y/2Y Yield Curve Flattening & Recession Signal",
+        "category": "rates",
+        "bullets": [
+          "10Y at 5.07%, 2Y at 4.80% = 27 bps spread; historically, sustained 10Y/2Y inversion (negative spread) has preceded recessions by 6-18 months",
+          "Current 'flat but positive' 27 bp spread is in gray zone: not inverted enough to be predictive recession signal alone, but combined with elevated VIX and equity decline, signals heightened tail risk",
+          "Flattening mechanism: long-end (10Y) rallying faster than front-end (2Y) suggests market is pricing recession scenario (demand falls, Fed eventually cuts, 10Y yields compress) but NOT yet confident in immediate rate cuts",
+          "If curve inverts (2Y > 10Y), it signals 'terminal recession bet'—market expects Fed tightening mistake and demand destruction; this would likely trigger another S&P 500 leg down (20%+ correction) and VIX spike above 35",
+          "If curve steepens (10Y rises faster than 2Y), it signals 'soft landing' bet—growth remains intact, Fed pauses, but inflation pressures ease; bullish for equities and cyclical credit",
+          "Current positioning: curve is flattening but resilient; market is 'fence-sitting' until FOMC press release Thu clarifies Fed's economic outlook and rate path certainty"
+        ],
+        "so_what": "Fixed-income portfolio managers monitor 10Y/2Y basis points as macro regime indicator; when curve flattens below 20 bps, PMs reduce equity risk and extend duration; credit traders use curve slope to predict high-yield spread widening (flattening = tighter credit spreads until inversion); sales teams alert clients when curve approaches inversion as recession early-warning system"
+      },
+      {
+        "term": "Iran Geopolitical Escalation & Tail Risk Premium",
+        "category": "macro",
+        "bullets": [
+          "Iran tensions directly impact oil prices (Strait of Hormuz shipping chokepoint threat), which flows through to inflation expectations and Fed policy uncertainty",
+          "Geopolitical tail risk premium: markets assign small but non-zero probability to military escalation, regional conflict, or sanctions that spike oil 10-30% in days; this premium embedded in VIX (28.44 vs historical 16-18 avg)",
+          "Oil spike scenario: energy sector rallies, inflation expectations spike (5Y5Y breakeven rises), Fed hawkish surprise possible, equities repriced lower (stagflation trade); this is priced into current 10Y/2Y flattening",
+          "Current gridlock: Congressional Iran policy deadlock paralyzes any new sanctions regime; uncertainty about US commitment to Tehran creates 'policy uncertainty premium' that keeps geopolitical risk elevated",
+          "Market hedge: long oil exposure (via energy ETF XLE, commodity futures), long gold (ultimate geopolitical hedge), short equity duration (expect vol compression if Iran tensions ease)",
+          "Resolution catalyst: if Congress reaches shutdown deal with clarity on Iran sanctions by early Dec, geopolitical tail risk unwinds, VIX could collapse to 20-22, equity rally likely"
+        ],
+        "so_what": "Commodity traders and energy salespeople use Iran headlines to pitch crude oil hedges and energy sector overweights to portfolio managers; macro strategists overlay geopolitical scenarios in risk models to justify elevated volatility expectations; FX traders position USD/IRR and regional currency hedges based on escalation probability"
+      },
+      {
+        "term": "Basis Points (bps), Yield, and Price-Yield Inverse Relationship (Fundamental)",
+        "category": "fundamental",
+        "bullets": [
+          "1 basis point (bp) = 0.01% = 1/100th of a percentage point; today's 10Y down 3 bps means yield fell from 5.10% to 5.07%, a small but meaningful 3-basis-point decline",
+          "Treasury price and yield move inversely: when 10Y yield falls 3 bps (prices up), it signals increased demand for safe assets; this rally happens because existing bondholders see capital appreciation and new buyers demand lower yields",
+          "Duration: measure of bond price sensitivity to yield changes; a 1-year duration = 1% price change per 1% yield move; 10Y Treasury has ~9-year duration, so 3 bp yield drop = ~0.03% price gain (small but compounds over time)",
+          "2Y Treasury lower duration (~1.9 years) explains why it's less sensitive to risk-off moves; small yield changes required to clear market, so 2Y often stays 'pinned' during volatility episodes",
+          "Carry trade risk: when yields are high and stable (like 4.80% on 2Y), traders borrow at lower rates (repo market, funding), buy 2Y, pocket yield spread; if yields spike (risk-on reversal), losses occur on carry unwinding",
+          "Real rates = nominal yield minus inflation expectation; at 10Y 5.07% and 5Y5Y breakeven ~2.35%, real 10Y rate is ~2.72%—historically elevated, explaining why bond investors are willing to hold despite low real returns"
+        ],
+        "so_what": "Sales teams use bps terminology to communicate small but cumulative yield moves to institutional clients (e.g., 'we've seen 12 bps of 10Y rally this week'); traders use duration math to hedge equity portfolios with 10Y futures; credit analysts use real rate level to assess corporate debt burden and refinance risk"
+      },
+      {
+        "term": "Risk-On vs Risk-Off Regimes & Market Regime Identification",
+        "category": "fundamental",
+        "bullets": [
+          "Risk-off regime (TODAY): equities fall, Treasuries rally (yields down), volatility spikes (VIX up), credit spreads widen, USD strengthens, commodity weakness except safe-haven gold; triggers 'flight to quality' flows",
+          "Risk-on regime (alternative scenario if Iran/shutdown resolved): equities rally, yields rise (bonds sell-off), volatility compresses, spreads tighten, USD weakens, commodities (oil, copper) rally as growth demand rises",
+          "Regime identification toolkit: use VIX above 25 + Treasury yields falling + equity weakness as quick confirmation of risk-off; use VIX below 15 + yields rising + equity strength as risk-on signal",
+          "Portfolio implication: in risk-off, hold 10Y Treasuries, long VIX positions, short equities, long USD; in risk-on, hold stocks, short Treasuries, short VIX (via call spreads), long EM currencies",
+          "Transition risk: regime shifts happen suddenly (e.g., FOMC hawkish surprise flips risk-on to risk-off in minutes); salespeople use regime filters to alert clients to 'imminent flip' warnings based on options positioning and flow data",
+          "Today's market briefs regime signal: risk-off is ACTIVE, but 'contrarian accumulation' suggests market is testing risk-off severity; next 48 hrs (until FOMC Thu) will determine if regime holds or flips"
+        ],
+        "so_what": "Portfolio managers use regime model to adjust equity/fixed-income/commodity weights dynamically; salespeople communicate regime-based portfolio recommendations to hedge fund and asset manager clients; risk managers adjust Value-at-Risk (VaR) models based on detected regime to forecast potential portfolio losses"
+      }
+    ],
+    "narrative": "Equities declined 2.86% on a confluence of shutdown gridlock, Iran escalation, and labor market warnings while VIX spiked to 28.44 and 10Y Treasury yields compressed 3 bps on safe-haven demand, creating a 'risk-off' regime despite relatively flat 2Y yields at 4.80%. The 27 bp 10Y/2Y spread signals market is pricing recession tail risk and Fed policy uncertainty, though contrarian accumulation into the selloff suggests technical support is building. FOMC communications Thursday and economic policy clarity over Iran/shutdown will be decisive: dovish messaging or geopolitical de-escalation could trigger short-covering rally and VIX compression, while hawkish surprise or escalation would likely extend risk-off and push 10Y yields toward 4.95% with VIX testing 32+."
+  },
+  {
     "date": "2026-11-19",
     "blocks": [
       {
