@@ -1,86 +1,86 @@
 {
-  "date": "2026-11-19",
-  "generated_at": "2026-11-19T20:07:55.243Z",
+  "date": "2026-11-20",
+  "generated_at": "2026-11-20T19:42:58.393Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7164",
-      "change": "-138 (-1.88%)",
+      "value": "6954",
+      "change": "-205 (-2.86%)",
       "up": false
     },
     {
       "name": "10Y UST",
-      "value": "5.10%",
-      "change": "-2.0 bps",
+      "value": "5.07%",
+      "change": "-3.0 bps",
       "up": true
     },
     {
       "name": "2Y UST",
       "value": "4.80%",
-      "change": "-3.0 bps",
+      "change": "0.0 bps",
       "up": true
     },
     {
       "name": "~DXY",
-      "value": "1.0973 EUR/USD",
-      "change": "-0.0024",
+      "value": "N/A",
+      "change": "N/A",
       "up": false
     },
     {
       "name": "VIX",
-      "value": "24.56",
-      "change": "-0.90",
+      "value": "28.44",
+      "change": "+3.88",
       "up": false
     }
   ],
   "stories": [
     {
-      "headline": "S&P 500 heads for 6th straight decline. Plus, J&J advances two key products",
-      "source": "CNBC",
-      "summary": "The S&P 500 is on track for a sixth consecutive day of losses, extending a selloff that has pushed the index down 1.88%. Johnson & Johnson has advanced two key products, potentially providing support within healthcare equities.",
-      "why_matters": "Extended equity weakness combined with selective pharma strength signals sector rotation and potential oversold conditions in a risk-off environment.",
-      "tag": "Equities"
-    },
-    {
-      "headline": "Anthropic's historic IPO is a boon to these 12 portfolio stocks. Here's how they benefit",
-      "source": "CNBC",
-      "summary": "Anthropic's IPO is expected to create positive spillovers for 12 related portfolio companies through partnership and ecosystem benefits. The offering highlights continued investor interest in AI infrastructure despite broader market weakness.",
-      "why_matters": "AI and tech leadership IPOs can stabilize sentiment and attract capital flows away from defensive sectors, counterbalancing the current 6-day decline.",
-      "tag": "Equities"
-    },
-    {
-      "headline": "US weekly jobless claims edge up, but labor market remains resilient",
+      "headline": "Congress struggles to avert US shutdown as Iran war divides lawmakers",
       "source": "Reuters",
-      "summary": "Weekly jobless claims increased but the overall labor market continues to demonstrate resilience and stability. The data suggests persistent employment strength even as equities face headwinds.",
-      "why_matters": "A resilient labor market supports Fed confidence in holding or gradually adjusting rates, keeping the 10Y and 2Y yields elevated near 5.10% and 4.80% respectively.",
+      "summary": "US Congress faces gridlock on avoiding a government shutdown while geopolitical tensions over Iran policy create additional legislative friction. The impasse threatens federal funding continuity and raises uncertainty around policy implementation.",
+      "why_matters": "Shutdown risk and policy uncertainty typically increase volatility and reduce near-term capital deployment.",
       "tag": "Macro"
+    },
+    {
+      "headline": "A wave of 'pent-up quits' could boost turnover in the job market, expert says: 'The labor market is a bit like a coiled spring'",
+      "source": "CNBC",
+      "summary": "Labor market experts warn that accumulated worker frustration may trigger a surge in job-switching and quits once conditions normalize. This buildup of labor supply pressure mirrors spring-loaded potential energy waiting for release.",
+      "why_matters": "Rising quits and labor turnover affect wage dynamics, unemployment rates, and Fed policy trajectory—key inputs for rate expectations.",
+      "tag": "Rates"
+    },
+    {
+      "headline": "We're making another small buy as the market sell-off deepens",
+      "source": "CNBC",
+      "summary": "Market participants are deploying capital into the recent 2.86% S&P 500 decline, signaling contrarian buying pressure at lower levels. The VIX spike to 28.44 reflects heightened fear, creating opportunity signals for tactical buyers.",
+      "why_matters": "Accumulation during drawdowns suggests demand support that may stabilize equities and limit further VIX expansion.",
+      "tag": "Equities"
     }
   ],
   "calendar": [
     {
-      "day": "Fri",
+      "day": "Thu",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "FOMC communications directly influence rate expectations and Treasury yields; critical on a day when 10Y and 2Y USTs have dropped 2–3 bps."
+      "note": "Central bank communications directly drive rate expectations and equity repricing; especially critical given 10Y/2Y curve and recent 2.86% selloff."
     },
     {
-      "day": "Fri",
+      "day": "Thu",
       "event": "Federal Funds Data",
       "importance": "high",
-      "note": "Federal funds rate settings and forward guidance shape bond market positioning and equity risk appetite in a declining-momentum environment."
+      "note": "Official Fed rate and policy stance data anchor all fixed-income and equity valuations in a risk-off environment."
     },
     {
-      "day": "Fri",
-      "event": "H.15 Selected Interest Rates",
+      "day": "Thu",
+      "event": "Economic Policy Uncertainty",
       "importance": "medium",
-      "note": "Provides granular snapshot of short- and long-term rate structures, relevant for assessing yield curve flatness during equity weakness."
+      "note": "Elevated uncertainty index would reinforce VIX spike and justify continued risk-asset caution amid shutdown and Iran tensions."
     }
   ],
   "concept": {
-    "title": "Defensive Rate Compression in Equity Decline",
-    "one_liner": "Treasury yields fall alongside a 6-day equity selloff, suggesting flight-to-quality and Fed-easing expectations despite sticky inflation.",
-    "explanation": "The S&P 500's -1.88% drop to 7164 is accompanied by a 2–3 bps decline in both 2Y and 10Y yields, typical of risk-off flows into safe-haven bonds. VIX sits at 24.56, elevated but not panicked, indicating measured repricing rather than capitulation. The USD's weakness (EUR/USD +0.0024) reflects lower US rate expectations, reinforcing the narrative that equity weakness is triggering safe-haven demand rather than growth optimism.",
-    "market_link": "These dynamics set the stage for today's FOMC communication and Federal Funds data release, which will determine whether the market reprices terminal rate expectations further downward or stabilizes yields."
+    "title": "Risk-Off Volatility Spike Amid Policy Gridlock",
+    "one_liner": "S&P 500 down 2.86% and VIX up 3.88 points as geopolitical risk, shutdown concerns, and labor market uncertainty converge.",
+    "explanation": "The 205-point S&P decline and VIX surge to 28.44 reflect a sharp reassessment of tail risk. Simultaneously, the 10Y Treasury rallied 3 bps (yield down) despite sticky 2Y rates, signaling a flight to safety and expectations of economic headwinds. Labor market warnings about pent-up quits add inflation/wage uncertainty, complicating the Fed's near-term messaging.",
+    "market_link": "Policy gridlock (shutdown threat) + geopolitical escalation (Iran) + labor instability (quits wave) = rising real rates, equity repricing, and elevated vol until clarity emerges."
   },
-  "narrative": "Equities are in their sixth consecutive day of decline (-1.88% on the S&P 500), prompting a classic flight-to-quality shift with Treasury yields compressing (10Y/2Y down 2–3 bps) and the dollar weakening. Despite the equity selloff, jobless claims resilience and upcoming FOMC guidance suggest the labor market and policy stance remain the key fulcrum for whether this corrective phase extends or stabilizes."
+  "narrative": "Equities sold off 2.86% on a confluence of shutdown risk, Iran tensions, and labor market concerns, while VIX spiked 3.88 points and 10Y Treasury yields compressed 3 bps on safe-haven demand. Market participants are showing cautious accumulation into the selloff, though FOMC communications and elevated economic policy uncertainty remain key near-term catalysts."
 }
