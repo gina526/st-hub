@@ -1,5 +1,119 @@
 [
   {
+    "date": "2026-11-23",
+    "blocks": [
+      {
+        "term": "S&P 500 Rally & Sentiment Reversal",
+        "category": "equities",
+        "bullets": [
+          "S&P 500 up 330 points to 7228 (+4.78%) on single session; magnitude suggests capitulation low or hedge unwind rather than organic buying",
+          "Rally coincides with VIX spike (not decline), indicating fear-driven short covering and options positioning shifts, not confidence-driven accumulation",
+          "Equity strength paired with falling Treasury yields (3-4 bps down curve) signals 'risk-off bounce'—investors rotating from hedges into equities as panic subsides, not from new fundamental optimism",
+          "Historically, 4-5% single-day rallies at elevated VIX often mark tactical lows before either sustained recovery or renewed selling; sustainability hinges on Friday FOMC tone",
+          "Sector rotation likely into defensives (utilities, staples) if fear-driven; cyclicals (tech, discretionary) if confidence-driven—key distinction for S&T positioning"
+        ],
+        "so_what": "Equity sales desk needs to know if clients should add cyclical exposure (true recovery story) or trim and rotate to stability plays (tactical relief). Rally magnitude alone does NOT tell you which narrative holds through FOMC—you need the FOMC thesis to guide client calls."
+      },
+      {
+        "term": "VIX Spike (35.89) & Contrarian Buy Signal",
+        "category": "volatility",
+        "bullets": [
+          "VIX jumped 7.45 points to 35.89, well above normal 12-20 range; historically, 35+ readings often coincide with capitulation lows (March 2020, March 2023 patterns)",
+          "High VIX = market pricing in tail risk and fear premium; when equities rally INTO elevated VIX (not on VIX decline), it signals hedge unwinding and sentiment reversal rather than fundamental improvement",
+          "Contrarian interpretation: extreme fear creates 'short squeeze' opportunity—forced liquidations of hedges (put options, short equity positions) drive mechanical rallies independent of earnings or economic data",
+          "VIX reversion (decline to 15-20 range) would validate sustained recovery; VIX staying elevated >30 would signal rally is relief, not conviction, raising re-test risk",
+          "Options traders use VIX >35 to sell puts (collect premium on downside protection) and buy calls (bet on reversion higher); equity sales desk sees this as 'hedging appetite is expensive, reduces client willingness to pay for downside protection'"
+        ],
+        "so_what": "When pitching equity hedges to clients, acknowledge the VIX is pricing extreme fear—you can either wait for VIX to normalize (costly premium now) or layer hedges into rallies when clients have false confidence. VIX at 35 is a SELLING point for downside protection to risk managers who know sentiment extremes reverse."
+      },
+      {
+        "term": "Treasury Yield Curve (10Y at 5.04%, 2Y at 4.76%)",
+        "category": "rates",
+        "bullets": [
+          "10Y UST down 3 bps to 5.04%; 2Y UST down 4 bps to 4.76%—steepening move (longer end underperforming shorter end by 1 bp), unusual for fear rally",
+          "Typical fear scenario: curve inverts further or flattens as investors buy 10Y safe havens; instead, 2Y outperformed suggests Fed cut expectations rising more than long-term growth fears",
+          "5.04% 10Y is elevated by pre-2022 standards but reflects current rate regime; 3-4 bps daily moves indicate thin liquidity and high sensitivity to FOMC messaging Friday",
+          "If FOMC signals dovish pivot (rate cuts ahead), 10Y could quickly fall to 4.70-4.80% range; if hawkish hold, yields bounce back above 5.10%, invalidating relief rally narrative",
+          "Curve steepening (10Y-2Y spread widening from ~28 bps currently) typically signals growth recovery expectations; flattening would signal recession risk—today's move is MIXED signal requiring FOMC clarity"
+        ],
+        "so_what": "Fixed income traders need FOMC to resolve the curve signal: today's 2Y outperformance hints dovish cuts priced in, but 10Y hasn't collapsed, suggesting markets aren't confident. Friday's statement either validates the 'cut cycle ahead' thesis (10Y falls further, steepen trade works) or kills it (curve flattens/inverts again). Rate sales desk uses this to guide duration positioning and client hedging urgency."
+      },
+      {
+        "term": "EUR/USD at 1.0967 & Dollar Weakness",
+        "category": "fx",
+        "bullets": [
+          "EUR/USD up 0.0001 (micro-move) to 1.0967, suggesting flat FX market despite broad risk-on equity rally; typically stronger euro setup would see 1.09+ on US growth concerns",
+          "Euro strength is muted likely because ECB also cutting (or holding rates higher than expected), negating relative rate advantage of moving to EUR; USD strength persists despite equity rally",
+          "If equity rally is 'growth recovery' driven, USD should weaken (carry unwind); instead, flat EUR/USD implies carry/rate differentials are holding USD bid—suggests market isn't convinced recovery is real",
+          "Watch Friday: if FOMC cuts (or hints cuts), USD weakness should accelerate, EUR/USD targets 1.10+; if FOMC holds/hawkish, USD rebounds (risk-off reversal), EUR/USD tests 1.08",
+          "Corporate FX desks care because stronger EUR hurts US exporters; weaker USD lifts commodity costs for US importers—ambiguous signal today until FOMC removes uncertainty"
+        ],
+        "so_what": "FX sales team uses this to hedge client exposures: if advising a multinational with EUR revenue, today's flat move is NOT a signal to hedge aggressively, because direction is unresolved pending Friday. Conversely, if client is long EUR receivables and nervous about FOMC hawkishness, today is a good entry to reduce exposure before retracement."
+      },
+      {
+        "term": "FOMC Press Release (Friday) & Policy Inflection Point",
+        "category": "macro",
+        "bullets": [
+          "FOMC releases Friday; this is the LYNCHPIN that validates or invalidates today's rally—central bank messaging anchors both equity valuations and Treasury yields",
+          "Market is pricing in one of three scenarios: (1) dovish pivot with rate cuts signaled, (2) hawkish hold/pause confirming data dependency, (3) surprise dovish cut (unlikely but tail risk). Each has different equity/rate implications",
+          "Fed communications influence both near-term sentiment (risk-on/off for equities) and long-term Treasury yields; dovish guidance = lower yields, higher equity multiples; hawkish = opposite",
+          "Given 10Y and 2Y decline today (3-4 bps), market is already pricing SOME dovish bias; FOMC must at minimum signal patience on future hikes, else rates rebound and equity rally reverses",
+          "Post-FOMC 2-hour window typically sees 50-100 bps S&P 500 moves; volatility likely to spike again on guidance release, then stabilize based on narrative clarity"
+        ],
+        "so_what": "Every S&T desk (equities, rates, FX) has a pre-FOMC thesis and contingency playbook Friday morning. Sales teams must brief clients on base case (dovish = rally extends, rates fall more) and tail cases (hawkish = sharp reversal) so clients can position ahead and not get whipsawed. Traders are delta-hedged or underhedged NOW waiting for FOMC to supply directional conviction."
+      },
+      {
+        "term": "Risk-On vs. Risk-Off Sentiment & Hedge Dynamics",
+        "category": "fundamental",
+        "bullets": [
+          "Risk-on sentiment = appetite for equities, high-yield credit, emerging markets; risk-off = flight to Treasuries, gold, low-volatility stocks. Today's S&P 500 up 4.78% + 10Y yields DOWN 3 bps = MIXED signal (unusual)",
+          "Normal risk-on day: equities rally, Treasury yields RISE (investors dump safe havens), VIX FALLS (complacency). Today's equity rally with falling yields + rising VIX = mechanical unwind of hedges, not confidence-driven accumulation",
+          "Market structure insight: hedge unwinding = forced sellers of puts/calls and short equities covering positions, creating a 'short squeeze' rally that is fast but potentially unsustainable without follow-through buying",
+          "Sentiment reversal (capitulation low) often marked by: (1) VIX spike, (2) equity capitulation, (3) margin call forced selling exhaustion. Today hits all three—suggests market MAY have found a bottom, but only if FOMC doesn't re-trigger panic",
+          "Risk appetite will re-enter if FOMC removes tail risk (clear dovish guidance); will reverse if FOMC re-triggers uncertainty (hawkish surprise, no rate cut signal)"
+        ],
+        "so_what": "Sales teams pitch hedging strategies based on sentiment regime: in risk-off periods (now), clients WANT to buy downside protection (puts, collars) but face high prices (expensive premiums). Conversely, today's VIX spike creates a tactical opportunity to sell hedges (covered calls, short puts) to clients who want to reduce hedge costs—frame it as 'lock in protection at extremes, not at the top.'"
+      },
+      {
+        "term": "Economic Policy Uncertainty (EPU) & Sentiment Anchors",
+        "category": "macro",
+        "bullets": [
+          "EPU index (released Friday) measures policy-related uncertainty in news/data; high EPU = elevated VIX and risk-off sentiment; low EPU = confidence in policy visibility",
+          "EPU typically spikes on Fed hawkishness, geopolitical shocks, or fiscal uncertainty; directly correlates to volatility and equity drawdowns because markets hate unpredictability",
+          "Current environment: elevated EPU likely reflects uncertainty about Fed rate path and recession risk—this feeds the VIX spike to 35.89 and explains why equity rally is fragile (depends on FOMC clarity)",
+          "If Friday's FOMC is CLEAR on policy stance (dovish cuts or hawkish hold, unambiguous language), EPU should decline, stabilizing VIX and validating equity relief. If FOMC is vague/dovish-ish but not committed, EPU stays elevated and rally fails",
+          "Advance Economic Indicators (Friday release) feed into FOMC messaging—if AEI is weak, Fed can justify cuts; if strong, Fed maintains hawkish posture. Market prices this interaction in real-time"
+        ],
+        "so_what": "Credit and macro strategists monitor EPU to gauge whether spreads (IG/HY bonds) will compress (low EPU, rally support) or widen (high EPU, risk-off). Clients in uncertain policy environments often demand 'policy clarity premium' in pricing—you can charge higher spreads to corporates until FOMC removes tail risk. Post-FOMC, EPU decline typically triggers 'risk-on compression' in spreads."
+      },
+      {
+        "term": "Basis Risk & Yield-Equity Disconnect Today",
+        "category": "fundamental",
+        "bullets": [
+          "Basis = the relationship between equity and bond valuations. Normally, equities and yields move inversely (equity rally = yield rise, as investors rotate out of bonds). Today: equity rally + yield DECLINE = broken correlation",
+          "Broken basis occurs during panic (forced liquidations of both stocks and bonds) or during hedging unwinds (shorts covering equities, puts expiring worthless, reducing Treasury demand). Today fits the UNWIND scenario",
+          "If basis stays broken (equities stay up, yields stay down), it signals sustainable recovery narrative; if basis 'normalizes' (equity rally fades or yields spike), it signals rally was mechanical only",
+          "Traders exploit basis breaks by going long equities + short Treasuries (or vice versa, depending on scenario) to profit when correlation reverts; basis trades are HIGH-conviction setups but require precise timing",
+          "Current broken basis = opportunity for relative value trades (long risk assets, short duration) if FOMC is dovish, or trap if FOMC doesn't deliver clarity"
+        ],
+        "so_what": "Quant and macro trading desks build basis trades into daily PnL; salespeople need to understand that today's unusual move (stocks up, yields down together) won't persist—either equities normalize down or yields normalize up Friday/Monday. Clients chasing today's rally without understanding basis risk are catching a falling knife; advisors should frame it as a 'positioning opportunity, not a conviction call.'"
+      },
+      {
+        "term": "Duration & Interest Rate Sensitivity in Rising-Rate Regime",
+        "category": "rates",
+        "bullets": [
+          "Duration = sensitivity of bond prices to yield changes. In 5% yield environment (today's 10Y at 5.04%), duration is relatively LOW compared to 2% regimes, so 3-4 bps daily moves feel smaller but still material for leveraged portfolios",
+          "Long-duration bonds (30Y+ Treasuries, low-coupon corporates) got crushed earlier in 2024-2025 when rates rose; short-duration bonds (2Y, floating-rate notes) outperformed. Today's 2Y outperformance (4 bps down vs. 3 bps for 10Y) reflects duration preference SHIFT if dovish FOMC is coming",
+          "If FOMC signals cuts, investors rotate BACK into long duration (10Y/30Y) to lock in yields before they fall; this creates '10Y outperformance' and curve steepening. If hawkish, curve flattens/inverts further as 2Y yields re-rise",
+          "Pension funds and insurance companies care deeply about duration because they have long-term liabilities; a shift from 5% to 4.5% yields represents massive portfolio gains ('+5% price appreciation on 10Y bonds). This creates BUYING incentive if cuts materialize",
+          "Current yield levels (5.04% 10Y) are attractive to REAL MONEY (pensions, insurance, endowments) versus equities, so if FOMC is dovish, capital reallocates from stocks to duration—potential headwind for equity rally sustainability"
+        ],
+        "so_what": "Fixed income sales team targets pension/insurance clients with duration/yield lock-in pitches Friday: 'If FOMC cuts, buy 10Y now at 5.04% before yields fall to 4.70%—you'll outperform SPX and lock in liability hedges.' Conversely, equities desk warns clients that duration reallocation FROM equities TO bonds could be a hidden headwind for stock rally if FOMC is dovish—not all rallies are equally sustainable."
+      }
+    ],
+    "narrative": "US equities surged 4.78% (+330 S&P 500 to 7228) Monday while VIX spiked 7.45 points to 35.89 and Treasury yields fell 3-4 bps (10Y at 5.04%, 2Y at 4.76%), signaling a classic capitulation-driven relief rally rather than confidence-based recovery. This constellation—high fear, falling rates, and equity strength—indicates hedge unwinding and mechanical short covering from oversold positioning, with sustainability entirely dependent on Friday's FOMC release. If the Fed signals dovish cuts or policy clarity, the rally extends and long bonds compress further; if the Fed holds hawkish, the basis normalizes, equity gains reverse, and yields re-spike, leaving today's move exposed as a tactical trap for momentum chasers."
+  },
+  {
     "date": "2026-11-20",
     "blocks": [
       {
