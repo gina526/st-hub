@@ -1,5 +1,132 @@
 [
   {
+    "date": "2026-11-24",
+    "blocks": [
+      {
+        "term": "10-Year U.S. Treasury Yield (10Y UST)",
+        "category": "rates",
+        "bullets": [
+          "10Y UST at 4.92%, down 12 bps today — sharp rally signals investors rotating OUT of equities INTO duration/safety",
+          "Inverse relationship: when yields fall, bond PRICES rise (you pay less to get same coupon); duration risk premium compressing",
+          "12 bps move in one day is significant for $20T+ Treasury market; typically driven by either Fed expectations OR growth/recession concerns",
+          "Curve is flattening: 10Y-2Y spread now only 29 bps (10Y at 4.92%, 2Y at 4.63%), near inversion territory — historical recession signal",
+          "Friday's FOMC press release will likely anchor expectations; market is currently pricing NO additional rate hikes based on this yield level",
+          "Longer-dated Treasuries also serve as inflation hedge when geopolitical risk (Iraq/Iran) boosts commodity prices; duration buyers hedge stagflation fears"
+        ],
+        "so_what": "On a rates desk, you're using the 10Y level to price fixed-income products (bonds, swaps, swaptions); 12 bps move reprices your entire book. Salespeople pitch hedges to corporates when duration is cheap."
+      },
+      {
+        "term": "2-Year U.S. Treasury Yield (2Y UST)",
+        "category": "rates",
+        "bullets": [
+          "2Y UST at 4.63%, down 13 bps today — steeper drop than 10Y suggests front-end (near-term rate) expectations are shifting downward faster",
+          "2Y is most sensitive to Fed policy because it prices Fed funds rate over next ~24 months; 13 bps drop = market reducing expected Fed funds path",
+          "Curve flattening: 2Y yielding nearly as much as 10Y (29 bps difference) is ABNORMAL and historical recession indicator; inverted curves (2Y > 10Y) precede downturns",
+          "2Y-10Y inversion creates carry trades: short long-duration bonds, long short-duration = collect carry when curve is steep; flattening destroys that trade",
+          "Combined 10Y/2Y rally despite S&P 500 weakness = classic risk-off: safe-haven flows into government bonds regardless of duration"
+        ],
+        "so_what": "Traders use 2Y as the proxy for Fed rate expectations; when it moves 13 bps in a day, it signals major repricing of monetary policy. Structurers use 2Y/10Y slope for curve steepening/flattening trades and laddered bond ladders."
+      },
+      {
+        "term": "S&P 500 Equity Index",
+        "category": "equities",
+        "bullets": [
+          "S&P 500 at 7173, down 50 points (−0.69%) despite VIX collapsing 9.27 points; suggests SELECTIVE selling (not panic), rotation OUT of equities",
+          "Nvidia headline risk (CEO investigations ongoing) could explain underperformance of mega-cap tech segment; Nvidia is ~7% of S&P 500 weight",
+          "Oil price support (+$0.29 to $89.53) from Iraq-Kurdish dispute benefits energy sector BUT hurts growth-dependent sectors (discretionary, industrials) via inflation expectations",
+          "VIX drop (26.62, down 9.27) despite equity weakness = volatility compression signal; indicates market is NOT panicking despite geopolitical risk; possibly exiting hedges",
+          "P/E multiple compression risk: if yields stay elevated AND earnings growth stalls due to oil/geopolitical drag, equities face downside; Friday's economic data critical"
+        ],
+        "so_what": "Equity salespeople use the S&P chart + headline risk (Nvidia) to pitch hedging strategies (puts, collars) to portfolio managers; traders monitor sector rotation (energy UP, defensives/bonds UP, growth DOWN) to identify forced selling in crowded tech positions."
+      },
+      {
+        "term": "Volatility Index (VIX)",
+        "category": "volatility",
+        "bullets": [
+          "VIX at 26.62, down 9.27 points — SHARP compression despite S&P 500 lower indicates de-risking and volatility hedge liquidation, NOT fear capitulation",
+          "VIX in 20–30 range = elevated but not crisis (crisis = VIX 40+); market pricing in manageable uncertainty around Friday FOMC + economic data",
+          "VIX decline during equity weakness suggests long-volatility hedges (put spreads, VIX call spreads) expiring worthless or being exited; reduces hedge cost",
+          "Inverse equity-volatility correlation breakdown: normally S&P down = VIX up; today's VIX drop is UNUSUAL and suggests structural flows (pension de-grossing, vol fund redemptions)",
+          "Options traders: when VIX falls this fast, implied volatility in equity options compresses; vega-short positions (short straddles, iron condors) lose money as IV contracts"
+        ],
+        "so_what": "Options desk uses VIX to price equity derivatives and monitor client hedging appetite; when VIX falls into 25 range, demand for protective puts weakens and skew flattens. Volatility salespeople pitch long-vol strategies before Friday's data dump."
+      },
+      {
+        "term": "WTI Crude Oil & Geopolitical Oil Risk Premium",
+        "category": "energy",
+        "bullets": [
+          "WTI Crude at $89.53, up $0.29 on day — small move but sticky; Iraq-Kurdish oilfield dispute + Iran export pressure cited as supply-side constraints",
+          "Iraq's PM order to seize Kurdish-held oilfields is SOVEREIGNTY/PRODUCTION RISK: if conflict escalates, 500k–1M barrels/day at risk (Iraq is OPEC's #2 producer); upside supply shock to WTI",
+          "Middle East crude exports 'trending lower' per Reuters = tightening global supply fundamentals; supports bid under oil despite demand weakness signals",
+          "Oil price support (near $89.53) creates STAGFLATION risk: higher energy input costs for corporates + consumers, but economy may be slowing (Treasury rally, equities down)",
+          "Energy sector (XLE, CVX, MPC) benefits from oil bid; but higher oil = inflation expectations higher = real yields HURT growth stocks — net negative for S&P 500 returns"
+        ],
+        "so_what": "Commodity traders and energy sector analysts monitor Iraq-Kurdistan territorial risk as key upside trigger for WTI; corporate clients (airlines, chemcials, transports) hedge oil exposure via futures or collars. Credit desk monitors energy issuers' capex/dividend capacity if oil stays elevated."
+      },
+      {
+        "term": "Yield Curve Flattening & Duration Risk",
+        "category": "fundamental",
+        "bullets": [
+          "2Y-10Y spread now 29 bps (10Y 4.92%, 2Y 4.63%) — historically flat; inverted curves (spread < 0) are strong recession predictors and have preceded every U.S. recession in past 50 years",
+          "Flattening mechanism: Fed holding rates high (via 2Y sensitivity) while longer-term growth expectations weaken (via 10Y selling into duration demand) = market pricing NO rate cuts in next 12 months but slower growth ahead",
+          "Investors buy long-duration (10Y, 30Y bonds) for CARRY (4.92% yield) and SAFETY; this 'barbell' strategy (short rates high, long rates safe) dominates in uncertainty regimes",
+          "Flat curve compresses net interest margin (NIM) for banks: they borrow short (2Y fed funds, deposits) and lend long (mortgages); when gap narrows to 29 bps, profitability pressure",
+          "Economic implications: flat curve signals market skepticism of Fed's 'soft landing' narrative; businesses delay capex when long-term rates aren't much higher than short-term"
+        ],
+        "so_what": "Credit salespeople pitch long-duration corporate bonds (10Y BBB) to insurance/pension clients who need 4.9% yield but fear recession. Banks' NIM compression is a credit risk; watch for dividend cuts in Q4 bank earnings."
+      },
+      {
+        "term": "Risk-Off vs. Risk-On Market Posture",
+        "category": "macro",
+        "bullets": [
+          "Today's market action = CLASSIC risk-off: Treasuries rallying (durations bought), equities falling (risk assets sold), VIX compressing (hedges liquidated), USD likely bid (safe haven)",
+          "Risk-off triggers: geopolitical uncertainty (Iraq-Kurdish conflict, Iran stalemate), leadership uncertainty (Nvidia CEO investigations), economic caution (Friday data could disappoint)",
+          "Market is 'risk-aware not risk-on': VIX 26 is NOT panic (that's 40+), but it's elevated enough to cause portfolio managers to trim growth exposure and lock in duration",
+          "Friday's FOMC + economic data is the INFLECTION POINT: if data surprises weak, risk-off accelerates (Treasury yields LOWER, equities LOWER); if strong, risk bounces back",
+          "Correlations in risk-off: equities ↓, Treasuries ↑, gold likely ↑, credit spreads likely wider, emerging markets vulnerable to capital flight"
+        ],
+        "so_what": "Sales teams use risk-on/off framework to explain portfolio rotations to clients; in risk-off, you pitch defensives (utilities, consumer staples), bonds, and long-vol hedges. If Friday data is soft, anticipate forced selling in equities and credit."
+      },
+      {
+        "term": "Friday FOMC Press Release & Policy Inflection",
+        "category": "rates",
+        "bullets": [
+          "FOMC communication on 2026-11-27 will anchor Fed funds expectations for Dec meeting (likely last 2026 decision); market already pricing in PAUSE (no cut or hike) based on 4.63%/4.92% yield structure",
+          "If FOMC signals hawkish hold (concerns re: oil inflation), 2Y-10Y could steepen and equities sell off harder; if dovish (growth concerns acknowledged), bonds rally further and equities bounce",
+          "Fed's forward guidance on 2027 rate path is CRITICAL: each 25 bps of guidance = 25 bps move in 2Y, cascading through fixed income and equity valuations",
+          "Market is 'forecasting committee'; traders are already positioning for most likely FOMC outcome; surprise from Powell = instant repricing of duration and equity multiples",
+          "Friday's Advance Economic Indicators data (leading indicators index) will provide real-time growth signal; if negative, it VALIDATES risk-off trade and Fed dovishness"
+        ],
+        "so_what": "Traders front-run FOMC press releases by positioning ahead of Friday (long duration if expecting dovish, short if hawkish); sales teams brief clients on consensus Fed expectations and key phrases Powell may use. Options desks gear up for IV expansion around 2 PM ET release."
+      },
+      {
+        "term": "Iraq-Kurdish Oilfield Dispute & Supply Shock Mechanics",
+        "category": "macro",
+        "bullets": [
+          "Iraqi PM's order to 'manage' Kurdish oilfields + Kurdish rejection = escalation in resource control dispute; if unresolved, threatens 500k–1M bbl/day production (Iraq produces ~4.4M bbl/day total)",
+          "Supply shock mechanism: Traders monitor risk of field shut-ins; even THREAT of output disruption lifts WTI futures premium (risk premium), independent of actual production loss",
+          "OPEC dynamics: Iraq's OPEC quota is ~4.4M bbl/day; if 25% disappears, OPEC loses market share to competitors (shale, Russia, etc.). But it also tightens global supply, supporting prices",
+          "Geopolitical risk premium embedded in oil curve: front-month WTI trades richer (higher) than calendar spreads when supply risk is acute; contango structure flattens in crisis",
+          "Spillover to energy equities: upstream E&P names (ExxonMobil, Chevron) benefit from price support; integrated majors also feel cost inflation (capex, services) if Iraq situation drags on"
+        ],
+        "so_what": "Energy traders monitor Middle East newswires in real-time; a single headline about oilfield seizure can move WTI $1–2 intraday. Clients buying oil for forward delivery hedge using WTI futures or brent-WTI spreads to lock in location differentials."
+      },
+      {
+        "term": "Nvidia CEO Uncertainty & Mega-Cap Tech Risk Premium",
+        "category": "equities",
+        "bullets": [
+          "Jensen Huang back as Nvidia CEO BUT investigations ongoing = headline risk and governance uncertainty; Nvidia is ~7% of S&P 500 (mega-cap concentration risk)",
+          "Investigations likely relate to accounting, insider trading, or competitive practices; ANY adverse outcome (fine, management changes, indictment) could trigger 5–10% stock correction",
+          "Sentiment channel: Risk-averse investors use headlines like this to justify taking chips/AI exposure OFF the table; forces fund rebalancing and sector rotation into defensives",
+          "Valuation risk: Nvidia has priced in continued AI dominance + monopoly margins; investigations + uncertainty could compress multiple from 60x to 40x earnings, inflicting 30%+ downside",
+          "Correlation to S&P: Mega-cap concentration means 1–2 Nvidia-sized events can explain 0.5–1% daily S&P moves; today's −0.69% decline aligns with Nvidia/Tech sector weakness driven by this headline"
+        ],
+        "so_what": "Equity sales pitch hedges on mega-cap concentration to QQQ/NDX holders; traders monitor Nvidia stock for support/resistance and use it as proxy for AI sentiment. Credit desk checks Nvidia's bond spreads for deterioration signaling distress."
+      }
+    ],
+    "narrative": "U.S. markets are pricing a risk-off rotation as geopolitical tensions in the Middle East anchor crude prices near $89.53 (Iraq-Kurdish oilfield dispute threatens supply), while Treasuries rallied sharply (10Y down 12 bps to 4.92%, 2Y down 13 bps to 4.63%) signaling reduced Fed rate expectations and economic caution. The 2Y-10Y curve has flattened to just 29 bps, approaching inversion and historically signaling recession concerns; simultaneously, the S&P 500 fell 0.69% and the VIX compressed 9.27 points, reflecting a rotation from equities into duration/safety rather than panic selling. Friday's FOMC press release and advance economic indicators will determine whether the market's risk-off posture persists or if data strength restores risk appetite."
+  },
+  {
     "date": "2026-11-23",
     "blocks": [
       {
