@@ -1,30 +1,30 @@
 {
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T17:24:27.631Z",
+  "generated_at": "2026-11-24T22:01:37.281Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7173",
-      "change": "-50 (-0.69%)",
+      "value": "7188",
+      "change": "-35 (-0.49%)",
       "up": false
     },
     {
       "name": "10Y UST",
       "value": "4.92%",
-      "change": "-12.0 bps",
+      "change": "0 bps",
       "up": true
     },
     {
       "name": "2Y UST",
       "value": "4.63%",
-      "change": "-13.0 bps",
+      "change": "0 bps",
       "up": true
     },
     {
-      "name": "WTI Crude",
-      "value": "$89.53",
-      "change": "+$0.29",
-      "up": true
+      "name": "EUR/USD",
+      "value": "1.0901",
+      "change": "-0.0066",
+      "up": false
     },
     {
       "name": "VIX",
@@ -35,24 +35,24 @@
   ],
   "stories": [
     {
-      "headline": "Iraqi PM orders ministry to manage oilfields in areas under Kurdish control, Kurds reject move",
+      "headline": "Trump administration set to unveil new tariffs after probe on excess factory capacity, sources say",
       "source": "Reuters",
-      "summary": "Iraq's Prime Minister has ordered the ministry to take control of oilfields in Kurdish-held regions, but Kurdish authorities have rejected the directive. This represents a significant escalation in the dispute over resource management and territorial control.",
-      "why_matters": "Geopolitical tensions in OPEC's second-largest producer could disrupt crude supply, supporting elevated oil prices and energy sector risk premiums.",
+      "summary": "The Trump administration is preparing to announce new tariffs following an investigation into excess factory capacity. This represents a potential escalation in trade policy that could affect multiple sectors.",
+      "why_matters": "Tariff announcements typically trigger equity volatility and inflation concerns, impacting both equity valuations and Treasury yield expectations.",
       "tag": "Macro"
     },
     {
-      "headline": "Jensen Huang is back as Nvidia CEO, but investigations and risks remain",
-      "source": "CNBC",
-      "summary": "Jensen Huang has resumed his role as Nvidia CEO despite ongoing investigations into the company. The article notes persistent risks and unresolved issues despite his return to leadership.",
-      "why_matters": "Nvidia is a mega-cap tech leader; CEO uncertainty and investigations create headline risk for the AI-driven equity rally and S&P 500 composition.",
+      "headline": "HPE shares tumble as shrinking AI margins overshadow upbeat forecast",
+      "source": "Reuters",
+      "summary": "Hewlett Packard Enterprise saw share price declines despite positive guidance, driven by concerns over contracting margins in AI-related business segments. The selloff signals caution around profitability in high-growth tech areas.",
+      "why_matters": "AI margin compression in large-cap tech represents a key earnings risk and could weigh on broad equity indices and growth-focused valuations.",
       "tag": "Equities"
     },
     {
-      "headline": "COMMENTARY: Middle East crude oil exports trend lower amid fake Iran stalemate",
+      "headline": "Houthis hit Riyadh's tallest tower, 11 wounded, Saudi Civil defense says",
       "source": "Reuters",
-      "summary": "Middle East crude oil exports are declining as geopolitical tensions persist around Iran negotiations. The commentary characterizes current diplomatic efforts as a stalemate affecting supply fundamentals.",
-      "why_matters": "Lower crude exports from the Middle East support WTI prices and tighten global energy supply, with spillover effects on inflation and Fed policy.",
+      "summary": "Houthi forces launched an attack on Saudi Arabia's tallest building in Riyadh, resulting in casualties. This marks a continued escalation of regional tensions in the Middle East.",
+      "why_matters": "Middle East geopolitical risk elevates crude oil volatility and could support energy prices, with WTI currently at $89.53.",
       "tag": "Macro"
     }
   ],
@@ -61,26 +61,26 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "FOMC communication on 2026-11-27 will set tone for monetary policy and likely drive bond and equity repricing; market is pricing in sustained rate expectations given 10Y/2Y at 4.92%/4.63%."
+      "note": "FOMC communication on monetary policy direction is critical for Treasury yields and equity risk appetite, especially given elevated VIX at 26.62."
     },
     {
       "day": "Fri",
       "event": "Advance Economic Indicators",
       "importance": "high",
-      "note": "Economic leading indicators on 2026-11-27 will signal growth momentum and inflation trajectory, key inputs for the Fed's December meeting."
+      "note": "Leading economic indicators provide forward-looking data on growth momentum, directly relevant to Fed policy expectations and 10Y/2Y curve positioning."
     },
     {
       "day": "Fri",
-      "event": "Federal Funds Data",
+      "event": "Economic Policy Uncertainty",
       "importance": "medium",
-      "note": "Federal Funds operational data on 2026-11-27 provides real-time view of overnight funding conditions and monetary transmission."
+      "note": "EPU index reflects market sentiment around policy headwinds, particularly relevant given Trump tariff announcements and geopolitical tensions."
     }
   ],
   "concept": {
-    "title": "Geopolitical Oil Risk & Rate Volatility",
-    "one_liner": "Middle East tensions and production disputes are supporting crude prices while Treasuries rally on growth concerns, compressing the 2Y/10Y curve.",
-    "explanation": "Iraq-Kurdish territorial disputes and Iranian export pressure are cited in today's headlines as Middle East crude exports trend lower, anchoring WTI near $89.53. Simultaneously, 10Y and 2Y Treasuries have both rallied sharply (−12 bps and −13 bps respectively), flattening the curve and signaling reduced rate-hike expectations. The S&P 500's 0.69% decline and VIX's sharp 9.27-point drop despite equity weakness suggest a \"risk-off\" rotation from equities into bonds, with safe-haven flows supporting duration.",
-    "market_link": "Energy supply shocks (Iraq, Iran) boost commodity prices and inflation hedges; simultaneous Treasury strength reflects flight-to-quality ahead of Friday's FOMC release and economic data, creating headwinds for growth-dependent equities."
+    "title": "Margin Compression in AI & Tariff Uncertainty",
+    "one_liner": "High-growth tech faces profitability pressures while macro uncertainty from new tariffs weighs on equity sentiment.",
+    "explanation": "HPE's margin squeeze in AI segments signals that the market is repricing AI-driven growth narratives for profitability, not just top-line expansion. Simultaneously, incoming tariffs from the Trump administration inject macro uncertainty that typically correlates with VIX elevation (currently 26.62) and equity caution (S&P -0.49%). These twin pressures—microeconomic earnings risk and macroeconomic policy headwinds—are restraining equities while Treasuries hold steady.",
+    "market_link": "S&P 500 weakness, persistent VIX elevation, and Treasury yield stability reflect a market bracing for both near-term earnings revisions and longer-term trade friction."
   },
-  "narrative": "U.S. equity markets closed lower on 2026-11-23 as geopolitical tensions in the Middle East sustain crude prices near $89.53, while Treasuries rallied sharply (10Y/2Y down 12–13 bps) signaling reduced rate expectations and economic caution. The VIX's steep 9.27-point decline despite S&P 500 weakness suggests volatility compression and a risk-off posture heading into Friday's FOMC press release and advance economic indicators."
+  "narrative": "Equity markets closed lower (-0.49% S&P 500) as AI margin concerns at HPE and looming Trump tariffs weigh on sentiment, while VIX remains elevated at 26.62 despite a 9.27-point decline. Treasury yields remain anchored (10Y at 4.92%, 2Y at 4.63%) as the market awaits Friday's FOMC communication and economic data to clarify the Fed's policy path amid geopolitical and tariff-related risks."
 }
