@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-23",
-  "generated_at": "2026-11-23T23:32:10.065Z",
+  "date": "2026-11-24",
+  "generated_at": "2026-11-24T17:24:27.631Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7223",
-      "change": "+325 (4.71%)",
-      "up": true
+      "value": "7173",
+      "change": "-50 (-0.69%)",
+      "up": false
     },
     {
       "name": "10Y UST",
@@ -28,31 +28,31 @@
     },
     {
       "name": "VIX",
-      "value": "35.89",
-      "change": "+7.45",
+      "value": "26.62",
+      "change": "-9.27",
       "up": false
     }
   ],
   "stories": [
     {
-      "headline": "Fed's John Williams indicates higher interest rates likely 'over time' to address inflation",
-      "source": "CNBC",
-      "summary": "Fed official John Williams signaled the central bank may maintain or raise interest rates in the medium term to combat persistent inflation. This guidance conflicts with recent bond market repricing that has seen Treasury yields fall.",
-      "why_matters": "Forward guidance from Fed policymakers directly influences equity valuations and fixed income positioning; this hawkish tone could pressure equities despite today's rally.",
-      "tag": "Rates"
+      "headline": "Iraqi PM orders ministry to manage oilfields in areas under Kurdish control, Kurds reject move",
+      "source": "Reuters",
+      "summary": "Iraq's Prime Minister has ordered the ministry to take control of oilfields in Kurdish-held regions, but Kurdish authorities have rejected the directive. This represents a significant escalation in the dispute over resource management and territorial control.",
+      "why_matters": "Geopolitical tensions in OPEC's second-largest producer could disrupt crude supply, supporting elevated oil prices and energy sector risk premiums.",
+      "tag": "Macro"
     },
     {
-      "headline": "Nvidia breathes new life into the AI trade. Plus, Qnity inks a smart deal to get stronger",
+      "headline": "Jensen Huang is back as Nvidia CEO, but investigations and risks remain",
       "source": "CNBC",
-      "summary": "Nvidia's leadership transition and strategic partnerships are driving renewed investor interest in the artificial intelligence sector. The company and its partners are positioning for expanded growth in AI infrastructure.",
-      "why_matters": "Nvidia is a mega-cap driver of S&P 500 performance; renewed AI momentum has broad equity market implications and influences tech sector rotation.",
+      "summary": "Jensen Huang has resumed his role as Nvidia CEO despite ongoing investigations into the company. The article notes persistent risks and unresolved issues despite his return to leadership.",
+      "why_matters": "Nvidia is a mega-cap tech leader; CEO uncertainty and investigations create headline risk for the AI-driven equity rally and S&P 500 composition.",
       "tag": "Equities"
     },
     {
-      "headline": "US imposes sanctions on dozens linked to Iran's shadow banking networks",
+      "headline": "COMMENTARY: Middle East crude oil exports trend lower amid fake Iran stalemate",
       "source": "Reuters",
-      "summary": "The US government escalated financial pressure on Iran by sanctioning individuals involved in its shadow banking system. This follows broader geopolitical tensions and Iranian domestic crackdowns.",
-      "why_matters": "Sanctions tighten financial networks and can disrupt oil markets and emerging market credit; relevant to crude price volatility and broader macro stability.",
+      "summary": "Middle East crude oil exports are declining as geopolitical tensions persist around Iran negotiations. The commentary characterizes current diplomatic efforts as a stalemate affecting supply fundamentals.",
+      "why_matters": "Lower crude exports from the Middle East support WTI prices and tighten global energy supply, with spillover effects on inflation and Fed policy.",
       "tag": "Macro"
     }
   ],
@@ -61,26 +61,26 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "Any policy signaling or rate guidance will directly move Treasury yields and equity valuations given current Fed uncertainty on inflation trajectory."
-    },
-    {
-      "day": "Fri",
-      "event": "Economic Policy Uncertainty",
-      "importance": "high",
-      "note": "EPU index readings could explain the elevated VIX (35.89) and validate whether policy uncertainty is driving the 7.45-point VIX spike."
+      "note": "FOMC communication on 2026-11-27 will set tone for monetary policy and likely drive bond and equity repricing; market is pricing in sustained rate expectations given 10Y/2Y at 4.92%/4.63%."
     },
     {
       "day": "Fri",
       "event": "Advance Economic Indicators",
+      "importance": "high",
+      "note": "Economic leading indicators on 2026-11-27 will signal growth momentum and inflation trajectory, key inputs for the Fed's December meeting."
+    },
+    {
+      "day": "Fri",
+      "event": "Federal Funds Data",
       "importance": "medium",
-      "note": "Leading economic data will help the market assess recession risk and validate Fed concerns about persistent inflation."
+      "note": "Federal Funds operational data on 2026-11-27 provides real-time view of overnight funding conditions and monetary transmission."
     }
   ],
   "concept": {
-    "title": "Hawkish Guidance Meets Rally: The Yield Curve Paradox",
-    "one_liner": "Bond yields fell sharply while Fed officials signal higher rates ahead, creating tension between market repricing and policy messaging.",
-    "explanation": "Fed Vice Chair John Williams's comments about maintaining higher rates conflict with the 12–13 bps drop in Treasury yields, suggesting market positioning ahead of potential policy changes. The S&P 500's 4.71% jump and elevated VIX (35.89) indicate investors are navigating elevated uncertainty—equity strength coexists with fear, likely driven by AI enthusiasm (Nvidia) offsetting rate-hike anxiety. This paradox underscores how forward guidance and market expectations can diverge sharply when inflation concerns remain alive.",
-    "market_link": "Fed communications directly drive bond curves and equity risk premiums; misalignment often precedes volatility or sharp repricing."
+    "title": "Geopolitical Oil Risk & Rate Volatility",
+    "one_liner": "Middle East tensions and production disputes are supporting crude prices while Treasuries rally on growth concerns, compressing the 2Y/10Y curve.",
+    "explanation": "Iraq-Kurdish territorial disputes and Iranian export pressure are cited in today's headlines as Middle East crude exports trend lower, anchoring WTI near $89.53. Simultaneously, 10Y and 2Y Treasuries have both rallied sharply (−12 bps and −13 bps respectively), flattening the curve and signaling reduced rate-hike expectations. The S&P 500's 0.69% decline and VIX's sharp 9.27-point drop despite equity weakness suggest a \"risk-off\" rotation from equities into bonds, with safe-haven flows supporting duration.",
+    "market_link": "Energy supply shocks (Iraq, Iran) boost commodity prices and inflation hedges; simultaneous Treasury strength reflects flight-to-quality ahead of Friday's FOMC release and economic data, creating headwinds for growth-dependent equities."
   },
-  "narrative": "The S&P 500 surged 4.71% driven by AI sector momentum and strategic corporate moves, yet the VIX jumped 7.45 points and Treasury yields fell sharply, reflecting conflicting signals: Fed officials signaled higher rates ahead while market yields compressed, leaving investors positioned defensively despite equity strength. Geopolitical risks (Iran sanctions) and macro uncertainty keep traders hedged even as equities rally."
+  "narrative": "U.S. equity markets closed lower on 2026-11-23 as geopolitical tensions in the Middle East sustain crude prices near $89.53, while Treasuries rallied sharply (10Y/2Y down 12–13 bps) signaling reduced rate expectations and economic caution. The VIX's steep 9.27-point decline despite S&P 500 weakness suggests volatility compression and a risk-off posture heading into Friday's FOMC press release and advance economic indicators."
 }
