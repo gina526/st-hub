@@ -1,5 +1,148 @@
 [
   {
+    "date": "2026-11-25",
+    "blocks": [
+      {
+        "term": "S&P 500 Selloff (-2.51% to 7008)",
+        "category": "equities",
+        "bullets": [
+          "Index down 180 points to 7008 on sustained AI sector weakness and Anthropic post-IPO underperformance",
+          "Nasdaq futures sliding >2%, signaling tech-heavy indices face steeper losses than broad market",
+          "AI-focused equities facing investor skepticism despite sector hype; elevated valuations under pressure as growth narrative cracks",
+          "Capital rotation out of equities into fixed income (munis, Treasuries) due to attractive yields competing for risk capital",
+          "Selloff occurring despite flat Treasury yields, meaning equity weakness is sector/growth specific, not rate-driven",
+          "VIX at 26.36 reflects equity volatility premium; not a panic signal yet but material hedging costs rising for long portfolios",
+          "FOMC press release Friday could reset equity expectations if Fed signals policy shift or growth concerns"
+        ],
+        "so_what": "Sales teams pitch risk-mitigation strategies (puts, collars) to growth-heavy clients holding concentrated AI/mega-cap tech; traders identify tactical shorts in momentum names and longs in defensive/dividend payers benefiting from rotation."
+      },
+      {
+        "term": "10-Year Treasury Yield (4.92%, flat 0bps)",
+        "category": "rates",
+        "bullets": [
+          "10Y UST holding 4.92% despite -2.51% equity selloff indicates Treasury demand is rotational, not flight-to-safety",
+          "Flat 0bps move shows duration is not the primary driver today; equity weakness and municipal bond competition are",
+          "4.92% remains attractive to tax-sensitive investors (high-net-worth, institutions) seeking tax-loss harvesting in munis",
+          "Yield stability despite equity pressure suggests Fed rate-cut cycle expectations are priced in; no surprise dovish repricing occurring",
+          "10Y/2Y spread at 29bps (4.92% - 4.63%) remains relatively flat, implying market expects near-term policy stability",
+          "FOMC Friday critical: any hawkish hold (rates unchanged) or dovish guidance would shift 10Y lower; hawkish surprise could push yields up"
+        ],
+        "so_what": "Fixed-income salespeople lock in client allocations to 4.92% yields before Friday FOMC (potential repricing catalyst); traders monitor 10Y futures for edge on Fed communications; flow traders track municipal bond demand competing for the same yield."
+      },
+      {
+        "term": "2-Year Treasury Yield (4.63%, flat 0bps)",
+        "category": "rates",
+        "bullets": [
+          "2Y UST at 4.63% reflects near-term policy rate expectations; flat 0bps move aligns with no Fed action today",
+          "29bps spread to 10Y suggests market is not pricing significant steepening; near-term rates expected to remain sticky",
+          "2Y more sensitive to FOMC Friday than 10Y; any new Fed forward guidance resets short-end repricing first",
+          "Flat move despite equity volatility shows Fed policy is not seen as imminent shock; baseline case remains hold or gradual cuts",
+          "2Y/10Y inversion risk low given current spread; curves remain structurally normal, supporting duration confidence in fixed-income portfolios",
+          "High-frequency traders monitor 2Y/3M spread for leading indicator of policy pivot; currently no distress signal in short-end structure"
+        ],
+        "so_what": "Rates traders use 2Y as barometer for Fed surprise risk on Friday; salespeople position clients in 2/10 duration ladder to hedge curve twist; repo traders monitor 2Y funding costs as proxy for near-term bank liquidity stress."
+      },
+      {
+        "term": "VIX (26.36, -0.26 today)",
+        "category": "volatility",
+        "bullets": [
+          "VIX at 26.36 reflects elevated but not extreme equity volatility; market is in risk-off mood but not panic territory",
+          "Small -0.26 decline despite -2.51% S&P drop suggests volatility is tracking risk appetite, not fear capitulation",
+          "26.36 is elevated vs. 15-18 normal range; puts options expensive relative to calls, hiking hedging costs for portfolio managers",
+          "VIX above 20 typically signals institutional de-risking; current level consistent with rotation out of growth/AI into stable income",
+          "Friday FOMC + economic calendar could push VIX higher if Fed surprises dovish (risk rally) or hawkish (equity repricing shock)",
+          "Implied volatility term structure likely backwardated (near-term vol > long-term), pricing near-term event risk (FOMC, inflation data)"
+        ],
+        "so_what": "Volatility desk marks hedging strategies (collars, ratio spreads) more expensive; salespeople advise clients on when to buy/sell vol into Friday's event risk; options traders structure condor spreads betting on VIX mean reversion post-FOMC."
+      },
+      {
+        "term": "Municipal Bond Rotation (Tax-Advantaged Fixed Income Bid)",
+        "category": "credit",
+        "bullets": [
+          "High-net-worth investors rotating into municipal bonds to harvest tax benefits while 4.92% 10Y yield remains elevated",
+          "Municipal yields attractive relative to taxable alternatives for top tax bracket; after-tax return on munis exceeds Treasury equivalent",
+          "Rotation pulls capital away from equities, creating two-way headwind for stock demand on days like today",
+          "Muni mutual fund inflows likely positive despite market stress, as fixed-income demand holds while equity demand collapses",
+          "Tax-loss harvesting season amplifies muni demand: sell losers in portfolio, offset capital gains, buy tax-exempt muni bonds",
+          "Credit quality remains stable in muni market; rotation is tactical allocation shift, not credit stress signal",
+          "FOMC Friday could reset muni yield expectations if Fed guidance changes; currently munis tracking Treasury curve"
+        ],
+        "so_what": "Credit salespeople pitch high-quality muni bonds to wealth management clients seeking tax efficiency; traders identify muni/Treasury basis trades and arbitrage opportunities; allocators monitor muni fund flows as barometer for high-net-worth risk appetite."
+      },
+      {
+        "term": "AI Sector Exhaustion & Post-IPO Washout (Anthropic Case Study)",
+        "category": "equities",
+        "bullets": [
+          "Anthropic post-IPO underperformance signals investor skepticism toward elevated AI valuations despite continued sector hype",
+          "AI-focused equities facing sustained selling; market questioning whether AI earnings growth justifies 2024–2025 valuation multiples",
+          "Post-IPO lockup expirations and profit-taking from early buyers adding supply to already-skeptical demand",
+          "Weakness in AI names (Nvidia, Broadcom, etc.) disproportionately dragging Nasdaq futures, amplifying tech selloff vs. broad market",
+          "Sector-level rotation from growth (AI, software) to value/dividend (energy, utilities, financials) reflects risk-off positioning",
+          "Analyst downgrades likely cascading through AI supply chain (semis, cloud, software); earnings estimate cuts to follow",
+          "FOMC Friday could reset AI growth narrative if Fed signals hawkish hold; market may bid AI lower on slower growth outlook"
+        ],
+        "so_what": "Equity salespeople field client calls on AI portfolio concentration risk; traders identify tactical shorts in bubble names and longs in AI-defensive sectors; research teams update earnings models for AI slowdown scenario."
+      },
+      {
+        "term": "Risk-On/Risk-Off Regime (Growth → Income Rotation)",
+        "category": "fundamental",
+        "bullets": [
+          "Market transitioning from risk-on (growth, momentum, high-multiple AI) to risk-off (income, defensives, stable yields)",
+          "Risk-off behavior defined: capital fleeing equities (esp. growth/tech) into fixed income (Treasuries, munis) and cash equivalents",
+          "Elevated Treasury yields (4.92%) now competitive enough with equity risk premium to justify fixed-income overweight for institutions",
+          "Risk-on market rewards momentum and earnings growth; risk-off market rewards dividends, cash flow, and credit safety",
+          "VIX at 26.36 is signal that institutional risk managers are reducing exposure, not adding; hedging costs high, conviction low",
+          "Rotation visible in flows: equity mutual funds seeing redemptions, fixed-income/money market funds seeing inflows",
+          "Friday's FOMC is pivot point: dovish surprise could reset risk-on (yields fall, growth bids higher); hawkish hold extends risk-off"
+        ],
+        "so_what": "Portfolio managers rebalance from 60/40 (stocks/bonds) toward 40/60 or cash-heavy; salespeople advise on tactical oversizing defensive sectors and fixed income; traders position for regime shift by shorting momentum and buying dividend + rate-sensitive names."
+      },
+      {
+        "term": "Friday FOMC Press Release & Economic Calendar Catalysts",
+        "category": "macro",
+        "bullets": [
+          "FOMC press release Friday (high importance): Fed communications could reset rate expectations and guide forward guidance, directly impacting 10Y yield (4.92%) and equity positioning",
+          "Economic Policy Uncertainty (EPU) reading Friday expected to remain elevated; correlates with VIX (26.36) and reinforces defensive market positioning",
+          "Advance Economic Indicators Friday (medium importance): leading indicators data signals economic momentum amid S&P 500's sharp decline and rising uncertainty",
+          "Market base case: Fed holds rates unchanged; any dovish surprise (new rate-cut signal) would push 10Y lower and boost equities; hawkish surprise extends selloff",
+          "Inflation data embedded in economic calendar Friday; if headline CPI surprises hot, 10Y could break above 4.92% and extend equity weakness",
+          "Guidance on Fed balance sheet and QT (quantitative tightening) could reset duration risk; faster balance-sheet shrinkage props yields higher",
+          "Post-FOMC vol compression expected once event risk passes; trading range likely tightens Tuesday-Wednesday if Fed guides clearly"
+        ],
+        "so_what": "Traders pre-hedge Friday event risk by buying straddles (long calls + puts) in ES (S&P 500 futures) and TY (10-year futures); salespeople lock in client calls for Friday morning; macro desk models multiple FOMC scenarios (hold, cuts, hikes) and positions accordingly."
+      },
+      {
+        "term": "Duration & Yield-Price Mechanism (Bond Math Primer)",
+        "category": "fundamental",
+        "bullets": [
+          "Bond prices and yields move inversely: if 10Y UST yield rises 1% (100bps), bond prices fall ~10% (10Y duration); today 0bps move = no price change",
+          "Duration risk: longer-dated bonds (10Y) are more sensitive to yield changes than shorter-dated bonds (2Y); currently 10Y/2Y spread at 29bps limits steepening",
+          "Yield-to-maturity (YTM) at 4.92% represents return to investor if held to maturity; reinvestment risk embedded if rates fall below 4.92%",
+          "Rising equity yields (cost of capital higher) reduce present value of future earnings; this mechanic explaining tech selloff despite flat Treasury yields",
+          "Municipal bond tax equivalence: muni yielding 3.5% = 4.92% equivalent taxable yield for 29% tax-bracket investor (inverse relationship to brackets)",
+          "FOMC Friday risk: if Fed signals future rate cuts, 10Y yield falls (bond prices rise); if Fed signals hold/hike, yield rises (bond prices fall)",
+          "Repo market (borrowing cash via bond collateral) tracks Treasury yields closely; if 10Y rises fast, repo rates spike and stress short-term funding"
+        ],
+        "so_what": "Rates salespeople educate clients on duration ladder (ladder maturities 2Y/5Y/10Y/30Y) to hedge interest rate risk; traders use duration hedge ratios to neutralize equity risk in bond portfolios; operations teams model bond portfolio P&L sensitivity for each 25bps yield move."
+      },
+      {
+        "term": "DXY / USD Currency Index (N/A today, absent from brief)",
+        "category": "fx",
+        "bullets": [
+          "DXY not reported today (N/A) but typically reflects US dollar strength vs. major currencies (EUR, JPY, GBP, CAD, SEK, CHF, AUD)",
+          "USD strength typically risk-off indicator: investors rotate into safe-haven US dollar, reducing EM and commodity FX demand",
+          "If DXY rising into FOMC Friday, signals market is pricing Fed hawkish surprise or geopolitical flight-to-safety; if falling, risk-on mood",
+          "10Y UST at 4.92% and sticky rates support USD carry trades; higher US rates attract foreign capital seeking yield, boosting DXY",
+          "Equity selloff (-2.51%) normally supports USD (risk-off), but sticky Treasury yields may limit DXY upside today",
+          "Friday FOMC could shift DXY via Fed rate expectations: dovish surprise weakens USD (lower relative rates), hawkish surprise strengthens USD",
+          "EM credit and commodity FX (AUD, CAD, BRL) exposed to DXY moves; salespeople hedge client FX exposure via forwards and swaps if DXY volatility spikes"
+        ],
+        "so_what": "FX traders monitor DXY vs. 10Y spread as carry trade signal; salespeople hedge USD exposure for multinational corporates ahead of FOMC; emerging market desk watches DXY as leading indicator of capital flows into/out of EM bonds and equities."
+      }
+    ],
+    "narrative": "The S&P 500 fell 2.51% to 7008 as AI sector exhaustion—exemplified by Anthropic's disappointing post-IPO performance—triggered broad tech weakness and Nasdaq futures declines exceeding -2% despite flat Treasury yields (10Y: 4.92%, 2Y: 4.63%), indicating the selloff is growth-specific rather than rate-driven. Simultaneously, elevated muni yields are attracting high-net-worth capital into tax-advantaged fixed income, compressing equity risk appetite and signaling a tactical rotation from growth to income. VIX at 26.36 reflects heightened uncertainty ahead of Friday's FOMC release and economic data, while the structural case for equities weakens as Treasury yields remain sticky enough to compete with equity risk premiums, setting the stage for further rotation if the Fed holds rates steady or signals patience on cuts."
+  },
+  {
     "date": "2026-11-24",
     "blocks": [
       {
