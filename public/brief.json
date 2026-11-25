@@ -1,11 +1,11 @@
 {
-  "date": "2026-11-24",
-  "generated_at": "2026-11-24T22:01:37.281Z",
+  "date": "2026-11-25",
+  "generated_at": "2026-11-25T16:26:30.210Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7188",
-      "change": "-35 (-0.49%)",
+      "value": "7008",
+      "change": "-180 (-2.51%)",
       "up": false
     },
     {
@@ -21,38 +21,38 @@
       "up": true
     },
     {
-      "name": "EUR/USD",
-      "value": "1.0901",
-      "change": "-0.0066",
+      "name": "~DXY",
+      "value": "N/A",
+      "change": "N/A",
       "up": false
     },
     {
       "name": "VIX",
-      "value": "26.62",
-      "change": "-9.27",
+      "value": "26.36",
+      "change": "-0.26",
       "up": false
     }
   ],
   "stories": [
     {
-      "headline": "Trump administration set to unveil new tariffs after probe on excess factory capacity, sources say",
-      "source": "Reuters",
-      "summary": "The Trump administration is preparing to announce new tariffs following an investigation into excess factory capacity. This represents a potential escalation in trade policy that could affect multiple sectors.",
-      "why_matters": "Tariff announcements typically trigger equity volatility and inflation concerns, impacting both equity valuations and Treasury yield expectations.",
-      "tag": "Macro"
-    },
-    {
-      "headline": "HPE shares tumble as shrinking AI margins overshadow upbeat forecast",
-      "source": "Reuters",
-      "summary": "Hewlett Packard Enterprise saw share price declines despite positive guidance, driven by concerns over contracting margins in AI-related business segments. The selloff signals caution around profitability in high-growth tech areas.",
-      "why_matters": "AI margin compression in large-cap tech represents a key earnings risk and could weigh on broad equity indices and growth-focused valuations.",
+      "headline": "Anthropic's stock has been a clunker post-IPO. Why that matters for the AI trade",
+      "source": "CNBC",
+      "summary": "Anthropic's post-IPO performance has underperformed expectations, raising questions about the viability of AI-focused equities. The weakness signals investor skepticism toward elevated AI valuations despite continued sector hype.",
+      "why_matters": "Broad AI selloff pressures large-cap tech holdings and compounds today's -2.51% S&P 500 decline.",
       "tag": "Equities"
     },
     {
-      "headline": "Houthis hit Riyadh's tallest tower, 11 wounded, Saudi Civil defense says",
+      "headline": "Wealthy investors seek tax savings from municipal bonds as yields remain elevated",
+      "source": "CNBC",
+      "summary": "High-net-worth investors are rotating into municipal bonds to harvest tax benefits while yields remain attractive relative to taxable alternatives. This reflects a tactical shift in fixed-income allocation among institutional buyers.",
+      "why_matters": "Elevated muni yields (supported by 4.92% 10Y UST) are redirecting capital flows away from equities and toward fixed income.",
+      "tag": "Credit"
+    },
+    {
+      "headline": "Nasdaq futures slide over 2% as AI losses deepen; inflation data in focus",
       "source": "Reuters",
-      "summary": "Houthi forces launched an attack on Saudi Arabia's tallest building in Riyadh, resulting in casualties. This marks a continued escalation of regional tensions in the Middle East.",
-      "why_matters": "Middle East geopolitical risk elevates crude oil volatility and could support energy prices, with WTI currently at $89.53.",
+      "summary": "Nasdaq futures are declining sharply as AI-related stocks face sustained selling pressure. Market participants are preparing for upcoming inflation data releases that could influence Fed policy expectations.",
+      "why_matters": "Forward-looking weakness in tech futures aligns with the broad S&P 500 selloff and sets stage for volatility ahead of economic calendar events.",
       "tag": "Macro"
     }
   ],
@@ -61,26 +61,26 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "FOMC communication on monetary policy direction is critical for Treasury yields and equity risk appetite, especially given elevated VIX at 26.62."
-    },
-    {
-      "day": "Fri",
-      "event": "Advance Economic Indicators",
-      "importance": "high",
-      "note": "Leading economic indicators provide forward-looking data on growth momentum, directly relevant to Fed policy expectations and 10Y/2Y curve positioning."
+      "note": "Federal Reserve communications could reset rate expectations and guide forward guidance, directly impacting the 4.92% 10Y yield and equity positioning."
     },
     {
       "day": "Fri",
       "event": "Economic Policy Uncertainty",
+      "importance": "high",
+      "note": "Elevated EPU readings may correlate with VIX at 26.36 and reinforce defensive market positioning seen in today's -2.51% sell-off."
+    },
+    {
+      "day": "Fri",
+      "event": "Advance Economic Indicators",
       "importance": "medium",
-      "note": "EPU index reflects market sentiment around policy headwinds, particularly relevant given Trump tariff announcements and geopolitical tensions."
+      "note": "Leading indicators data will provide early signals on economic momentum amid the S&P 500's sharp decline and rising uncertainty."
     }
   ],
   "concept": {
-    "title": "Margin Compression in AI & Tariff Uncertainty",
-    "one_liner": "High-growth tech faces profitability pressures while macro uncertainty from new tariffs weighs on equity sentiment.",
-    "explanation": "HPE's margin squeeze in AI segments signals that the market is repricing AI-driven growth narratives for profitability, not just top-line expansion. Simultaneously, incoming tariffs from the Trump administration inject macro uncertainty that typically correlates with VIX elevation (currently 26.62) and equity caution (S&P -0.49%). These twin pressures—microeconomic earnings risk and macroeconomic policy headwinds—are restraining equities while Treasuries hold steady.",
-    "market_link": "S&P 500 weakness, persistent VIX elevation, and Treasury yield stability reflect a market bracing for both near-term earnings revisions and longer-term trade friction."
+    "title": "AI Rotation Risk & Defensive Fixed Income Bid",
+    "one_liner": "Post-IPO weakness in AI names is triggering a broader tech selloff while elevated Treasury yields attract capital into municipal bonds, compressing equity risk appetite.",
+    "explanation": "Anthropic's underperformance post-IPO is emblematic of AI sector exhaustion, driving the S&P 500 down 2.51% and pressuring Nasdaq futures harder. Simultaneously, 4.92% 10Y yields remain sticky and attractive enough to pull wealthy investors into tax-advantaged municipal bonds, creating a two-way headwind for equities. VIX at 26.36 reflects this risk-off sentiment even as Treasury yields hold flat, suggesting duration is not the primary concern—equity volatility and sector rotation are.",
+    "market_link": "S&P 500 decline, elevated municipal bond demand, and AI stock weakness converge to signal a tactical shift from growth to income."
   },
-  "narrative": "Equity markets closed lower (-0.49% S&P 500) as AI margin concerns at HPE and looming Trump tariffs weigh on sentiment, while VIX remains elevated at 26.62 despite a 9.27-point decline. Treasury yields remain anchored (10Y at 4.92%, 2Y at 4.63%) as the market awaits Friday's FOMC communication and economic data to clarify the Fed's policy path amid geopolitical and tariff-related risks."
+  "narrative": "The S&P 500 fell 2.51% as AI-related losses deepen following Anthropic's disappointing post-IPO performance, while elevated Treasury yields (10Y: 4.92%, 2Y: 4.63%) continue to attract capital into tax-advantaged fixed income vehicles, further undermining equity demand. VIX at 26.36 reflects heightened uncertainty ahead of Friday's FOMC release and economic data, with Nasdaq futures signaling steeper losses to come."
 }
