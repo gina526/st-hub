@@ -1,11 +1,11 @@
 {
   "date": "2026-11-25",
-  "generated_at": "2026-11-25T16:26:30.210Z",
+  "generated_at": "2026-11-25T21:16:08.017Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7008",
-      "change": "-180 (-2.51%)",
+      "value": "7167",
+      "change": "-21 (-0.29%)",
       "up": false
     },
     {
@@ -21,10 +21,10 @@
       "up": true
     },
     {
-      "name": "~DXY",
-      "value": "N/A",
-      "change": "N/A",
-      "up": false
+      "name": "EUR/USD",
+      "value": "1.0964",
+      "change": "+0.0063",
+      "up": true
     },
     {
       "name": "VIX",
@@ -35,24 +35,24 @@
   ],
   "stories": [
     {
-      "headline": "Anthropic's stock has been a clunker post-IPO. Why that matters for the AI trade",
+      "headline": "Nvidia leads tech sell-off as Huang comeback rally fizzles and AI concerns return",
       "source": "CNBC",
-      "summary": "Anthropic's post-IPO performance has underperformed expectations, raising questions about the viability of AI-focused equities. The weakness signals investor skepticism toward elevated AI valuations despite continued sector hype.",
-      "why_matters": "Broad AI selloff pressures large-cap tech holdings and compounds today's -2.51% S&P 500 decline.",
+      "summary": "Nvidia shares are declining as a recent rally around CEO Jensen Huang fades amid renewed concerns about artificial intelligence valuations and growth. The sell-off reflects broader weakness in the technology sector.",
+      "why_matters": "Nvidia is a core holding in the Magnificent Seven and AI infrastructure complex; weakness here signals potential rotation away from growth assets.",
       "tag": "Equities"
     },
     {
-      "headline": "Wealthy investors seek tax savings from municipal bonds as yields remain elevated",
+      "headline": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
       "source": "CNBC",
-      "summary": "High-net-worth investors are rotating into municipal bonds to harvest tax benefits while yields remain attractive relative to taxable alternatives. This reflects a tactical shift in fixed-income allocation among institutional buyers.",
-      "why_matters": "Elevated muni yields (supported by 4.92% 10Y UST) are redirecting capital flows away from equities and toward fixed income.",
-      "tag": "Credit"
+      "summary": "SpaceX has received FCC clearance to launch one million satellites for orbital data center infrastructure. This represents a major regulatory win for Musk's space infrastructure ambitions.",
+      "why_matters": "This deployment could reshape US telecommunications and cloud infrastructure competition, with implications for tech capex cycles and national security technology positioning.",
+      "tag": "Equities"
     },
     {
-      "headline": "Nasdaq futures slide over 2% as AI losses deepen; inflation data in focus",
+      "headline": "EXCLUSIVE: Boehly signs US-backed share swap deal to buy Lukoil global assets",
       "source": "Reuters",
-      "summary": "Nasdaq futures are declining sharply as AI-related stocks face sustained selling pressure. Market participants are preparing for upcoming inflation data releases that could influence Fed policy expectations.",
-      "why_matters": "Forward-looking weakness in tech futures aligns with the broad S&P 500 selloff and sets stage for volatility ahead of economic calendar events.",
+      "summary": "Boehly has agreed to acquire Lukoil's global assets through a US-backed share swap arrangement. This transaction signals continued consolidation in energy markets with government involvement.",
+      "why_matters": "Energy asset consolidation and US government backing in deals could affect crude markets, geopolitical risk positioning, and capital flows into commodities.",
       "tag": "Macro"
     }
   ],
@@ -61,26 +61,26 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "Federal Reserve communications could reset rate expectations and guide forward guidance, directly impacting the 4.92% 10Y yield and equity positioning."
+      "note": "FOMC communications are market-moving and directly influence rate expectations; this release follows recent Treasury yield stability."
     },
     {
       "day": "Fri",
       "event": "Economic Policy Uncertainty",
       "importance": "high",
-      "note": "Elevated EPU readings may correlate with VIX at 26.36 and reinforce defensive market positioning seen in today's -2.51% sell-off."
+      "note": "EPU index tracks policy-driven market stress and is closely watched by traders given elevated geopolitical tensions and energy reshuffles."
     },
     {
       "day": "Fri",
       "event": "Advance Economic Indicators",
       "importance": "medium",
-      "note": "Leading indicators data will provide early signals on economic momentum amid the S&P 500's sharp decline and rising uncertainty."
+      "note": "Leading indicators help gauge near-term growth momentum amid recent equity weakness and unchanged Treasury yields."
     }
   ],
   "concept": {
-    "title": "AI Rotation Risk & Defensive Fixed Income Bid",
-    "one_liner": "Post-IPO weakness in AI names is triggering a broader tech selloff while elevated Treasury yields attract capital into municipal bonds, compressing equity risk appetite.",
-    "explanation": "Anthropic's underperformance post-IPO is emblematic of AI sector exhaustion, driving the S&P 500 down 2.51% and pressuring Nasdaq futures harder. Simultaneously, 4.92% 10Y yields remain sticky and attractive enough to pull wealthy investors into tax-advantaged municipal bonds, creating a two-way headwind for equities. VIX at 26.36 reflects this risk-off sentiment even as Treasury yields hold flat, suggesting duration is not the primary concern—equity volatility and sector rotation are.",
-    "market_link": "S&P 500 decline, elevated municipal bond demand, and AI stock weakness converge to signal a tactical shift from growth to income."
+    "title": "Tech Leadership Fade & VIX Complacency Divergence",
+    "one_liner": "Nvidia and AI sell-off amid fixed yields suggests growth rotation risk, yet VIX compression signals traders remain underhedged for volatility.",
+    "explanation": "The S&P 500 declined 0.29% with Nvidia leading the tech sell-off as growth concerns resurface, while the VIX fell 0.26 points to 26.36—a mild level given equity pressure. Treasury yields remained flat (10Y at 4.92%, 2Y at 4.63%), indicating the market is pricing neither rate relief nor hawkish surprises. This divergence—falling stocks, stable yields, and declining volatility—suggests complacency in hedging strategies even as mega-cap tech leadership erodes.",
+    "market_link": "If VIX remains artificially low while equities weaken further, options markets could spike sharply, forcing deleveraging and risk-off cascades."
   },
-  "narrative": "The S&P 500 fell 2.51% as AI-related losses deepen following Anthropic's disappointing post-IPO performance, while elevated Treasury yields (10Y: 4.92%, 2Y: 4.63%) continue to attract capital into tax-advantaged fixed income vehicles, further undermining equity demand. VIX at 26.36 reflects heightened uncertainty ahead of Friday's FOMC release and economic data, with Nasdaq futures signaling steeper losses to come."
+  "narrative": "US equities slipped 0.29% as Nvidia-led tech weakness offset stable Treasury yields (10Y unchanged at 4.92%) and mild VIX compression. SpaceX regulatory wins and energy M&A highlight infrastructure and geopolitical reshuffles, while FOMC communications on Friday will be critical to confirm whether the Fed's stance remains accommodative amid growth softness."
 }
