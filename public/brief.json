@@ -1,11 +1,11 @@
 {
   "date": "2026-11-26",
-  "generated_at": "2026-11-26T16:41:42.356Z",
+  "generated_at": "2026-11-26T21:03:49.289Z",
   "market_levels": [
     {
       "name": "S&P 500",
       "value": "7167",
-      "change": "-20 (-0.28%)",
+      "change": "-21 (-0.29%)",
       "up": false
     },
     {
@@ -22,8 +22,8 @@
     },
     {
       "name": "~DXY",
-      "value": "1.0971 EUR/USD",
-      "change": "+0.0007",
+      "value": "N/A",
+      "change": "N/A",
       "up": false
     },
     {
@@ -35,24 +35,24 @@
   ],
   "stories": [
     {
-      "headline": "Spain's De Cos set to be nominated by EU countries as next head of ECB",
+      "headline": "Trump demands probe into 'record setting error' after third-quarter GDP data gets massive revision higher",
+      "source": "CNBC",
+      "summary": "Trump has called for an investigation into a significant upward revision to Q3 GDP data. The demand raises questions about the timing and accuracy of economic reporting.",
+      "why_matters": "GDP revisions directly impact Fed policy expectations and equity valuations; political scrutiny of economic data can influence market confidence.",
+      "tag": "Macro"
+    },
+    {
+      "headline": "Saudi-led coalition says Houthis attacked Aramco's Jazan refinery",
       "source": "Reuters",
-      "summary": "Spain's De Cos is positioned to become the next ECB head following EU nomination proceedings. This marks a significant leadership transition at Europe's central bank.",
-      "why_matters": "ECB policy direction directly impacts eurozone rates, USD/EUR dynamics, and cross-border capital flows affecting US equities.",
+      "summary": "The Saudi-led coalition reported that Houthis launched an attack on Aramco's Jazan refinery. Such attacks on critical energy infrastructure risk supply disruptions.",
+      "why_matters": "Energy infrastructure attacks affect global oil supply and prices; WTI crude is up $0.82 to $82.24, reflecting geopolitical risk premium.",
       "tag": "Rates"
     },
     {
-      "headline": "Airline Norse Atlantic flags bankruptcy risk as flights suspended",
+      "headline": "Israel's Eisenkot reaches deal with left-wing faction as coalition talks gain steam",
       "source": "Reuters",
-      "summary": "Norse Atlantic has suspended flights and flagged bankruptcy risk amid operational challenges. The airline's distress signals broader pressures in the aviation sector.",
-      "why_matters": "Airline stress reflects demand headwinds and credit market tightness; bankruptcy filings are cyclical recession indicators.",
-      "tag": "Credit"
-    },
-    {
-      "headline": "OPEC+ oil capacity disputes persist ahead of Sunday meeting on 2027 quotas, sources say",
-      "source": "Reuters",
-      "summary": "OPEC+ members remain divided over capacity allocations ahead of the Sunday quota-setting meeting for 2027. Unresolved disputes could impact global energy supply planning.",
-      "why_matters": "Oil quota decisions influence commodity prices, inflation expectations, and treasury yield dynamics critical to equity valuations.",
+      "summary": "Israeli political negotiations have progressed with Eisenkot securing a deal with a left-wing faction. Coalition formation continues amid ongoing regional tensions.",
+      "why_matters": "Middle East political stability affects commodity prices and geopolitical risk appetite; market volatility can follow coalition shifts in the region.",
       "tag": "Macro"
     }
   ],
@@ -61,26 +61,26 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "Fed policy communication signals are market-moving events that reset rate expectations and equity risk premiums."
+      "note": "FOMC communications drive rate expectations and equity/bond repricing; combined with Economic Policy Uncertainty data, sets tone for year-end volatility."
+    },
+    {
+      "day": "Fri",
+      "event": "Advance Economic Indicators",
+      "importance": "high",
+      "note": "Leading indicators help forecast near-term economic momentum and inform Fed policy trajectory."
     },
     {
       "day": "Fri",
       "event": "Economic Policy Uncertainty",
-      "importance": "high",
-      "note": "EPU indices correlate with VIX spikes and equity volatility; elevated readings can trigger defensive positioning."
-    },
-    {
-      "day": "Fri",
-      "event": "Federal Funds Data",
-      "importance": "high",
-      "note": "Fed funds rate operations anchor the entire yield curve and overnight funding costs for financial institutions."
+      "importance": "medium",
+      "note": "EPU index reflects market anxiety; elevated readings often correlate with higher VIX and risk-off positioning."
     }
   ],
   "concept": {
-    "title": "Geopolitical Risk Premium & Rate Curve Flattening",
-    "one_liner": "Middle East tensions and energy supply uncertainty are testing whether safe-haven flows into Treasuries can offset equity weakness.",
-    "explanation": "With the VIX elevated at 26.36 and S&P 500 down 0.28%, headlines on Gaza, Iran, and Ukraine dominate newsflow. Simultaneously, the 10Y Treasury rallied 1 bp while the 2Y held flat, flattening the curve—a classic risk-off signal. OPEC+ quota disputes add commodity tail risk, keeping oil uncertainty high and inflation expectations pinned.",
-    "market_link": "ECB leadership change and Fed communications Friday (FOMC release) will test whether central banks can communicate stability amid geopolitical fragmentation."
+    "title": "Geopolitical Risk Premium and Inflation Signals",
+    "one_liner": "Energy infrastructure attacks, political disputes, and GDP data scrutiny are pushing crude higher while bonds flatten, signaling lingering inflation concern beneath a weakening equity close.",
+    "explanation": "With WTI crude up $0.82 on Houthi-Aramco tensions and Iraq closing borders, energy supply risk is pricing in. The 10Y UST at 4.91% (down 1 bp) and VIX at 26.36 (down 0.26) show bond demand offsetting equity weakness (S&P -21 bps), suggesting investors are rotating to safety. Trump's GDP revision probe adds political noise to economic data credibility, creating uncertainty around Fed pivot timing and real growth.",
+    "market_link": "Energy shocks + political/data uncertainty typically widen credit spreads and boost volatility; the flat 2Y (no change) despite 10Y decline hints at terminal rate stickiness, limiting rally room."
   },
-  "narrative": "US equities declined 0.28% with VIX holding elevated at 26.36 as Middle East tensions, ECB transition uncertainty, and airline credit stress weigh on sentiment. The 10Y Treasury rallied while the curve flattened, signaling flight-to-quality into duration amid OPEC+ quota disputes and Friday's pending FOMC messaging."
+  "narrative": "Equities closed modestly lower (-0.29%) as geopolitical risks in the Middle East pushed crude up $0.82, while Treasuries rallied on demand for safety. VIX dipped to 26.36, but political scrutiny of GDP data and ongoing regional tensions leave year-end positioning fragile heading into Friday's FOMC release and economic data."
 }
