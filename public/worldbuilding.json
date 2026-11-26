@@ -1,5 +1,140 @@
 [
   {
+    "date": "2026-11-26",
+    "blocks": [
+      {
+        "term": "10-Year US Treasury Yield (10Y UST)",
+        "category": "rates",
+        "bullets": [
+          "Current level: 4.91%, down 1.0 basis point today — rally into duration amid risk-off sentiment",
+          "Long-end bond prices move inversely to yields; 1bp drop = capital gains for duration holders, reflects flight-to-quality",
+          "Flattening signal: 10Y down 1bp while 2Y held flat (4.63%) creates steeper inversion, historically precedes recession concerns",
+          "ECB leadership transition (De Cos nomination) and Friday FOMC release will reset 10Y expectations; every policy signal moves this 5-10bps",
+          "Oil and geopolitical risk premia feed into 10Y via inflation expectations — OPEC+ quota disputes keep inflation tail risks elevated",
+          "Fed funds futures traders use 10Y as the terminal rate proxy; every 10bp move in 10Y triggers portfolio rebalancing across fixed income desks"
+        ],
+        "so_what": "On a rates desk, you're watching 10Y as your primary barometer for central bank policy expectations and risk appetite. Friday's FOMC release will be your biggest market mover; salespeople should be prepped to explain yield curve positioning (long-end rally despite equity weakness = recession hedging demand) to clients holding duration."
+      },
+      {
+        "term": "2-Year US Treasury Yield (2Y UST)",
+        "category": "rates",
+        "bullets": [
+          "Current level: 4.63%, unchanged (0.0 bps) today — sticky to Fed policy rate expectations in near term",
+          "2Y is the market's proxy for near-term Fed rate path; Fed funds currently anchored, so 2Y shows less volatility than longer duration",
+          "Curve flattening today: 10Y down 1bp, 2Y flat = 2-10 spread tightening, now deeply inverted (negative when 2Y > 10Y historically)",
+          "Airline bankruptcy risk (Norse Atlantic) and corporate credit stress push money into Treasuries across the curve, but short-end absorbs less volatility",
+          "Friday's FOMC press release and Federal Funds data will likely anchor 2Y; any hawkish surprise steepens curve, dovish flattens further"
+        ],
+        "so_what": "Salespeople use 2Y/10Y spread as a risk gauge to pitch to clients: inverted/flat curves historically signal recession. Today's flatness + geopolitical uncertainty = strong pitch for defensive positioning. For flow traders, sticky 2Y means focus short-term tactical flow around FOMC, not structural rate repricing."
+      },
+      {
+        "term": "S&P 500 Equity Index",
+        "category": "equities",
+        "bullets": [
+          "Current level: 7,167, down 20 points (-0.28%) — modest selloff but VIX elevated at 26.36 signals underlying fragility",
+          "ECB transition uncertainty + Middle East geopolitical risk + airline credit distress = multi-headwind equity downdraft without single catalyst panic",
+          "Equity weakness + bond rally = textbook risk-off: stocks down, Treasuries up = market repricing growth/inflation lower, bracing for slowdown",
+          "Energy uncertainty (OPEC+ quota disputes) adds cyclical cost pressure; down 0.28% suggests institutional de-risking, not capitulation",
+          "Sector rotation: defensive names (utilities, staples) likely outperforming cyclicals (airlines, discretionary) on credit stress signals",
+          "Friday FOMC release will reset equity risk premium — dovish signals could spark relief rally, hawkish deepens selloff"
+        ],
+        "so_what": "Equity salespeople should frame today's weakness as 'risk-off, not panic': clients aren't selling into fear yet, but macro uncertainty (geopolitics + central bank transitions) is grinding sentiment lower. Position this as hedging window; if FOMC Friday is dovish, you have a tactical entry point for growth exposure."
+      },
+      {
+        "term": "VIX (Equity Volatility Index)",
+        "category": "volatility",
+        "bullets": [
+          "Current level: 26.36, down only 0.26 from prior close — elevated for base case but not panic territory (>30+ = tail risk spike)",
+          "VIX at 26 reflects 30-day implied volatility of S&P 500; every 1-point move ≈ 1% swing in realized vol expectations",
+          "High VIX persists despite small equity decline = market pricing tail risk: geopolitical escalation, ECB miscommunication, airline contagion to other credit spreads",
+          "Friday's FOMC + EPU (Economic Policy Uncertainty) release are calendar risks; if either surprises, VIX can spike 3-5 points intraday",
+          "Volatility sellers (short VIX trades, variance swaps) are testing pain thresholds; risk/reward skewed if geopolitical events accelerate",
+          "Options traders: 26 VIX = elevated call option prices = expensive hedges; structural sellers finding buyers for vol, but not capitulating yet"
+        ],
+        "so_what": "Volatility desk and salespeople: VIX is elevated but stable, suggesting market isn't panicked yet — this is YOUR pitch window for selling volatility or selling tail hedges to clients who bought protection cheap. If VIX breaks above 30, that's your signal to cover; Friday's FOMC is the binary catalyst to monitor."
+      },
+      {
+        "term": "USD/EUR Exchange Rate (DXY proxy)",
+        "category": "fx",
+        "bullets": [
+          "Current level: 1.0971 EUR/USD, up +0.0007 today — euro strengthening marginally (lower USD) despite risk-off sentiment",
+          "ECB De Cos nomination removes leadership uncertainty; market repricing that EU may stabilize policy, reducing euro safe-haven demand weakness",
+          "Risk-off should weaken EUR (EM/commodity link), but ECB clarity is offsetting this; structural fight between geopolitical risk (long USD) and policy transition relief (long EUR)",
+          "Every basis point of 10Y UST move feeds into USD/EUR: lower UST yields weaken USD carry, favor EUR (tighter spreads)",
+          "OPEC+ quota disputes impact oil pricing in USD; weaker dollar makes commodities cheaper for foreign buyers, dampens import-driven inflation in EU",
+          "Friday FOMC communications will reset USD expectations; dovish Fed = weaker USD, hawkish = stronger USD — cable and crosses will move 50-100 pips on surprise"
+        ],
+        "so_what": "FX salespeople: frame EUR/USD move as 'policy transition premium' — clients positioning for ECB stability. Use FOMC Friday as your pivot point: if Fed is dovish vs. ECB staying restrictive, that's a structural USD weakness trade to pitch. Hedge desks should lock in EUR/USD levels before Friday to avoid whipsaw on policy divergence."
+      },
+      {
+        "term": "Yield Curve Flattening & Duration Risk Premium",
+        "category": "rates",
+        "bullets": [
+          "Flattening mechanism: 10Y down 1bp, 2Y flat = short end 'sticky' (anchored to Fed funds), long end 'rallying' (safe-haven demand)",
+          "Inverted/flat curves = market pricing recession within 18-24 months; every 10bp of flattening = 5-10% recession probability increase in market pricing",
+          "Duration hedge trades: clients buying 10Y, selling 2Y to monetize steepness conviction; Friday FOMC could blow these out if Fed signals rate cuts earlier",
+          "Portfolio managers use curve slope as portfolio hedge: flat curve = buy long duration (10Y/30Y), reduces equity hedging costs",
+          "Geopolitical tail risks + airline credit stress push institutional money into 10Y specifically (long-dated safe haven); 2Y sees less institutional bid",
+          "Traders watch 2-10 spread religiously; at current levels (deeply negative), any steepening surprise traps short-duration positions"
+        ],
+        "so_what": "Fixed income traders and salespeople: curve flattening is your macro-to-micro translation tool. Explain to clients that inverted curve + geopolitical risk = duration is now defensive, not speculative. Pitch long 10Y / short 2Y trades to hedge equity exposure; Friday FOMC is your inflection — if dovish, curve steepens and your trade profits."
+      },
+      {
+        "term": "Credit Stress & Airline Bankruptcy Risk (Norse Atlantic Signal)",
+        "category": "credit",
+        "bullets": [
+          "Norse Atlantic suspension = cyclical red flag: airline credit stress reveals tight liquidity conditions, reduced consumer spending, operational cost pressures",
+          "Bankruptcy trigger mechanism: airline fixed costs (fuel, labor, debt service) stay constant; revenue drop (fewer bookings) = negative free cash flow, covenant violations, Chapter 11",
+          "Credit contagion risk: if Norse Atlantic fails, lenders reprrice airline sector CDS wider; High Yield Index spreads expand 10-20bps on cascade",
+          "Market signal: airline distress = bond market is tightening credit conditions (harder to refinance maturing debt); early warning for broader HY stress",
+          "Implications for Fed: airline stress reduces Q4 2026 / Q1 2027 earnings expectations, feeds recession narratives, could force FOMC to cut rates faster",
+          "Repo market impact: airline distress reduces collateral quality in repo market, tightens overnight funding rates for financial institutions, spreads to broader credit"
+        ],
+        "so_what": "Credit salespeople: Norse Atlantic isn't just an airline story — it's your barometer for credit market tightness and recession risk. Use it to pitch defensive positioning (IG over HY, quality over cyclicals) and to justify steeper OAS (option-adjusted spread) demands. If more airline names falter, you're calling for broader HY stress; that's your thesis to build client conviction."
+      },
+      {
+        "term": "OPEC+ Oil Quota Disputes & Commodity Tail Risk",
+        "category": "energy",
+        "bullets": [
+          "Sunday OPEC+ meeting: quota allocation dispute = oil supply uncertainty entering 2027; resolution could range from 'no cut' (bearish oil) to 'deeper cuts' (bullish oil)",
+          "Oil supply uncertainty feeds inflation expectations: higher oil = higher energy CPI, stickier inflation, forces longer Fed rate hold = equity headwind",
+          "Current mechanism: OPEC+ sets production quotas by member (Saudi, UAE, Russia, Iran, etc.); capacity disputes = some members claim quotas exceed actual productive capacity",
+          "Market implications: unresolved quotas = oil price volatility (±2-4% swings possible on Sunday), flows through energy sector earnings, reflationary pressure on 10Y",
+          "Geopolitical overlay: Iran nuclear deal status, Russia sanctions, Middle East tensions all embedded in quota negotiations; political risk = commodity risk",
+          "Link to equities: higher oil = higher corporate cost inflation, margin compression in consumer/industrial sectors, feeds 2027 earnings recession narrative"
+        ],
+        "so_what": "Commodities and macro salespeople: OPEC+ Sunday meeting is your binary catalyst this week. Use it to pitch energy hedges (long oil calls, long DBC ETF) if clients are underprepared for supply shock, or pitch defensive positioning if resolution looks dovish. Connect oil price to equity downside: 'If OPEC+ surprises hawkish on Sunday, oil rallies 3-5%, inflation re-accelerates, Fed holds rates, equities sell off 1-2% by Friday.'"
+      },
+      {
+        "term": "ECB Leadership Transition & Policy Uncertainty",
+        "category": "macro",
+        "bullets": [
+          "De Cos nomination = shift from outgoing ECB president's inflation-fighting policy stance; market repricing what 2027 rate path looks like under new leadership",
+          "ECB policy direction sets eurozone rates, affects EUR/USD carry, impacts cross-border capital flows into/out of US equities — not a 'European-only' story",
+          "Leadership vacuum risk: until De Cos is confirmed, market prices policy inertia, widening bid-ask spreads on EUR rates, reducing options value for hedgers",
+          "Friday FOMC release + ECB transition uncertainty = dual central bank surprise risk; if both are dovish, that's coordinated policy easing signal, risk-on catalyst",
+          "Client positioning: hedgers and macro funds are likely long EUR/USD as De Cos nomination removes leadership risk; any hawkish ECB signal is a 'sell EUR' trade",
+          "Spillover to US: if ECB signals rate cuts (less restrictive), that widens rate differentials, weakens EUR, strengthens USD carry, affects S&P 500 EM earnings"
+        ],
+        "so_what": "Macro and FX salespeople: frame ECB transition as a 'policy signaling risk' story through Friday. This is your window to pitch currency hedges (EUR/USD puts, USD puts vs. EM) and to explain why US equity weakness might persist if markets fear coordinated global easing. Watch De Cos messaging; if he signals cuts, that's a structural EUR/USD sell and a US growth downgrade."
+      },
+      {
+        "term": "Risk-Off vs. Risk-On Market Regimes & Safe-Haven Flows",
+        "category": "fundamental",
+        "bullets": [
+          "Risk-off definition: equities down, Treasuries up, volatility elevated, USD strong, credit spreads wider — money fleeing cyclicals into duration/cash",
+          "Today's regime: S&P 500 -0.28%, 10Y down 1bp, VIX 26.36 = classic risk-off, but not capitulation yet (retail investors haven't panicked, institutional repositioning underway)",
+          "Safe-haven flows: geopolitical + ECB uncertainty + credit stress = 'triple negative' catalyst pushing money into 10Y UST (perceived safest asset), away from equities/EM",
+          "Market betting: curve flattening + equity weakness suggests market is pricing 'growth disappointment' (not financial crisis). Strategists calling for 2027 slowdown, not 2008 replay",
+          "Pivot point: Friday FOMC release. If Fed signals dovish pivot, market rotates back to risk-on; if hawkish surprise, risk-off deepens and 7000 S&P 500 is in play",
+          "Salesperson framework: 'We're in Goldilocks risk-off: enough fear to hedge, not enough to capitulate. Positioning should be 60/40 defensive/offensive, then rebalance Friday on FOMC.'"
+        ],
+        "so_what": "Every salesperson (rates, equities, credit, FX) should use risk-off/risk-on framework to stitch together client conversations across desks. Today's regime = pitch defensive positioning (IG credit, long duration, long USD, short EM) with Friday FOMC as your repricing event. This is how you sound like a macro strategist, not a silo specialist."
+      }
+    ],
+    "narrative": "US equities declined 0.28% to 7,167 with the VIX holding elevated at 26.36, signaling risk-off positioning as Middle East geopolitical tensions, ECB leadership transition uncertainty (De Cos nomination), and airline credit stress (Norse Atlantic) converge into a triple headwind. The 10-Year Treasury rallied 1 basis point to 4.91% while the 2-Year held flat at 4.63%, flattening the yield curve and signaling market pricing of recession within 18-24 months; simultaneously, OPEC+ quota disputes ahead of Sunday's meeting are testing oil price stability and keeping inflation tail risks elevated. Friday's FOMC press release and Federal Funds data will be the week's inflection point—a dovish signal could spark risk-on reversal and steepen the curve, while hawkish surprise deepens the selloff and pushes S&P 500 lower."
+  },
+  {
     "date": "2026-11-25",
     "blocks": [
       {
