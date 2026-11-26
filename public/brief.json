@@ -1,30 +1,30 @@
 {
-  "date": "2026-11-25",
-  "generated_at": "2026-11-25T21:16:08.017Z",
+  "date": "2026-11-26",
+  "generated_at": "2026-11-26T16:41:42.356Z",
   "market_levels": [
     {
       "name": "S&P 500",
       "value": "7167",
-      "change": "-21 (-0.29%)",
+      "change": "-20 (-0.28%)",
       "up": false
     },
     {
       "name": "10Y UST",
-      "value": "4.92%",
-      "change": "0 bps",
+      "value": "4.91%",
+      "change": "-1.0 bps",
       "up": true
     },
     {
       "name": "2Y UST",
       "value": "4.63%",
-      "change": "0 bps",
+      "change": "0.0 bps",
       "up": true
     },
     {
-      "name": "EUR/USD",
-      "value": "1.0964",
-      "change": "+0.0063",
-      "up": true
+      "name": "~DXY",
+      "value": "1.0971 EUR/USD",
+      "change": "+0.0007",
+      "up": false
     },
     {
       "name": "VIX",
@@ -35,24 +35,24 @@
   ],
   "stories": [
     {
-      "headline": "Nvidia leads tech sell-off as Huang comeback rally fizzles and AI concerns return",
-      "source": "CNBC",
-      "summary": "Nvidia shares are declining as a recent rally around CEO Jensen Huang fades amid renewed concerns about artificial intelligence valuations and growth. The sell-off reflects broader weakness in the technology sector.",
-      "why_matters": "Nvidia is a core holding in the Magnificent Seven and AI infrastructure complex; weakness here signals potential rotation away from growth assets.",
-      "tag": "Equities"
-    },
-    {
-      "headline": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-      "source": "CNBC",
-      "summary": "SpaceX has received FCC clearance to launch one million satellites for orbital data center infrastructure. This represents a major regulatory win for Musk's space infrastructure ambitions.",
-      "why_matters": "This deployment could reshape US telecommunications and cloud infrastructure competition, with implications for tech capex cycles and national security technology positioning.",
-      "tag": "Equities"
-    },
-    {
-      "headline": "EXCLUSIVE: Boehly signs US-backed share swap deal to buy Lukoil global assets",
+      "headline": "Spain's De Cos set to be nominated by EU countries as next head of ECB",
       "source": "Reuters",
-      "summary": "Boehly has agreed to acquire Lukoil's global assets through a US-backed share swap arrangement. This transaction signals continued consolidation in energy markets with government involvement.",
-      "why_matters": "Energy asset consolidation and US government backing in deals could affect crude markets, geopolitical risk positioning, and capital flows into commodities.",
+      "summary": "Spain's De Cos is positioned to become the next ECB head following EU nomination proceedings. This marks a significant leadership transition at Europe's central bank.",
+      "why_matters": "ECB policy direction directly impacts eurozone rates, USD/EUR dynamics, and cross-border capital flows affecting US equities.",
+      "tag": "Rates"
+    },
+    {
+      "headline": "Airline Norse Atlantic flags bankruptcy risk as flights suspended",
+      "source": "Reuters",
+      "summary": "Norse Atlantic has suspended flights and flagged bankruptcy risk amid operational challenges. The airline's distress signals broader pressures in the aviation sector.",
+      "why_matters": "Airline stress reflects demand headwinds and credit market tightness; bankruptcy filings are cyclical recession indicators.",
+      "tag": "Credit"
+    },
+    {
+      "headline": "OPEC+ oil capacity disputes persist ahead of Sunday meeting on 2027 quotas, sources say",
+      "source": "Reuters",
+      "summary": "OPEC+ members remain divided over capacity allocations ahead of the Sunday quota-setting meeting for 2027. Unresolved disputes could impact global energy supply planning.",
+      "why_matters": "Oil quota decisions influence commodity prices, inflation expectations, and treasury yield dynamics critical to equity valuations.",
       "tag": "Macro"
     }
   ],
@@ -61,26 +61,26 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "FOMC communications are market-moving and directly influence rate expectations; this release follows recent Treasury yield stability."
+      "note": "Fed policy communication signals are market-moving events that reset rate expectations and equity risk premiums."
     },
     {
       "day": "Fri",
       "event": "Economic Policy Uncertainty",
       "importance": "high",
-      "note": "EPU index tracks policy-driven market stress and is closely watched by traders given elevated geopolitical tensions and energy reshuffles."
+      "note": "EPU indices correlate with VIX spikes and equity volatility; elevated readings can trigger defensive positioning."
     },
     {
       "day": "Fri",
-      "event": "Advance Economic Indicators",
-      "importance": "medium",
-      "note": "Leading indicators help gauge near-term growth momentum amid recent equity weakness and unchanged Treasury yields."
+      "event": "Federal Funds Data",
+      "importance": "high",
+      "note": "Fed funds rate operations anchor the entire yield curve and overnight funding costs for financial institutions."
     }
   ],
   "concept": {
-    "title": "Tech Leadership Fade & VIX Complacency Divergence",
-    "one_liner": "Nvidia and AI sell-off amid fixed yields suggests growth rotation risk, yet VIX compression signals traders remain underhedged for volatility.",
-    "explanation": "The S&P 500 declined 0.29% with Nvidia leading the tech sell-off as growth concerns resurface, while the VIX fell 0.26 points to 26.36—a mild level given equity pressure. Treasury yields remained flat (10Y at 4.92%, 2Y at 4.63%), indicating the market is pricing neither rate relief nor hawkish surprises. This divergence—falling stocks, stable yields, and declining volatility—suggests complacency in hedging strategies even as mega-cap tech leadership erodes.",
-    "market_link": "If VIX remains artificially low while equities weaken further, options markets could spike sharply, forcing deleveraging and risk-off cascades."
+    "title": "Geopolitical Risk Premium & Rate Curve Flattening",
+    "one_liner": "Middle East tensions and energy supply uncertainty are testing whether safe-haven flows into Treasuries can offset equity weakness.",
+    "explanation": "With the VIX elevated at 26.36 and S&P 500 down 0.28%, headlines on Gaza, Iran, and Ukraine dominate newsflow. Simultaneously, the 10Y Treasury rallied 1 bp while the 2Y held flat, flattening the curve—a classic risk-off signal. OPEC+ quota disputes add commodity tail risk, keeping oil uncertainty high and inflation expectations pinned.",
+    "market_link": "ECB leadership change and Fed communications Friday (FOMC release) will test whether central banks can communicate stability amid geopolitical fragmentation."
   },
-  "narrative": "US equities slipped 0.29% as Nvidia-led tech weakness offset stable Treasury yields (10Y unchanged at 4.92%) and mild VIX compression. SpaceX regulatory wins and energy M&A highlight infrastructure and geopolitical reshuffles, while FOMC communications on Friday will be critical to confirm whether the Fed's stance remains accommodative amid growth softness."
+  "narrative": "US equities declined 0.28% with VIX holding elevated at 26.36 as Middle East tensions, ECB transition uncertainty, and airline credit stress weigh on sentiment. The 10Y Treasury rallied while the curve flattened, signaling flight-to-quality into duration amid OPEC+ quota disputes and Friday's pending FOMC messaging."
 }
