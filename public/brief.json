@@ -1,18 +1,18 @@
 {
-  "date": "2026-11-26",
-  "generated_at": "2026-11-26T21:03:49.289Z",
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T18:54:58.974Z",
   "market_levels": [
     {
       "name": "S&P 500",
-      "value": "7167",
-      "change": "-21 (-0.29%)",
-      "up": false
+      "value": "7284",
+      "change": "+117 (1.63%)",
+      "up": true
     },
     {
       "name": "10Y UST",
       "value": "4.91%",
       "change": "-1.0 bps",
-      "up": true
+      "up": false
     },
     {
       "name": "2Y UST",
@@ -22,37 +22,37 @@
     },
     {
       "name": "~DXY",
-      "value": "N/A",
-      "change": "N/A",
+      "value": "1.0967",
+      "change": "-0.0004",
       "up": false
     },
     {
       "name": "VIX",
-      "value": "26.36",
-      "change": "-0.26",
+      "value": "26.80",
+      "change": "-1.49",
       "up": false
     }
   ],
   "stories": [
     {
-      "headline": "Trump demands probe into 'record setting error' after third-quarter GDP data gets massive revision higher",
+      "headline": "Airline Norse Atlantic's Norwegian operating unit declares bankruptcy - Reuters",
+      "source": "Reuters",
+      "summary": "Norse Atlantic's Norwegian operations filed for bankruptcy and halted flights as elevated fuel costs from regional geopolitical tensions pressured margins. The airline industry faces structural headwinds from energy inflation and reduced pricing power.",
+      "why_matters": "Airline bankruptcies signal stress in cyclical sectors and rising energy costs that could dampen consumer spending heading into the holiday season.",
+      "tag": "Credit"
+    },
+    {
+      "headline": "Inflation has shoppers hunting for value. That bodes well for Black Friday",
       "source": "CNBC",
-      "summary": "Trump has called for an investigation into a significant upward revision to Q3 GDP data. The demand raises questions about the timing and accuracy of economic reporting.",
-      "why_matters": "GDP revisions directly impact Fed policy expectations and equity valuations; political scrutiny of economic data can influence market confidence.",
+      "summary": "Consumer behavior is shifting toward value-seeking as inflation persists, suggesting retailers offering discounts will capture disproportionate holiday sales. This dynamic reinforces consumer price sensitivity and demand for deals on Black Friday.",
+      "why_matters": "Sustained inflation pressures on household budgets influence retail margins and earnings outlook, directly affecting equity valuations in discretionary sectors.",
       "tag": "Macro"
     },
     {
-      "headline": "Saudi-led coalition says Houthis attacked Aramco's Jazan refinery",
+      "headline": "Global diesel market to run into deficit in second quarter of 2027 - Reuters",
       "source": "Reuters",
-      "summary": "The Saudi-led coalition reported that Houthis launched an attack on Aramco's Jazan refinery. Such attacks on critical energy infrastructure risk supply disruptions.",
-      "why_matters": "Energy infrastructure attacks affect global oil supply and prices; WTI crude is up $0.82 to $82.24, reflecting geopolitical risk premium.",
-      "tag": "Rates"
-    },
-    {
-      "headline": "Israel's Eisenkot reaches deal with left-wing faction as coalition talks gain steam",
-      "source": "Reuters",
-      "summary": "Israeli political negotiations have progressed with Eisenkot securing a deal with a left-wing faction. Coalition formation continues amid ongoing regional tensions.",
-      "why_matters": "Middle East political stability affects commodity prices and geopolitical risk appetite; market volatility can follow coalition shifts in the region.",
+      "summary": "Global diesel supply is forecast to tighten in Q2 2027, signaling supply-demand imbalances in energy markets. Structural tightness in refined products could elevate transportation and production costs across industries.",
+      "why_matters": "Diesel supply deficits raise input costs for logistics, manufacturing, and agriculture, feeding into inflation expectations and potentially constraining Fed rate-cut room.",
       "tag": "Macro"
     }
   ],
@@ -61,26 +61,32 @@
       "day": "Fri",
       "event": "FOMC Press Release",
       "importance": "high",
-      "note": "FOMC communications drive rate expectations and equity/bond repricing; combined with Economic Policy Uncertainty data, sets tone for year-end volatility."
+      "note": "Federal Reserve communications on policy stance directly drive bond yields and equity volatility; market is pricing guidance on future rate trajectory."
     },
     {
       "day": "Fri",
       "event": "Advance Economic Indicators",
       "importance": "high",
-      "note": "Leading indicators help forecast near-term economic momentum and inform Fed policy trajectory."
+      "note": "Leading indicators forecast near-term economic momentum and feed into Fed expectations for growth and inflation over next 2–6 months."
     },
     {
       "day": "Fri",
       "event": "Economic Policy Uncertainty",
       "importance": "medium",
-      "note": "EPU index reflects market anxiety; elevated readings often correlate with higher VIX and risk-off positioning."
+      "note": "EPU index measures sentiment around policy risk; elevated readings can suppress investment and consumer confidence."
+    },
+    {
+      "day": "Fri",
+      "event": "Key ECB Interest Rates",
+      "importance": "medium",
+      "note": "ECB rate decisions influence EUR/USD and cross-border capital flows; divergence with Fed policy shapes currency and equity correlations."
     }
   ],
   "concept": {
-    "title": "Geopolitical Risk Premium and Inflation Signals",
-    "one_liner": "Energy infrastructure attacks, political disputes, and GDP data scrutiny are pushing crude higher while bonds flatten, signaling lingering inflation concern beneath a weakening equity close.",
-    "explanation": "With WTI crude up $0.82 on Houthi-Aramco tensions and Iraq closing borders, energy supply risk is pricing in. The 10Y UST at 4.91% (down 1 bp) and VIX at 26.36 (down 0.26) show bond demand offsetting equity weakness (S&P -21 bps), suggesting investors are rotating to safety. Trump's GDP revision probe adds political noise to economic data credibility, creating uncertainty around Fed pivot timing and real growth.",
-    "market_link": "Energy shocks + political/data uncertainty typically widen credit spreads and boost volatility; the flat 2Y (no change) despite 10Y decline hints at terminal rate stickiness, limiting rally room."
+    "title": "Energy-Driven Cost Inflation Threatens Cyclical Profit Margins",
+    "one_liner": "Diesel supply deficits and elevated jet fuel squeeze airline and logistics margins while sticky consumer inflation forces retailers into margin-eroding discounting.",
+    "explanation": "Norse Atlantic's bankruptcy illustrates how energy cost shocks propagate through capital-intensive sectors when pricing power is constrained. Simultaneously, persistent inflation is forcing consumers to hunt for value, pushing retailers toward promotional intensity that erodes profitability. These cross-currents—input cost inflation colliding with demand-side price resistance—create a scissor effect on operating margins across cyclical industries, raising earnings recession risk even as equities posted strong overnight gains.",
+    "market_link": "S&P 500 +1.63% and VIX -1.49 suggest near-term relief, but structural margin pressure in cyclical and consumer-sensitive names could limit upside and re-test volatility if Q4 earnings disappoint."
   },
-  "narrative": "Equities closed modestly lower (-0.29%) as geopolitical risks in the Middle East pushed crude up $0.82, while Treasuries rallied on demand for safety. VIX dipped to 26.36, but political scrutiny of GDP data and ongoing regional tensions leave year-end positioning fragile heading into Friday's FOMC release and economic data."
+  "narrative": "Equities rallied +1.63% overnight while VIX fell 1.49 and long yields dipped 1 bps, but underlying fundamentals reveal tension: energy supply tightness (diesel deficit 2027) is pushing operational costs higher, airline bankruptcies signal sector stress, and consumer inflation sensitivity is forcing heavy discounting. The 10Y at 4.91% and sticky 2Y at 4.63% reflect lingering disinflation expectations, yet supply-side shocks and margin compression risks suggest the market's bullish posture may be front-running uncertainty ahead of the FOMC release today."
 }
