@@ -1,5 +1,127 @@
 [
   {
+    "date": "2026-11-27",
+    "blocks": [
+      {
+        "term": "S&P 500 at 7284 (+117, +1.63%)",
+        "category": "equities",
+        "bullets": [
+          "Overnight rally +1.63% suggests risk-on sentiment despite underlying margin compression in cyclicals",
+          "Gain driven by relief trade ahead of FOMC release (expected today, Fri); market betting on dovish guidance or held rates",
+          "VIX fell 1.49 pts to 26.80 in tandem—equity bounce not accompanied by volatility spike indicates institutional rebalancing, not panic-driven moves",
+          "Cyclical sectors (airlines, logistics, retail) underperforming within broader index; S&P strength masks sector divergence between defensives and energy-exposed names",
+          "Norse Atlantic bankruptcy and diesel deficit forecasts suggest cyclical earnings risk in Q4; rally may be overweighting near-term technical bounce vs. forward guidance",
+          "Retailers with strong discounting capacity (Costco, Walmart, Target) outperforming; luxury/full-price retail lagging as consumer value-seeking intensifies"
+        ],
+        "so_what": "Sales team pitches hedging strategies (long defensives / short cyclicals) to portfolio managers rotation; traders use sector technicals to identify mean-reversion entry points into beaten-down names on earnings miss risk."
+      },
+      {
+        "term": "10Y UST at 4.91% (-1 bps) vs 2Y UST at 4.63% (flat)",
+        "category": "rates",
+        "bullets": [
+          "10Y down 1 bp while 2Y held flat = flattening curve; 2Y-10Y spread now ~28 bps, historically inverted, signals growth recession concerns",
+          "Flattening despite equity rally suggests bond traders skeptical of earnings growth narrative; rates market pricing in softer economic data or Fed staying restrictive longer than equity bulls expect",
+          "2Y sticky at 4.63% = market pricing Fed holding rates steady through early 2027; little conviction for rate cuts despite inflation headlines",
+          "10Y at 4.91% reflects disinflation expectations (Fed rate-cut cycle discounted), BUT diesel supply deficit (Q2 2027) and airline bankruptcies challenge that narrative",
+          "Curve inversion persists = recession probability embedded in bond market; gap between equity enthusiasm (+1.63%) and rate market caution (curve flat/inverted) is key divergence Gina needs to track",
+          "Duration extension risk: if FOMC sounds less dovish than priced, 10Y could spike back above 5%, hurting bond portfolios and triggering equity selloff"
+        ],
+        "so_what": "Fixed income desk uses curve positioning to identify when equity market is overextended; sales team pitches duration hedges to asset managers if they're overweight growth when curve signals recession."
+      },
+      {
+        "term": "VIX at 26.80 (-1.49, down from prior)",
+        "category": "volatility",
+        "bullets": [
+          "VIX decline matched equity rally = textbook risk-on unwind; volatility sellers exiting hedges as equities bounce",
+          "26.80 is elevated vs. pre-pandemic historical average (~15–18 range); signals market still pricing meaningful tail risk despite intraday relief",
+          "Diesel deficit forecasts and airline bankruptcies are tail-risk narratives; if Q4 earnings miss because of margin compression, VIX could spike back above 30",
+          "Options market is pricing volatility through FOMC release (today, Fri); if Fed guidance surprises dovish, vol crushes further; if hawkish, vol spikes",
+          "Equity call buyers (bullish) and put buyers (hedgers) both present at elevated vol; asymmetric positioning = potential vol whipsaw Friday afternoon",
+          "Credit default swaps on airline/logistics companies tracking wider, contradicting equity/VIX rally; credit market less convinced than equities of soft landing"
+        ],
+        "so_what": "Options traders calibrate call/put spreads to FOMC odds; sales team hedges clients' equity exposure via VIX calls or put spreads if they expect Friday surprise; vol traders fade intraday bounces into FOMC."
+      },
+      {
+        "term": "DXY (USD Index) at 1.0967 (-0.0004)",
+        "category": "fx",
+        "bullets": [
+          "Dollar essentially flat overnight; USD weakness vs. major baskets (EUR, GBP, JPY) has paused despite equity rally normally weakening USD carry",
+          "ECB rate decision due today (Fri calendar) = cross-currency traders await EUR/USD directional cues; if ECB cuts while Fed holds, EUR outperforms",
+          "2Y-10Y spread flat on USD side, but ECB likely cutting more aggressively = rate differential narrows, reducing USD carry advantage for EM investors",
+          "Diesel supply deficit 2027 and energy inflation = USD typically strengthens (petrodollar effect), but that's offset by Fed cut pricing; two forces in stalemate",
+          "DXY weakness (-0.0004) suggests capital flowing out of USD safety trade into risk assets; aligns with equity rally but contradicts curve inversion signal"
+        ],
+        "so_what": "FX sales desk hedges USD strength exposure for multinational clients; traders identify carry trade unwind risk if rate differentials compress further on ECB cuts."
+      },
+      {
+        "term": "Energy-Driven Cost Inflation & Diesel Supply Deficit (Q2 2027)",
+        "category": "energy",
+        "bullets": [
+          "Reuters forecast: global diesel market running into deficit in Q2 2027 = structured supply shortage, not cyclical; refineries struggling to maintain capacity",
+          "Diesel = lifeblood of logistics, trucking, agriculture; supply tightness feeds directly into freight costs, agricultural input costs, and manufacturing COGS",
+          "Norse Atlantic bankruptcy proximate cause: elevated jet fuel costs from regional geopolitical tensions (likely Middle East/Ukraine spillovers) crushed airline unit economics",
+          "Margin compression mechanism: airlines cannot pass fuel costs to consumers (price-sensitive demand); logistics firms face capacity constraints raising shipping costs; both squeeze profit",
+          "Structural tightness (not cyclical) suggests inflation may not resolve with demand destruction alone; could keep 2Y yields sticky even as equities price soft landing",
+          "Implications for 2027: shipping, ag, construction—any capex-intensive sector—faces higher input costs; earnings guidance risks in Q4 2026 for FY2027"
+        ],
+        "so_what": "Energy sector sales team pitches refiners / midstream names to portfolio managers; traders track diesel futures and shipping costs to predict margin pressure in discretionary sectors before earnings; corporate finance team models energy hedging for capex budgets."
+      },
+      {
+        "term": "Consumer Inflation Sensitivity & Margin Compression in Retail",
+        "category": "macro",
+        "bullets": [
+          "CNBC story: persistent inflation forcing consumers to hunt for value = retailers facing binary choice: discount heavily or lose volume",
+          "Margin erosion mechanism: promotional intensity (Black Friday, holiday deals) reduces gross margin 300–500 bps on discounted SKUs; volume uplift rarely offsets margin drop",
+          "Consumer price sensitivity is structural, not cyclical; real wages still below pre-pandemic trends for bottom 50% earners = demand weighted to discount/value retailers",
+          "Retailers with strong supply chains (Costco, Walmart) can absorb margin loss via operational leverage; luxury/full-price retailers face worst case: margin + volume decline",
+          "Scissors effect: input cost inflation (diesel, freight) PLUS demand-side discounting = double margin squeeze; retail earnings risk in Q4 2026 and Q1 2027",
+          "Market priced assumption: Fed cuts rates, demand recovers, consumers stop hunting bargains = that's the bull case; if diesel deficit + geopolitical shocks persist, bargain-hunting sticks"
+        ],
+        "so_what": "Equity research desk models retail comps and guidance using promotional intensity; sales team sells margin-compression hedges (short retail, long staples) to hedge funds; corporate teams negotiate supplier contracts under assumption that input cost pressure lingers."
+      },
+      {
+        "term": "Yield Curve Inversion (2Y-10Y ~28 bps) = Recession Signal vs. Equity Rally Divergence",
+        "category": "fundamental",
+        "bullets": [
+          "Inverted or flat yield curve = historical predictor of recession within 12–24 months; market is pricing recession probability despite +1.63% equity bounce today",
+          "Mechanism: when short rates (2Y at 4.63%) stay at or above long rates (10Y at 4.91%), lenders lose incentive to extend capital; credit dries up, economic activity slows",
+          "Bond market + equity market contradiction: bonds say growth slowing/recession risk; equities say soft landing + Fed cuts coming; one is wrong",
+          "FOMC release (Fri) is tiebreaker: if Fed signals cuts coming (dovish), 10Y falls further, curve inverts more deeply, equities may reverse; if Fed stays hawkish, equities correct",
+          "Gina's key insight: curve inversion is reliable macro indicator but lags by 6–12 months; airline bankruptcies + diesel deficit are LEADING indicators (happening now); curve is finally catching up",
+          "Risk-off scenario: earnings miss on energy/margin pressure → equities correct → VIX spikes → bonds rally again (curve steepens inverted-side), triggering credit stress"
+        ],
+        "so_what": "Macro strategists use curve inversion as framework for 12-month portfolio allocation; trading desks position for curve steepening (long 10Y, short 2Y) if recession fears intensify; sales team pitches recession hedge strategies (bonds + gold) to CIOs if equities diverge further from bond signal."
+      },
+      {
+        "term": "Credit Risk Spillover (Airlines, Logistics) & High-Yield Spreads",
+        "category": "credit",
+        "bullets": [
+          "Norse Atlantic bankruptcy = canary in coal mine for airline industry; other carriers (Southwest, Spirit, Frontier) also trading near cost of capital due to fuel pressure",
+          "High-yield spreads in transportation likely widening today despite S&P rally; credit market pricing higher default risk than equity market; asymmetric signal",
+          "Mechanism: airlines / logistics firms issued debt when rates lower; now trapped with high fixed costs in environment of elevated fuel + competitive pricing pressure = default risk rises",
+          "CDS (credit default swap) spreads on airline issuers trending wider = insurance cost for holding airline bonds rising; signals institutional de-risking in credit",
+          "Diesel deficit 2027 extends margin pain into 2027; refinance risk for airlines / logistics firms maturing 2027–2028; some may face covenant breaches if earnings miss badly",
+          "Credit-equity divergence: equities +1.63%, but HY spreads likely 20–40 bps wider = credit is leading indicator before equities reprice downward"
+        ],
+        "so_what": "Credit sales desk pitches duration + curve positioning (bonds outperform equities) to bond managers; distressed desk scouts airline / logistics names for workout opportunities; equity sales warns clients that equity rally may be overweighted vs. credit risk embedded."
+      },
+      {
+        "term": "FOMC Press Release (Today, Fri) = Market Pivot Point",
+        "category": "rates",
+        "bullets": [
+          "Fed communications on policy stance = most important driver of bond yields and equity volatility today; market pricing is NOT stable until guidance heard",
+          "Current pricing: market discounts ~25% odds Fed holds through 2027, ~75% odds Fed cuts 1–2x in 2027; if FOMC sounds more hawkish (holds longer), yields spike, equities correct",
+          "Diesel deficit forecasts and airline bankruptcies are hawkish input (stagflation risk); but equity rally + VIX drop are dovish signals = Fed faces communication challenge",
+          "Scenario 1 (Dovish): Fed signals cuts coming → 10Y falls below 4.80% → equities extend gains → VIX crushes to <20 → Gina pitches call spreads, long duration",
+          "Scenario 2 (Hawkish): Fed holds rate + cautions on sticky inflation → 10Y spikes above 5.00% → equities correct → VIX >30 → Gina pitches hedges, curve steepening",
+          "Advance Economic Indicators also due Fri; if leading indicators weaken, Fed more likely dovish; if strong, Fed more likely hawkish; either way, volatility unwind after statement"
+        ],
+        "so_what": "Trading desks size positions around FOMC odds; macro strategists model both scenarios (rates spike vs. crush); sales team tells clients volatility expected Fri afternoon, frames hedging window as NOW before statement."
+      }
+    ],
+    "narrative": "Equities rallied +1.63% overnight while VIX fell 1.49, pricing risk-on relief ahead of today's FOMC release; however, the bond market is telling a different story. The 10Y UST at 4.91% (down just 1 bp) and sticky 2Y at 4.63% reflect a flat/inverted 2Y-10Y curve (~28 bps), which is a recession signal that contradicts equity enthusiasm. Underlying fundamentals reveal the tension: diesel supply deficits forecast for Q2 2027 and Norse Atlantic's bankruptcy illustrate how energy cost shocks are compressing margins in capital-intensive cyclical sectors, while persistent consumer inflation is forcing retailers into heavy discounting that erodes profitability. The scissors effect—input cost inflation colliding with demand-side price resistance—is a leading indicator of earnings recession risk; credit markets are pricing this via wider HY spreads in transportation, even as equities bounce. Today's FOMC guidance and Advance Economic Indicators are the pivot: a dovish surprise extends equity gains and flattens the curve further, while hawkish signals trigger a re-pricing of recession probability that credit markets are already front-running."
+  },
+  {
     "date": "2026-11-26",
     "blocks": [
       {
